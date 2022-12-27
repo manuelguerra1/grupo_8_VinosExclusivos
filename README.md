@@ -7,3 +7,4 @@ Hola Soy Diego N. Páez, tengo 35 años. Soy Maestro de grado y Analista en Sist
 
 Hola, soy Manuel Guerra, tengo 17 años. Estoy haciendo un curso en Digital House con el cual quiero tener y construir un futuro. Me gusta mucho la tecnologia, en especial las computadoras, y espero les guste este proyecto!.
 
+Hola, mi nombre es Pablo, tengo 29 años. Estoy por presentar mi tesis como Licenciado en Contador en UBA, tengo pensado empezar despues la carrera de Sistemas de informacion contable, y el plan de estudio de Digital me intereso y me sirve para complementar. Me gusta el voley y los juegos de mesa.
