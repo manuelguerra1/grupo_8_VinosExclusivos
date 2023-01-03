@@ -1,5 +1,5 @@
 # proyectoIntegradorG8
-ggg
+
 LOGO
 
 Introducción:
