@@ -2,11 +2,11 @@
 
 LOGO
 
-Introducción
-En este Proyecto participaremos en el desarrollo de una e-commerce, con una idea de negocio de market place en principio del rubro vitivinícola y destilados. El concepto de negocio es el de crear una web donde el cliente pueda acceder a un sitio donde cada productor pueda ofrecer sus productos. El proyecto es escalable a otros rubros.
+Introducción:
+En este Proyecto participaremos en el desarrollo de una e-commerce, con una idea de negocio de market place en principio del rubro vitivinícola y destilados. El concepto de negocio es crear una web en la que el cliente pueda acceder a un sitio, donde cada productor pueda ofrecer sus productos. El proyecto es escalable a otros rubros.
 
 Objetivo General 🎯
-•	Desarrollar un portal donde productores pequeños, medianos y (grandes?) puedan ofrecer sus productos con denominación de origen y fomentar la relación y colaboración con aquellos organismos, asociaciones y entidades cuyos fines sean complementarios y/o concurrentes.
+•	Desarrollar un portal donde productores pequeños, medianos puedan ofrecer sus productos con denominación de origen y fomentar la relación y colaboración con aquellos organismos, asociaciones y entidades cuyos fines sean complementarios y/o concurrentes.
 
 Objetivos Especificos 🎯
 •	El objetivo de la tienda para este proyecto es desarrollar un e-commerce para vinos y destilados, siendo el mismo escalable a otros productos en el futuro. Potenciar las marcas de los productores en el mercado online, de manera que el consumidor pueda llegar a ellos de manera fácil y rápida, con una navegacion ágil, intuitiva y segura las 24 horas del día los 365 días del año.
