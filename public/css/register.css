@@ -8,16 +8,19 @@ body{
     align-items: center;
     justify-content: center;
 }
-
+/* ---------------------------HEADER------------------------------- */
 img.header-logo{
     display: block;
     margin: auto;
     padding: 10px;
     width: 200px;
+    
 }
+
 .top-header{
     background-color:#7b1d46 ;
 }
+
 .searching{
     position: center;
     padding: 5px;
@@ -60,7 +63,6 @@ img.header-logo{
 .navegacionBarra li:hover{
     background: #770d3b;
 }
-
 /* ---------------------------FOOTER------------------------------- */
 .pieDePagina{
     background-color: #7b1d46;
@@ -126,69 +128,46 @@ div.burger-menu {
     font-size: 20px;
 
 } */
-/* ---------------------------CARRITO------------------------------ */
-.carritoPag{
-    margin: 80px;
+
+/* -----------------------------REGISTER----------------------------- */
+main{
+    text-align: center;
 }
-table{
-    width: 100%;
-    border-collapse: collapse;
+
+.register input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px
 }
-.carritoInfo{
-    display: flex;
-    flex-wrap: wrap;
-    color: #770d3b;
+
+.register p{
+    margin: 10px 0 3px 10px;
+    padding: 10px 0 3px 4px;
 }
-.carritoInfo .p{
-    color: #770d3b;
+
+.register input[type="date"]{
+    margin-top: 5px;
 }
-th{
-    text-align: left;
+
+button{
+    background-color: #7b1d46;
+    color: #d9d1c5;
+    border-radius: 5px;
     padding: 5px;
-    color: #770d3b;
-    font-weight: normal;
+    margin: 0 10px 20px 10px;
+    opacity: 0.9;
 }
-td{
+
+.terms-cond{
+    margin: 10px;
+    padding: 10px;
     text-align: left;
-    color: #770d3b;
-    font-weight: normal;
-    padding: 10px 5px;
 }
-td input{
-    width: 40px;
-    height: 30px;
-    padding: 5px;
+
+@media (min-width: 361px){
+    
 }
-td img{
-    width: 200 px;
-    height: 200px;
-    margin-right: 10px;
-}
-td p{
-    text-align: left;
-    color: #770d3b;
-    font-weight: normal;
-    padding: 10px 5px;
-}
-td small{
-    text-align: left;
-    color: #770d3b;
-    font-weight: normal;
-    padding: 10px 5px;
-}
-.totalPrecio{
-    display: flex;
-    justify-content: flex-end;
-}
-.totalPrecio table{
-    border-top: 3px solid #770d3b;
-    width: 100%;
-    max-width: 350px;
-}
-/*esto es para que los dos cuadros esten alineados el ultimo hijo y el cuadro de total*/
-td:last-child{
-    text-align: right;
-}
-th:last-child{
-    text-align: right;
+
+@media (min-width: 769px){
+
 }

@@ -4,9 +4,165 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Registro</title>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit nobis veniam quia eum quos ducimus hic dolore deleniti, dolorum voluptatibus ad vitae nemo dolores reprehenderit! Nesciunt voluptate explicabo aliquid!</p>
+    <header>
+        <header>
+            <div class="top-header">
+
+                <img class="header-logo" src="/img/imgs/logo-sin-fondo-1-beige.png" alt="logo" >
+
+                <!-- <div class="searching">
+                    <input class="search-nav" type="search" name="search-nav">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div> -->
+            
+                <!-- <button> <a href="/register"></a><i class="fa-solid fa-circle-user"></i> </button>   
+                <button> <a href="/carrito"></a><i class="fa-solid fa-cart-shopping"></i> </button>
+
+            </div>
+            <nav>
+                <div>
+                    
+                    <ul class="navegacionBarra">
+                        <li> <a href="">Home</a> </li>
+                        <li> <a href="">Productos</a> </li>
+                        <li> <a href="">Carrito</a> </li>
+                        <li> <a href="">Login</a> </li>
+                        <li> <a href="">Crear Cuenta</a> </li>
+
+                    </ul>
+
+                </div>
+            </nav> -->
+    </header>
+    </header>
+    <hr>
+    <main>
+        <form action = "/">
+            <div class="register">
+
+                <h3> ¡Registrate! </h3>
+                <label for="name"></label>
+                <input type="text" name="nombre" id="name" placeholder="Nombre" required>
+                <br>
+    
+                <label for="last-name"></label>
+                <input type="text" name="apellido" id="last-name" placeholder="Apellido" required>
+                <br>
+    
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <br>
+    
+                <label for="user-name"></label>
+                <input type="text" name="usuario" id="user-name" placeholder="Nombre de usuario" required>
+                <br>
+    
+                <label for="password"></label>
+                <input type="password" name="contraseña" id="password" placeholder="Contraseña" required>
+                <br>
+    
+                <label for="confirm-password"></label>
+                <input type="password" name="confirmar-contraseña" id="confirm-password" placeholder="Confirmar contraseña" required>
+                <br>
+    
+                <label for="birth"></label>
+                <p class="birth-date">Fecha de nacimiento</p>
+                <input type="date" name="nacimiento" id="birth">
+                <br>
+                <label for="address#1"></label>
+                <input type="text" name="direccion" id="address#1" placeholder="Direccion 1" required>
+                <br>
+    
+                <label for="address#2"></label>
+                <input type="text" name="direccion2" id="address#2" placeholder="Direccion 2 *Opcional*">
+                <br>
+    
+                <label for="postal-code"></label>
+                <input type="text" name="codigo postal" id="postal-code" placeholder="Código postal" required>
+                <br>
+    
+                <label for="city"></label>
+                <input type="text" name="ciudad" id="city" placeholder="Ciudad" required>
+                <br>
+    
+                <label for="province"></label>
+                <input type="text" name="provincia" id="province" placeholder="Provincia" required>
+                <br>
+    
+                <label for="country"></label>
+                <input type="text" name="pais" id="country" placeholder="País" required>
+                <br>
+    
+                <label for="phone-number"></label>
+                <input type="number" name="telefono" id="phone-number" placeholder="Teléfono celular" required> 
+                <br>
+                
+                
+            </div>
+            <div class="terms-cond">
+                <input type="checkbox" name="terminos y condiciones" id="" required>Acepto las condiciones de uso y políticas de privacidad.
+            </div>
+            <br>
+
+            <button type="reset" value="Borrar">BORRAR</button>
+
+            <button type="submit" value="Enviar">ENVIAR</button>
+
+
+        </form>
+    </main>
+    <footer class="pieDePagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="/img/imgs/logo-sin-fondo-1-beige.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <ul>
+                    <li>Ayuda</li>
+                    <li>Como comprar</li>
+                    <li>Envios</li>
+                    <li>Nosotros</li>
+                    <li>Preguntas frecuentes</li>
+                    <li>Términos y condiciones</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Contactanos</h2>
+                <ul>
+                    <li>Aplicación</li>
+                    <li>Conviertete en afiliado</li>
+                    <li>Vende tus productos con nosotros</li>
+                    <li>Política de privacidad</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Siguenos</h3>
+                    <div class="redSocial">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-youtube"></a></li>
+                    </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
+        </div>
+    </footer>
 </body>
 </html>
