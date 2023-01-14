@@ -1,0 +1,66 @@
+/* ---------------------------CARRITO------------------------------ */
+.carritoPag{
+    margin: 80px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.carritoInfo{
+    display: flex;
+    flex-wrap: wrap;
+    color: #770d3b;
+}
+.carritoInfo .p{
+    color: #770d3b;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #770d3b;
+    font-weight: normal;
+}
+td{
+    text-align: left;
+    color: #770d3b;
+    font-weight: normal;
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td img{
+    width: 200 px;
+    height: 200px;
+    margin-right: 10px;
+}
+td p{
+    text-align: left;
+    color: #770d3b;
+    font-weight: normal;
+    padding: 10px 5px;
+}
+td small{
+    text-align: left;
+    color: #770d3b;
+    font-weight: normal;
+    padding: 10px 5px;
+}
+.totalPrecio{
+    display: flex;
+    justify-content: flex-end;
+}
+.totalPrecio table{
+    border-top: 3px solid #770d3b;
+    width: 100%;
+    max-width: 350px;
+}
+/*esto es para que los dos cuadros esten alineados el ultimo hijo y el cuadro de total*/
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
