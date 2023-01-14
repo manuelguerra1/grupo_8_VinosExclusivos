@@ -42,7 +42,7 @@ img.header-logo{
     padding: 0;
     background: #7b1d46;
     width: 100%;
-    max width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
 .navegacionBarra li a{
@@ -162,7 +162,7 @@ td input{
 td img{
     width: 200 px;
     height: 200px;
-    margin right: 10px;
+    margin-right: 10px;
 }
 td p{
     text-align: left;
