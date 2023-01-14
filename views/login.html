@@ -4,9 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <title>Login</title>
 </head>
-<body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nemo atque cumque, alias laboriosam amet magni nulla praesentium aspernatur, quae eum ex expedita deleniti inventore labore officiis, provident reiciendis maiores.</p>
-</body>
+</head>
+
+    <body>
+        <header>
+        <div class="top-header">
+
+            <img class="header-logo" src="../public/img/imgs/Logo sin fondo 1 bordo.png" alt="logo" >
+
+            <div class="searching">
+                <input class="search-nav" type="search" name="search-nav">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        
+            <button> <a href="/register"></a><i class="fa-solid fa-circle-user"></i> </button>   
+            <button> <a href="/carrito"></a><i class="fa-solid fa-cart-shopping"></i> </button>
+
+        </div>
+        <nav>
+            <div>
+                
+                <ul class="navegacionBarra">
+                    <li> <a href="">Home</a> </li>
+                    <li> <a href="">Productos</a> </li>
+                    <li> <a href="">Carrito</a> </li>
+                    <li> <a href="">Login</a> </li>
+                    <li> <a href="">Crear Cuenta</a> </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        </header>
+         <!--Armado Login Box-->
+         <section class="login">
+            <div class="loginBox">
+                <img class="avatar" src="../public/img/imgs/Logo sin fondo 1 beige.png"/>
+                   <h1>Logueate Aqui</h1>
+                   <form>
+                       <!--Nombre Usuario-->
+                       <label for="nombreUsuario">Ingresa Nombre de Usuario</label>
+                       <input type="text" placeholder="Enter Username">
+   
+                       <!--Password-->
+                       <label for="password">Password</label>
+                       <input type="password" placeholder="Enter Password">
+   
+                       <input type="submit" value="Log in">
+   
+                       <a href="#">Perdiste tu password?</a><br>
+                       <a href="#">No tenes cuenta?</a>
+   
+                   </label>
+                   </form>
+            </div>
+         </section>
+           
+         <!--Footer nuevo preguntar que les parece-->
+        
+        <footer class="pieDePagina">
+            <div class="grupo1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="../public/img/imgs/Logo sin fondo 1 beige.png">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>Sobre Nosotros</h2>
+                    <ul>
+                        <li>Ayuda</li>
+                        <li>Como comprar</li>
+                        <li>Envios</li>
+                        <li>Nosotros</li>
+                        <li>Preguntas frecuentes</li>
+                        <li>Términos y condiciones</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h2>Contactanos</h2>
+                    <ul>
+                        <li>Aplicación</li>
+                        <li>Conviertete en afiliado</li>
+                        <li>Vende tus productos con nosotros</li>
+                        <li>Política de privacidad</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Siguenos</h3>
+                        <div class="redSocial">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-instagram"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-youtube"></a></li>
+                        </div>
+                </div>
+            </div>
+            <div class="grupo2">
+                <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
+            </div>
+        </footer>
+    </body>
 </html>
