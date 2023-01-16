@@ -19,6 +19,7 @@ img.header-logo{
 
 .top-header{
     background-color:#7b1d46 ;
+    width: 100vw;
 }
 
 .searching{
@@ -85,12 +86,12 @@ img.header-logo{
     justify-content: center;
 }
 .pieDePagina .grupo1 .box figure img{
-    width: 250px;
+    width: 150px;
 }
 .pieDePagina .grupo1 .box h2{
     color: #d9d1c5;
     margin-bottom: 25px;
-    font-size: 20px;
+    font-size: 15px;
 }
 .pieDePagina .grupo1 .box li{
     color: #d9d1c5;
