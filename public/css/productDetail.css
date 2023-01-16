@@ -67,36 +67,36 @@ img.header-logo{
     background-color: #7b1d46;
     width: 100%;
 }
-.pieDePagina .grupo1{
+.pieDePagina {
     background-color: #7b1d46;
     width: 100%;
     max-width: 1200px;
-    margin: auto;
-    display: grid; /*propiedad grid*/
-    grid-template-columns: repeat(2, 2fr);/*para que se aplique grid en columnas*/
-    grid-gap: 50px; /*separa las lineas de texto en relacion con dimesion*/
+    margin: auto; 
     padding: 25px 10px;
 }
-.pieDePagina .grupo1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+
+.pieDePagina .box{
+    text-align:center;
 }
-.pieDePagina .grupo1 .box figure img{
-    width: 150px;
-}
-.pieDePagina .grupo1 .box h2{
+
+.pieDePagina .box h2{
     color: #d9d1c5;
-    margin-bottom: 25px;
-    font-size: 20px;
+    text-align: center;
+    padding-bottom: 15px;
 }
-.pieDePagina .grupo1 .box li{
+
+.pieDePagina .box h3{
+    color: #d9d1c5;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.pieDePagina .box li{
     color: #d9d1c5;
     margin-bottom: 10px;
     list-style-type: none;
 }
-.pieDePagina .grupo1 .redSocial a{
+.pieDePagina .redSocial a{
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -108,25 +108,44 @@ img.header-logo{
     text-align: center;
     transition: all 300ms ease;
 }
-.pieDePagina .grupo1 .redSocial a:hover{
-    color: aqua
+.pieDePagina .redSocial{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.pieDePagina .redSocial a:hover{
+    color: aqua; 
 }
 .pieDePagina .grupo2{
     background-color: #770d3b;
     padding: 15px 20px;
     text-align: center;
+    color: #d9d1c5;
 }
-    /* 
-div.burger-menu{
+
+.pieDePagina .box1 h3{
+    color: #d9d1c5;
+    padding:15px 0 15px;
     text-align: center;
 }
 
-div.burger-menu {
-    border-radius: 5px;
-    color: #000;
-    font-size: 20px;
+.pieDePagina .box1 .payments{
+    text-align: center;
+}
 
-} */
+/* ------------------------------MAIN--------------------------------- */
+
+p{
+    border: 5px solid green;
+    font-size: 100px;
+}
+
+@media (min-width: 361px){
+    
+}
+
 @media (min-width: 769px) {
     img.header-logo{
         display: block;
@@ -178,13 +197,12 @@ div.burger-menu {
     .navegacionBarra li:hover{
         background: #770d3b;
     }
-    
     ---------------------------FOOTER-------------------------------
     .pieDePagina{
         background-color: #7b1d46;
         width: 100%;
     }
-    .pieDePagina .grupo1{
+    .pieDePagina{
         background-color: #7b1d46;
         width: 100%;
         max-width: 1500px;
@@ -194,26 +212,26 @@ div.burger-menu {
         grid-gap: 50px; /*separa las lineas de texto en relacion con dimesion*/
         padding: 45px 0px;
     }
-    .pieDePagina .grupo1 .box figure{
+    .pieDePagina .box figure{
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
     }
-    .pieDePagina .grupo1 .box figure img{
+    .pieDePagina .box figure img{
         width: 250px;
     }
-    .pieDePagina .grupo1 .box h2{
+    .pieDePagina .box h2{
         color: #d9d1c5;
         margin-bottom: 25px;
         font-size: 20px;
     }
-    .pieDePagina .grupo1 .box li{
+    .pieDePagina .box li{
         color: #d9d1c5;
         margin-bottom: 10px;
         list-style-type: none;
     }
-    .pieDePagina .grupo1 .redSocial a{
+    .pieDePagina .redSocial a{
         display: inline-block;
         text-decoration: none;
         width: 45px;
@@ -225,7 +243,7 @@ div.burger-menu {
         text-align: center;
         transition: all 300ms ease;
     }
-    .pieDePagina .grupo1 .redSocial a:hover{
+    .pieDePagina .redSocial a:hover{
         color: aqua
     }
     .pieDePagina .grupo2{
