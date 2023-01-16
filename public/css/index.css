@@ -141,9 +141,53 @@ p{
 .pieDePagina .box1 .payments{
     text-align: center;
 }
+/*-------------- MEDIA PARA TABLETS NOTEBOOKS Y PCs---------------------------*/
+
+@media (min-width: 361px){
+   .pieDePagina .box .redSocial{
+    /* align-items: center; */
+    display: block;
+    flex-wrap: wrap;
+    border-color: black;
+    /* justify-content: space-between; */
+   }  
+}
 
 
-@media (min-width: 769px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (min-width: 361px) {
     img.header-logo{
         display: block;
         margin: auto;
@@ -167,13 +211,13 @@ p{
         border: 1px solid silver;
         border-radius: 30px;
     }
-    /*.search-nav{
+    .search-nav{
         margin-left: 85px;  ACOMODAR 
         border:1px solid;
         border-radius: 3px;
         width: 500px;
         background-color: white;
-    }*/
+    }
     .navegacionBarra{
         list-style: none;
         padding: 0;
@@ -193,60 +237,5 @@ p{
     }
     .navegacionBarra li:hover{
         background: #770d3b;
-    }
+    } */
     
-    ---------------------------FOOTER-------------------------------
-    .pieDePagina{
-        background-color: #7b1d46;
-        width: 100%;
-    }
-    .pieDePagina{
-        background-color: #7b1d46;
-        width: 100%;
-        max-width: 1500px;
-        margin: auto;
-        display: grid; /*propiedad grid*/
-        grid-template-columns: repeat(4, 1fr);/*para que se aplique grid en columnas*/
-        grid-gap: 50px; /*separa las lineas de texto en relacion con dimesion*/
-        padding: 45px 0px;
-    }
-    .pieDePagina .box figure{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .pieDePagina .box figure img{
-        width: 250px;
-    }
-    .pieDePagina .box h2{
-        color: #d9d1c5;
-        margin-bottom: 25px;
-        font-size: 20px;
-    }
-    .pieDePagina .box li{
-        color: #d9d1c5;
-        margin-bottom: 10px;
-        list-style-type: none;
-    }
-    .pieDePagina .redSocial a{
-        display: inline-block;
-        text-decoration: none;
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        color: #d9d1c5;
-        margin-right: 10px;
-        background-color: #770d3b;
-        text-align: center;
-        transition: all 300ms ease;
-    }
-    .pieDePagina .redSocial a:hover{
-        color: aqua
-    }
-    .pieDePagina .grupo2{
-        background-color: #770d3b;
-        padding: 15px 10px;
-        text-align: center;
-    }
-}
