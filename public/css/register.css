@@ -75,9 +75,9 @@ img.header-logo{
     max-width: 1200px;
     margin: auto;
     display: grid; /*propiedad grid*/
-    grid-template-columns: repeat(4, 1fr);/*para que se aplique grid en columnas*/
+    grid-template-columns: repeat(2, 2fr);/*para que se aplique grid en columnas*/
     grid-gap: 50px; /*separa las lineas de texto en relacion con dimesion*/
-    padding: 45px 0px;
+    padding: 25px 10px;
 }
 .pieDePagina .grupo1 .box figure{
     width: 100%;
@@ -91,7 +91,7 @@ img.header-logo{
 .pieDePagina .grupo1 .box h2{
     color: #d9d1c5;
     margin-bottom: 25px;
-    font-size: 15px;
+    font-size: 20px;
 }
 .pieDePagina .grupo1 .box li{
     color: #d9d1c5;
@@ -115,7 +115,7 @@ img.header-logo{
 }
 .pieDePagina .grupo2{
     background-color: #770d3b;
-    padding: 15px 10px;
+    padding: 15px 20px;
     text-align: center;
 }
     /* 
@@ -129,6 +129,113 @@ div.burger-menu {
     font-size: 20px;
 
 } */
+@media (min-width: 769px) {
+    img.header-logo{
+        display: block;
+        margin: auto;
+        padding: 10px;
+        width: 200px;
+    }
+    .top-header{
+        background-color:#7b1d46 ;
+    }
+    .searching{
+        position: center;
+        padding: 5px;
+    }
+    .searching input{
+        width: 240px;
+        height: '40px';
+        padding: 0px 20px;
+        font-size: 18px;
+        color: black;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 30px;
+    }
+    /*.search-nav{
+        margin-left: 85px;  ACOMODAR 
+        border:1px solid;
+        border-radius: 3px;
+        width: 500px;
+        background-color: white;
+    }*/
+    .navegacionBarra{
+        list-style: none;
+        padding: 0;
+        background: #7b1d46;
+        width: 100%;
+        max-width: 2000px;
+    }
+    .navegacionBarra li a{
+        text-decoration: none;
+        color: #d9d1c5;
+        padding: 20px;
+        display: block;
+    }
+    .navegacionBarra li{
+        display: inline-block;
+        text-align: center;
+    }
+    .navegacionBarra li:hover{
+        background: #770d3b;
+    }
+    
+    ---------------------------FOOTER-------------------------------
+    .pieDePagina{
+        background-color: #7b1d46;
+        width: 100%;
+    }
+    .pieDePagina .grupo1{
+        background-color: #7b1d46;
+        width: 100%;
+        max-width: 1500px;
+        margin: auto;
+        display: grid; /*propiedad grid*/
+        grid-template-columns: repeat(4, 1fr);/*para que se aplique grid en columnas*/
+        grid-gap: 50px; /*separa las lineas de texto en relacion con dimesion*/
+        padding: 45px 0px;
+    }
+    .pieDePagina .grupo1 .box figure{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .pieDePagina .grupo1 .box figure img{
+        width: 250px;
+    }
+    .pieDePagina .grupo1 .box h2{
+        color: #d9d1c5;
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+    .pieDePagina .grupo1 .box li{
+        color: #d9d1c5;
+        margin-bottom: 10px;
+        list-style-type: none;
+    }
+    .pieDePagina .grupo1 .redSocial a{
+        display: inline-block;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: #d9d1c5;
+        margin-right: 10px;
+        background-color: #770d3b;
+        text-align: center;
+        transition: all 300ms ease;
+    }
+    .pieDePagina .grupo1 .redSocial a:hover{
+        color: aqua
+    }
+    .pieDePagina .grupo2{
+        background-color: #770d3b;
+        padding: 15px 10px;
+        text-align: center;
+    }
+}
 
 /* -----------------------------REGISTER----------------------------- */
 main{
@@ -170,5 +277,109 @@ button{
 }
 
 @media (min-width: 769px){
-
+    img.header-logo{
+        display: block;
+        margin: auto;
+        padding: 10px;
+        width: 200px;
+    }
+    .top-header{
+        background-color:#7b1d46 ;
+    }
+    .searching{
+        position: center;
+        padding: 5px;
+    }
+    .searching input{
+        width: 240px;
+        height: '40px';
+        padding: 0px 20px;
+        font-size: 18px;
+        color: black;
+        outline: none;
+        border: 1px solid silver;
+        border-radius: 30px;
+    }
+    /*.search-nav{
+        margin-left: 85px;  ACOMODAR 
+        border:1px solid;
+        border-radius: 3px;
+        width: 500px;
+        background-color: white;
+    }*/
+    .navegacionBarra{
+        list-style: none;
+        padding: 0;
+        background: #7b1d46;
+        width: 100%;
+        max-width: 2000px;
+    }
+    .navegacionBarra li a{
+        text-decoration: none;
+        color: #d9d1c5;
+        padding: 20px;
+        display: block;
+    }
+    .navegacionBarra li{
+        display: inline-block;
+        text-align: center;
+    }
+    .navegacionBarra li:hover{
+        background: #770d3b;
+    }
+    
+    ---------------------------FOOTER-------------------------------
+    .pieDePagina{
+        background-color: #7b1d46;
+        width: 100%;
+    }
+    .pieDePagina .grupo1{
+        background-color: #7b1d46;
+        width: 100%;
+        max-width: 1500px;
+        margin: auto;
+        display: grid; /*propiedad grid*/
+        grid-template-columns: repeat(4, 1fr);/*para que se aplique grid en columnas*/
+        grid-gap: 50px; /*separa las lineas de texto en relacion con dimesion*/
+        padding: 45px 0px;
+    }
+    .pieDePagina .grupo1 .box figure{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .pieDePagina .grupo1 .box figure img{
+        width: 250px;
+    }
+    .pieDePagina .grupo1 .box h2{
+        color: #d9d1c5;
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+    .pieDePagina .grupo1 .box li{
+        color: #d9d1c5;
+        margin-bottom: 10px;
+        list-style-type: none;
+    }
+    .pieDePagina .grupo1 .redSocial a{
+        display: inline-block;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: #d9d1c5;
+        margin-right: 10px;
+        background-color: #770d3b;
+        text-align: center;
+        transition: all 300ms ease;
+    }
+    .pieDePagina .grupo1 .redSocial a:hover{
+        color: aqua
+    }
+    .pieDePagina .grupo2{
+        background-color: #770d3b;
+        padding: 15px 10px;
+        text-align: center;
+    }
 }
