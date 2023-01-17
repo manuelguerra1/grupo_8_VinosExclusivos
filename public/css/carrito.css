@@ -9,11 +9,13 @@ body{
     justify-content: center;
 }
 
+/* ---------------------------HEADER------------------------------- */
 img.header-logo{
     display: block;
     margin: auto;
     padding: 10px;
     width: 200px;
+    
 }
 .top-header{
     background-color:#7b1d46 ;
@@ -21,17 +23,29 @@ img.header-logo{
 .searching{
     position: center;
     padding: 5px;
+    width: 50vw;
 }
+
 .searching input{
     width: 240px;
     height: '40px';
     padding: 0px 20px;
-    font-size: 18px;
+    font-size: 20px;
     color: black;
     outline: none;
     border: 1px solid silver;
     border-radius: 30px;
+    
 }
+
+.searching button{
+    font-size: 20px;
+    border-radius: 30px;
+    border: 1px;
+    background-color: #7b1d46;
+    color: #fff;
+}
+
 /*.search-nav{
     margin-left: 85px;  ACOMODAR 
     border:1px solid;
@@ -43,14 +57,12 @@ img.header-logo{
     list-style: none;
     padding: 0;
     background: #7b1d46;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
+    width: 100vw;
 }
 .navegacionBarra li a{
     text-decoration: none;
     color: #d9d1c5;
-    padding: 10px;
+    padding: 20px;
     display: block;
 }
 .navegacionBarra li{
@@ -61,6 +73,45 @@ img.header-logo{
     background: #770d3b;
 }
 
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart{
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #7b1d46;
+    border: #7b1d46;
+
+
+}
+
+.fa-circle-user{
+    margin-right: 25px;
+    color: #fff;
+    font-size: 30px;
+
+}
+
+.fa-cart-shopping{
+    margin-right: 25px;
+    color: #fff;
+    font-size: 25px;
+
+}
+
+.user{
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #7b1d46;
+    border: #7b1d46;
+
+    
+}
+
 /* ---------------------------FOOTER------------------------------- */
 .pieDePagina{
     background-color: #7b1d46;
@@ -69,8 +120,6 @@ img.header-logo{
 .pieDePagina {
     background-color: #7b1d46;
     width: 100%;
-    max-width: 1200px;
-    margin: auto; 
     padding: 25px 10px;
 }
 
@@ -200,6 +249,39 @@ td:last-child{
 th:last-child{
     text-align: right;
 }
+
+/* -----------------MEDIA QUERIES------------------- */
+@media (min-width: 361px){
+    .pieDePagina{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .pieDePagina .box .redSocial{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 0 40px;
+        width: 100px;
+        
+    }
+
+    .pieDePagina .box h2{
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 0 10px 15px;
+        width: 100px;
+    }
+
+    .pieDePagina ul{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
 @media (min-width: 769px) {
     /* ----------------------HEADER----------------------- */
     img.header-logo{
@@ -319,5 +401,97 @@ th:last-child{
     th:last-child{
         text-align: right;
     }
-}
+    /* -----------------FOOTER------------------ */
+    footer{
+        width: 100vw;
+        }
     
+        .pieDePagina{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .pieDePagina .box{
+            font-size: 20px;
+            width: 25vw;
+        }
+    
+        .pieDePagina .box1{
+            font-size: 20px;
+            width: 25vw;
+        }
+    
+        .pieDePagina .box1 .payments .banelco{
+            font-size: 40px;
+            width: 75px;
+            height: 50px;
+            margin: 5px
+        }
+        .pieDePagina .box1 .payments .visa{
+            font-size: 40px;
+            width: 75px;
+            height: 50px;
+            margin: 5px
+        }
+        .pieDePagina .box1 .payments .mastercard{
+            font-size: 40px;
+            width: 75px;
+            height: 50px;
+            margin: 5px
+        }
+        .pieDePagina .box1 .payments .mercadopago{
+            font-size: 40px;
+            width: 75px;
+            height: 50px;
+            margin: 5px
+        }
+        .pieDePagina .box1 .payments .rapipago{
+            font-size: 40px;
+            width: 75px;
+            height: 50px;
+            margin: 5px
+        }
+        .pieDePagina .box1 .payments .pagofacil{
+            font-size: 40px;
+            width: 75px;
+            height: 50px;
+            margin: 5px
+        }
+}
+
+@media (min-width: 1280px){
+    footer{
+        width: 100vw;
+    }
+
+    .pieDePagina{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .pieDePagina .box .redSocial {
+        width: 30vw;
+    }
+
+    .pieDePagina .box h2{
+        margin: 10px 10px 10px 60px;
+    }
+
+    .pieDePagina .box .redSocial a{
+        font-size: 30px;
+        width: 10vw;
+        text-align: center;
+    }
+
+    .pieDePagina .box ul{
+        width: 30vw;
+    }
+
+    .pieDePagina .box1{
+        width: 30vw;
+    }
+
+    
+}
