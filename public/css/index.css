@@ -73,17 +73,19 @@ p{
 .pieDePagina{
     background-color: #7b1d46;
     width: 100%;
+
 }
 .pieDePagina {
     background-color: #7b1d46;
     width: 100%;
-    max-width: 1200px;
     margin: auto; 
     padding: 25px 10px;
 }
 
-.pieDePagina .box{
+.pieDePagina .box2{
     text-align:center;
+    width: 360px;
+   
 }
 
 .pieDePagina .box h2{
@@ -98,10 +100,11 @@ p{
     padding-bottom: 15px;
 }
 
-.pieDePagina .box li{
+.pieDePagina .box2 li{
     color: #d9d1c5;
     margin-bottom: 10px;
     list-style-type: none;
+    
 }
 .pieDePagina .redSocial a{
     display: inline-block;
@@ -118,7 +121,8 @@ p{
 .pieDePagina .redSocial{
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+   
 
 }
 
@@ -145,11 +149,12 @@ p{
 
 @media (min-width: 361px){
    .pieDePagina .box .redSocial{
-    /* align-items: center; */
-    display: block;
+    align-self: center;
+    display: flex;
     flex-wrap: wrap;
-    border-color: black;
-    /* justify-content: space-between; */
+   
+    
+    
    }  
 }
 
