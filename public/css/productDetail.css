@@ -187,7 +187,7 @@ img.header-logo{
 
 .product1 .product{
     width: 330px;
-    margin: 15px 15px 0 15px;
+    margin: 70px 15px 0 15px;
 }
 .product1 .desc{
     margin: 8px 0 0 15px;
@@ -235,11 +235,12 @@ img.header-logo{
 
 .product2 .product{
     width: 330px;
-    margin: 15px 15px 0 15px;
+    margin: 70px 15px 0 15px;
 }
 .product2 .desc{
-    margin: 8px 0 0 15px;
+    margin: 15px 0 0 15px;
     font-size: 18px;
+
 }
 .product2 h2{
     margin: 8px 0 0 15px;
@@ -281,6 +282,101 @@ img.header-logo{
     margin: 15px;
 }
 
+.product3 .product{
+    width: 330px;
+    margin: 70px 15px 0 15px;
+}
+.product3 .desc{
+    margin: 8px 0 0 15px;
+    font-size: 18px;
+}
+.product3 h2{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+}
+.product3 button{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #770d3b;
+    color: #d9d1c5;
+    border-radius: 5px;
+    padding: 5px;
+    letter-spacing: 1px;  
+}
+
+.product3 h4{
+    margin: 15px 0 2px 15px;
+}
+
+.product3 select{
+    margin: 0 0 15px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.product3 h3{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product3 .shipping{
+    text-transform: uppercase;
+    margin: 15px;
+}
+
+.product3 .rules{
+    margin: 15px;
+}
+
+.product4 .product{
+    width: 330px;
+    margin: 70px 15px 0 15px;
+}
+.product4 .desc{
+    margin: 8px 0 0 15px;
+    font-size: 18px;
+}
+.product4 h2{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+}
+.product4 button{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #770d3b;
+    color: #d9d1c5;
+    border-radius: 5px;
+    padding: 5px;
+    letter-spacing: 1px;  
+}
+
+.product4 h4{
+    margin: 15px 0 2px 15px;
+}
+
+.product4 select{
+    margin: 0 0 15px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.product4 h3{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product4 .shipping{
+    text-transform: uppercase;
+    margin: 15px;
+}
+
+.product4 .rules{
+    margin: 15px;
+}
 /* -----------------MEDIA QUERIES------------------- */
 @media (min-width: 361px){
     .pieDePagina{

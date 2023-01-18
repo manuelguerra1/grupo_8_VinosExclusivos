@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Login</title>
 </head>
 
@@ -20,7 +20,9 @@
             <header>
                     <div class="top-header">
         
-                        <img class="header-logo" src="/img/imgs/logo-sin-fondo-1-beige.png" alt="logo" >
+                        <a href="../views/index.html">
+                            <div class="logo-to-menu"> <img class="header-logo" src="../img/imgs/logo-sin-fondo-1-beige.png" alt="logo" > </a>
+                        </a>
         
                         <!-- <button>
                             <div class="burger-menu">
@@ -34,9 +36,10 @@
                             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                         <div class="buttons">
-                            <button class="user"> <a href="login"><i class="fa-solid fa-circle-user"></i></a> </button>
-                            
-                            <button class="cart"> <a href="carrito"><i class="fa-solid fa-cart-shopping"></i></a> </button>
+                            <button class="user"> <a href="../login.html"><i class="fa-solid fa-circle-user"></i></a> </button>
+                
+                            <button class="cart"> <a href="../views/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a> </button>
+            
                         </div>
                         
                         
@@ -46,11 +49,11 @@
                         <div>
                             
                             <ul class="navegacionBarra">
-                                <li> <a href="/">Home</a> </li>
-                                <li> <a href="productDetail">Productos</a> </li>
-                                <li> <a href="carrito">Carrito</a> </li>
-                                <li> <a href="login">Login</a> </li>
-                                <li> <a href="register">Crear Cuenta</a> </li>
+                                <li> <a href="../views/index.html">Home</a> </li>
+                                <li> <a href="../views/productDetail.html">Productos</a> </li>
+                                <li> <a href="../views/carrito.html">Carrito</a> </li>
+                                <li> <a href="/">Login</a> </li>
+                                <li> <a href="../views/register.html">Crear Cuenta</a> </li>
         
                             </ul>
         
@@ -59,14 +62,14 @@
                     <nav>
                         <div class="nav-bar">
                             
-                            <ul>
+                            <!--<ul>
                                 <li> <i class="fa-solid fa-wine-glass-empty"></i> <a href="">Vinos</a> </li>
                                 <li> <i class="fa-solid fa-wine-bottle"></i> <a href="">Destilados</a> </li>
                                 <li> <i class="fa-solid fa-utensils"></i> <a href="">Maridajes</a> </li>
                                 <li> <i class="fa-solid fa-martini-glass-citrus"></i> <a href="">Cócteles</a> </li>
                                 <li> <i class="fa-solid fa-tags"></i> <a href="">Ofertas</a> </li>
         
-                            </ul>
+                            </ul>-->
         
                         </div>
         
@@ -77,7 +80,7 @@
             <!--Armado Login Box-->
             <section class="login">
                <div class="loginBox">
-                   <img class="avatar" src="/img/imgs/logo-sin-fondo-1-beige.png"/>
+                   <img class="avatar" src="../img/imgs/logo-sin-fondo-1-beige.png"/>
                       <h1>Logueate Aqui</h1>
                       <form action="">
                           <!--Nombre Usuario-->

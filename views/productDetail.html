@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="../css/productDetail.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,7 +18,9 @@
         <header>
                 <div class="top-header">
     
-                    <img class="header-logo" src="/img/imgs/logo-sin-fondo-1-beige.png" alt="logo" >
+                    <a href="../views/index.html">
+                        <div class="logo-to-menu"> <img class="header-logo" src="../img/imgs/logo-sin-fondo-1-beige.png" alt="logo" > </a>
+                    </a>
     
                     <!-- <button>
                         <div class="burger-menu">
@@ -32,9 +34,10 @@
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                     <div class="buttons">
-                        <button class="user"> <a href="login"><i class="fa-solid fa-circle-user"></i></a> </button>
-                        
-                        <button class="cart"> <a href="carrito"><i class="fa-solid fa-cart-shopping"></i></a> </button>
+                        <button class="user"> <a href="../views/login.html"><i class="fa-solid fa-circle-user"></i></a> </button>
+            
+                        <button class="cart"> <a href="../views/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a> </button>
+        
                     </div>
                     
                     
@@ -44,11 +47,11 @@
                     <div>
                         
                         <ul class="navegacionBarra">
-                            <li> <a href="/">Home</a> </li>
-                            <li> <a href="productDetail">Productos</a> </li>
-                            <li> <a href="carrito">Carrito</a> </li>
-                            <li> <a href="login">Login</a> </li>
-                            <li> <a href="register">Crear Cuenta</a> </li>
+                            <li> <a href="../views/index.html">Home</a> </li>
+                            <li> <a href="/">Productos</a> </li>
+                            <li> <a href="../views/carrito.html">Carrito</a> </li>
+                            <li> <a href="../views/login.html">Login</a> </li>
+                            <li> <a href="../views/register.html">Crear Cuenta</a> </li>
     
                         </ul>
     
@@ -57,14 +60,14 @@
                 <nav>
                     <div class="nav-bar">
                         
-                        <ul>
+                        <!--<ul>
                             <li> <i class="fa-solid fa-wine-glass-empty"></i> <a href="">Vinos</a> </li>
                             <li> <i class="fa-solid fa-wine-bottle"></i> <a href="">Destilados</a> </li>
                             <li> <i class="fa-solid fa-utensils"></i> <a href="">Maridajes</a> </li>
                             <li> <i class="fa-solid fa-martini-glass-citrus"></i> <a href="">Cócteles</a> </li>
                             <li> <i class="fa-solid fa-tags"></i> <a href="">Ofertas</a> </li>
     
-                        </ul>
+                        </ul>-->
     
                     </div>
     
@@ -73,7 +76,7 @@
         
     <main>
         <div class="product1">
-            <img class="product" src="/img/imgs/gin-merle-blue-.webp" alt="product-image" width="500px">
+            <img class="product" src="../img/imgs/gin-merle-blue-.webp" alt="product-image" width="500px">
             <h3>Gin Merle Blue</h3>
             <h2>$8.000</h2>
             <button type="submit"> Agregar al carrito </button>
@@ -96,7 +99,7 @@
         <hr>
         <hr>
         <div class="product2">
-            <img class="product" src="/img/imgs/gin-bosque-alta-montaña.webp" alt="product2-image" width="500px">
+            <img class="product" src="../img/imgs/gin-bosque-alta-montaña.webp" alt="product2-image" width="500px">
             <h3>Gin Bosque Alta Montaña </h3>
             <h2>$10.000</h2>
             <button type="submit"> Agregar al carrito </button>
@@ -117,7 +120,61 @@
             <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
             <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
         </div>
+        <hr>
+        <hr>
+        <div class="product3">
+            <img class="product" src="../img/imgs/produc-bombay-sapphire-dry-gin.jpg" alt="product3-image" width="500px">
+            <h3>Bombay Sapphire</h3>
+            <h2>$9.200</h2>
+            <button type="submit"> Agregar al carrito </button>
+            <h4> Cantidad: </h4> <select name="product-amount" id="">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+            </select>
+            <p class="desc">Descripción: 
+                <br>
+                1 Gin Bombay Sapphire 500ML
 
+                <br>
+                El nombre Bombay Sapphire proviene
+                de la popularidad de la ginebra en la
+                India en la época de la colonización
+                británica.</p>  
+                
+            <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+            <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+        </div>
+        <hr>
+        <hr>
+        <div class="product4">
+            <img class="product" src="../img/imgs/prod -carmelo-patti.webp" alt="product4c-image" width="500px">
+            <h3>Carmelo Patti</h3>
+            <h2>$5.000</h2>
+            <button type="submit"> Agregar al carrito </button>
+            <h4> Cantidad: </h4> <select name="product-amount" id="">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+            </select>
+            <p class="desc">Descripción: 
+                <br>
+                1 Gin Bombay Sapphire 500ML
+
+                <br>
+                Uva: 100% Malbec.
+                Región: Agrelo & Perdriel, Luján de
+                Cuyo, Mendoza.
+                Alcohol: 13,8%.
+                Enólogo: Carmelo Patti.</p>  
+                
+            <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+            <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+        </div>
     </main>
         <footer class="pieDePagina">
             <div class="box">
