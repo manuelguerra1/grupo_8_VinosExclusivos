@@ -13,10 +13,8 @@ img.header-logo{
     display: block;
     margin: auto;
     padding: 10px;
-    width: 200px;
-    
+    width: 200px;   
 }
-
 .top-header{
     background-color:#7b1d46 ;
     width: 100vw;
@@ -25,6 +23,8 @@ img.header-logo{
 .searching{
     position: center;
     padding: 5px;
+     width: 50vw;
+    display: flex;
 }
 .searching input{
     width: 240px;

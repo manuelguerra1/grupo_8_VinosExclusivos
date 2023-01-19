@@ -23,8 +23,17 @@ img.header-logo{
     position: center;
     padding: 5px;
     width: 50vw;
+    display:flex;
 }
 
+.searching button{
+    font-size: 20px;
+    border-radius: 30px;
+    border: 1px;
+    background-color: #7b1d46;
+    color: #fff;
+
+}
 .searching input{
     width: 240px;
     height: '40px';
@@ -37,13 +46,7 @@ img.header-logo{
     
 }
 
-.searching button{
-    font-size: 20px;
-    border-radius: 30px;
-    border: 1px;
-    background-color: #7b1d46;
-    color: #fff;
-}
+
 
 /*.search-nav{
     margin-left: 85px;  ACOMODAR 
@@ -75,6 +78,8 @@ img.header-logo{
 .buttons{
     display: flex;
     justify-content: flex-end;
+    height:15px;
+    justify-content: flex-end;
 }
 
 .cart{
@@ -90,7 +95,7 @@ img.header-logo{
 .fa-circle-user{
     margin-right: 25px;
     color: #fff;
-    font-size: 30px;
+    font-size: 27px;
 
 }
 
@@ -119,12 +124,13 @@ img.header-logo{
 .pieDePagina {
     background-color: #7b1d46;
     width: 100%;
+    margin: auto;
     padding: 25px 10px;
 }
 
 .pieDePagina .box{
     text-align:center;
-    width: 25vw;
+    width: 360px;
 }
 
 .pieDePagina .box h2{
@@ -159,7 +165,7 @@ img.header-logo{
 .pieDePagina .redSocial{
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
 
