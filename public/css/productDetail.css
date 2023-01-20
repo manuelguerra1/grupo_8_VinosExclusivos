@@ -190,20 +190,39 @@ img.header-logo{
 }
 
 /* ------------------------------MAIN--------------------------------- */
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productContainer{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    width: 80%;
+}
+.imgProduct{
+    width: 15vw;
+    height: 400px;
+}
+.imgProduct .img{
+    width: 100%;
+    height: 100%;
+}
 
-.product1 .product{
+.product{
     width: 330px;
     margin: 70px 15px 0 15px;
 }
-.product1 .desc{
+.product .desc{
     margin: 8px 0 0 15px;
     font-size: 18px;
 }
-.product1 h2{
+.product h2{
     margin: 8px 0 0 15px;
     font-weight: bold;
 }
-.product1 button{
+.product button{
     margin: 8px 0 0 15px;
     font-weight: bold;
     font-size: 20px;
@@ -214,32 +233,32 @@ img.header-logo{
     letter-spacing: 1px;  
 }
 
-.product1 h4{
+.product h4{
     margin: 15px 0 2px 15px;
 }
 
-.product1 select{
+.product select{
     margin: 0 0 15px 15px;
     border-radius: 3px;
     font-size: 15px;
 }
 
-.product1 h3{
+.product h3{
     margin: 8px 0 0 15px;
     font-weight: bold;
     font-size: 20px;
 }
 
-.product1 .shipping{
+.product .shipping{
     text-transform: uppercase;
     margin: 15px;
 }
 
-.product1 .rules{
+.product .rules{
     margin: 15px;
 }
 
-.product2 .product{
+/*.product2 .product{
     width: 330px;
     margin: 70px 15px 0 15px;
 }
@@ -382,7 +401,7 @@ img.header-logo{
 
 .product4 .rules{
     margin: 15px;
-}
+}*/
 /* -----------------MEDIA QUERIES------------------- */
 @media (min-width: 361px){
     .pieDePagina{

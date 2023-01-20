@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/productDetail.css">
+    <link rel="stylesheet" href="../public/css/productDetail.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
                 <div class="top-header">
     
                     <a href="/">
-                        <div class="logo-to-menu"> <img class="header-logo" src="../img/imgs/logo-sin-fondo-1-beige.png" alt="logo" > </a>
+                        <div class="logo-to-menu"> <img class="header-logo" src="../public/img/imgs/logo-sin-fondo-1-beige.png" alt="logo" > </a>
                     </a>
     
                     <!-- <button>
@@ -75,106 +75,107 @@
             </header>
         
     <main>
-        <div class="product1">
-            <img class="product" src="../img/imgs/gin-merle-blue-.webp" alt="product-image" width="500px">
-            <h3>Gin Merle Blue</h3>
-            <h2>$8.000</h2>
-            <a href="carrito"> <button type="submit"> Agregar al carrito </button> </a>
-            <h4> Cantidad: </h4> <select name="product-amount" id="">
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-                <option value="five">5</option>
-            </select>
-            <p class="desc">Descripción: 
-                <br>
-                1 Blue Merle 750cc.
-                <br>
-                Un Gin Premium 100% natural. Gracias a su particular combinación de botánicos transforma su color azulado en un original rosa al entrar en contacto con la tónica.</p>  
-                
-            <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
-            <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
-        </div>
-        <hr>
-        <hr>
-        <div class="product2">
-            <img class="product" src="../img/imgs/gin-bosque-alta-montaña.webp" alt="product2-image" width="500px">
-            <h3>Gin Bosque Alta Montaña </h3>
-            <h2>$10.000</h2>
-            <a href="carrito"> <button type="submit"> Agregar al carrito </button> </a>
-            <h4> Cantidad: </h4> <select name="product-amount" id="">
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-                <option value="five">5</option>
-            </select>
-            <p class="desc">Descripción: 
-                <br>
-                1 Gin Bosque Alta Montaña 500ML
+        <section class="products">
+            <div class="productContainer">
+                <div class="product">
+                    <div class="imgProduct"><img src="../public/img/imgs/gin-merle-blue-.webp"></div>
+                    <h3>Gin Merle Blue</h3>
+                    <h2>$8.000</h2>
+                    <a href="carrito"> <button type="submit"> Agregar al carrito </button> </a>
+                    <h4> Cantidad: </h4> <select name="product-amount" id="">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select>
+                    <p class="desc">Descripción: 
+                        <br>
+                        1 Blue Merle 750cc.
+                        <br>
+                        Un Gin Premium 100% natural. Gracias a su particular combinación de botánicos transforma su color azulado en un original rosa al entrar en contacto con la tónica.</p>  
+                        
+                    <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+                    <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+                </div>
+            
+                <div class="product">
+                    <div class="imgProduct"><img src="../public/img/imgs/gin-bosque-alta-montaña.webp"></div>
+                    <h3>Gin Bosque Alta Montaña </h3>
+                    <h2>$10.000</h2>
+                    <a href="carrito"> <button type="submit"> Agregar al carrito </button> </a>
+                    <h4> Cantidad: </h4> <select name="product-amount" id="">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select>
+                    <p class="desc">Descripción: 
+                        <br>
+                        1 Gin Bosque Alta Montaña 500ML
 
-                <br>
-                Este gin se elabora artesanalmente desde la selección de sus insumos hasta el embotellado del producto finalizado, todo el proceso es cuidadosamente supervisado de forma artesanal. Luego de cuatro destilaciones, se toma para embotellar solamente el corazón del gin, descartando en buenas proporciones las cabezas y colas de cada partida. Elaborado manualmente en cada etapa de su proceso. Esta Edicion de Bosque Gin Alta Montaña es una partida adapatada y diseñada para el frío de la alta montaña, inspirado en el Cerro Dos Picos, tiene una graduación Alcohólica de 53 grs</p>  
-                
-            <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
-            <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
-        </div>
-        <hr>
-        <hr>
-        <div class="product3">
-            <img class="product" src="../img/imgs/produc-bombay-sapphire-dry-gin.jpg" alt="product3-image" width="500px">
-            <h3>Bombay Sapphire</h3>
-            <h2>$9.200</h2>
-            <a href="carrito"> <button type="submit"> Agregar al carrito </button> </a>
-            <h4> Cantidad: </h4> <select name="product-amount" id="">
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-                <option value="five">5</option>
-            </select>
-            <p class="desc">Descripción: 
-                <br>
-                1 Gin Bombay Sapphire 500ML
+                        <br>
+                        Este gin se elabora artesanalmente desde la selección de sus insumos hasta el embotellado del producto finalizado, todo el proceso es cuidadosamente supervisado de forma artesanal. Luego de cuatro destilaciones, se toma para embotellar solamente el corazón del gin, descartando en buenas proporciones las cabezas y colas de cada partida. Elaborado manualmente en cada etapa de su proceso. Esta Edicion de Bosque Gin Alta Montaña es una partida adapatada y diseñada para el frío de la alta montaña, inspirado en el Cerro Dos Picos, tiene una graduación Alcohólica de 53 grs</p>  
+                        
+                    <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+                    <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+                </div>
 
-                <br>
-                El nombre Bombay Sapphire proviene
-                de la popularidad de la ginebra en la
-                India en la época de la colonización
-                británica.</p>  
-                
-            <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
-            <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
-        </div>
-        <hr>
-        <hr>
-        <div class="product4">
-            <img class="product" src="../img/imgs/prod -carmelo-patti.webp" alt="product4c-image" width="500px">
-            <h3>Carmelo Patti</h3>
-            <h2>$5.000</h2>
-             <a href="carrito"> <button type="submit"> Agregar al carrito </button> </a> 
-            <h4> Cantidad: </h4> <select name="product-amount" id="">
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-                <option value="five">5</option>
-            </select>
-            <p class="desc">Descripción: 
-                <br>
-                1 Gin Bombay Sapphire 500ML
+                <div class="product">
+                    <div class="imgProduct"><img src="../public/img/imgs/produc-bombay-sapphire-dry-gin.jpg"></div>
+                    <h3>Bombay Sapphire</h3>
+                    <h2>$9.200</h2>
+                    <a href="carrito"> <button type="submit"> Agregar al carrito </button> </a>
+                    <h4> Cantidad: </h4> <select name="product-amount" id="">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select>
+                    <p class="desc">Descripción: 
+                        <br>
+                        1 Gin Bombay Sapphire 500ML
 
-                <br>
-                Uva: 100% Malbec.
-                Región: Agrelo & Perdriel, Luján de
-                Cuyo, Mendoza.
-                Alcohol: 13,8%.
-                Enólogo: Carmelo Patti.</p>  
-                
-            <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
-            <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
-        </div>
+                        <br>
+                        El nombre Bombay Sapphire proviene
+                        de la popularidad de la ginebra en la
+                        India en la época de la colonización
+                        británica.</p>  
+                        
+                    <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+                    <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+                </div>
+
+                <div class="product">
+                    <div class="imgProduct"><img src="../public/img/imgs/prod -carmelo-patti.webp"></div>
+                    <h3>Carmelo Patti</h3>
+                    <h2>$5.000</h2>
+                    <a href="carrito"> <button type="submit"> Agregar al carrito </button> </a> 
+                    <h4> Cantidad: </h4> <select name="product-amount" id="">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select>
+                    <p class="desc">Descripción: 
+                        <br>
+                        1 Gin Bombay Sapphire 500ML
+
+                        <br>
+                        Uva: 100% Malbec.
+                        Región: Agrelo & Perdriel, Luján de
+                        Cuyo, Mendoza.
+                        Alcohol: 13,8%.
+                        Enólogo: Carmelo Patti.</p>  
+                        
+                    <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+                    <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+                </div>
+            </div>
+    </section>
     </main>
         <footer class="pieDePagina">
             <div class="box">
