@@ -151,6 +151,11 @@ article {
     flex-wrap: wrap;
     margin: 10px auto;
 }
+.prod-cabernet {
+    margin: 10px;
+    background-color:#fff;
+    border-radius: 10px;
+}
 
 
 /* ---------------------------FOOTER------------------------------- */
