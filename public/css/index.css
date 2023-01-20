@@ -135,13 +135,22 @@ main section article img{
 
 main section{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: space-around;
     align-items: center;
+    margin: 10px auto;
 }
 
 .data{
     margin: 15px;
 }
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
 
 /* ---------------------------FOOTER------------------------------- */
 .pieDePagina{
