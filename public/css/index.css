@@ -179,6 +179,14 @@ article {
     width: 100%;
     height: 100%;
 }
+
+.country .country-icon {
+    width: 19px;
+    height: 18px;
+    margin-left: 16px;
+    margin-top: 10px; 
+}
+
 .product{
     /* width: 200px; */
     margin: 70px 15px 0 15px;
@@ -229,7 +237,7 @@ article {
 }
 
 .product {
-    margin: 10px;
+    margin: 15px 0 15px 0;
     background-color:#fff;
     border-radius: 10px;
 }
@@ -287,7 +295,6 @@ article {
     align-items: center;
     display: flex;
     justify-content: space-between;
-   
 }
 
 .pieDePagina .redSocial a:hover{
@@ -309,6 +316,15 @@ article {
 .pieDePagina .box1 .payments{
     text-align: center;
 }
+
+.shipping {
+    color: #770d3b;
+}
+
+.rules{
+    color: #770d3b;
+}
+
 /* -----------------MEDIA QUERIES------------------- */
 @media (min-width: 361px){
     
