@@ -20,10 +20,11 @@ img.header-logo{
     background-color:#7b1d46 ;
 }
 .searching{
-    position: center;
     padding: 5px;
-    width: 50vw;
+    width: 100vw;
     display: flex;
+    justify-content: center;
+
 }
 
 .searching button{
@@ -36,8 +37,8 @@ img.header-logo{
 }
 
 .searching input{
-    width: 240px;
-    height: '40px';
+    width: 540px;
+    height: 30px;
     padding: 0px 20px;
     font-size: 20px;
     color: black;
@@ -75,6 +76,13 @@ img.header-logo{
 .navegacionBarra li:hover{
     background: #770d3b;
 }
+
+/* .navegacionBarra li button{
+    background-color: #d9d1c5;
+    border: 1px solid #d9d1c5;
+    border-radius: 5px;
+    padding: 5px 15px;
+} */
 
 .buttons{
     display: flex;
