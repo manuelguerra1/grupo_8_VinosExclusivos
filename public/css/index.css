@@ -130,7 +130,7 @@ img.header-logo{
     padding-top: 100px;
 }
 
-main section article img{
+/* main section article img{
     width: 200px;
     height: auto;
     border: 1px solid rgb(190, 182, 182);
@@ -139,18 +139,18 @@ main section article img{
     margin: 15px;
     font-size: 90px;
 
-}
+} */
 
-main section{
+/* main section{
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-around;
+    /* justify-content: space-around;
     align-items: center;
     margin: 10px auto;
     
-}
+} */
 
-.data{
+/* .data{
     margin: 15px;
 }
 
@@ -158,6 +158,96 @@ article {
     display: flex;
     flex-wrap: wrap;
     margin: 10px auto;
+}
+.prod-cabernet {
+    margin: 10px;
+    background-color:#fff;
+    border-radius: 10px;
+} */
+
+
+.products{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+}
+.productContainer{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    width: 80%;
+}
+.imgProduct{
+    width: 250px;
+    /* height: 357px; */
+    padding: 0 50px 5px 15px;
+    margin-left: 85px;
+}
+.imgProduct img{
+    width: 100%;
+    height: 100%;
+}
+
+.country .country-icon {
+    width: 19px;
+    height: 18px;
+    margin-left: 16px;
+    margin-top: 10px; 
+}
+
+.product{
+    /* width: 200px; */
+    margin: 70px 15px 0 15px;
+    justify-content: space-between 10px;
+}
+.product .desc{
+    margin: 8px 0 0 15px;
+    font-size: 18px;
+}
+.product h2{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+}
+.product button{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #770d3b;
+    color: #d9d1c5;
+    border-radius: 5px;
+    padding: 5px;
+    letter-spacing: 1px;  
+}
+
+.product h4{
+    margin: 15px 0 2px 15px;
+}
+
+.product select{
+    margin: 0 0 15px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.product h3{
+    margin: 8px 0 0 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product .shipping{
+    text-transform: uppercase;
+    margin: 15px;
+}
+
+.product .rules{
+    margin: 15px;
+}
+
+.product {
+    margin: 15px 0 15px 0;
+    background-color:#fff;
+    border-radius: 10px;
 }
 
 
@@ -213,7 +303,6 @@ article {
     align-items: center;
     display: flex;
     justify-content: space-between;
-   
 }
 
 .pieDePagina .redSocial a:hover{
@@ -235,6 +324,15 @@ article {
 .pieDePagina .box1 .payments{
     text-align: center;
 }
+
+.shipping {
+    color: #770d3b;
+}
+
+.rules{
+    color: #770d3b;
+}
+
 /* -----------------MEDIA QUERIES------------------- */
 @media (min-width: 361px){
     
