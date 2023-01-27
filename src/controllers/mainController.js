@@ -2,8 +2,9 @@ const path = require('path');
 
 const mainController = {
     index: function (req, res) {
-        res.render('pages/index')
-    } 
+        // res.render('pages/index')
+        res.render('index')
+    }
 }
 
 module.exports = mainController;
