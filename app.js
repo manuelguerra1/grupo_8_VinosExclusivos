@@ -1,12 +1,22 @@
 const express = require('express');
 const app = express();
+const mainRouter = require("./routers/main");
+const usersRouter = require("./routers/users");
+const carritoRouter = require("./routers/carrito");
+const productsRouter = require("./routers/products");
 
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.listen(3008, () => {
     console.log('Servidor corriendo en el puerto 3008');
 })
 
+app.use(mainRouter);
+app.use(usersRouter);
+app.use(carritoRouter);
+app.use(productsRouter);
+/*
 app.get('/', (req, res) =>{
     res.sendFile(__dirname + '/views/index.html')
 })
@@ -26,4 +36,4 @@ app.get('/login', (req, res) =>{
 app.get('/productDetail', (req, res) =>{
     res.sendFile(__dirname + '/views/productDetail.html')
 })
-
+*/
