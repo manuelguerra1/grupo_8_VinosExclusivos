@@ -26,80 +26,51 @@
     <form action = "/">
         <div class="registroProducto">
             
-            <button type="submit" value="Crear">CREAR</button>    
-            <button type="submit" value="Editar">EDITAR</button>    
+              
             
-            <h3> ¡Registrate! </h3>
+            <h3> FORMULARIO DE EDICION DE PRODUCTOS</h3>
+
+            <button type="submit" value="Guardar"><i class="fa-solid fa-circle-plus"></i></button>
+           
             <label for="codigo"></label>
-            <input type="text" name="codigo" id="codigo" placeholder="Codigo" required>
+            <h4>Codigo de Producto: </h4><input  type="text" name="codigo" id="codigo" placeholder="Codigo" required> 
             <br>
+
             <label for="nameproduct"></label>
-            <input type="text" name="nombre" id="name" placeholder="Nombbre del Producto" required>
+            <h4>Nombre del Producto: </h4><input type="text" name="nombre" id="name" placeholder="Nombre del Producto" required>
+            <br>
+
+            <label for="description"></label>
+            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Description*">
             <br>
 
             <label for="variedad"></label>
-            <input type="text" name="variedad" id="variedad" placeholder="Variedad" required>
+            <h4>Variedad: </h4><input type="text" name="variedad" id="variedad" placeholder="Variedad" required>
             <br>
 
             <label for="cosecha"></label>
-            <input type="text" name="cosecha" id="cosecha" placeholder="Año de Cosecha" required>
-            <br>
-
-            <label for="pais"></label>
-            <input type="text" name="pais" id="pais" placeholder="Pais de Origen" required>
+            <h4>Año de Cosecha: </h4><input type="text" name="cosecha" id="cosecha" placeholder="Año de Cosecha" required>
             <br>
 
             <label for="crianza"></label>
-            <input type="text" name="crianza" id="crianza" placeholder="Crianza"required>
+            <h4>Crianza: </h4><input type="text" name="crianza" id="crianza" placeholder="Crianza"required>
+            <br>
+
+            <label for="pais"></label>
+            <h4>Pais de Origen: </h4><input type="text" name="pais" id="pais" placeholder="Pais de Origen" required>
             <br>
 
             <label for="region"></label>
-            <input type="text" name="region" id="region" placeholder="Region" required>
+            <h4>Region: </h4><input type="text" name="region" id="region" placeholder="Region" required>
             <br>
 
-            <!-- <label for="birth"></label>
-            <p class="birth-date">Fecha de nacimiento</p>
-            <input type="date" name="nacimiento" id="birth">
-            <br>
-            <label for="address#1"></label>
-            <input type="text" name="direccion" id="address#1" placeholder="Direccion 1" required>
-            <br> -->
+           
 
-            <label for="description"></label>
-            <input type="text" name="description" id="description" placeholder="Description*">
-            <br>
-
-            <!-- <label for="postal-code"></label>
-            <input type="text" name="codigo postal" id="postal-code" placeholder="Código postal" required>
-            <br>
-
-            <label for="city"></label>
-            <input type="text" name="ciudad" id="city" placeholder="Ciudad" required>
-            <br>
-
-            <label for="province"></label>
-            <input type="text" name="provincia" id="province" placeholder="Provincia" required>
-            <br>
-
-            <label for="country"></label>
-            <input type="text" name="pais" id="country" placeholder="País" required>
-            <br>
-
-            <label for="phone-number"></label>
-            <input type="number" name="telefono" id="phone-number" placeholder="Teléfono celular" required> 
-            <br>
-            
-            
-        </div>
-        <div class="terms-cond">
-            <input type="checkbox" name="terminos y condiciones" id="" required>Acepto las condiciones de uso y políticas de privacidad.
-        </div>
-        <br> -->
+        <button type="submit" value="Guardar">EDITAR</button>
 
         <button type="reset" value="Borrar">BORRAR</button>
 
-        <button type="submit" value="Guardar">GUARDAR</button>
-
+       
 
     </form>
 </main>
