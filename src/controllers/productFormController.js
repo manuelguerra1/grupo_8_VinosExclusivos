@@ -2,7 +2,7 @@ const path = require('path');
 
 const productForm = {
     productForm: function (req, res) {
-        res.render('products/productForm')
+        res.render('productForm')
     } 
 }
 
