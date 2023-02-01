@@ -6,7 +6,8 @@ const mainRouter = require("./routers/main");
 const usersRouter = require("./routers/users");
 const carritoRouter = require("./routers/carrito");
 const productsRouter = require("./routers/products");
-const productForm = require('./routers/productForm.js')
+const productEditForm = require('./routers/productEditForm.js')
+const productCreateForm = require('./routers/productCreateForm.js')
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
@@ -22,7 +23,9 @@ app.use(mainRouter);
 app.use(usersRouter);
 app.use(carritoRouter);
 app.use(productsRouter);
-app.use(productForm);
+app.use(productEditForm);
+app.use(productCreateForm);
+
 
 /*
 app.get('/', (req, res) =>{

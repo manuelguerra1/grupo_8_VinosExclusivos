@@ -105,6 +105,20 @@ img.header-logo{
     font-size: 25px;
 
 }
+.fa-circle-plus {
+    margin-right: 25px;
+    color: #fff;
+    font-size: 27px;
+
+}
+/* ---------- seguir trabajando con el boton add */
+.add-menu {
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #7b1d46;
+    border: #7b1d46;
+}
 
 .user{
     margin-right: 25px;
