@@ -6,7 +6,7 @@ const mainRouter = require("./routers/main");
 const usersRouter = require("./routers/users");
 const carritoRouter = require("./routers/carrito");
 const productsRouter = require("./routers/products");
-const productForm = requite('./routers/productForm.js')
+const productForm = require('./routers/productForm.js')
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');

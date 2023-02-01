@@ -1,6 +1,6 @@
 const path = require('path');
 
-const productForm = {
+const productFormController = {
     productForm: function (req, res) {
         res.render('productForm')
     } 
