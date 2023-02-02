@@ -131,11 +131,30 @@ div.registroProducto{
 }
 
 div.registroProducto input{
-    border: 1px solid black;
     border-radius: 3px;
     width: 50%;
     padding: 5px;
-    background-color: #7b1d46;
-    border: 1px solid #7b1d46;
-    border-bottom: 2px solid black;
+    margin: 7px;
+    background-color: #e9dee2;
+    border: 2px solid black;
+} 
+
+div.categories{
+    display: flex;
+    background-color: #e9dee2;
+    color: #7b1d46;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 5px 5px 5px 5px;
+    margin: 7px ;
+}
+
+div.prodCreate-buttons button{
+    padding: 4px;
+    margin: 15px;
+    background-color: #d9d1c5;
+    color: #7b1d46;
+    border: 1px solid black;
+    border-radius: 3px;
+    text-decoration: none;
 }
