@@ -140,6 +140,10 @@ div.registroProducto input{
     border: 2px solid black;
 } 
 
+#prod-img{
+    background-color: #7b1d46;
+}
+
 div.categories{
     display: flex;
     background-color: #e9dee2;
