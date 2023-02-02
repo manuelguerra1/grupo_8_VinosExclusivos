@@ -128,6 +128,7 @@ div.registroProducto{
     justify-content: center;
     color: #d9d1c5;
     text-decoration: underline;
+    font-size: 20px;
 }
 
 div.registroProducto input{
