@@ -6,8 +6,7 @@ const mainRouter = require("./routers/main");
 const usersRouter = require("./routers/users");
 const carritoRouter = require("./routers/carrito");
 const productsRouter = require("./routers/products");
-const productEditForm = require('./routers/productEditForm');
-const productCreateForm = require('./routers/productCreateForm');
+const adminRouter = require('./routers/admin');
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
@@ -23,28 +22,4 @@ app.use(mainRouter);
 app.use(usersRouter);
 app.use(carritoRouter);
 app.use(productsRouter);
-app.use(productEditForm);
-app.use(productCreateForm);
-
-
-/*
-app.get('/', (req, res) =>{
-    res.sendFile(__dirname + '/views/index.html')
-})
-
-app.get('/register', (req, res) =>{
-    res.sendFile(__dirname + '/views/register.html')
-})
-
-app.get('/carrito', (req, res) =>{
-    res.sendFile(__dirname + '/views/carrito.html')
-})
-
-app.get('/login', (req, res) =>{
-    res.sendFile(__dirname + '/views/login.html')
-})
-
-app.get('/productDetail', (req, res) =>{
-    res.sendFile(__dirname + '/views/productDetail.html')
-})
-*/
+app.use(adminRouter);

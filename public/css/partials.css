@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,79 +7,10 @@ body{
     background-color: #d9d1c5;
     align-items: center;
     justify-content: center;
-} */
-
-/* ---------------------------LOGIN------------------------------ */
-.login{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: 40px 0;
 }
-
-.loginBox{
-    width: 320px;
-    height: 420px;
-    background-color: #770d3b;
-    color: #d9d1c5;
-    box-sizing: border-box;
-    padding: 70px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.loginBox .avatar{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-
-}
-.loginBox h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-}
-.loginBox label{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    display: block;
-}
-.loginBox input{
-    width: 100%;
-    margin-bottom: 20px;
-}
-.loginBox input[type="text"],
-.loginBox input[type="password"]{
-    border: none;
-    border-bottom: 1px solid #d9d1c5;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #d9d1c5;
-}
-
-.loginBox input[type="submit"]{
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #d9d1c5;
-    color: #770d3b;
-    font-size: 18px;
-    border-radius: 20px;
-}
-.loginBox a{
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: darkgray;
-}
-
 /* ---------------------------HEADER------------------------------- */
-/* img.header-logo{
+
+img.header-logo{
     display: block;
     margin: auto;
     padding: 10px;
@@ -90,15 +21,25 @@ body{
     background-color:#7b1d46 ;
 }
 .searching{
-    position: center;
     padding: 5px;
-    width: 50vw;
+    width: 100vw;
     display: flex;
+    justify-content: center;
+
+}
+
+.searching button{
+    font-size: 20px;
+    border-radius: 30px;
+    border: 1px;
+    background-color: #7b1d46;
+    color: #fff;
+    padding: 0 0 0 5px;
 }
 
 .searching input{
-    width: 240px;
-    height: '40px';
+    width: 540px;
+    height: 30px;
     padding: 0px 20px;
     font-size: 20px;
     color: black;
@@ -108,22 +49,8 @@ body{
     
 }
 
-.searching button{
-    font-size: 20px;
-    border-radius: 30px;
-    border: 1px;
-    background-color: #7b1d46;
-    color: #fff;
-} */
 
-/*.search-nav{
-    margin-left: 85px;  ACOMODAR 
-    border:1px solid;
-    border-radius: 3px;
-    width: 500px;
-    background-color: white;
-}*/
-/* .navegacionBarra{
+.navegacionBarra{
     list-style: none;
     padding: 0;
     background: #7b1d46;
@@ -132,7 +59,7 @@ body{
 .navegacionBarra li a{
     text-decoration: none;
     color: #d9d1c5;
-    padding: 20px;
+    padding: 30px 5px 20px 5px;
     display: block;
 }
 .navegacionBarra li{
@@ -156,8 +83,6 @@ body{
     height: 25px;
     background-color: #7b1d46;
     border: #7b1d46;
-
-
 }
 
 .fa-circle-user{
@@ -174,29 +99,63 @@ body{
 
 }
 
+
 .user{
     margin-right: 25px;
     width: 25px;
     height: 25px;
     background-color: #7b1d46;
     border: #7b1d46;
-
     
-} */
+}
+
+@media (min-width: 361px){
+    
+    .pieDePagina{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .pieDePagina .box .redSocial{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 0 40px;
+        width: 100px;
+        
+    }
+
+    .pieDePagina .box h2{
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 0 10px 15px;
+        width: 100px;
+    }
+
+    .pieDePagina ul{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
 
 /* ---------------------------FOOTER------------------------------- */
-/* .pieDePagina{
+.pieDePagina{
     background-color: #7b1d46;
     width: 100%;
 }
 .pieDePagina {
     background-color: #7b1d46;
     width: 100%;
+    margin: auto; 
     padding: 25px 10px;
 }
 
 .pieDePagina .box{
     text-align:center;
+    /* width: 360px;  */
 }
 
 .pieDePagina .box h2{
@@ -253,10 +212,18 @@ body{
 
 .pieDePagina .box1 .payments{
     text-align: center;
-} */
+}
+.shipping {
+    color: #770d3b;
+}
+
+.rules{
+    color: #770d3b;
+}
 
 /* -----------------MEDIA QUERIES------------------- */
-/* @media (min-width: 361px){
+@media (min-width: 361px){
+    
     .pieDePagina{
         display: flex;
         flex-wrap: wrap;
@@ -287,60 +254,13 @@ body{
     }
 }
 
-@media (min-width: 769px) {
-    img.header-logo{
-        display: block;
-        margin: auto;
-        padding: 10px;
-        width: 200px;
-    }
-    .top-header{
-        background-color:#7b1d46 ;
-    }
-    .searching{
-        position: center;
-        padding: 5px;
-    }
-    .searching input{
-        width: 240px;
-        height: '40px';
-        padding: 0px 20px;
-        font-size: 18px;
-        color: black;
-        outline: none;
-        border: 1px solid silver;
-        border-radius: 30px;
-    } */
-    /*.search-nav{
-        margin-left: 85px;  ACOMODAR 
-        border:1px solid;
-        border-radius: 3px;
-        width: 500px;
-        background-color: white;
-    }*/
-    /* .navegacionBarra{
-        list-style: none;
-        padding: 0;
-        background: #7b1d46;
-        width: 100%;
-        max-width: 2000px;
-    }
-    .navegacionBarra li a{
-        text-decoration: none;
-        color: #d9d1c5;
-        padding: 20px;
-        display: block;
-    }
-    .navegacionBarra li{
-        display: inline-block;
-        text-align: center;
-    }
-    .navegacionBarra li:hover{
-        background: #770d3b;
-    }
-     */
+@media (min-width: 769px){
+
+    /* -----------------HEADER----------------------- */
+
+    
     /* -----------------FOOTER------------------ */
-    /* footer{
+    footer{
         width: 100vw;
         }
     
@@ -432,4 +352,4 @@ body{
     }
 
     
-} */
+}

@@ -1,3 +1,38 @@
+/* -----------------------------REGISTER----------------------------- */
+main{
+    text-align: center;
+}
+
+.register input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px
+}
+
+.register p{
+    margin: 10px 0 3px 10px;
+    padding: 10px 0 3px 4px;
+}
+
+.register input[type="date"]{
+    margin-top: 5px;
+}
+
+button{
+    background-color: #7b1d46;
+    color: #d9d1c5;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px 20px 10px;
+    opacity: 0.9;
+}
+
+.terms-cond{
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+/* 
 *{
     margin: 0;
     padding: 0;
@@ -7,9 +42,9 @@ body{
     background-color: #d9d1c5;
     align-items: center;
     justify-content: center;
-}
+} */
 /* ---------------------------HEADER------------------------------- */
-img.header-logo{
+/* img.header-logo{
     display: block;
     margin: auto;
     padding: 10px;
@@ -35,7 +70,7 @@ img.header-logo{
     outline: none;
     border: 1px solid silver;
     border-radius: 30px;
-}
+} */
 /*.search-nav{
     margin-left: 85px;  ACOMODAR 
     border:1px solid;
@@ -43,7 +78,7 @@ img.header-logo{
     width: 500px;
     background-color: white;
 }*/
-.navegacionBarra{
+/* .navegacionBarra{
     list-style: none;
     padding: 0;
     background: #7b1d46;
@@ -61,9 +96,9 @@ img.header-logo{
 }
 .navegacionBarra li:hover{
     background: #770d3b;
-}
+} */
 /* ---------------------------FOOTER------------------------------- */
-.pieDePagina{
+/* .pieDePagina{
     background-color: #7b1d46;
     width: 100%;
 }
@@ -131,10 +166,10 @@ img.header-logo{
 
 .pieDePagina .box1 .payments{
     text-align: center;
-}
+} */
 
 /* -----------------MEDIA QUERIES------------------- */
-@media (min-width: 361px){
+/* @media (min-width: 361px){
     .pieDePagina{
         display: flex;
         flex-wrap: wrap;
@@ -165,9 +200,9 @@ img.header-logo{
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) { */
     /* ----------------HEADER-------------- */
-    img.header-logo{
+    /* img.header-logo{
         display: block;
         margin: auto;
         padding: 10px;
@@ -189,7 +224,7 @@ img.header-logo{
         outline: none;
         border: 1px solid silver;
         border-radius: 30px;
-    }
+    } */
     /*.search-nav{
         margin-left: 85px;  ACOMODAR 
         border:1px solid;
@@ -197,7 +232,7 @@ img.header-logo{
         width: 500px;
         background-color: white;
     }*/
-    .navegacionBarra{
+    /* .navegacionBarra{
         list-style: none;
         padding: 0;
         background: #7b1d46;
@@ -217,9 +252,9 @@ img.header-logo{
     .navegacionBarra li:hover{
         background: #770d3b;
     }
-    
+     */
     /* -----------------FOOTER------------------ */
-    footer{
+    /* footer{
     width: 100vw;
     }
 
@@ -312,40 +347,6 @@ img.header-logo{
     }
 
     
-}
+} */
 
-/* -----------------------------REGISTER----------------------------- */
-main{
-    text-align: center;
-}
-
-.register input{
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px
-}
-
-.register p{
-    margin: 10px 0 3px 10px;
-    padding: 10px 0 3px 4px;
-}
-
-.register input[type="date"]{
-    margin-top: 5px;
-}
-
-button{
-    background-color: #7b1d46;
-    color: #d9d1c5;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 0 10px 20px 10px;
-    opacity: 0.9;
-}
-
-.terms-cond{
-    margin: 10px;
-    padding: 10px;
-    text-align: left;
-}
 

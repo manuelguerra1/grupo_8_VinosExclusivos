@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--FONTS Agregadas-->
+    
     <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/carrito.css">
 
     <title>Carrito</title>
-</head>
+</head> -->
+<%- include('./partials/head') %> 
 <body>
-    <header>
+    <!-- <header>
             <div class="top-header">
 
                 <a href="/">
                     <div class="logo-to-menu"> <img class="header-logo" src="../img/imgs/logo-sin-fondo-1-beige.png" alt="logo" > </a>
                 </a>
 
-                <!-- <button>
+                <button>
                     <div class="burger-menu">
                         <i class="fa fa-bars burger"></i>
                     </div>
-                </button> -->
+                </button>
 
                 <div class="searching">
                     <input class="search-nav" type="search" name="search-nav" placeholder="Busca tu producto">
@@ -60,19 +61,20 @@
             <nav>
                 <div class="nav-bar">
                     
-                    <!--<ul>
+                    <ul>
                         <li> <i class="fa-solid fa-wine-glass-empty"></i> <a href="">Vinos</a> </li>
                         <li> <i class="fa-solid fa-wine-bottle"></i> <a href="">Destilados</a> </li>
                         <li> <i class="fa-solid fa-utensils"></i> <a href="">Maridajes</a> </li>
                         <li> <i class="fa-solid fa-martini-glass-citrus"></i> <a href="">Cócteles</a> </li>
                         <li> <i class="fa-solid fa-tags"></i> <a href="">Ofertas</a> </li>
 
-                    </ul>-->
+                    </ul>
 
                 </div>
 
             </nav>
-        </header>
+        </header> -->
+        <%- include('./partials/header') %> 
         <!--Carrito detalle de items-->
     <main>
         <div class="carritoPag">
@@ -142,7 +144,7 @@
         </div>
         </main>
         <!--Footer nuevo preguntar que les parece-->
-        <footer class="pieDePagina">
+        <!-- <footer class="pieDePagina">
             <div class="box">
             <h2>Seguinos!</h2>
                     <div class="redSocial">
@@ -179,7 +181,8 @@
             <div class="grupo2">
                 <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
             </div>
-        </footer>
+        </footer> -->
+        <%- include('./partials/footer') %> 
     </body>
 
 </html>

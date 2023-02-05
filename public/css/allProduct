@@ -1,6 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d9d1c5;
+    align-items: center;
+    justify-content: center;
+}
+/* ---------------------------HEADER------------------------------- */
+img.header-logo{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 200px;
+    
+}
+.top-header{
+    background-color:#7b1d46 ;
+}
+.searching{
+    position: center;
+    padding: 5px;
+    width: 50vw;
+    display:flex;
+}
+
+.searching button{
+    font-size: 20px;
+    border-radius: 30px;
+    border: 1px;
+    background-color: #7b1d46;
+    color: #fff;
+
+}
+.searching input{
+    width: 240px;
+    height: '40px';
+    padding: 0px 20px;
+    font-size: 20px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    
+}
+
+
+
+/*.search-nav{
+    margin-left: 85px;  ACOMODAR 
+    border:1px solid;
+    border-radius: 3px;
+    width: 500px;
+    background-color: white;
+}*/
+.navegacionBarra{
+    list-style: none;
+    padding: 0;
+    background: #7b1d46;
+    width: 100vw;
+}
+.navegacionBarra li a{
+    text-decoration: none;
+    color: #d9d1c5;
+    padding: 20px;
+    display: block;
+}
+.navegacionBarra li{
+    display: inline-block;
+    text-align: center;
+}
+.navegacionBarra li:hover{
+    background: #770d3b;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    height:15px;
+    justify-content: flex-end;
+}
+
+.cart{
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #7b1d46;
+    border: #7b1d46;
+
+
+}
+
+.fa-circle-user{
+    margin-right: 25px;
+    color: #fff;
+    font-size: 27px;
+
+}
+
+.fa-cart-shopping{
+    margin-right: 25px;
+    color: #fff;
+    font-size: 25px;
+
+}
+.fa-circle-plus {
+    margin-right: 25px;
+    color: #fff;
+    font-size: 27px;
+
+}
+/* ---------- seguir trabajando con el boton add */
+.add-menu {
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #7b1d46;
+    border: #7b1d46;
+}
+
+.user{
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #7b1d46;
+    border: #7b1d46;
+
+    
+}
+
+/* ---------------------------FOOTER------------------------------- */
+.pieDePagina{
+    background-color: #7b1d46;
+    width: 100%;
+}
+.pieDePagina {
+    background-color: #7b1d46;
+    width: 100%;
+    margin: auto;
+    padding: 25px 10px;
+}
+
+.pieDePagina .box{
+    text-align:center;
+    width: 360px;
+}
+
+.pieDePagina .box h2{
+    color: #d9d1c5;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.pieDePagina .box h3{
+    color: #d9d1c5;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.pieDePagina .box li{
+    color: #d9d1c5;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.pieDePagina .redSocial a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #d9d1c5;
+    margin-right: 10px;
+    background-color: #770d3b;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pieDePagina .redSocial{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pieDePagina .redSocial a:hover{
+    color: aqua; 
+}
+.pieDePagina .grupo2{
+    background-color: #770d3b;
+    padding: 15px 20px;
+    text-align: center;
+    color: #d9d1c5;
+}
+
+.pieDePagina .box1 h3{
+    color: #d9d1c5;
+    padding:15px 0 15px;
+    text-align: center;
+}
+
+.pieDePagina .box1 .payments{
+    text-align: center;
+}
+
 /* ------------------------------MAIN--------------------------------- */
 
-/* .products{
+.products{
     display: flex ;
     align-items: center;
     justify-content: center;
@@ -84,7 +289,7 @@
 
 .product .rules{
     margin: 15px;
-} */
+}
 
 .product {
     margin: 15px 0 15px 0;
@@ -92,17 +297,17 @@
     border-radius: 10px;
 }
 
-.btn-send-description{
+/* .btn-send-description{
     background: #d9d1c5;
     color: #666;
     border-radius: 6px;
     padding: 2px;
-} 
+}  */
 
     /* margin-bottom: auto; */
 
 
-.product2 .product{
+/* .product2 .product{
     width: 330px;
     margin: 70px 15px 0 15px;
 }
@@ -245,216 +450,9 @@
 
 .product4 .rules{
     margin: 15px;
-}
-
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #d9d1c5;
-    align-items: center;
-    justify-content: center;
 } */
-/* ---------------------------HEADER------------------------------- */
-/* img.header-logo{
-    display: block;
-    margin: auto;
-    padding: 10px;
-    width: 200px;
-    
-}
-.top-header{
-    background-color:#7b1d46 ;
-}
-.searching{
-    position: center;
-    padding: 5px;
-    width: 50vw;
-    display:flex;
-}
-
-.searching button{
-    font-size: 20px;
-    border-radius: 30px;
-    border: 1px;
-    background-color: #7b1d46;
-    color: #fff;
-
-}
-.searching input{
-    width: 240px;
-    height: '40px';
-    padding: 0px 20px;
-    font-size: 20px;
-    color: black;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px;
-    
-}
- */
-
-
-/*.search-nav{
-    margin-left: 85px;  ACOMODAR 
-    border:1px solid;
-    border-radius: 3px;
-    width: 500px;
-    background-color: white;
-}*/
-/* .navegacionBarra{
-    list-style: none;
-    padding: 0;
-    background: #7b1d46;
-    width: 100vw;
-}
-.navegacionBarra li a{
-    text-decoration: none;
-    color: #d9d1c5;
-    padding: 20px;
-    display: block;
-}
-.navegacionBarra li{
-    display: inline-block;
-    text-align: center;
-}
-.navegacionBarra li:hover{
-    background: #770d3b;
-}
-
-.buttons{
-    display: flex;
-    justify-content: flex-end;
-    height:15px;
-    justify-content: flex-end;
-}
-
-.cart{
-    margin-right: 25px;
-    width: 25px;
-    height: 25px;
-    background-color: #7b1d46;
-    border: #7b1d46;
-
-
-}
-
-.fa-circle-user{
-    margin-right: 25px;
-    color: #fff;
-    font-size: 27px;
-
-}
-
-.fa-cart-shopping{
-    margin-right: 25px;
-    color: #fff;
-    font-size: 25px;
-
-}
-.fa-circle-plus {
-    margin-right: 25px;
-    color: #fff;
-    font-size: 27px;
-
-} */
-/* ---------- seguir trabajando con el boton add */
-/* .add-menu {
-    margin-right: 25px;
-    width: 25px;
-    height: 25px;
-    background-color: #7b1d46;
-    border: #7b1d46;
-}
-
-.user{
-    margin-right: 25px;
-    width: 25px;
-    height: 25px;
-    background-color: #7b1d46;
-    border: #7b1d46;
-
-    
-} */
-
-/* ---------------------------FOOTER------------------------------- */
-/* .pieDePagina{
-    background-color: #7b1d46;
-    width: 100%;
-}
-.pieDePagina {
-    background-color: #7b1d46;
-    width: 100%;
-    margin: auto;
-    padding: 25px 10px;
-}
-
-.pieDePagina .box{
-    text-align:center;
-    width: 360px;
-}
-
-.pieDePagina .box h2{
-    color: #d9d1c5;
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-.pieDePagina .box h3{
-    color: #d9d1c5;
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-.pieDePagina .box li{
-    color: #d9d1c5;
-    margin-bottom: 10px;
-    list-style-type: none;
-}
-.pieDePagina .redSocial a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #d9d1c5;
-    margin-right: 10px;
-    background-color: #770d3b;
-    text-align: center;
-    transition: all 300ms ease;
-}
-.pieDePagina .redSocial{
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.pieDePagina .redSocial a:hover{
-    color: aqua; 
-}
-.pieDePagina .grupo2{
-    background-color: #770d3b;
-    padding: 15px 20px;
-    text-align: center;
-    color: #d9d1c5;
-}
-
-.pieDePagina .box1 h3{
-    color: #d9d1c5;
-    padding:15px 0 15px;
-    text-align: center;
-}
-
-.pieDePagina .box1 .payments{
-    text-align: center;
-} */
-
-
 /* -----------------MEDIA QUERIES------------------- */
-/* @media (min-width: 361px){
+@media (min-width: 361px){
     .pieDePagina{
         display: flex;
         flex-wrap: wrap;
@@ -508,7 +506,7 @@ body{
         outline: none;
         border: 1px solid silver;
         border-radius: 30px;
-    } */
+    }
     /*.search-nav{
         margin-left: 85px;  ACOMODAR 
         border:1px solid;
@@ -516,7 +514,7 @@ body{
         width: 500px;
         background-color: white;
     }*/
-    /* .navegacionBarra{
+    .navegacionBarra{
         list-style: none;
         padding: 0;
         background: #7b1d46;
@@ -535,9 +533,9 @@ body{
     }
     .navegacionBarra li:hover{
         background: #770d3b;
-    } */
+    }
     /* -----------------FOOTER------------------ */
-    /* footer{
+    footer{
         width: 100vw;
         }
     
@@ -629,4 +627,4 @@ body{
     }
 
     
-} */
+}
