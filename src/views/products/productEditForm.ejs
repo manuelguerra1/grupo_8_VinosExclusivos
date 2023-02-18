@@ -23,7 +23,7 @@
         </a>
 </header>
 <main>
-    <form action = "/">
+    <form method="/post" action = "../products/productEditForm/"<%= products.id %>?_method=PUT>
         <div class="registroProductoEdit">
             
               
@@ -32,47 +32,66 @@
 
             
            
+            <br>
             <label for="codigo"></label>
-            <h4>Codigo de Producto: </h4><input  type="text" name="codigo" id="codigo" placeholder="Codigo" required> 
+            <h4>Codigo de Producto: </h4>
+            <input  type="text" name="codigo" id="codigo" placeholder="Codigo" required> 
             <br>
 
             <label for="nameproduct"></label>
-            <h4>Nombre del Producto: </h4><input type="text" name="nombre" id="name" placeholder="Nombre del Producto" required>
+            <h4>Nombre del Producto: </h4><input type="text" name="nombre" id="name" placeholder="Nombre del Producto" value="<%= products.name %>"required>
             <br>
 
             <label for="description"></label>
-            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Description*">
+            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Description*" value="<%= products.description %>">
             <br>
 
-            <label for="variedad"></label>
-            <h4>Variedad: </h4><input type="text" name="variedad" id="variedad" placeholder="Variedad" required>
+            <label for="price"></label>
+            <h4>Precio: </h4>
+            <input type="text" name="price" id="price" placeholder="Precio" value="<%= products.price %>">
+            <br>
+            
+            <label for="varietal"></label>
+            <h4>Variedad: </h4><input type="text" name="varietal" id="varietal" placeholder="varietal" value="<%= products.varietal %>"required>
             <br>
 
             <label for="cosecha"></label>
-            <h4>Año de Cosecha: </h4><input type="text" name="cosecha" id="cosecha" placeholder="Año de Cosecha" required>
+            <h4>Año de Cosecha: </h4><input type="text" name="cosecha" id="cosecha" placeholder="Año de Cosecha" value="<%= products.year %>"required>
             <br>
-
-            <label for="crianza"></label>
-            <h4>Crianza: </h4><input type="text" name="crianza" id="crianza" placeholder="Crianza"required>
-            <br>
-
+            
             <label for="pais"></label>
-            <h4>Pais de Origen: </h4><input type="text" name="pais" id="pais" placeholder="Pais de Origen" required>
+            <h4>Pais de Origen: </h4><input type="text" name="pais" id="pais" placeholder="Pais de Origen" value="<%= products.origen %>"required>
             <br>
-
+            
             <label for="region"></label>
-            <h4>Region: </h4><input type="text" name="region" id="region" placeholder="Region" required>
+            <h4>Region: </h4><input type="text" name="region" id="region" placeholder="Region" value="<%= products.region %>"required>
+    
             <br>
-
+            <label for="categories"></label>
+            <h4>Categorias</h4>
+            <div class="categories">
+                <select name="categorias" id="" required>
+                    <option value="">Seleccionar</option>
+                    <option value="Destilados">Destilados</option>
+                    <option value="Vinos">Vinos</option>
+            
+                </select>
+                </div>
+            </br>
+            
+            <label for="prod-img"></label>
+            <h4>Imágen de producto</h4><input type="file" name="prod-img" id="prod-img" required>
+            
             <br>
-            <div class="prodEdit-buttons">
-            <button type="submit" value="Guardar">EDITAR</button>
-
-             <button type="reset" value="Borrar">BORRAR</button>
-            <br>
+            <div class="prodCreate-buttons">
+                <button type="submit" value="Guardar">GUARDAR</button>
+                
+                <button type="reset" value="Borrar">BORRAR</button>
+                <br>
             </div>
-        </div>
 
+            
+        </div>
     </form>
 </main>
 </body>

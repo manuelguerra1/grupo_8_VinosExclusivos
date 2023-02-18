@@ -1,111 +1,160 @@
 [
     {
         "id":1,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
+        
 
     },
     {
         "id":2,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":3,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":4,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":5,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":6,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":7,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":8,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":9,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":10,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":11,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     },
     {
         "id":12,
-        "name": "",
-        "price":"$0",
+        "name":"",
         "description":"",
+        "price":"$0",
+        "varietal":"",
+        "year":"",
+        "origen":"",
+        "region":"",
         "category":"",
-        "image":"",
-        "available": true
+        "available": true,
+        "image":""
     }
 ]

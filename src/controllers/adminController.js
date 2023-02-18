@@ -35,7 +35,7 @@ show: (req, res) => {
     })
 },
 create: (req,res) =>{
-    res.render('/products/create',  {
+    res.render('/products/productCreateForm',  {
         title: 'Nuevo producto',
     });
 },
