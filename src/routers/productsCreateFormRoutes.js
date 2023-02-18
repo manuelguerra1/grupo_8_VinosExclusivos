@@ -3,16 +3,17 @@ const router = express.Router();
 
 const productsCreateFormController = require('../controllers/productsCreateFormController');
 
-router.get ('/', productsCreateForm.index);
+router.get ('/', productsCreateFormController.index);
 
-router.get ('/create', productsCreateForm.create);
-router.post('/create', productsCreateForm.store);
+router.get ('/create', productsCreateFormController.create);
+router.post('/create', productsCreateFormController.store);
 
-router.get ('/edit/:id', productsCreateForm.edit);
-router.put ('/edit/:id', productsCreateForm.updated);
+router.get ('/edit/:id', productsCreateFormController.edit);
+router.put ('/edit/:id', productsCreateFormController.update);
 
-router.get ('/delete/:id', productsCreateForm.delete);
-router.delete ('/delete/:id', productsCreateForm.destroy);
+router.get ('/delete/:id', productsCreateFormController.delete);
+router.delete ('/delete/:id', productsCreateFormController.destroy);
 
+router.get('/:id', productsCreateFormController.show)
 
-module.exports = router
+module.exports = router;

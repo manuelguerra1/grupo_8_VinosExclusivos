@@ -4,83 +4,108 @@
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
+
     },
     {
         "id":2,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":3,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":4,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":5,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":6,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":7,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":8,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":9,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":10,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":11,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     },
     {
         "id":12,
         "name": "",
         "price":"$0",
         "description":"",
-        "image":""
+        "category":"",
+        "image":"",
+        "available": true
     }
 ]
