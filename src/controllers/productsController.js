@@ -10,7 +10,9 @@ const productsController = {
 
     
     allProduct: function (req, res) {
-        res.render('./products/allProduct')
+        res.render('./products/allProduct', {
+        productList: productsController.getProducts()
+        });
     },
 
     // show: (req, res) => {

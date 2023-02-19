@@ -1,16 +1,16 @@
 [
  {
   "id": 1,
-  "name": "",
-  "description": "",
-  "price": "$0",
-  "varietal": "",
-  "year": "",
-  "origen": "",
-  "region": "",
-  "category": "",
+  "name": "Palo Alto Joven Cabernet Sauvignon",
+  "description": "Muestra un color rojo rubí brillante con reflejos violáceos. Presta aromas característicos de lavariedad tales como el casis, la pimienta negra y el pimiento verde maduro",
+  "price": "$8.000",
+  "varietal": "Cabernet Sauvignon",
+  "year": "2 años",
+  "origen": "Argentina",
+  "region": "Luján de Cuyo, Mendoza (1100 m S.N.M.)",
+  "category": "vinos",
   "available": true,
-  "image": ""
+  "image": "/img/imgs/palo_alto_joven-cabernet_sauvignon.png"
  },
  {
   "id": "3",
@@ -37,5 +37,31 @@
   "category": "Destilados",
   "available": true,
   "image": ""
+ },
+ {
+  "id": "44",
+  "name": "we",
+  "description": "we",
+  "price": "we",
+  "varietal": "we",
+  "year": "we",
+  "origen": "we",
+  "region": "we",
+  "category": "Destilados",
+  "available": true,
+  "image": "gin-combo-floral-blue-merle.webp"
+ },
+ {
+  "id": "34",
+  "name": "rt",
+  "description": "rt",
+  "price": "rt",
+  "varietal": "rt",
+  "year": "rt",
+  "origen": "rt",
+  "region": "rt",
+  "category": "Destilados",
+  "available": true,
+  "image": "carrusel3.jpg"
  }
 ]
