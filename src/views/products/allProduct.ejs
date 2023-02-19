@@ -13,7 +13,7 @@
                         <li><a href="/products/<%= product.id %>"><%= product.name %></a></li>
                         <div class="product">
                             <a href="productDetail">
-                                <div class="imgProduct"><img src="../img/imgs/palo_alto_joven-cabernet_sauvignon.png">
+                                <div class="imgProduct"><img src=<%= product.image%>>
                                 </div>
                             </a>
                             <h3>
@@ -33,7 +33,7 @@
                             </select>
 
                             <p class="country"> <img class="country-icon" src="../img/icons/icono-AR-48.png"
-                                alt="bandera-pais"> Mendoza, Argentina</p>
+                                alt="bandera-pais"><%=product.origen%> <%=product.region%></p>
                             <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
                             <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS
                             </p>
