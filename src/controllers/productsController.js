@@ -13,10 +13,6 @@ const productsController = {
         res.render('./products/allProduct')
     },
 
-    productDetail: function (req, res) {
-        res.render('./products/productDetail')
-    },
-
     // show: (req, res) => {
     //     let productoId = req.params.id;
     //     let producto = adminController.getProducts().find(producto => producto.id == productoId);
@@ -32,37 +28,44 @@ const productsController = {
     },
 
     store: (req,res)=>{
-        let producto = adminController.getProducts();
-        let images = [];
+
+        let product = productsController.getProducts();
+        // let image = [];
         
-        if (req.files) {
-            req.files.forEach(file =>{
-                images.push({
-                    "id": Date.now(),
-                    "name": file.filename,
-                });
-            });
+        // if (req.files) {
+        //     req.files.forEach(file =>{
+        //         image.push({
+        //             "id": Date.now(),
+        //             "name": file.filename,
+        //         });
+        //     });
     
-        } else{
-            images.push("default.jpg");
-        }
+        // } else{
+        //     image.push("default.jpg");
+        // }
     
         let newProducts = {
-                "id":Date.now,
-                "name": req.params.name,
-                "price":req.params.price,
-                "description":req.params.description,
-                "category":req.params.category,
-                "image": images,
-                "available": true
+                "id":req.body.id,
+                "name": req.body.name,
+                "description":req.body.description,
+                "price":req.body.price,
+                "varietal":req.body.price,
+                "year":req.body.year,
+                "origen":req.body.origen,
+                "region":req.body.region,
+                "category":req.body.category,
+                "available": true,
+                "image": req.body.image
                 
         }
+
+        console.log("nuevo producto", newProducts);
     
-        products.push(newProducts);
+        product.push(newProducts);
     
-        fs.writeFileSync(productsPath, JSON.stringify(producto, null, ' '));
+        fs.writeFileSync(productsPath, JSON.stringify(product, null, ' '));
     
-        res.redirect('/products');
+        res.redirect('/allProduct');
     },
 
     productEdit: function (req, res) {
@@ -99,26 +102,30 @@ const productsController = {
     },
     
     delete: (req,res) => {
-        let productoId = req.params.id;
-        let producto = adminCotroller.getProducts().find(producto => productoid == productoId);
+        let productId = req.params.id;
+        let product = productsController.getProducts().find(product => product.id == productId);
     
-        res.render ('/products/delete', {
+        res.render ('./products/productDeleteForm', {
             title: 'Eliminar producto',
-            product: producto
+            product: product
         });
     
     },
     
     destroy: (req, res) => {
         let productoId = req.params.id
-        let productos = adminController.getProducts();
-        let producto = adminCotroller.getProducts().find(producto => productoid == productoId);
+        let productos = productsControllerr.getProducts();
+        let producto = productsController.getProducts().find(producto => productoid == productoId);
     
         productos.splice (productos.indexOf (producto), 1 );
         let newProducts = productos.filter(producto => producto.id == productoId);
         fs.writeFileSync (productsPath, JSON.stringify(newProducts, null, ' '));
     
         res.redirect('./products')
+    },
+
+    productDetail: function (req, res) {
+        res.render('./products/productDetail')
     }
     
 }

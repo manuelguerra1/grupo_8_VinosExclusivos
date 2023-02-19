@@ -8,12 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    
-
     <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/productCreateForm.css">
+    <link rel="stylesheet" href="../css/productEditForm.css">
     <title>Login</title>
 </head>
 <body>
@@ -25,19 +23,20 @@
         </a>
 </header>
 <main>
-    <form method="post" action = "/save">
+        k
+    <form method="post" action = "/delete<%= product.id %>?_method=PUT">
         <div class="registroProducto">
             
-            <h3> FORMULARIO DE CREACION DE PRODUCTOS</h3>
+            <h3> ¿ESTAS SEGURO DE ELIMINAR EL PRODUCTO? </h3>
 
             <br>
             <label for="codigo"></label>
             <h4>Codigo de Producto: </h4>
-            <input  type="text" name="id" id="id" placeholder="Codigo" required> 
+            <input  type="text" name="id" id="id" placeholder="Codigo" value="<%= product.id %>"required> 
             <br>
 
             <label for="nameproduct"></label>
-            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" required>
+            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= product.name %>"required>
             <br>
 
             <label for="description"></label>
@@ -79,13 +78,14 @@
             
             <label for="image"></label>
             <h4>Imágen de producto</h4><input type="file" name="image" id="image">
+            <br>
             
             <br>
             <div class="prodCreate-buttons">
-                <button type="submit" value="Crear">CREAR</button>
+                <button type="submit" value="Guardar">GUARDAR</button>
                 
-                <!-- <button type="reset" value="Borrar">BORRAR</button>
-                <br> -->
+                <button type="reset" value="Borrar">BORRAR</button>
+                <br>
             </div>
 
             
@@ -93,9 +93,9 @@
     </form>
 </main>
 </body>
-<br>
+
 <footer>
-    <div class="grupo2">
+<div class="grupo2">
     <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
 </div>
 </footer>

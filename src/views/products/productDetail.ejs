@@ -6,15 +6,19 @@
     <header>
         <%- include('../partials/header') %> 
 
-            <form action="#" >
-                <div class="buttons">
-                    <button class="add-menu" type="submit"><i class="fa-solid fa-circle-plus"></i></button>
-                </div>
-            </form>
-
     </header>
 
     <main>
+        <form action="/edit/:id" >
+            <div class="btn-edit">
+                <button class="add-menu" type="submit">EDITAR</button>
+            </div>
+        </form>
+        <form action="/delete/:id" >
+            <div class="btn-edit">
+                <button class="add-menu" type="submit">ELIMINAR</button>
+            </div>
+        </form>
         <section class="products">
             <div class="productContainer">
                 </section>

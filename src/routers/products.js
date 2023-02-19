@@ -4,11 +4,9 @@ const router = express.Router();
 
 router.get('/allProduct', productsController.allProduct);
 
-router.get('/productDetail', productsController.productDetail);
-
 // Crear
 router.get ('/create', productsController.create);
-router.post('/create', productsController.store);
+router.post('/save', productsController.store);
 // Editar
 router.get ('/edit/:id', productsController.productEdit);
 router.put ('/edit/:id', productsController.update);
@@ -16,6 +14,8 @@ router.put ('/edit/:id', productsController.update);
 router.get ('/delete/:id', productsController.delete);
 router.delete ('/delete/:id', productsController.destroy);
 
-router.get('/:id', productsController.productDetail)
+router.get('/productDetail', productsController.productDetail);
+
+// router.get('/:id', productsController.productDetail)
 
 module.exports = router;

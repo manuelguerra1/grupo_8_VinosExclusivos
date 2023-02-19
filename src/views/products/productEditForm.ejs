@@ -23,54 +23,50 @@
         </a>
 </header>
 <main>
-    <form method="/post" action = "../products/productEditForm/"<%= products.id %>?_method=PUT>
-        <div class="registroProductoEdit">
+    <form method="post" action = "/save">
+        <div class="registroProducto">
             
-              
-            
-            <h3> FORMULARIO DE EDICION DE PRODUCTOS</h3>
+            <h3> EDICIÓN DE PRODUCTOS</h3>
 
-            
-           
             <br>
             <label for="codigo"></label>
             <h4>Codigo de Producto: </h4>
-            <input  type="text" name="codigo" id="codigo" placeholder="Codigo" required> 
+            <input  type="text" name="id" id="id" placeholder="Codigo" required> 
             <br>
 
             <label for="nameproduct"></label>
-            <h4>Nombre del Producto: </h4><input type="text" name="nombre" id="name" placeholder="Nombre del Producto" value="<%= products.name %>"required>
+            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" required>
             <br>
 
             <label for="description"></label>
-            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Description*" value="<%= products.description %>">
+            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Description*">
             <br>
 
             <label for="price"></label>
             <h4>Precio: </h4>
-            <input type="text" name="price" id="price" placeholder="Precio" value="<%= products.price %>">
+            <input type="text" name="price" id="price" placeholder="Precio">
             <br>
             
             <label for="varietal"></label>
-            <h4>Variedad: </h4><input type="text" name="varietal" id="varietal" placeholder="varietal" value="<%= products.varietal %>"required>
+            <h4>Variedad: </h4><input type="text" name="varietal" id="varietal" placeholder="varietal" required>
             <br>
 
-            <label for="cosecha"></label>
-            <h4>Año de Cosecha: </h4><input type="text" name="cosecha" id="cosecha" placeholder="Año de Cosecha" value="<%= products.year %>"required>
+            <label for="year"></label>
+            <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" placeholder="Año de Cosecha" required>
             <br>
             
-            <label for="pais"></label>
-            <h4>Pais de Origen: </h4><input type="text" name="pais" id="pais" placeholder="Pais de Origen" value="<%= products.origen %>"required>
+            <label for="origen"></label>
+            <h4>Pais de Origen: </h4><input type="text" name="origen" id="origen" placeholder="Pais de Origen" required>
             <br>
             
             <label for="region"></label>
-            <h4>Region: </h4><input type="text" name="region" id="region" placeholder="Region" value="<%= products.region %>"required>
+            <h4>Region: </h4><input type="text" name="region" id="region" placeholder="Region" required>
     
             <br>
-            <label for="categories"></label>
+            <label for="category"></label>
             <h4>Categorias</h4>
             <div class="categories">
-                <select name="categorias" id="" required>
+                <select name="category" id="" required>
                     <option value="">Seleccionar</option>
                     <option value="Destilados">Destilados</option>
                     <option value="Vinos">Vinos</option>
@@ -78,6 +74,10 @@
                 </select>
                 </div>
             </br>
+            
+            <label for="image"></label>
+            <h4>Imágen de producto</h4><input type="file" name="image" id="image">
+            <br>
             
             <label for="prod-img"></label>
             <h4>Imágen de producto</h4><input type="file" name="prod-img" id="prod-img" required>
