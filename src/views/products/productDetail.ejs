@@ -9,12 +9,12 @@
     </header>
 
     <main>
-        <form action="/edit/:id" >
+        <form action="/edit/<%= product.id %>" >
             <div class="btn-edit">
                 <button class="add-menu" type="submit">EDITAR</button>
             </div>
         </form>
-        <form action="/delete/:id" >
+        <form action="/delete/<%= product.id %>" >
             <div class="btn-edit">
                 <button class="add-menu" type="submit">ELIMINAR</button>
             </div>
@@ -22,12 +22,10 @@
         <section class="products">
             <div class="productContainer">
                 </section>
-
-
                 <div class="product">
-                    <div class="imgProduct"><img src="../img/imgs/gin-merle-blue-.webp"></div>
-                    <h3>Gin Merle Blue</h3>
-                    <h2>$8.000</h2>
+                    <div class="imgProduct"><img src="<%= product.image%>"></div>
+                    <h3><%= product.name %></h3>
+                    <h2><%= product.price %></h2>
                     <button type="submit"> Agregar al carrito </button>
                     <h4> Cantidad: </h4> <select name="product-amount" id="">
                         <option value="one">1</option>
@@ -38,9 +36,9 @@
                     </select>
                     <p class="desc">Descripción: 
                         <br>
-                        1 Blue Merle 750cc.
+                        <%= product.description %> 
                         <br>
-                        Un Gin Premium 100% natural. Gracias a su particular combinación de botánicos transforma su color azulado en un original rosa al entrar en contacto con la tónica.</p>  
+                    </p>  
                         
                     <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
                     <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>

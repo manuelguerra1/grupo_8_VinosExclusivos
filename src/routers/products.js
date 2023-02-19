@@ -9,12 +9,12 @@ router.get ('/create', productsController.create);
 router.post('/save', productsController.store);
 // Editar
 router.get ('/edit/:id', productsController.productEdit);
-router.put ('/edit/:id', productsController.update);
+router.put ('/modify/:id', productsController.update);
 // Eliminar
 router.get ('/delete/:id', productsController.delete);
 router.delete ('/delete/:id', productsController.destroy);
 
-router.get('/productDetail', productsController.productDetail);
+router.get('/productDetail/:id', productsController.productDetail);
 
 // router.get('/:id', productsController.productDetail)
 

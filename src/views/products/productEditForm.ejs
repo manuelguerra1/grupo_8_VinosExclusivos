@@ -23,7 +23,7 @@
         </a>
 </header>
 <main>
-    <form method="post" action = "/save">
+    <form method="post" action = "/modify/<%= product.id %>?_method=PUT">
         <div class="registroProducto">
             
             <h3> EDICIÓN DE PRODUCTOS</h3>
@@ -31,43 +31,43 @@
             <br>
             <label for="codigo"></label>
             <h4>Codigo de Producto: </h4>
-            <input  type="text" name="id" id="id" placeholder="Codigo" required> 
+            <input  type="text" name="id" id="id"  value="<%= product.id %>" > 
             <br>
 
             <label for="nameproduct"></label>
-            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" required>
+            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" value="<%= product.name %>" >
             <br>
 
             <label for="description"></label>
-            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Description*">
+            <h4>Descripción: </h4><input type="text" name="description" id="description" value="<%= product.description %>">
             <br>
 
             <label for="price"></label>
             <h4>Precio: </h4>
-            <input type="text" name="price" id="price" placeholder="Precio">
+            <input type="text" name="price" id="price" value="<%= product.price %>">
             <br>
             
             <label for="varietal"></label>
-            <h4>Variedad: </h4><input type="text" name="varietal" id="varietal" placeholder="varietal" required>
+            <h4>Variedad: </h4><input type="text" name="varietal" id="varietal" value="<%= product.varietal %>">
             <br>
 
             <label for="year"></label>
-            <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" placeholder="Año de Cosecha" required>
+            <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" value="<%= product.year %>">
             <br>
             
             <label for="origen"></label>
-            <h4>Pais de Origen: </h4><input type="text" name="origen" id="origen" placeholder="Pais de Origen" required>
+            <h4>Pais de Origen: </h4><input type="text" name="origen" id="origen" value="<%= product.origen %>">
             <br>
             
             <label for="region"></label>
-            <h4>Region: </h4><input type="text" name="region" id="region" placeholder="Region" required>
+            <h4>Region: </h4><input type="text" name="region" id="region" value="<%= product.region %>">
     
             <br>
             <label for="category"></label>
             <h4>Categorias</h4>
             <div class="categories">
-                <select name="category" id="" required>
-                    <option value="">Seleccionar</option>
+                <select name="category" id="category" value="<%= product.category %>">
+                    <option value="<%= product.category %>"><%= product.category %></option> 
                     <option value="Destilados">Destilados</option>
                     <option value="Vinos">Vinos</option>
             
@@ -76,17 +76,15 @@
             </br>
             
             <label for="image"></label>
-            <h4>Imágen de producto</h4><input type="file" name="image" id="image">
+            <h4>Imágen de producto</h4>
+            <img src="<%= product.image%>">
+            <!-- <input type="file" name="image" id="image" value=""> -->
             <br>
             
-            <label for="prod-img"></label>
-            <h4>Imágen de producto</h4><input type="file" name="prod-img" id="prod-img" required>
-            
-            <br>
             <div class="prodCreate-buttons">
-                <button type="submit" value="Guardar">GUARDAR</button>
+                <button type="submit" value="Actualizar">ACTUALIZAR</button>
                 
-                <button type="reset" value="Borrar">BORRAR</button>
+                <!-- <button type="reset" value="Cancelar">CANCELAR</button> -->
                 <br>
             </div>
 

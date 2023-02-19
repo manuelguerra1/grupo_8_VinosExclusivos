@@ -15,15 +15,14 @@ const productsController = {
         });
     },
 
-    // show: (req, res) => {
-    //     let productoId = req.params.id;
-    //     let producto = adminController.getProducts().find(producto => producto.id == productoId);
-    
-    //     res.render('./products/productCreateForm', {
-    //         title: 'Mi producto',
-    //         producto: producto
-    //     })
-    // },
+    productDetail: function (req, res) {
+        let productId = req.params.id;
+        let producto = productsController.getProducts().find(producto => producto.id == productId);
+
+        res.render('./products/productDetail',{
+            product: producto
+        });
+    },
 
     create: function (req, res) {
         res.render('./products/productCreateForm')
@@ -71,35 +70,39 @@ const productsController = {
     },
 
     productEdit: function (req, res) {
-        res.render('./products/productEditForm')
+        let productId = req.params.id;
+        let producto = productsController.getProducts().find(producto => producto.id == productId);
+        
+        res.render('./products/productEditForm', {
+            product: producto
+        });
     }, 
-
-    // edit: (req,res) =>{
-    //     let productoId = req.params.id;
-    //     let producto = adminController.getProducts().find(producto => producto.id == productoId);
-    
-    //     res.render('/products/edit', {
-    //         title: 'Mi producto',
-    //         product: producto
-    //     });
-    // },
     
     update: (req,res) =>{
-        let productoId = req.params.id;
-        let productos = adminController.getProducts();
+        let productId = req.params.id;
+        let productos = productsController.getProducts();
     
         productos.forEach((producto, index) =>{
-            if(producto.id == productoId){
-            producto.name = req.params.name;
-            descripcion.description = req.params.description;
-    
+            if(producto.id == productId){
+            producto.name = req.body.name,
+            producto.name=  req.body.name,
+            producto.id= req.body.id,
+            producto.description= req.body.description,
+            producto.price= req.body.price,
+            producto.varietal= req.body.price,
+            producto.year= req.body.year,
+            producto.origen= req.body.origen,
+            producto.region= req.body.region,
+            producto.category= req.body.category,
+            producto.image=  req.body.image
+
             productos[index] = producto;
         }
     });
     
         fs.writeFileSync(productsPath, JSON.stringify(productos, null, ' '));
     
-        res.redirect('/products');
+        res.redirect('/allProduct');
     
     },
     
@@ -124,10 +127,6 @@ const productsController = {
         fs.writeFileSync (productsPath, JSON.stringify(newProducts, null, ' '));
     
         res.redirect('./products')
-    },
-
-    productDetail: function (req, res) {
-        res.render('./products/productDetail')
     }
     
 }

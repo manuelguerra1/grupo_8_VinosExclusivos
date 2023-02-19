@@ -12,8 +12,8 @@
                     <% productList.forEach (product =>  { %>
                         <li><a href="/products/<%= product.id %>"><%= product.name %></a></li>
                         <div class="product">
-                            <a href="productDetail">
-                                <div class="imgProduct"><img src=<%= product.image%>>
+                            <a href="/productDetail/<%= product.id %>">
+                                <div class="imgProduct"><img src="<%= product.image%>" npm>
                                 </div>
                             </a>
                             <h3>
