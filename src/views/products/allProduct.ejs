@@ -5,12 +5,13 @@
 
 <body>
     <%- include('../partials/header') %>
-        <main>
-            <section class="products">
-                <div class="productContainer">
+    <main>
+        <section class="products">
+            <div class="productContainer">
                 <ul>
                     <% productList.forEach (product =>  { %>
-                        <li><a href="/products/<%= product.id %>"><%= product.name %></a></li>
+                        <!-- LO COMENTO PORQUE NO TIENE NINGUNA FUNCION -->
+                        <!-- <li><a href="/products/<%= product.id %>"><%= product.name %></a></li> -->
                         <div class="product">
                             <a href="/productDetail/<%= product.id %>">
                                 <div class="imgProduct"><img src="<%= product.image%>" npm>
@@ -33,7 +34,7 @@
                             </select>
 
                             <p class="country"> <img class="country-icon" src="../img/icons/icono-AR-48.png"
-                                alt="bandera-pais"><%=product.origen%> <%=product.region%></p>
+                                alt="bandera-pais"><%= product.origen %> <%= product.region %></p>
                             <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
                             <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS
                             </p>

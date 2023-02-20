@@ -130,6 +130,13 @@ img.header-logo{
     
 }
 
+
+/* ---------------------------MAIN------------------------------- */
+
+/* div.productContainer ul li{
+    
+} */
+
 /* ---------------------------FOOTER------------------------------- */
 .pieDePagina{
     background-color: #7b1d46;
@@ -224,8 +231,8 @@ img.header-logo{
 }
 
 .imgProduct img{
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 60%;
 }
 .product{
     margin: 70px 15px 0 15px;
