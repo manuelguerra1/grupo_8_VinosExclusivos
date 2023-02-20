@@ -1,3 +1,4 @@
+const { Console } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -118,15 +119,15 @@ const productsController = {
     },
     
     destroy: (req, res) => {
-        let productoId = req.params.id
-        let productos = productsControllerr.getProducts();
-        let producto = productsController.getProducts().find(producto => productoid == productoId);
-    
-        productos.splice (productos.indexOf (producto), 1 );
-        let newProducts = productos.filter(producto => producto.id == productoId);
+        let productId = req.params.id;
+        let product = productsController.getProducts();
+
+        let newProducts = product.filter(product => product.id != productId);
+        console.log("Nuevo array", product.length > newProducts.length, product.length, newProducts.length);
+       
         fs.writeFileSync (productsPath, JSON.stringify(newProducts, null, ' '));
     
-        res.redirect('./products')
+        res.redirect('/allProduct');
     }
     
 }

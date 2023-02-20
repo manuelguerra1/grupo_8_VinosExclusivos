@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,88 +15,58 @@
     <link rel="stylesheet" href="../css/productEditForm.css">
     <title>Login</title>
 </head>
+
 <body>
-<header>
-    <div class="top-header">
+    <header>
+        <div class="top-header">
 
-        <a href="/">
-            <div class="logo-to-menu"> <img class="header-logo" src="../img/imgs/logo-sin-fondo-1-beige.png" alt="logo" > </a>
-        </a>
-</header>
-<main>
-        
-    <form method="post" action = "/delete?_method=PUT">
-        <div class="registroProducto">
-            
-            <h3> ¿ESTAS SEGURO DE ELIMINAR EL PRODUCTO? </h3>
+            <a href="/">
+                <div class="logo-to-menu"> <img class="header-logo" src="../img/imgs/logo-sin-fondo-1-beige.png"
+                        alt="logo">
+            </a>
+            </a>
+    </header>
+    <main>
 
-            <br>
-            <label for="codigo"></label>
-            <h4>Codigo de Producto: </h4>
-            <input  type="text" name="id" id="id" placeholder="Codigo" value="<%= product.id %>"required> 
-            <br>
+        <form method="post" action="/eliminate/<%= product.id%> ?_method=DELETE">
+            <div class="registroProducto">
 
-            <label for="nameproduct"></label>
-            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= product.name %>"required>
-            <br>
+                <h3> ¿ESTAS SEGURO DE ELIMINAR EL PRODUCTO? </h3>
 
-            <label for="description"></label>
-            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Description*">
-            <br>
-
-            <label for="price"></label>
-            <h4>Precio: </h4>
-            <input type="text" name="price" id="price" placeholder="Precio">
-            <br>
-            
-            <label for="varietal"></label>
-            <h4>Variedad: </h4><input type="text" name="varietal" id="varietal" placeholder="varietal" required>
-            <br>
-
-            <label for="year"></label>
-            <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" placeholder="Año de Cosecha" required>
-            <br>
-            
-            <label for="origen"></label>
-            <h4>Pais de Origen: </h4><input type="text" name="origen" id="origen" placeholder="Pais de Origen" required>
-            <br>
-            
-            <label for="region"></label>
-            <h4>Region: </h4><input type="text" name="region" id="region" placeholder="Region" required>
-    
-            <br>
-            <label for="category"></label>
-            <h4>Categorias</h4>
-            <div class="categories">
-                <select name="category" id="" required>
-                    <option value="">Seleccionar</option>
-                    <option value="Destilados">Destilados</option>
-                    <option value="Vinos">Vinos</option>
-            
-                </select>
+                <section class="products">
+                    <div class="productContainer">
+                </section>
+                <div class="product">
+                    <div class="imgProduct"><img src="<%= product.image%>"></div>
+                    <h3>
+                        <%= product.name %>
+                    </h3>
+                    <h2>
+                        <%= product.price %>
+                    </h2>
+                    <p class="desc">Descripción:
+                        <br>
+                        <%= product.description %>
+                            <br>
+                    </p>
                 </div>
-            </br>
-            
-            <label for="image"></label>
-            <h4>Imágen de producto</h4><input type="file" name="image" id="image">
-            <br>
-            
-            <br>
+            </div>
+            </section>
             <div class="prodCreate-buttons">
-                <button type="submit" value="Guardar">GUARDAR</button>
-                
-                <button type="reset" value="Borrar">BORRAR</button>
+                <button type="submit" value="Actualizar">ELIMINAR</button>
+
+                <!-- <button type="reset" value="Cancelar">CANCELAR</button> -->
                 <br>
             </div>
 
-            
-        </div>
-    </form>
-</main>
+
+            </div>
+        </form>
+    </main>
 </body>
 
 <footer>
-<div class="grupo2">
-    <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
-</div>
+    <div class="grupo2">
+        <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
+    </div>
 </footer>
