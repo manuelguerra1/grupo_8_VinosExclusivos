@@ -120,12 +120,13 @@ const productsController = {
     
     destroy: (req, res) => {
         let productId = req.params.id;
-        let product = productsController.getProducts();
-
-        let newProducts = product.filter(product => product.id != productId);
-        console.log("Nuevo array", product.length > newProducts.length, product.length, newProducts.length);
+        let products= productsController.getProducts();
        
-        fs.writeFileSync (productsPath, JSON.stringify(newProducts, null, ' '));
+        
+        products = products.filter(product => product.id != productId);
+        
+       
+        fs.writeFileSync (productsPath, JSON.stringify(products, null, ' '));
     
         res.redirect('/allProduct');
     }

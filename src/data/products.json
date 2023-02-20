@@ -1,6 +1,6 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "name": "Palo Alto Joven Cabernet Sauvignon",
   "description": "Muestra un color rojo rubí brillante con reflejos violáceos. Presta aromas característicos de lavariedad tales como el casis, la pimienta negra y el pimiento verde maduro",
   "price": "$8.000",
@@ -13,7 +13,7 @@
   "image": "/img/imgs/palo_alto_joven-cabernet_sauvignon.png"
  },
  {
-  "id": "2",
+  "id": 2,
   "name": "Palo Alto Joven Malbec",
   "description": "Tiene un ataque dulce, de cuerpo medio, fresco y frutado en su paso por boca. Equilibrado, de taninos redondos, cálido y con una acidéz que resalta la fruta. Evoluciona hacia un finalpleno de notas tostadas, persistente y de agradable recuerdo.",
   "price": "$8.000",
@@ -26,7 +26,7 @@
   "image": "/img/imgs/palo_alto_joven-malbec.png"
  },
  {
-  "id": "3",
+  "id": 3,
   "name": "Palo Alto Joven Torrontes",
   "description": "De entrada amable, es delicado y untuoso en su paso por boca, es dueño de una equilibrada acidez que aporta frescura a la fruta. Posee un persistente y cálido final.",
   "price": "$8.000",
@@ -39,7 +39,7 @@
   "image": "/img/imgs/palo_alto_joven-torrentes.png"
  },
  {
-  "id": "4",
+  "id": 4,
   "name": "Palo Alto Benito A Grand Reserve Blend",
   "description": "Tiene un ataque dulce, despliega en el medio de boca su potencia donde muestra sus taninos firmes, muestra un exquisito equilibrio entre la fruta y la acidez en su paso por boca. Corre sedoso y robusto para culminar en un final prolongado colmado de notas torradas y ahumados intensos.",
   "price": "$12.000",
@@ -52,7 +52,7 @@
   "image": "/img/imgs/palo_alto-benito-blend.jpg"
  },
  {
-  "id": "5",
+  "id": 5,
   "name": "Gordons",
   "description": "Gordon´s es una de las ginebras más antiguas, creada en 1769, y fue una de las primeras que se tomó con tónica. Hoy Gordon´s es la ginebra London Dry más vendida del mundo, una botella de Gordon´s es vendida cada 6 segundos. Más de 3.000 bayas de enebro son testeadas con la nariz y el 95% son rechazadas para asegurar que sólo las mejores están en nuestra ginebra, creando un líquido de inmejorable calidad.",
   "price": "$2.300",
@@ -65,7 +65,7 @@
   "image": "/img/imgs/gins_gordons-botella_685x1200_1.jpg"
  },
  {
-  "id": "6",
+  "id": 6,
   "name": "Tanqueray Dry Gin",
   "description": "El nuevo Tanqueray Royale se crea con una deliciosa mezcla de berries franceses y notas de vainilla. Tiene un perfil aromático dulce y afrutado en equilibrio perfecto con la complejidad de sabor de Tanqueray London.",
   "price": "$7.000",
@@ -78,7 +78,7 @@
   "image": "/img/imgs/gins_tanqueray_dry_685x1200.jpg"
  },
  {
-  "id": "7",
+  "id": 7,
   "name": "Tanqueray Sevillas",
   "description": "El gin Tanqueray Sevilla ofrece un sabor afrutado y sabroso, equilibrado con los 4 ingredientes botánicos de nuestra clásico Tanqueray London Dry. Este sabor del Mediterráneo bañado por el sol es un gin excepcionalmente agradable y complejo.",
   "price": "$7.000",
@@ -91,7 +91,7 @@
   "image": "/img/imgs/gins_tanqueray_sevillas_685x1200_1.jpg"
  },
  {
-  "id": "8",
+  "id": 8,
   "name": "Tanqueray Royale",
   "description": "El nuevo Tanqueray Royale se crea con una deliciosa mezcla de berries franceses y notas de vainilla. Tiene un perfil aromático dulce y afrutado en equilibrio perfecto con la complejidad de sabor de Tanqueray London.",
   "price": "$7.000",
@@ -104,7 +104,7 @@
   "image": "/img/imgs/gins_tanqueray_royale_685x1200.jpg"
  },
  {
-  "id": "9",
+  "id": 9,
   "name": "Smirnoff Green Apple",
   "description": "Es la marca de bebidas espirituosas más grande del mundo. Su calidad y pureza son extraordinarias. Smirnoff está triplemente destilado y filtrado 10 veces sobre carbón vegetal por un lapso de 8 horas. Smirnoff Green Apple está infusionado con manzana verde y mantiene la pureza de Smirnoff 21.",
   "price": "$1.800",
@@ -117,7 +117,7 @@
   "image": "/img/imgs/vodka_smf_green_apple_685x1200.jpg"
  },
  {
-  "id": "10",
+  "id": 10,
   "name": "Smirnoff Raspberry",
   "description": "Es la marca de bebidas espirituosas más grande del mundo. Su calidad y pureza son extraordinarias. Smirnoff está triplemente destilado y filtrado 10 veces sobre carbón vegetal por un lapso de 8 horas. Smirnoff Raspberry está infusionado con frutos rojos y mantiene la pureza de Smirnoff 21.",
   "price": "$2.300",
@@ -130,7 +130,7 @@
   "image": "/img/imgs/vodka_smf_raspberry_685x1200.jpg"
  },
  {
-  "id": "11",
+  "id": 11,
   "name": "Smirnoff 21",
   "description": "Smirnoff es la marca de bebidas espirituosas más grande del mundo. Su calidad y pureza son extraordinarias. Smirnoff está triplemente destilado y filtrado 10 veces sobre carbón vegetal por un lapso de 8 horas. Este Vodka fue creado especialmente para que se destaque por su pureza y por su facilidad de mezclado con otras bebidas..",
   "price": "$1.800",
@@ -143,7 +143,7 @@
   "image": "/img/imgs/vodka_smf_21_685x1200.jpg"
  },
  {
-  "id": "12",
+  "id": 12,
   "name": "Smirnoff Watermelon",
   "description": "Es la marca de bebidas espirituosas más grande del mundo. Su calidad y pureza son extraordinarias. Smirnoff está triplemente destilado y filtrado 10 veces sobre carbón vegetal por un lapso de 8 horas. Smirnoff Watermelon está infusionado con manzana verde y mantiene la pureza de Smirnoff 21.",
   "price": "$1.800",
@@ -154,18 +154,5 @@
   "category": "Destilados",
   "available": true,
   "image": "/img/imgs/vodka_smf_watermelon_685x1200.jpg"
- },
- {
-  "id": "13",
-  "name": "Smirnoff Watermelon",
-  "description": "Es la marca de bebidas espirituosas más grande del mundo. Su calidad y pureza son extraordinarias.",
-  "price": "$1.800",
-  "varietal": "Vodka",
-  "year": "2022",
-  "origen": "Argentina",
-  "region": "Cordoba",
-  "category": "Destilados",
-  "available": true,
-  "image": "/img/imgs/gin-merle-blue-.webp"
  }
 ]
