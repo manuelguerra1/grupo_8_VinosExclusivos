@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/productEditForm.css">
+    <link rel="stylesheet" href="../css/productDeleteForm.css">
     <title>Login</title>
 </head>
 
@@ -31,33 +31,32 @@
         <form method="post" action="/eliminate/<%= product.id%> ?_method=DELETE">
             <div class="registroProducto">
 
-                <h3> ¿ESTAS SEGURO DE ELIMINAR EL PRODUCTO? </h3>
+                <h3 class="delete-title"> ¿ESTAS SEGURO DE ELIMINAR EL PRODUCTO? </h3>
 
                 <section class="products">
                     <div class="productContainer">
                 </section>
                 <div class="product">
                     <div class="imgProduct"><img src="<%= product.image%>"></div>
-                    <h3>
+                    <h3 class="name-price">
                         <%= product.name %>
                     </h3>
-                    <h2>
+                    <h3 class="name-price">
                         <%= product.price %>
-                    </h2>
+                    </h3>
                     <p class="desc">Descripción:
                         <br>
                         <%= product.description %>
-                            <br>
+                        <br>
                     </p>
+                    <div class="prodDelete-buttons">
+                        <button class="delete-button" type="submit" value="Actualizar">ELIMINAR</button>
+            
+                        <!-- <button type="reset" value="Cancelar">CANCELAR</button> -->
+                    </div>
                 </div>
             </div>
-            </section>
-            <div class="prodCreate-buttons">
-                <button type="submit" value="Actualizar">ELIMINAR</button>
-
-                <!-- <button type="reset" value="Cancelar">CANCELAR</button> -->
-                <br>
-            </div>
+        </section>
 
 
             </div>

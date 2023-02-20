@@ -127,32 +127,32 @@ div.registroProducto{
     align-items: center;
     justify-content: center;
     color: #d9d1c5;
-    text-decoration: underline;
     font-size: 20px;
 }
 
-div.registroProducto input{
-    border-radius: 3px;
-    width: 50%;
-    padding: 5px;
-    margin: 7px;
-    background-color: #e9dee2;
-    border: 2px solid black;
-} 
+p.desc{
+    text-align: justify;
+    font-size: 18px;
+    padding: 10px;
+}
 
-div.prodCreate-buttons button{
+h3.name-price{
+    text-decoration: underline;
+}
+
+h3.delete-title{
+    text-decoration: overline;
+}
+
+button.delete-button{
     font-weight: bold;
-    font-size: 15px;
     padding: 4px;
     margin: 15px;
     background-color: #d9d1c5;
     color: #7b1d46;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-
-img.edit-form-img{
-    margin-top: 10px;
-    height: 300px;
-    width: 110px;
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 130px;
+    height: 30px;
+    font-size: 18px;
 }

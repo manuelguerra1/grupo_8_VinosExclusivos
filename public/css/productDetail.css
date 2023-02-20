@@ -86,6 +86,16 @@
     margin: 15px;
 } */
 
+div.btn-edit{
+    background-color: #fff;
+}
+
+button.add-menu{
+    width: 100px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
 .product {
     margin: 15px 0 15px 0;
     background-color:#fff;

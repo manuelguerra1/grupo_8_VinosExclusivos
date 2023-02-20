@@ -21,12 +21,15 @@
         </form>
         <section class="products">
             <div class="productContainer">
-                </section>
-                <div class="product">
+            </section>
+            <div class="product">
                     <div class="imgProduct"><img src="<%= product.image%>"></div>
                     <h3><%= product.name %></h3>
                     <h2><%= product.price %></h2>
-                    <button type="submit"> Agregar al carrito </button>
+                    <form action="/carrito">
+                        <button type="submit"> Agregar al carrito </button>
+                    </form>
+                    
                     <h4> Cantidad: </h4> <select name="product-amount" id="">
                         <option value="one">1</option>
                         <option value="two">2</option>
