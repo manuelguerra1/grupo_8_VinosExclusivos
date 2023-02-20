@@ -1,110 +1,57 @@
 [
-    {
-        "id":1,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":2,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":3,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":4,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":5,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":6,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":7,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":8,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":9,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":10,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":11,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    },
-    {
-        "id":12,
-        "name": "",
-        "lastname":"$0",
-        "email":"",
-        "password":"",
-        "category":"",
-        "image":""
-    }
+ {
+  "id": 1,
+  "name": "",
+  "lastname": "$0",
+  "email": "",
+  "username": "",
+  "password": "",
+  "confirmpassword": "",
+  "category": "",
+  "available": true,
+  "image": ""
+ },
+ {
+  "id": 2,
+  "name": "",
+  "lastname": "$0",
+  "email": "",
+  "username": "",
+  "password": "",
+  "confirmpassword": "",
+  "category": "",
+  "available": true,
+  "image": ""
+ },
+ {
+  "id": 3,
+  "name": "",
+  "lastname": "$0",
+  "email": "",
+  "username": "",
+  "password": "",
+  "confirmpassword": "",
+  "category": "",
+  "image": ""
+ },
+ {
+  "id": 4,
+  "name": "",
+  "lastname": "$0",
+  "email": "",
+  "username": "",
+  "password": "",
+  "confirmpassword": "",
+  "category": "",
+  "available": true,
+  "image": ""
+ },
+ {
+  "name": "DIEGO",
+  "lastname": "PAEZ",
+  "email": "diegopaez73@gmail.com",
+  "username": "DiegoP",
+  "password": "9876",
+  "confirmpassword": "9876"
+ }
 ]

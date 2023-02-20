@@ -50,16 +50,16 @@
     </header>
     <hr>
     <main>
-        <form action = "/">
+        <form method="post" action = "/userSave">
             <div class="register">
 
                 <h3> ¡Registrate! </h3>
                 <label for="name"></label>
-                <input type="text" name="nombre" id="name" placeholder="Nombre" required>
+                <input type="text" name="name" id="name" placeholder="Nombre"  required>
                 <br>
     
                 <label for="last-name"></label>
-                <input type="text" name="apellido" id="last-name" placeholder="Apellido" required>
+                <input type="text" name="lastname" id="last-name" placeholder="Apellido" required>
                 <br>
     
                 <label for="email"></label>
@@ -67,18 +67,18 @@
                 <br>
     
                 <label for="user-name"></label>
-                <input type="text" name="usuario" id="user-name" placeholder="Nombre de usuario" required>
+                <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" required>
                 <br>
     
                 <label for="password"></label>
-                <input type="password" name="contraseña" id="password" placeholder="Contraseña" required>
+                <input type="password" name="password" id="password" placeholder="Contraseña" required>
                 <br>
     
                 <label for="confirm-password"></label>
-                <input type="password" name="confirmar-contraseña" id="confirm-password" placeholder="Confirmar contraseña" required>
+                <input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña" required>
                 <br>
     
-                <label for="birth"></label>
+                <!-- <label for="birth"></label>
                 <p class="birth-date">Fecha de nacimiento</p>
                 <input type="date" name="nacimiento" id="birth">
                 <br>
@@ -108,7 +108,7 @@
     
                 <label for="phone-number"></label>
                 <input type="number" name="telefono" id="phone-number" placeholder="Teléfono celular" required> 
-                <br>
+                <br> -->
                 
                 
             </div>
@@ -119,7 +119,7 @@
 
             <button type="reset" value="Borrar">BORRAR</button>
 
-            <button type="submit" value="Enviar">ENVIAR</button>
+            <button type="submit" value="Enviar">GUARDAR</button>
 
 
         </form>
