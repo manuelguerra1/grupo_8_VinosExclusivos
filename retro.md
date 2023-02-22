@@ -20,3 +20,17 @@ Como aprendizaje de este sprint nos queda:
 - Utilizar el espacio Trello asignando responsabilidades en las tarjetas.
 - Asignar a cada integrante del equipo una tarea o punto entregable del sprint.
 - Mejorar la comunicación entre los integrantes, notificar si se tiene algún impedimento para hacer la tarea asignada o si requiere ayuda del equipo.
+
+Retro Sprint 4
+
+El tema CRUD fue un tema que costo en el equipo e hizo que no hubiera compromiso para ir trabajando el sprint hasta despues del 15/2
+No hemos podido mejorar la comunicacion entre los integrantes, se trabajaba en el proyecto y habia retrasos en hacer el push
+Todavia como equipo necesitamos trabajar juntos por la falta de una completa comprension del material. 
+Los encuentros eran parciales o sin coordinacion.
+
+Puntos a mejorar:
+
+- mejorar la comunicacion sobre como va el proyecto y dejarlo registrado en el momento en la weekly o daily. 
+- Programar ambas reuniones, designa un responsable que escriba lo que se habla en cada de ellas.
+
+A pesar de todo llegamos a terminarlo y presentarlo.
