@@ -67,7 +67,7 @@ const productsController = {
     
         fs.writeFileSync(productsPath, JSON.stringify(product, null, ' '));
     
-        res.redirect('/allProduct');
+        res.redirect('/');
     },
 
     productEdit: function (req, res) {
@@ -103,7 +103,7 @@ const productsController = {
     
         fs.writeFileSync(productsPath, JSON.stringify(productos, null, ' '));
     
-        res.redirect('/allProduct');
+        res.redirect('/');
     
     },
     
@@ -122,13 +122,21 @@ const productsController = {
         let productId = req.params.id;
         let products= productsController.getProducts();
        
+        // NO FUNCIONA 
+        // products = products.filter(product => product.id != productId);
         
-        products = products.filter(product => product.id != productId);
+        // ENCUENTRA EL PRODUCTO
+        let product = products.find(product => product.id == productId)
+        //ENCUENTRA EL INDICE DEL PRODUCTO
+        let productIndex = products.indexOf(product)
+        
+        // ELIMINA EL PRODUCTO QUE COINCIDE CON EL INDICE DEL PRODUCTO
+        products.splice(productIndex, 1)
         
        
         fs.writeFileSync (productsPath, JSON.stringify(products, null, ' '));
     
-        res.redirect('/allProduct');
+        res.redirect('/');
     }
     
 }

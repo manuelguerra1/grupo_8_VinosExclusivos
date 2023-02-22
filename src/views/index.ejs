@@ -68,14 +68,36 @@
     <hr>
 
     <main>
-            <img   class="carrusel" src="../img/imgs/carrusel3.3.jpg" alt="carrusel">
+            <img class="carrusel" src="../img/imgs/carrusel3.3.jpg" alt="carrusel">
             
             <!-- ---------------------------------------------------------- -->
             <section class="products">
                 <div class="productContainer">
-                    <div class="product">
+
+                    <!-- LE PASAMOS A LA URL EL ID DEL PRODUCTO DE LA ITERACION -->
+                    <% productList.forEach(product => { %>
+                        <div class="product">
+                            <a href="/productDetail/<%= product.id %>">
+                            <div class="imgProduct">
+                                <!-- IMPRIME LA IMAGEN DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
+                                <img src="<%= product.image %>">
+                            </div>
+                            </a>
+                            <!-- IMPRIME EL NOMBRE DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
+                            <h3><%= product.name %></h3>
+                            <!-- IMPRIME EL PRECIO DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
+                            <h2><%= product.price %></h2>
+                                <p class="country"> <img class="country-icon" src="../img/icons/icono-AR-48.png" alt="bandera-pais"> Mendoza, Argentina</p>
+                                <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+                                <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+                        </div>
+                    <% }) %>
+
+                    <!-- <div class="product">
                         <a href="productDetail">
-                        <div class="imgProduct"><img src="../img/imgs/palo_alto_joven-cabernet_sauvignon.png"></div>
+                        <div class="imgProduct">
+                            <img src="../img/imgs/palo_alto_joven-cabernet_sauvignon.png">
+                        </div>
                         </a>
                         <h3>Palo Alto Joven Cabernet Sauvignon</h3>
                         <h2>$8.000</h2>
@@ -180,7 +202,7 @@
                         <p class="country"> <img class="country-icon" src="../img/icons/icono-AR-48.png" alt="bandera-pais"> Mendoza, Argentina</p>
                         <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
                         <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
-                    </div>
+                    </div> -->
                 </div>
             </section>         
             <!-- ------------------------------------------------------ -->
