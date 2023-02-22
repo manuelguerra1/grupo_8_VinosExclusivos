@@ -45,9 +45,9 @@ const productsController = {
         // } else{
         //     image.push("default.jpg");
         // }
-    
+
         let newProducts = {
-                "id":req.body.id,
+                "id":Date.now(),
                 "name": req.body.name,
                 "description":req.body.description,
                 "price":req.body.price,
@@ -57,11 +57,11 @@ const productsController = {
                 "region":req.body.region,
                 "category":req.body.category,
                 "available": true,
-                "image": req.body.image
+                "image": `/img/imgs/${req.file.filename}`
                 
         }
 
-        console.log("nuevo producto", newProducts);
+        // console.log("nuevo producto", newProducts);
     
         product.push(newProducts);
     
@@ -86,7 +86,6 @@ const productsController = {
         productos.forEach((producto, index) =>{
             if(producto.id == productId){
             producto.name = req.body.name,
-            producto.name=  req.body.name,
             producto.id= req.body.id,
             producto.description= req.body.description,
             producto.price= req.body.price,
@@ -133,7 +132,12 @@ const productsController = {
         // ELIMINA EL PRODUCTO QUE COINCIDE CON EL INDICE DEL PRODUCTO
         products.splice(productIndex, 1)
         
-       
+        // PREGUNTA SI TIENE IMAGEN CUANDO ELIMINA UN PRODUCTO
+        if (req.file) {
+            // SI TIENE UNA IMAGEN, LA BORRA DE LA CARPETA IMGS
+            fs.unlinkSync(__dirname, `../../public/img/imgs/${product.image}`)
+        }
+        
         fs.writeFileSync (productsPath, JSON.stringify(products, null, ' '));
     
         res.redirect('/');

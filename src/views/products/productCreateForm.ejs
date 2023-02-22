@@ -25,7 +25,7 @@
         </a>
 </header>
 <main>
-    <form method="post" action = "/save">
+    <form method="post" action = "/save" enctype="multipart/form-data">
         <div class="registroProducto">
             
             <h3> CREACION DE PRODUCTOS</h3>
@@ -33,7 +33,7 @@
             <br>
             <label for="codigo"></label>
             <h4>Codigo de Producto: </h4>
-            <input  type="text" name="id" id="id" placeholder="Codigo" required> 
+            <input  type="number" name="id" id="id" placeholder="Codigo" required> 
             <br>
 
             <label for="nameproduct"></label>

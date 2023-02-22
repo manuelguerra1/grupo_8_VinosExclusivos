@@ -1,12 +1,12 @@
 const express = require('express');
 const productsController = require('../controllers/productsController');
+const upload = require('../middlewares/multerMiddleware')
 const router = express.Router();
 
 router.get('/allProduct', productsController.allProduct);
-
 // Crear
 router.get ('/create', productsController.create);
-router.post('/save', productsController.store);
+router.post('/save', upload.single('image') ,productsController.store);
 // Editar
 router.get ('/edit/:id', productsController.productEdit);
 router.put ('/modify/:id', productsController.update);
