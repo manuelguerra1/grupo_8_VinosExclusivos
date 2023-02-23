@@ -117,7 +117,7 @@ img.header-logo{
 
 /* -----------------MAIN----------------- */
 
-div.registroProducto{
+div.registroProducto-edit-form{
     background-color: #7b1d46;
     margin: 20px;
     padding: 10px;
@@ -131,7 +131,7 @@ div.registroProducto{
     font-size: 20px;
 }
 
-div.registroProducto input{
+div.registroProducto-edit-form input{
     border-radius: 3px;
     width: 50%;
     padding: 5px;
@@ -140,7 +140,7 @@ div.registroProducto input{
     border: 2px solid black;
 } 
 
-div.prodCreate-buttons button{
+div.prodCreate-buttons-edit-form button{
     font-weight: bold;
     font-size: 15px;
     padding: 4px;
@@ -151,8 +151,20 @@ div.prodCreate-buttons button{
     border-radius: 4px;
 }
 
-img.edit-form-img{
+img.edit-form-img-edit-form{
     margin-top: 10px;
     height: 300px;
     width: 110px;
+}
+
+.category-select-edit-form{
+    display: flex;
+    background-color: #e9dee2;
+    color: #7b1d46;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    margin: 7px;
+    font-weight: 800;
+    text-transform: uppercase;
 }

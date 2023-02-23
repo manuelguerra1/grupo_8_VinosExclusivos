@@ -15,8 +15,7 @@
 </head> -->
 <%- include('./partials/head') %> 
 <body>
-    <header>
-        <header>
+    <!-- <header>
             <div class="top-header">
 
                 <a href="/">
@@ -31,25 +30,26 @@
                 <!-- <button> <a href="/register"></a><i class="fa-solid fa-circle-user"></i> </button>   
                 <button> <a href="/carrito"></a><i class="fa-solid fa-cart-shopping"></i> </button>-->
 
-            </div>
+            <!-- </div>
             <nav>
                 <div>
                     
                     <ul class="navegacionBarra">
                         <li> <a href="/">Home</a> </li>
-                        <!-- <li> <a href="">Productos</a> </li>
+                         <li> <a href="">Productos</a> </li>
                         <li> <a href="">Carrito</a> </li>
                         <li> <a href="">Login</a> </li>
                         <li> <a href="">Crear Cuenta</a> </li> -->
 
-                    </ul>
+                    <!-- </ul>
 
                 </div>
             </nav> 
-    </header>
-    </header>
+    </header>  -->
+
+    <%- include('./partials/header') %> 
     <hr>
-    <main>
+    <main class="register-main">
         <form method="post" action = "/userSave">
             <div class="register">
 
@@ -112,14 +112,14 @@
                 
                 
             </div>
-            <div class="terms-cond">
+            <div class="terms-cond-register">
                 <input type="checkbox" name="terminos y condiciones" id="" required>Acepto las condiciones de uso y políticas de privacidad.
             </div>
             <br>
 
-            <button type="reset" value="Borrar">BORRAR</button>
+            <button class="register-buttons"  type="reset" value="Borrar">BORRAR</button>
 
-            <button type="submit" value="Enviar">GUARDAR</button>
+            <button class="register-buttons"  type="submit" value="Enviar">GUARDAR</button>
 
 
         </form>

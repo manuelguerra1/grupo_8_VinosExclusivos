@@ -26,11 +26,11 @@ app.use(mainRouter);
 app.use(usersRouter);
 app.use(carritoRouter);
 app.use(productsRouter);
-// app.use((req,res) =>{
-//     res.status(404).render('404', {
-//         title: '404'
-//     })
-// })
+app.use((req,res) =>{
+    res.status(404).render('404', {
+        title: '404'
+    })
+})
 
 app.listen(PORT, () => {
     console.log('Servidor corriendo en el puerto 3008');

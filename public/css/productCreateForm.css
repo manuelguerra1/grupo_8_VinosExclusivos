@@ -115,9 +115,9 @@ img.header-logo{
     
 }
 
-/* -----------------MAIN----------------- */
+/* --------------------------------MAIN------------------------------- */
 
-div.registroProducto{
+div.registroProducto-prod-create-form{
     background-color: #7b1d46;
     margin: 20px;
     padding: 10px;
@@ -131,35 +131,49 @@ div.registroProducto{
     font-size: 20px;
 }
 
-div.registroProducto input{
-    border-radius: 3px;
+div.registroProducto-prod-create-form input{
+    border-radius: 5px;
     width: 50%;
     padding: 9px;
     margin: 7px;
     background-color: #e9dee2;
+    color: #7b1d46;
+    font-weight: bold;
     border: 2px solid black;
 } 
 
-#prod-img{
+/* #prod-img-prod-create-form{
     background-color: #7b1d46;
-}
+} */
 
-div.categories{
+div.categories-prod-create-form{
     display: flex;
     background-color: #e9dee2;
     color: #7b1d46;
     border: 2px solid black;
-    border-radius: 3px;
-    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
     margin: 7px ;
 }
 
-div.prodCreate-buttons button{
-    padding: 4px;
-    margin: 15px;
+div.prodCreate-buttons-prod-create-form button{
     background-color: #d9d1c5;
     color: #7b1d46;
-    border: 1px solid black;
-    border-radius: 3px;
-    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 10px;
+    margin: 0 10px 20px 10px;
+    opacity: 0.9;
+    font-weight:800;
+}
+
+.categorie-select-prod-create-form{
+    background-color: #7b1d46;
+    color: #d9d1c5;
+    padding: 4px;
+    font-weight: bold;
+    border: 1px solid #7b1d46;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
 }

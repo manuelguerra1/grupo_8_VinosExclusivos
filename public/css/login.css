@@ -10,7 +10,7 @@ body{
 } */
 
 /* ---------------------------LOGIN------------------------------ */
-.login{
+.login-section{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -30,13 +30,13 @@ body{
     justify-content: center;
     align-items: center;
 }
-.loginBox .avatar{
+.loginBox .avatar-login-img{
     width: 100px;
     height: 100px;
     border-radius: 50%;
 
 }
-.loginBox h1{
+.loginBox h1.login-h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
@@ -71,9 +71,9 @@ body{
     font-size: 18px;
     border-radius: 20px;
 }
-.loginBox a{
+.loginBox a.login-a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
     color: darkgray;
 }

@@ -5,46 +5,48 @@
 <body>
     <header>
         <%- include('../partials/header') %> 
-
     </header>
 
     <main>
         <form action="/edit/<%= product.id %>" >
-            <div class="btn-edit">
-                <button class="add-menu" type="submit">EDITAR</button>
+            <div class="btn-edit-prod-detail">
+                <button class="add-menu-prod-detail" type="submit">EDITAR</button>
             </div>
         </form>
         <form action="/delete/<%= product.id %>" >
-            <div class="btn-edit">
-                <button class="add-menu" type="submit">ELIMINAR</button>
+            <div class="btn-edit-prod-detail">
+                <button class="add-menu-prod-detail" type="submit">ELIMINAR</button>
             </div>
         </form>
-        <section class="products">
-            <div class="productContainer">
+        <section class="products-prod-detail">
+            <div class="productContainer-prod-detail">
             </section>
-            <div class="product">
-                    <div class="imgProduct"><img src="<%= product.image%>"></div>
-                    <h3><%= product.name %></h3>
-                    <h2><%= product.price %></h2>
+            <div class="product-prod-detail">
+                    <div class="imgProduct-prod-detail"><img src="<%= product.image%>"></div>
+                    <h3 class="prod-name-prod-detail"><%= product.name %></h3>
+                    <br>
+                    <h2 class="prod-price-prod-detail"><%= product.price %></h2>
+                    <br>
                     <form action="/carrito">
                         <button type="submit"> Agregar al carrito </button>
                     </form>
+                    <br>
                     
-                    <h4> Cantidad: </h4> <select name="product-amount" id="">
+                    <h4 class="prod-amount-prod-detail"> Cantidad: </h4> <select name="product-amount" id="">
                         <option value="one">1</option>
                         <option value="two">2</option>
                         <option value="three">3</option>
                         <option value="four">4</option>
                         <option value="five">5</option>
                     </select>
-                    <p class="desc">Descripción: 
+                    <p class="desc-prod-detail">Descripción: 
                         <br>
                         <%= product.description %> 
                         <br>
                     </p>  
                         
-                    <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
-                    <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+                    <p class="shipping-prod-detail"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+                    <p class="rules-prod-detail"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
                 </div>
             </div>
         </section>

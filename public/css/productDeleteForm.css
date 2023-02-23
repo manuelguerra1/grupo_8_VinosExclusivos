@@ -115,14 +115,14 @@ img.header-logo{
     
 }
 
-/* -----------------MAIN----------------- */
+/* ------------------------------MAIN----------------------------- */
 
 form.delete-form{
     display: flex;
     justify-content: center;
 }
 
-div.registroProducto{
+div.registroProducto-delete-form{
     background-color: #7b1d46;
     width: 50%;
     margin: 20px;
@@ -134,21 +134,21 @@ div.registroProducto{
     font-size: 20px;
 }
 
-p.desc{
+p.desc-delete-form{
     text-align: justify;
     font-size: 18px;
     padding: 10px;
 }
 
-h3.name-price{
+h3.name-price-delete-form{
     text-decoration: underline;
 }
 
-h3.delete-title{
+h3.delete-title-delete-form{
     text-decoration: overline;
 }
 
-button.delete-button{
+button.delete-button-delete-form{
     font-weight: bold;
     padding: 4px;
     margin: 15px;

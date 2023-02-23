@@ -1,6 +1,6 @@
 
 /* ---------------------------CARRITO------------------------------ */
-.carritoPag{
+/* .carritoPag{
     margin: 50px;
 }
 table{
@@ -62,42 +62,42 @@ td small{
     max-width: 350px;
 }
 /*esto es para que los dos cuadros esten alineados el ultimo hijo y el cuadro de total*/
-td:last-child{
+/* td:last-child{
     text-align: right;
 }
 th:last-child{
     text-align: right;
-}
+}  */
 
 /* ---------------------------CARRITO------------------------------ */
-.carritoPag{
+.carritoPag-trolley{
     margin: 80px;
 }
-table{
+.table-trolley{
     width: 100%;
     border-collapse: collapse;
 }
-.carritoInfo{
+.carritoInfo-trolley{
     display: flex;
     flex-wrap: wrap;
     color: #770d3b;
 }
-.carritoInfo .p{
+/* .carritoInfo-trolley p{
     color: #770d3b;
-}
-th{
+} */
+.th-trolley{
     text-align: left;
     padding: 5px;
     color: #770d3b;
     font-weight: bold;
 }
-td{
+.td-trolley{
     text-align: left;
     color: #770d3b;
     font-weight: bold;
     padding: 10px 5px;
 }
-td select{
+.td-trolley select{
     width: 55px;
     height: 30px;
     padding: 5px;
@@ -105,37 +105,37 @@ td select{
     border-radius: 4px;
     background-color: #d9d1c5;
 }
-td img{
+.td-trolley img{
     width: 300px;
     height: 300px;
     margin-right: 30px;
 }
-td p{
+.td-trolley p.prod-name-trolley{
     text-align: left;
     color: #770d3b;
     font-weight: normal;
     padding: 10px 5px;
 }
-td small{
+.td-trolley small.tiny-price-trolley{
     text-align: left;
     color: #770d3b;
     font-weight: normal;
     padding: 10px 5px;
 }
-.totalPrecio{
+.totalPrecio-trolley{
     display: flex;
     justify-content: flex-end;
 }
-.totalPrecio table{
+.totalPrecio-trolley table.final-table-trolley{
     border-top: 3px solid #770d3b;
     width: 100%;
     max-width: 350px;
 }
 /*esto es para que los dos cuadros esten alineados el ultimo hijo y el cuadro de total*/
-td:last-child{
+.td-trolley:last-child{
     text-align: right;
 }
-th:last-child{
+.th-trolley:last-child{
     text-align: right;
 }
 /* *{

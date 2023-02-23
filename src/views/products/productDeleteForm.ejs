@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/productDeleteForm.css">
     <title>Login</title>
-</head>
+</head> -->
+
+<%- include('../partials/head') %> 
 
 <body>
-    <header>
+    <!-- <header>
         <div class="top-header">
 
             <a href="/">
@@ -25,32 +27,34 @@
                         alt="logo">
             </a>
             </a>
-    </header>
+    </header> -->
+
+    <%- include('../partials/header') %>
     <main>
 
         <form class="delete-form" method="post" action="/eliminate/<%= product.id%> ?_method=DELETE">
-            <div class="registroProducto">
+            <div class="registroProducto-delete-form">
 
-                <h3 class="delete-title"> ¿ESTAS SEGURO DE ELIMINAR EL PRODUCTO? </h3>
+                <h3 class="delete-title-delete-form"> ¿ESTAS SEGURO DE ELIMINAR EL PRODUCTO? </h3>
 
-                <section class="products">
-                    <div class="productContainer">
-                </section>
-                <div class="product">
+                <!-- <section class="products-delete-form">
+                    <div class="productContainer-delete-form">
+                </section> -->
+                <div class="product-delete-form">
                     <div class="imgProduct"><img src="<%= product.image%>"></div>
-                    <h3 class="name-price">
+                    <h3 class="name-price-delete-form">
                         <%= product.name %>
                     </h3>
-                    <h3 class="name-price">
+                    <h3 class="name-price-delete-form">
                         <%= product.price %>
                     </h3>
-                    <p class="desc">Descripción:
+                    <p class="desc-delete-form">Descripción:
                         <br>
                         <%= product.description %>
                         <br>
                     </p>
-                    <div class="prodDelete-buttons">
-                        <button class="delete-button" type="submit" value="Actualizar">ELIMINAR</button>
+                    <div class="prodDelete-buttons-delete-form">
+                        <button class="delete-button-delete-form" type="submit" value="Actualizar">ELIMINAR</button>
             
                         <!-- <button type="reset" value="Cancelar">CANCELAR</button> -->
                     </div>

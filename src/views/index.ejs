@@ -68,28 +68,28 @@
     <hr>
 
     <main>
-            <img class="carrusel" src="../img/imgs/carrusel3.3.jpg" alt="carrusel">
+            <img class="carrusel-index" src="../img/imgs/carrusel3.3.jpg" alt="carrusel">
             
             <!-- ---------------------------------------------------------- -->
-            <section class="products">
-                <div class="productContainer">
+            <section class="products-index">
+                <div class="productContainer-index">
 
                     <!-- LE PASAMOS A LA URL EL ID DEL PRODUCTO DE LA ITERACION -->
                     <% productList.forEach(product => { %>
-                        <div class="product">
+                        <div class="product-index">
                             <a href="/productDetail/<%= product.id %>">
-                            <div class="imgProduct">
+                            <!-- <div class="imgProduct-index"> -->
                                 <!-- IMPRIME LA IMAGEN DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
                                 <img src="<%= product.image %>">
-                            </div>
+                            <!-- </div> -->
                             </a>
                             <!-- IMPRIME EL NOMBRE DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
-                            <h3><%= product.name %></h3>
+                            <h3 class="prod-name-index"><%= product.name %></h3>
                             <!-- IMPRIME EL PRECIO DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
-                            <h2><%= product.price %></h2>
-                                <p class="country"> <img class="country-icon" src="../img/icons/icono-AR-48.png" alt="bandera-pais"> Mendoza, Argentina</p>
-                                <p class="shipping"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
-                                <p class="rules"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+                            <h2 class="prod-price-index"><%= product.price %></h2>
+                                <p class="country-index"> <img class="country-icon-index" src="../img/icons/icono-AR-48.png" alt="bandera-pais"> Mendoza, Argentina</p>
+                                <p class="shipping-index"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+                                <p class="rules-index"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
                         </div>
                     <% }) %>
 

@@ -77,12 +77,12 @@
         <%- include('./partials/header') %> 
         <!--Carrito detalle de items-->
     <main>
-        <div class="carritoPag">
-            <table>
+        <div class="carritoPag-trolley">
+            <table class="table-trolley">
                 <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
+                    <th class="th-trolley">Producto</th>
+                    <th class="th-trolley">Cantidad</th>
+                    <th class="th-trolley">Subtotal</th>
                 </tr>
                 <!-- <tr>
                     <td>
@@ -111,39 +111,39 @@
                     <td>$15.000</td>
                 </tr> -->
                 <tr>
-                    <td>
-                        <div class="carritoInfo">
+                    <td class="td-trolley">
+                        <div class="carritoInfo-trolley">
                             <img src="../img/imgs/gin-bosque-alta-montaña.webp" alt="">
-                            <div class="detalleProducto">
-                                <p> Gin Bosque</p>
-                                <small>Precio $10.000</small>
+                            <div class="detalleProducto-trolley">
+                                <p class="prod-name-trolley"> Gin Bosque</p>
+                                <small class="tiny-price-trolley">Precio $10.000</small>
                             </div>
                         </div>
                     </td>
-                    <td><select class='prod-amount 'name="prod-amount" id="">
+                    <td class="td-trolley"><select class='prod-amount 'name="prod-amount" id="">
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
                         <option value="">4</option>
                         <option value="">5</option>
                     </select></td>
-                    <td>$10.000</td>
+                    <td class="td-trolley">$10.000</td>
                 </tr>
             </table>
     
-            <div class="totalPrecio"  >
-                <table>
+            <div class="totalPrecio-trolley"  >
+                <table class="final-table-trolley">
                     <tr>
-                        <td>Subtotal</td>
-                        <td>$10.000</td>
+                        <td class="td-trolley">Subtotal</td>
+                        <td class="td-trolley">$10.000</td>
                     </tr>
                     <tr>
-                    <td>Envio</td>
-                        <td>$3.000</td>
+                    <td class="td-trolley">Envio</td>
+                        <td class="td-trolley">$3.000</td>
                     </tr>
                     <tr>
-                        <td>Total</td>
-                        <td>$13.000</td>
+                        <td class="td-trolley">Total</td>
+                        <td class="td-trolley">$13.000</td>
                     </tr>
                 </table>
             </div>
