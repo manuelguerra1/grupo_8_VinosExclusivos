@@ -86,10 +86,23 @@
     margin: 15px;
 } */
 
+div.btn-edit-prod-detail{
+    width: 100vw;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
 button.add-menu-prod-detail{
     width: 100px;
     margin-top: 10px;
     border: 1px solid black;
+    background-color: #7b1d46;
+    color: #d9d1c5;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 700;
 }
 
 .product-prod-detail {
