@@ -57,7 +57,7 @@ const productsController = {
                 "region":req.body.region,
                 "category":req.body.category,
                 "available": true,
-                "image": `/img/imgs/${req.file.filename}`
+                "image": req.file.filename
                 
         }
 
@@ -94,7 +94,8 @@ const productsController = {
             producto.origen= req.body.origen,
             producto.region= req.body.region,
             producto.category= req.body.category,
-            producto.image=  req.body.image
+            //ponemos un ternario para que si me trae una imagen cambie el valor o foto y sino queda la misma imagen
+            producto.image=  req.file ? req.file.filename : producto.image
 
             productos[index] = producto;
         }
@@ -133,10 +134,9 @@ const productsController = {
         products.splice(productIndex, 1)
         
         // PREGUNTA SI TIENE IMAGEN CUANDO ELIMINA UN PRODUCTO
-        if (req.file) {
-            // SI TIENE UNA IMAGEN, LA BORRA DE LA CARPETA IMGS
-            fs.unlinkSync(__dirname, `../../public/img/imgs/${product.image}`)
-        }
+        // SI TIENE UNA IMAGEN, LA BORRA DE LA CARPETA IMGS
+        fs.unlinkSync(__dirname, `../../public/img/imgs/${product.image}`)
+        
         
         fs.writeFileSync (productsPath, JSON.stringify(products, null, ' '));
     

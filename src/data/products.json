@@ -10,7 +10,7 @@
   "region": "Luján de Cuyo, Mendoza (1100 m S.N.M.)",
   "category": "Vinos",
   "available": true,
-  "image": "/img/imgs/palo_alto_joven-cabernet_sauvignon.png"
+  "image": "palo_alto_joven-cabernet_sauvignon.png"
  },
  {
   "id": 2,
@@ -23,7 +23,7 @@
   "region": "Luján de Cuyo, Mendoza (1100 m S.N.M.)",
   "category": "Vinos",
   "available": true,
-  "image": "/img/imgs/palo_alto_joven-malbec.png"
+  "image": "palo_alto_joven-malbec.png"
  },
  {
   "id": 3,
@@ -36,7 +36,7 @@
   "region": "Luján de Cuyo, Mendoza (1100 m S.N.M.)",
   "category": "Vinos",
   "available": true,
-  "image": "/img/imgs/palo_alto_joven-torrentes.png"
+  "image": "palo_alto_joven-torrentes.png"
  },
  {
   "id": 4,
@@ -49,7 +49,7 @@
   "region": "Luján de Cuyo, Mendoza (1100 m S.N.M.)",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/palo_alto-benito-blend.jpg"
+  "image": "palo_alto-benito-blend.jpg"
  },
  {
   "id": 5,
@@ -62,7 +62,7 @@
   "region": "Buenos Aires",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/gin-bosque-alta-montaña.webp"
+  "image": "gin-bosque-alta-montaña.webp"
  },
  {
   "id": 6,
@@ -75,7 +75,7 @@
   "region": "Buenos Aires",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/gins_BOTELLA-BSASGIN-scaled.jpg"
+  "image": "gins_BOTELLA-BSASGIN-scaled.jpg"
  },
  {
   "id": 7,
@@ -88,7 +88,7 @@
   "region": "Buenos Aires",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/gins_aconcagua_BLUE.jpeg"
+  "image": "gins_aconcagua_BLUE.jpeg"
  },
  {
   "id": 8,
@@ -101,7 +101,7 @@
   "region": "Buenos Aires",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/gins_aconcagua_lemongrass.webp"
+  "image": "gins_aconcagua_lemongrass.webp"
  },
  {
   "id": 9,
@@ -114,7 +114,7 @@
   "region": "Cordoba",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/vodka_smf_green_apple_685x1200.jpg"
+  "image": "vodka_smf_green_apple_685x1200.jpg"
  },
  {
   "id": 10,
@@ -126,7 +126,8 @@
   "origen": "Argentina",
   "region": "Cordoba",
   "category": "Destilados",
-  "available": true
+  "available": true,
+  "image": "vodka_smf_raspberry_685x1200.jpg"
  },
  {
   "id": 11,
@@ -139,7 +140,7 @@
   "region": "Cordoba",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/vodka_smf_21_685x1200.jpg"
+  "image": "vodka_smf_21_685x1200.jpg"
  },
  {
   "id": 12,
@@ -152,7 +153,7 @@
   "region": "Cordoba",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/vodka_smf_watermelon_685x1200.jpg"
+  "image": "vodka_smf_watermelon_685x1200.jpg"
  },
  {
   "id": 14,
@@ -165,6 +166,6 @@
   "region": "Cordoba",
   "category": "Destilados",
   "available": true,
-  "image": "/img/imgs/gin-bosque-alta-montaña.webp"
+  "image": "gin-bosque-alta-montaña.webp"
  }
 ]
