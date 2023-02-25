@@ -1,10 +1,10 @@
 [
  {
-  "id": 1,
+  "id": "1",
   "name": "Palo Alto Joven Cabernet Sauvignon",
   "description": "Muestra un color rojo rubí brillante con reflejos violáceos. Presta aromas característicos de lavariedad tales como el casis, la pimienta negra y el pimiento verde maduro",
-  "price": "$8.000",
-  "varietal": "$8.000",
+  "price": "20000",
+  "varietal": "Cabernet Sauvignon",
   "year": "2022",
   "origen": "Argentina",
   "region": "Luján de Cuyo, Mendoza (1100 m S.N.M.)",
@@ -13,10 +13,10 @@
   "image": "palo_alto_joven-cabernet_sauvignon.png"
  },
  {
-  "id": 2,
+  "id": "2",
   "name": "Palo Alto Joven Malbec",
   "description": "Tiene un ataque dulce, de cuerpo medio, fresco y frutado en su paso por boca. Equilibrado, de taninos redondos, cálido y con una acidéz que resalta la fruta. Evoluciona hacia un finalpleno de notas tostadas, persistente y de agradable recuerdo.",
-  "price": "$8.000",
+  "price": "30000000",
   "varietal": "Malbec",
   "year": "2022",
   "origen": "Argentina",
@@ -26,10 +26,10 @@
   "image": "palo_alto_joven-malbec.png"
  },
  {
-  "id": 3,
+  "id": "3",
   "name": "Palo Alto Joven Torrontes",
   "description": "De entrada amable, es delicado y untuoso en su paso por boca, es dueño de una equilibrada acidez que aporta frescura a la fruta. Posee un persistente y cálido final.",
-  "price": "$8.000",
+  "price": "40000",
   "varietal": "Torrontes",
   "year": "2022",
   "origen": "Argentina",
@@ -39,10 +39,10 @@
   "image": "palo_alto_joven-torrentes.png"
  },
  {
-  "id": 4,
+  "id": "4",
   "name": "Palo Alto Benito A Grand Reserve Blend",
   "description": "Tiene un ataque dulce, despliega en el medio de boca su potencia donde muestra sus taninos firmes, muestra un exquisito equilibrio entre la fruta y la acidez en su paso por boca. Corre sedoso y robusto para culminar en un final prolongado colmado de notas torradas y ahumados intensos.",
-  "price": "$12.000",
+  "price": "50000",
   "varietal": "Blend",
   "year": "2019",
   "origen": "Argentina",

@@ -16,3 +16,17 @@ objetivo semanal:
 - css de imagenes ver si funciona con esto la resolucion de la imagen de los productos  "Width
 object-fit: cover; o contain"
 
+revisar devolucion de Ro
+Al editar producto, no tienen para editar la imagen del mismo, solo aparece la imagen (que en realidad no aparece tampoco porque aparentemente están rotas las rutas, seguro porque ya están con las modificaciones para el siguiente sprint) 
+<!-- Corregido en la linea 82 de productEditForm.ejs le agregue /img/imgs antes del <%=>
+ <img class="edit-form-img-edit-form" src="/img/imgs/<%= product.image%>"> -->
+
+El input de $$ solo debería aceptar números. 
+// <input type="number" name="price" id="price" value="<%= product.price %>">
+
+Cuando estamos en la vista de edición o detalle de , las imagenes no se ven. (por lo dicho arriba)
+
+Se crean perfecto los productos, se editan correctamente, pero se rompe al querer eliminar. 
+
+Saludos muy buen trabajo y a seguir asi 💪
+

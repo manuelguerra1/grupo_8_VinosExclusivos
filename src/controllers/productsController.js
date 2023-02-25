@@ -73,9 +73,11 @@ const productsController = {
     productEdit: function (req, res) {
         let productId = req.params.id;
         let producto = productsController.getProducts().find(producto => producto.id == productId);
+        console.log("hola estamos viendo",producto)
         
-        res.render('./products/productEditForm', {
-            product: producto
+        return res.render('./products/productEditForm', {
+            product: producto,
+            id: req.params.id
         });
     }, 
     
@@ -89,13 +91,14 @@ const productsController = {
             producto.id= req.body.id,
             producto.description= req.body.description,
             producto.price= req.body.price,
-            producto.varietal= req.body.price,
+            producto.varietal= req.body.varietal,
             producto.year= req.body.year,
             producto.origen= req.body.origen,
             producto.region= req.body.region,
             producto.category= req.body.category,
             //ponemos un ternario para que si me trae una imagen cambie el valor o foto y sino queda la misma imagen
             producto.image=  req.file ? req.file.filename : producto.image
+            
 
             productos[index] = producto;
         }
