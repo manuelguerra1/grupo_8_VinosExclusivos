@@ -44,7 +44,7 @@ const productsController = {
     
         // } else{
         //     image.push("default.jpg");
-        // }
+        // } 
 
         let newProducts = {
                 "id":Date.now(),

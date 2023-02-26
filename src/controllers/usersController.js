@@ -8,15 +8,15 @@ const usersController = {
         return JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
     },
     login: function (req, res) {
-        res.render('login')
+        res.render('./users/login')
     },
     
     register: function (req, res) {
-        res.render('register')
+        res.render('./users/register')
     },
 
     usersCreate:function (req, res) {
-        res.render('../products/register')
+        res.render('./users/register')
     },
 
     usersStore:function (req,res) {

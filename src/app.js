@@ -3,7 +3,7 @@ const app = express();
 
 const methodOverride = require('method-override');
 
-const PORT = process.env.PORT || 3008; 
+const PORT = process.env.PORT || 3008;
 
 const mainRouter = require("./routers/main");
 const usersRouter = require("./routers/users");
