@@ -30,3 +30,9 @@ Se crean perfecto los productos, se editan correctamente, pero se rompe al quere
 
 Saludos muy buen trabajo y a seguir asi 💪
 
+27 de Febrero
+Cambiamos la ruta de multerMilddleware xq estaba imgs y es product la carpeta.
+
+Agregamos una imagen en el json para ver porque no elimina un producto, hay que controlar el unlinksync xq tira error ahi
+
+Y en productController cambiamos la ruta xq también estaba imgs y es product
