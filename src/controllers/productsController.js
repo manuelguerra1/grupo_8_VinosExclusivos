@@ -138,7 +138,7 @@ const productsController = {
         
         // PREGUNTA SI TIENE IMAGEN CUANDO ELIMINA UN PRODUCTO
         // SI TIENE UNA IMAGEN, LA BORRA DE LA CARPETA IMGS
-        fs.unlinkSync(__dirname, `../../public/img/imgs/${product.image}`)
+        fs.unlinkSync(__dirname, `../../public/img/product/${product.image}`)
         
         
         fs.writeFileSync (productsPath, JSON.stringify(products, null, ' '));

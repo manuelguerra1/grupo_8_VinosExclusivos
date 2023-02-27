@@ -4,7 +4,7 @@ const path = require('path');
 const storage = multer.diskStorage({
     // DEFINE EL LUGAR DONDE SE VAN A GUARDAR LAS IMAGENES
     destination: (req, file, callback) => {
-        let filePath = path.resolve(__dirname, '../../public/img/imgs/')
+        let filePath = path.resolve(__dirname, '../../public/img/product/')
         callback(null, filePath)
     },
     // DEFINE EL NOMBRE DE LA IMAGEN, DANDO UN NOMBRE DISTINTO A CADA IMAGEN
