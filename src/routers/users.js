@@ -9,12 +9,14 @@ router.get('/register', usersController.register);
 // Crear
 router.get ('/userCreate', usersController.usersCreate);
 router.post('/userSave', usersController.usersStore);
+
 // // Editar
-// router.get ('/useredit/:id', usersController.usersEdit);
-// router.put ('/usermodify/:id', usersController.usersUpdate);
+router.get ('/useredit/:id', usersController.usersEdit);
+router.put ('/usermodify/:id', usersController.usersUpdate);
+
 // // Eliminar
-// router.get ('/userdelete/:id', usersController.usersDelete);
-// router.delete ('/usereliminate/:id', usersController.usersDestroy);
+router.get ('/userdelete/:id', usersController.usersDelete);
+router.delete ('/usereliminate/:id', usersController.usersDestroy);
 
 
 module.exports = router;

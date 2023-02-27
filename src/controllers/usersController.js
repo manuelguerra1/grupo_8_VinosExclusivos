@@ -43,7 +43,14 @@ user.push(newUser);
 
     },
 
-    usersEdit:{
+    usersEdit:{ function (req, res){
+        let userId = req.params.id;
+        let usuario = usersController.getUsers().find(usuario => usuario.id == userId);
+
+        return res.render('./users/userEditForm', {
+            user: usuario,
+            id: req.params.id
+        });
 
     },
     update:{

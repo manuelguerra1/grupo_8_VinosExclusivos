@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+    <body>
+
+
+        <%- include('../partials/header') %>
+            <main>
+                <form method="post" action="/useredit/<%= user.id %>?_method=PUT">
+                    <div class="registroUsuario-edit-form">
+                        <h3> EDICIÓN DE USUARIO</h3>
+
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name" placeholder="Nombre" value="<%= users.name %>" required>
+                        <br>
+
+                        <label for="last-name"></label>
+                        <input type="text" name="lastname" id="last-name" placeholder="Apellido" value="<%= users.lastname %>" required>
+                        <br>
+
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="E-mail" value="<%= users.email %>" required>
+                        <br>
+
+                        <label for="user-name"></label>
+                        <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" value="<%= users.username %>" required>
+                        <br>
+
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= users.password %>" required>
+                        <br>
+
+                        <label for="confirm-password"></label>
+                        <input type="password" name="confirmpassword" id="confirm-password"
+                            placeholder="Confirmar contraseña" value="<%= users.confirmpassword %>" required>
+                        <br>
+
+
+                    </div>
+                    <div class="terms-cond-register">
+                        <input type="checkbox" name="terminos y condiciones" id="" required>Acepto las condiciones de
+                        uso y políticas de privacidad.
+                    </div>
+                    <br>
+<!-- buscar que type debemos usar para que el button cancele -->
+                    <!-- <button class="register-buttons" type="reset" value="Cancelar">CANCELAR</button> -->
+
+                    <button class="register-buttons" type="submit" value="Enviar">ACTUALIZAR</button>
+
+
+                </form>
+            </main>
+
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

@@ -73,7 +73,7 @@ const productsController = {
     productEdit: function (req, res) {
         let productId = req.params.id;
         let producto = productsController.getProducts().find(producto => producto.id == productId);
-        console.log("hola estamos viendo",producto)
+        
         
         return res.render('./products/productEditForm', {
             product: producto,
