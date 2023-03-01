@@ -36,3 +36,9 @@ Cambiamos la ruta de multerMilddleware xq estaba imgs y es product la carpeta.
 Agregamos una imagen en el json para ver porque no elimina un producto, hay que controlar el unlinksync xq tira error ahi
 
 Y en productController cambiamos la ruta xq también estaba imgs y es product
+
+---1 de marzo---
+En esta estapa vamos a modificar el logo de login para llamar PERFIL que vamos a crear con la intencion de que en esta parte pueda editar sus datos de usuario.
+
+Para esto vamos a crear un nuevo EJS con los datos extraido del registro que van a tener un boton EDITAR, un boton CANCELAR y un boton GUARDAR.
+

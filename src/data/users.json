@@ -53,5 +53,13 @@
   "username": "DiegoP",
   "password": "9876",
   "confirmpassword": "9876"
+ },
+ {
+  "name": "Juan",
+  "lastname": "Palo",
+  "email": "juanpalo@gmail.com",
+  "username": "JuanP",
+  "password": "nuevo",
+  "confirmpassword": "nuevo"
  }
 ]
