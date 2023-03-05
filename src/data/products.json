@@ -154,31 +154,5 @@
   "category": "Destilados",
   "available": true,
   "image": "vodka_smf_watermelon_685x1200.jpg"
- },
- {
-  "id": 14,
-  "name": "Smirnoff Watermelon",
-  "description": "Es la marca de bebidas espirituosas más grande del mundo. Su calidad y pureza son extraordinarias. Smirnoff está triplemente destilado y filtrado 10 veces sobre carbón vegetal por un lapso de 8 horas. Smirnoff Watermelon está infusionado con manzana verde y mantiene la pureza de Smirnoff 21.",
-  "price": "$1.800",
-  "varietal": "Vodka",
-  "year": "2022",
-  "origen": "Argentina",
-  "region": "Cordoba",
-  "category": "Destilados",
-  "available": true,
-  "image": "gin-bosque-alta-montaña.webp"
- },
- {
- "id": 15,
-  "name": "Smirnoff Watermelon",
-  "description": "Es la marca de bebidas espirituosas más grande del mundo. Su calidad y pureza son extraordinarias. Smirnoff está triplemente destilado y filtrado 10 veces sobre carbón vegetal por un lapso de 8 horas. Smirnoff Watermelon está infusionado con manzana verde y mantiene la pureza de Smirnoff 21.",
-  "price": "$1.800",
-  "varietal": "Vodka",
-  "year": "2022",
-  "origen": "Argentina",
-  "region": "Cordoba",
-  "category": "Destilados",
-  "available": true,
-  "image": "gin-bosque-alta-montaña.webp"
-}
+ }
 ]
