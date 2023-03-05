@@ -5,6 +5,7 @@ const router = express.Router();
 const userUpload = require ('../middlewares/userMulterMiddleware')
 
 router.get('/login', usersController.login);
+router.post('/processLogin', usersController.processLogin);
 
 router.get('/register', usersController.register);
 

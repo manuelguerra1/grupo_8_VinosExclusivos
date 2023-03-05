@@ -81,5 +81,15 @@
   "username": "prueba",
   "password": "prueba",
   "confirmpassword": "prueba"
+ },
+ {
+  "id": 1678052139348,
+  "avatar": "user-1678052139339.jpeg",
+  "name": "Antonella",
+  "lastname": "Rodríguez",
+  "email": "rodriguez.antonella.n@gmail.com",
+  "username": "anrrid",
+  "password": "$2b$10$yGp3HIt8mkMRNr93X0qGeOKURJE.kk4gIQwgkPT8d43M1c5cZtez.",
+  "confirmpassword": "$2b$10$GQbET7LtLJNOHW/5lmxN.uM02aHryJutshBWU2.L5vMlK/9pyd0F2"
  }
 ]

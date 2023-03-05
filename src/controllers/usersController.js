@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const bcrypt = require('bcrypt');
 
 const usersPath = path.join(__dirname, "/../data/users.json");
 
@@ -9,6 +10,13 @@ const usersController = {
   },
   login: function (req, res) {
     res.render("./users/login");
+  },
+  processLogin: function (req, res) {
+    res.json({
+      msg: "respuesta del processlogin",
+      data: req.body
+    })
+    
   },
 
   register: function (req, res) {
@@ -31,8 +39,8 @@ const usersController = {
       "lastname": req.body.lastname,
       "email": req.body.email,
       "username": req.body.username,
-      "password": req.body.password,
-      "confirmpassword": req.body.confirmpassword
+      "password": bcrypt.hashSync(req.body.password, 10),
+      "confirmpassword": bcrypt.hashSync(req.body.confirmpassword, 10)
     }
 
     // console.log("nuevo usuario", newUser);

@@ -85,14 +85,15 @@
                       <h1 class="login-h1">Logueate aquí</h1>
                       //TODO el boton de login no nos llevaba a ningun lado, ahora esta para que una vez q se Logueate
                       // lo lleve al home para empezar a navegar 1-marzo
-                      <form action="/">
+
+                      <form action="/processLogin" method="post">
                           <!--Nombre Usuario-->
                           <label for="nombreUsuario">Ingresá tu nombre de Usuario</label>
-                          <input type="text" placeholder="Enter Username">
+                          <input type="text" placeholder="Enter Username" name="name">
       
                           <!--Password-->
                           <label for="password">Ingresá tu contraseña</label>
-                          <input type="password" placeholder="Enter Password">
+                          <input type="password" placeholder="Enter Password" name="password">
    
                            <!-- PASAR EL INPUT SUBMIT A UN BUTTON SUBMIT -->
                            
