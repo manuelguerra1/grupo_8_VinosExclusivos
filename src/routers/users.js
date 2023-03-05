@@ -2,15 +2,19 @@ const express = require('express');
 const usersController = require('../controllers/usersController');
 // TODO - const upload = require('../middlewares/multerMiddleware')
 const router = express.Router();
+const userUpload = require ('../middlewares/userMulterMiddleware')
 
 router.get('/login', usersController.login);
 
 router.get('/register', usersController.register);
 
+router.get('/profile', usersController.profile);
+
+
 // Crear
 //TODO Agregar en la linea 13 -  upload.single('image')
 router.get ('/userCreate', usersController.usersCreate);
-router.post('/userSave', usersController.usersStore);
+router.post('/userSave', userUpload.single('avatar'), usersController.usersStore);
 
 // // Editar
 router.get ('/userEdit/:id', usersController.usersEdit);

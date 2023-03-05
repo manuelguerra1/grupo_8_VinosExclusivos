@@ -61,5 +61,25 @@
   "username": "JuanP",
   "password": "nuevo",
   "confirmpassword": "nuevo"
+ },
+ {
+  "id": 1678045453330,
+  "avatar": "user-1678045453322.png",
+  "name": "prueba",
+  "lastname": "prueba",
+  "email": "prueba@prueba.com",
+  "username": "prueba",
+  "password": "prueba",
+  "confirmpassword": "prueba"
+ },
+ {
+  "id": 1678048066819,
+  "avatar": "user-1678048066812.jpg",
+  "name": "Kira",
+  "lastname": "Rodríguez",
+  "email": "kira@post.com",
+  "username": "prueba",
+  "password": "prueba",
+  "confirmpassword": "prueba"
  }
 ]

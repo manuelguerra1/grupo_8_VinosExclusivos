@@ -44,4 +44,5 @@ Para esto vamos a crear un nuevo EJS con los datos extraido del registro que van
 
 3/3/23 ** Se arreglo destroy, comentando el unlinksync. 
 
-5/3 Recordar implementar pop-up con condicion de mayor de edad. 
+5/3 *Recordar implementar pop-up con condicion de mayor de edad.
+    *Armamos controlador-ruta-formulario para usuarios, presento errores. La solucion se encontro agregando enctype="multipart/form-data" en la etiqueta form del register.ejs. Info sacada de la documentacion de multer.

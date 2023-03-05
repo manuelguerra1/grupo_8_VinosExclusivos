@@ -21,24 +21,27 @@ const usersController = {
 
   usersStore: function (req, res) {
     let user = usersController.getUsers();
+    console.log('avatar', req.file.filename);
+    console.log('req.file', req.file);
 
     let newUsers = {
-      id: req.body.id,
-      name: req.body.name,
-      lastname: req.body.lastname,
-      email: req.body.email,
-      username: req.body.username,
-      password: req.body.password,
-      confirmpassword: req.body.confirmpassword,
-    };
+      "id": Date.now(),
+      "avatar": req.file.filename,
+      "name": req.body.name,
+      "lastname": req.body.lastname,
+      "email": req.body.email,
+      "username": req.body.username,
+      "password": req.body.password,
+      "confirmpassword": req.body.confirmpassword
+    }
 
     // console.log("nuevo usuario", newUser);
 
     user.push(newUsers);
 
-    fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));
+    fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '));
 
-    res.redirect("register");
+    res.redirect("/");
   },
 
   usersEdit: function (req, res) {
@@ -103,12 +106,18 @@ const usersController = {
 
     // PREGUNTA SI TIENE IMAGEN CUANDO ELIMINA UN USUARIO
     // SI TIENE UNA IMAGEN, LA BORRA DE LA CARPETA IMGS
-    fs.unlinkSync(__dirname, `../../public/img/users/${user.image}`);
+    // fs.unlinkSync(__dirname, `../../public/img/users/${user.image}`);
 
     fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
 
     res.redirect("/");
   },
+
+  profile: function (req, res) {
+    res.render('./users/miPerfil', {
+        userList: usersController.getUsers()
+    });
+},
 };
 
 module.exports = usersController;
