@@ -43,3 +43,5 @@ En esta estapa vamos a modificar el logo de login para llamar PERFIL que vamos a
 Para esto vamos a crear un nuevo EJS con los datos extraido del registro que van a tener un boton EDITAR, un boton CANCELAR y un boton GUARDAR.
 
 3/3/23 ** Se arreglo destroy, comentando el unlinksync. 
+
+5/3 Recordar implementar pop-up con condicion de mayor de edad. 

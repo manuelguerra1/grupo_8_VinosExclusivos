@@ -12,6 +12,11 @@
                     <div class="registroUsuario-edit-form">
                         <h3> EDICIÓN DE USUARIO</h3>
 
+                        <label for="image"></label>
+                        <h4 class="prod-img-prod-create-form">Foto de perfil</h4><input type="file" name="avatar" id="image">
+                        <br>
+                        <!-- Revisar css -->
+
                         <label for="name"></label>
                         <input type="text" name="name" id="name" placeholder="Nombre" value="<%= users.name %>" required>
                         <br>
@@ -26,6 +31,10 @@
 
                         <label for="user-name"></label>
                         <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" value="<%= users.username %>" required>
+                        <br>
+
+                        <label for="phone-number"></label>
+                        <input type="number" name="telefono" id="phone-number" placeholder="Teléfono celular" required> 
                         <br>
 
                         <label for="password"></label>
