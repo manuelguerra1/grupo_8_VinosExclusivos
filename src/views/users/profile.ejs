@@ -1,0 +1,39 @@
+//TODO en construccion hay que renderizar la pagina solo copie desde el register hay que 
+//ver los campos si estan bien sino modificar algunos nombres
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %> 
+<body>
+
+    <%- include('../partials/header') %> 
+    <hr>
+    <main class="register-main">
+            <div class="register">
+
+                <h3> MI PERFIL </h3>
+                <br>
+                <img src="/img/user/<%= user.avatar%>">
+
+                <br>
+                <!-- Revisar css -->
+
+                <span>Hola <%= user.name %> <%= user.lastname %>!</span>
+                <br>
+    
+                <span>Tu usuario es: <%= user.username %></span>
+                <br>
+                <span>Tu email es: <%= user.email %></span>
+                <br>
+
+                <form class="prod-detail-form"  action="/userModify/<%= user.id %>" >
+                    <div class="btn-edit-prod-detail">
+                        <button class="add-menu-prod-detail" type="submit">EDITAR PERFIL</button>
+                    </div>
+                </form>
+                <!-- Revisar el CSS boton con la accion para editar perfil a futuro -->
+    </main>
+
+    <%- include('../partials/footer') %> 
+</body>
+</html>

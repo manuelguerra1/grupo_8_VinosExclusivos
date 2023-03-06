@@ -46,4 +46,8 @@ Para esto vamos a crear un nuevo EJS con los datos extraido del registro que van
 
 5/3 -Recordar implementar pop-up con condicion de mayor de edad.
     -Armamos controlador-ruta-formulario para usuarios, presento errores. La solucion se encontro agregando enctype="multipart/form-data" en la etiqueta form del register.ejs. Info sacada de la documentacion de multer.
-    -Implementacion del login, correcion del form. Pasan datos correctos en formato json del nombre usuario y password. 
+    -Implementacion del login, correcion del form. Pasan datos correctos en formato json del nombre usuario y password.
+    -Encriptamos el password con bcrypt y le agregamos la sal, son los caracteres especiales.
+
+6/3 Realizamos middlewares: session, cookies (las configuramos, pero aun no estan implementadas). Resolvimos el loggeo, ahora el boton de profile se encuentra funcionando. Una vez loggeado se muestra los datos del usuario. 
+- Agregamos guestMiddleware que se encargar de revisar que el cliente este logueado. En caso de que no lo este lo dirige al login, de caso contrario puede navegar por toda la pagina. 

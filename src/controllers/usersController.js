@@ -5,19 +5,37 @@ const bcrypt = require('bcrypt');
 const usersPath = path.join(__dirname, "/../data/users.json");
 
 const usersController = {
-  getUsers: () => {
-    return JSON.parse(fs.readFileSync(usersPath, "utf-8"));
-  },
+  // getUsers: () => {
+  //   return JSON.parse(fs.readFileSync(usersPath, "utf-8"));
+  // },
   login: function (req, res) {
     res.render("./users/login");
   },
   processLogin: function (req, res) {
-    res.json({
-      msg: "respuesta del processlogin",
-      data: req.body
-    })
-    
+    let users = JSON.parse(fs.readFileSync(usersPath, "utf-8"));
+    let user = users.find(user => user.username == req.body.username);
+
+    if (user) {
+      req.session.userLogged = user;
+
+      res.redirect('/profile');
+    }
+
+
+    // res.json({
+    //   msg: "respuesta del processlogin",
+    //   data: req.body,
+    //   user
+    // })
+    //----res.json se utilizar para probar que los datos esten llegando de manera correcta para MOSTRAR LOS DATOS DEL JSON----//
+    //----usamos el if para iniciar la session, luego de que esta se inicie te redirige a profile hasta se decida a donde va a redirigir----//
   },
+
+  profile: function (req, res) {
+    res.render('./users/profile', {
+        user: req.session.userLogged
+    });
+},
 
   register: function (req, res) {
     res.render("./users/register");
@@ -119,13 +137,7 @@ const usersController = {
     fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
 
     res.redirect("/");
-  },
-
-  profile: function (req, res) {
-    res.render('./users/miPerfil', {
-        userList: usersController.getUsers()
-    });
-},
+  }
 };
 
 module.exports = usersController;

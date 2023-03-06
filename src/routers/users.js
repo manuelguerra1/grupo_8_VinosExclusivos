@@ -3,13 +3,15 @@ const usersController = require('../controllers/usersController');
 // TODO - const upload = require('../middlewares/multerMiddleware')
 const router = express.Router();
 const userUpload = require ('../middlewares/userMulterMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware')
+//este middleware es para que el visitante pueda navegar en toda la web.
 
 router.get('/login', usersController.login);
 router.post('/processLogin', usersController.processLogin);
 
 router.get('/register', usersController.register);
 
-router.get('/profile', usersController.profile);
+router.get('/profile',guestMiddleware, usersController.profile);
 
 
 // Crear
