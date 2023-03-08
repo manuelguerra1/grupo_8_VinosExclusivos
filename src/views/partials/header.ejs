@@ -46,9 +46,21 @@
         <li><a href="/">Home</a></li>
         <li><a href="/allProduct">Productos</a></li>
         <li><a href="/carrito">Carrito</a></li>
-        <li><a href="/login">Login</a></li>
+        <li>
+
+          <a href="/login">Login</a></li>
         <li><a href="/register">Registro</a></li>
         <li><a href="/create">Crear</a></li>
+      <!-- </li>
+      <% if (locals.userLogged) { %>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/logout">Logout</a></li>
+      <% } else { %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+      <% } %>
+      </li> -->
+
       </ul>
     </div>
   </nav>

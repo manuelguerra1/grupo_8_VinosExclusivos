@@ -51,3 +51,7 @@ Para esto vamos a crear un nuevo EJS con los datos extraido del registro que van
 
 6/3 Realizamos middlewares: session, cookies (las configuramos, pero aun no estan implementadas). Resolvimos el loggeo, ahora el boton de profile se encuentra funcionando. Una vez loggeado se muestra los datos del usuario. 
 - Agregamos guestMiddleware que se encargar de revisar que el cliente este logueado. En caso de que no lo este lo dirige al login, de caso contrario puede navegar por toda la pagina. 
+
+8/3 -Creamos el middleware de autenticacion (authMiddleware) y tambien el userSessionMiddleware, que chequea si estas logueado.
+    -Requerimos las cookie en app.js. Y la usamos en el login con el checkbox con la leyenda "Recordame". Falta testear si funciona todo lo antes mencionado. Queda pendiente para el viernes 10.
+    -Creamos en controlador logout, que destruye la sesion, lo usamos en el header para el boton logout (nav).
