@@ -17,13 +17,7 @@ const usersController = {
 
     if (user) {
       req.session.userLogged = user;
-    //   if (req.body.rememberme) {
-    //     res.cookie(
-    //         'userLogged',
-    //         user,
-    //         { maxAge: 1000 * 60 * 60 * 24 } // 1 dia
-    //     );
-    // }
+
       res.redirect('/profile');
     }
 
@@ -36,12 +30,6 @@ const usersController = {
     //----res.json se utilizar para probar que los datos esten llegando de manera correcta para MOSTRAR LOS DATOS DEL JSON----//
     //----usamos el if para iniciar la session, luego de que esta se inicie te redirige a profile hasta se decida a donde va a redirigir----//
   },
-
-  logout: (req, res) => {
-    req.session.destroy();
-    res.clearCookie('userLogged')
-    return res.redirect('/');
-},
 
   profile: function (req, res) {
     res.render('./users/profile', {

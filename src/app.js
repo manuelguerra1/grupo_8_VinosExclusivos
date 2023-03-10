@@ -2,11 +2,8 @@ const express = require('express');
 const app = express();
 
 //Agregamos express-session con (npm i express-session -S)
-const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const methodOverride = require('method-override');
-
-const userSessionMiddleware = require('./middlewares/userSessionMiddleware');
 
 const PORT = process.env.PORT || 3008;
 
@@ -21,8 +18,6 @@ app.set('views', './src/views');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(cookieParser);
-
 app.use(session({
     secret: 'secret',
     resave: false,
@@ -32,9 +27,9 @@ app.use(session({
 }))
 
 app.use(methodOverride('_method'));
+
 app.use(express.static('public'));
 
-app.use(userSessionMiddleware);
 
 
 app.use(mainRouter);
