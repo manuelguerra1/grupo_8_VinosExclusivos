@@ -5,6 +5,8 @@ const app = express();
 const session = require('express-session');
 const methodOverride = require('method-override');
 
+const userSessionMiddleware = require('./middlewares/userSessionMiddleware')
+
 const PORT = process.env.PORT || 3008;
 
 const mainRouter = require("./routers/main");
@@ -27,7 +29,7 @@ app.use(session({
 }))
 
 app.use(methodOverride('_method'));
-
+app.use(userSessionMiddleware);
 app.use(express.static('public'));
 
 

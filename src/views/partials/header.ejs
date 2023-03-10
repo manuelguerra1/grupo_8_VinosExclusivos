@@ -29,12 +29,17 @@
       </button>
     </div>
     <div class="buttons">
-      <button class="user">
-        <a href="profile">
-          <i class="fa-solid fa-circle-user"></i>
-        </a>
-      </button>
-
+          <% if (locals.userLogged) 
+          { %>
+              <button class="user">
+                <a href="profile">
+                  <i class="fa-solid fa-circle-user"></i>
+                </a>
+              </button>
+              
+            <% } 
+            
+          %>
       <button class="cart">
         <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
       </button>
@@ -46,9 +51,13 @@
         <li><a href="/">Home</a></li>
         <li><a href="/allProduct">Productos</a></li>
         <li><a href="/carrito">Carrito</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Registro</a></li>
         <li><a href="/create">Crear</a></li>
+        <% if (locals.userLogged) { %>
+          <li><a href="/logout">Logout</a></li>
+      <% } else { %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+      <% } %>
       </ul>
     </div>
   </nav>

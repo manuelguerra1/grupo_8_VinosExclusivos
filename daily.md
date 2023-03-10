@@ -51,3 +51,5 @@ Para esto vamos a crear un nuevo EJS con los datos extraido del registro que van
 
 6/3 Realizamos middlewares: session, cookies (las configuramos, pero aun no estan implementadas). Resolvimos el loggeo, ahora el boton de profile se encuentra funcionando. Una vez loggeado se muestra los datos del usuario. 
 - Agregamos guestMiddleware que se encargar de revisar que el cliente este logueado. En caso de que no lo este lo dirige al login, de caso contrario puede navegar por toda la pagina. 
+
+10/3 Creamos authMiddleware verifica que el usuario este logueado, y nos muestra en el nav el boton de profile. En caso de que no lo este muestra login y register. Falta terminar userSessionMiddleware.
