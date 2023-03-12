@@ -23,23 +23,14 @@ const usersController = {
             user,
             { maxAge: 1000 * 60 *60 *24} //1 dia
         );
-        console.log('cookie', res.cookie);
+        
       }
       res.redirect('/profile');
     }
-
-
-    // res.json({
-    //   msg: "respuesta del processlogin",
-    //   data: req.body,
-    //   user
-    // })
-    //----res.json se utilizar para probar que los datos esten llegando de manera correcta para MOSTRAR LOS DATOS DEL JSON----//
-    //----usamos el if para iniciar la session, luego de que esta se inicie te redirige a profile hasta se decida a donde va a redirigir----//
   },
   logout: (req, res) => {
+    res.clearCookie('userLogged')
     req.session.destroy();
-    
     return res.redirect('/');
 },
 

@@ -13,17 +13,17 @@
 
                 <h3> MI PERFIL </h3>
                 <br>
-                <img src="/img/user/<%= user.avatar%>">
+                <img src="/img/user/<%= locals.userLogged.avatar%>">
 
                 <br>
                 <!-- Revisar css -->
 
-                <span>Hola <%= user.name %> <%= user.lastname %>!</span>
+                <span>Hola <%= locals.userLogged.name %> <%= locals.userLogged.lastname %>!</span>
                 <br>
     
-                <span>Tu usuario es: <%= user.username %></span>
+                <span>Tu usuario es: <%= locals.userLogged.username %></span>
                 <br>
-                <span>Tu email es: <%= user.email %></span>
+                <span>Tu email: <%= locals.userLogged.email %></span>
                 <br>
 
                 <form class="prod-detail-form"  action="/userModify/<%= user.id %>" >

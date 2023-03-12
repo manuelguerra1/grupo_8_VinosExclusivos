@@ -12,9 +12,9 @@ router.post('/processLogin', usersController.processLogin);
 
 router.get('/register', usersController.register);
 
-router.get('/logout', authMiddleware, usersController.logout);
-
 router.get('/profile',guestMiddleware, usersController.profile);
+
+router.get('/logout', usersController.logout);
 
 
 // Crear
