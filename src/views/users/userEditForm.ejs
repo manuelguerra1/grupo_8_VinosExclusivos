@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <%- include('../partials/head') %>
@@ -8,29 +8,29 @@
 
         <%- include('../partials/header') %>
             <main>
-                <form method="post" action="/userModify/<%= users.id %>?_method=PUT">
+                <form method="post" action="/userModify/<%= locals.userLogged.id %>?_method=PUT" enctype="multipart/form-data">
                     <div class="registroUsuario-edit-form">
                         <h3> EDICIÓN DE USUARIO</h3>
 
                         <label for="image"></label>
                         <h4 class="prod-img-prod-create-form">Foto de perfil</h4><input type="file" name="avatar" id="image">
                         <br>
-                        <!-- Revisar css -->
+                        Revisar css
 
                         <label for="name"></label>
-                        <input type="text" name="name" id="name" placeholder="Nombre" value="<%= users.name %>" required>
+                        <input type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.userLogged.name %>" required>
                         <br>
 
                         <label for="last-name"></label>
-                        <input type="text" name="lastname" id="last-name" placeholder="Apellido" value="<%= users.lastname %>" required>
+                        <input type="text" name="lastname" id="last-name" placeholder="Apellido" value="<%= locals.userLogged.lastname %>" required>
                         <br>
 
                         <label for="email"></label>
-                        <input type="email" name="email" id="email" placeholder="E-mail" value="<%= users.email %>" required>
+                        <input type="email" name="email" id="email" placeholder="E-mail" value="<%= locals.userLogged.email %>" required>
                         <br>
 
                         <label for="user-name"></label>
-                        <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" value="<%= users.username %>" required>
+                        <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" value="<%= locals.userLogged.username %>" required>
                         <br>
 
                         <label for="phone-number"></label>
@@ -38,12 +38,12 @@
                         <br>
 
                         <label for="password"></label>
-                        <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= users.password %>" required>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= locals.userLogged.password %>" required>
                         <br>
 
                         <label for="confirm-password"></label>
                         <input type="password" name="confirmpassword" id="confirm-password"
-                            placeholder="Confirmar contraseña" value="<%= users.confirmpassword %>" required>
+                            placeholder="Confirmar contraseña" value="<%= locals.userLogged.confirmpassword %>" required>
                         <br>
 
 
@@ -53,8 +53,8 @@
                         uso y políticas de privacidad.
                     </div>
                     <br>
-<!-- buscar que type debemos usar para que el button cancele -->
-                    <!-- <button class="register-buttons" type="reset" value="Cancelar">CANCELAR</button> -->
+buscar que type debemos usar para que el button cancele
+                    <button class="register-buttons" type="reset" value="Cancelar">CANCELAR</button>
 
                     <button class="register-buttons" type="submit" value="Enviar">ACTUALIZAR</button>
 
@@ -65,4 +65,4 @@
             <%- include('../partials/footer') %>
     </body>
 
-</html>
+</html> -->

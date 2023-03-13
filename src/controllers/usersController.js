@@ -5,9 +5,9 @@ const bcrypt = require('bcrypt');
 const usersPath = path.join(__dirname, "/../data/users.json");
 
 const usersController = {
-  // getUsers: () => {
-  //   return JSON.parse(fs.readFileSync(usersPath, "utf-8"));
-  // },
+  getUsers: () => {
+    return JSON.parse(fs.readFileSync(usersPath, "utf-8"));
+  },
   login: function (req, res) {
     res.render("./users/login");
   },
@@ -75,6 +75,7 @@ const usersController = {
 
   usersEdit: function (req, res) {
     let userId = req.params.id;
+    console.log('userId', userId);
     let usuario = usersController
       .getUsers()
       .find((usuario) => usuario.id == userId);
