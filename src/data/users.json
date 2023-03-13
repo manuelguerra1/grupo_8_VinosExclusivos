@@ -91,5 +91,15 @@
   "username": "anrrid",
   "password": "$2b$10$yGp3HIt8mkMRNr93X0qGeOKURJE.kk4gIQwgkPT8d43M1c5cZtez.",
   "confirmpassword": "$2b$10$GQbET7LtLJNOHW/5lmxN.uM02aHryJutshBWU2.L5vMlK/9pyd0F2"
+ },
+ {
+  "id": 1678736317743,
+  "avatar": "user-1678736317725.jpeg",
+  "name": "Lilian",
+  "lastname": "Devico",
+  "email": "lilian@gmail.com",
+  "username": "lilidev",
+  "password": "$2b$10$FrHICtowUnd0/6tUYMjN8Oi2XoA6.Ykk9S.I.3pvOU25sYoV1VT/e",
+  "confirmpassword": "$2b$10$LmCLaP0vSX8ppjK/s4XqROCqdXMbV9JRh.R4/3jQIeWWCf7w16JDS"
  }
 ]
