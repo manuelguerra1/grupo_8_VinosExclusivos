@@ -14,4 +14,4 @@ const userSessionMiddleware = (req, res, next) => {
 
 module.exports = userSessionMiddleware;
 
-//Este middleware es para verificar si el usuario esta loggueado, en caso de que no lo dirige al login. 
+//Este middleware quiere traer toda la data 

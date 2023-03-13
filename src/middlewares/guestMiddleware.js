@@ -1,11 +1,11 @@
 const guestMiddleware = (req, res, next) => {
-    if (!req.session.userLogged) {
-        res.redirect('/login')
+    console.log('guestMiddleware cookie',req.cookies.userLogged);
+    if (!req.session.userLogged && !req.cookies.userLogged) {
+        return res.redirect('/login');
     }
-
+    
     next();
 }
 
-module.exports = guestMiddleware
-
+module.exports = guestMiddleware;
 //Este middleware es para verificar si el usuario esta loggueado, en caso de que no lo dirige al login. 

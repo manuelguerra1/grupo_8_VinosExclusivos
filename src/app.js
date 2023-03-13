@@ -28,6 +28,7 @@ app.use(session({
     //se coloca false para que se guarde una vez la sesion, en el caso que pongas true no es lo correcto se guardaria dos veces.
     saveUninitialized: true,
     // cookie: {maxAge: 60000}
+    // cookie: 'destroy'
 }))
 
 app.use(methodOverride('_method'));
@@ -47,5 +48,5 @@ app.use((req,res) =>{
 })
 
 app.listen(PORT, () => {
-    console.log('Servidor corriendo en el puerto 3008');
+    console.log("El servidor esta corriendo en http://localhost:" + PORT);
 })
