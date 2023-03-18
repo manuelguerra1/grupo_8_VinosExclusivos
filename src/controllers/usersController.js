@@ -75,6 +75,7 @@ const usersController = {
 
   usersEdit: function (req, res) {
     let userId = req.params.id;
+    console.log('userId', userId);
     let usuario = usersController
       .getUsers()
       .find((usuario) => usuario.id == userId);
