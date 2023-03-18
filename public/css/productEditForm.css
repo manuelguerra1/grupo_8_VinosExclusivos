@@ -10,24 +10,24 @@ body{
 }
 
 /* ---------------------------HEADER------------------------------- */
-img.header-logo{
+/* img.header-logo{
     display: block;
     margin: auto;
     padding: 10px;
     width: 200px;
     
-}
-.top-header{
+} */
+/* .top-header{
     background-color:#7b1d46 ;
-}
-.searching{
+} */
+/* .searching{
     position: center;
     padding: 5px;
     width: 50vw;
     display: flex;
-}
+} */
 
-.searching input{
+/* .searching input{
     width: 240px;
     height: '40px';
     padding: 0px 20px;
@@ -37,15 +37,15 @@ img.header-logo{
     border: 1px solid silver;
     border-radius: 30px;
     
-}
+} */
 
-.searching button{
+/* .searching button{
     font-size: 20px;
     border-radius: 30px;
     border: 1px;
     background-color: #7b1d46;
     color: #fff;
-}
+} */
 
 /*.search-nav{
     margin-left: 85px;  ACOMODAR 
@@ -54,23 +54,23 @@ img.header-logo{
     width: 500px;
     background-color: white;
 }*/
-.navegacionBarra{
+/* .navegacionBarra{
     list-style: none;
     padding: 0;
     background: #7b1d46;
     width: 100vw;
-}
-.navegacionBarra li a{
+} */
+/* .navegacionBarra li a{
     text-decoration: none;
     color: #d9d1c5;
     padding: 20px;
     display: block;
-}
-.navegacionBarra li{
+} */
+/* .navegacionBarra li{
     display: inline-block;
     text-align: center;
-}
-.navegacionBarra li:hover{
+} */
+/* .navegacionBarra li:hover{
     background: #770d3b;
 }
 
@@ -89,9 +89,9 @@ img.header-logo{
     border: #7b1d46;
 
 
-}
+} */
 
-.fa-circle-user{
+/* .fa-circle-user{
     margin-right: 25px;
     color: #fff;
     font-size: 27px;
@@ -113,7 +113,7 @@ img.header-logo{
     border: #7b1d46;
 
     
-}
+} */
 
 /* -----------------MAIN----------------- */
 

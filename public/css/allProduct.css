@@ -10,7 +10,7 @@ body{
 }
 /* ---------------------------HEADER------------------------------- */
 
-img.header-logo{
+/* img.header-logo{
     display: block;
     margin: auto;
     padding: 10px;
@@ -46,7 +46,7 @@ img.header-logo{
     border-radius: 30px;
     
 }
-
+ */
 
 
 /*.search-nav{
@@ -56,7 +56,7 @@ img.header-logo{
     width: 500px;
     background-color: white;
 }*/
-.navegacionBarra{
+/* .navegacionBarra{
     list-style: none;
     padding: 0;
     background: #7b1d46;
@@ -111,7 +111,7 @@ img.header-logo{
     color: #fff;
     font-size: 27px;
 
-}
+} */
 /* ---------- seguir trabajando con el boton add */
 .add-menu {
     margin-right: 25px;

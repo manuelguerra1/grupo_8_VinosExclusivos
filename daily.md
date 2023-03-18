@@ -58,3 +58,4 @@ Para esto vamos a crear un nuevo EJS con los datos extraido del registro que van
 
 18/03 
 Nos reunimos Anto, Diego, Lili y Vivi armamos tabla de usuarios, instalamos sequelize y configuramos todo para largar cuando nos aprueben las tablas relacionales.
+comentamos los header de Css de los archivos excepto el partial porque lo estaban pisando. No se veia que se hubiera trabajado del modo mobile first. Queda pendiente arreglar la vista en version mobile para poder seguir con las media querie de tablet y Desktop

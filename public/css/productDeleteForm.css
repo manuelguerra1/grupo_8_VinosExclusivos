@@ -10,7 +10,7 @@ body{
 }
 
 /* ---------------------------HEADER------------------------------- */
-img.header-logo{
+/* img.header-logo{
     display: block;
     margin: auto;
     padding: 10px;
@@ -45,7 +45,7 @@ img.header-logo{
     border: 1px;
     background-color: #7b1d46;
     color: #fff;
-}
+} */
 
 /*.search-nav{
     margin-left: 85px;  ACOMODAR 
@@ -54,7 +54,7 @@ img.header-logo{
     width: 500px;
     background-color: white;
 }*/
-.navegacionBarra{
+/* .navegacionBarra{
     list-style: none;
     padding: 0;
     background: #7b1d46;
@@ -113,7 +113,7 @@ img.header-logo{
     border: #7b1d46;
 
     
-}
+} */
 
 /* ------------------------------MAIN----------------------------- */
 
