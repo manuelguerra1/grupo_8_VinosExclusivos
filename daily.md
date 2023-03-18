@@ -55,3 +55,6 @@ Para esto vamos a crear un nuevo EJS con los datos extraido del registro que van
 10/3 Creamos authMiddleware verifica que el usuario este logueado, y nos muestra en el nav el boton de profile. En caso de que no lo este muestra login y register. Falta terminar userSessionMiddleware.
 
 13/3 Revisamos inicio de sesion, mi perfil, cierre de sesion y comentamos la edicion del usuario porque no lo piden en ninguno de los sprint. Y no funciona el controlador para editar usuarios, suponemos que es porque ahora utilizamos la cookie, userLogged.
+
+18/03 
+Nos reunimos Anto, Diego, Lili y Vivi armamos tabla de usuarios, instalamos sequelize y configuramos todo para largar cuando nos aprueben las tablas relacionales.
