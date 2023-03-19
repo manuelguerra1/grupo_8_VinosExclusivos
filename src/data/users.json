@@ -47,7 +47,7 @@
   "image": ""
  },
  {
-    "id": 5,
+  "id": 5,
   "name": "DIEGO",
   "lastname": "PAEZ",
   "email": "diegopaez73@gmail.com",
@@ -56,7 +56,7 @@
   "confirmpassword": "9876"
  },
  {
-    "id": 6,
+  "id": 6,
   "name": "Juan",
   "lastname": "Palo",
   "email": "juanpalo@gmail.com",
@@ -103,5 +103,15 @@
   "username": "lilidev",
   "password": "$2b$10$FrHICtowUnd0/6tUYMjN8Oi2XoA6.Ykk9S.I.3pvOU25sYoV1VT/e",
   "confirmpassword": "$2b$10$LmCLaP0vSX8ppjK/s4XqROCqdXMbV9JRh.R4/3jQIeWWCf7w16JDS"
+ },
+ {
+  "id": 1679234158005,
+  "avatar": "user-1679234157996.png",
+  "name": "test2",
+  "lastname": "test2",
+  "email": "test2@test2.com",
+  "username": "test2",
+  "password": "$2b$10$RsuzbA060sBHEYhI6yde..9TKVxHED0dlCv/fBdztwxDE./zMRLg6",
+  "confirmpassword": "$2b$10$.kN.TXeYUzjf1ya79dKTL.ULf227bBu.IGIosnpAw1j4jWAJnigQ6"
  }
 ]
