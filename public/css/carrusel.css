@@ -13,7 +13,6 @@ body{
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    /* border: 1px solid #d9d1c5; */
     padding: 30 px 0px;
 }
 

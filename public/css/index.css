@@ -1,14 +1,3 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #d9d1c5;
-    align-items: center;
-    justify-content: center;
-} */
-
 /* ------------------------------MAIN--------------------------------- */
 
 .carrusel-index{
@@ -16,65 +5,30 @@ body{
     padding-top: 100px;
 }
 
-/* main section article img{
-    width: 200px;
-    height: auto;
-    border: 1px solid rgb(190, 182, 182);
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 15px;
-    font-size: 90px;
-
-} */
-
-/* main section{
-    display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-around;
-    align-items: center;
-    margin: 10px auto;
-    
-} */
-
-/* .data{
-    margin: 15px;
-}
-
-article {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px auto;
-}
-.prod-cabernet {
-    margin: 10px;
-    background-color:#fff;
-    border-radius: 10px;
-} */
-
-
 .products-index{
     display: flex ;
     align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .productContainer-index{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .product-index {
-    margin: 15px 0 15px 0;
+    margin: 15px auto 15px auto;
     background-color:#fff;
     border-radius: 10px;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    max-height: 561px;
+    max-width: 339px;
 }
 
 .imgProduct-index{
     width: 250px;
-    /* height: 357px; */
     padding: 0 50px 5px 15px;
     margin-left: 85px;
 }
@@ -91,53 +45,16 @@ article {
     margin-top: 10px; 
 }
 
-.product-index{
-    /* width: 200px; */
-    /* margin: 70px 15px 0 15px;
-    justify-content: space-between 10px; */
-    justify-content: center;
-    background-color: #fff;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    height: 561px;
-    width: 339px;
-    margin: 30px 0 30px 30px;
-}
 
 .product-index:hover{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-
-/* .product-index .desc{
-    margin: 8px 0 0 15px;
-    font-size: 18px;
-} */
 
 .product-index h2.prod-price-index{
     margin: 8px 0 0 15px;
     font-weight: bold;
     color: #770d3b;
 }
-/* .product button{
-    margin: 8px 0 0 15px;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: #770d3b;
-    color: #d9d1c5;
-    border-radius: 5px;
-    padding: 5px;
-    letter-spacing: 1px;  
-} */
-
-/* .product h4{
-    margin: 15px 0 2px 15px;
-} */
-
-/* .product select{
-    margin: 0 0 15px 15px;
-    border-radius: 3px;
-    font-size: 15px;
-} */
 
 .product-index h3.prod-name-index{
     margin: 8px 0 0 15px;
@@ -153,339 +70,6 @@ article {
 .product-index .rules-index{
     margin: 15px;
 }
-
-
-/* ---------------------------HEADER------------------------------- */
-/* img.header-logo{
-    display: block;
-    margin: auto;
-    padding: 10px;
-    width: 200px;
-    
-}
-.top-header{
-    background-color:#7b1d46 ;
-}
-.searching{
-    padding: 5px;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-
-}
-
-.searching button{
-    font-size: 20px;
-    border-radius: 30px;
-    border: 1px;
-    background-color: #7b1d46;
-    color: #fff;
-    padding: 0 0 0 5px;
-}
-
-.searching input{
-    width: 540px;
-    height: 30px;
-    padding: 0px 20px;
-    font-size: 20px;
-    color: black;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px;
-    
-}
- */
-
-
-/*.search-nav{
-    margin-left: 85px;  ACOMODAR 
-    border:1px solid;
-    border-radius: 3px;
-    width: 500px;
-    background-color: white;
-}*/
-/* .navegacionBarra{
-    list-style: none;
-    padding: 0;
-    background: #7b1d46;
-    width: 100vw;
-}
-.navegacionBarra li a{
-    text-decoration: none;
-    color: #d9d1c5;
-    padding: 30px 5px 20px 5px;
-    display: block;
-}
-.navegacionBarra li{
-    display: inline-block;
-    text-align: center;
-}
-.navegacionBarra li:hover{
-    background: #770d3b;
-} */
-
-/* .navegacionBarra li button{
-    background-color: #d9d1c5;
-    border: 1px solid #d9d1c5;
-    border-radius: 5px;
-    padding: 5px 15px;
-} */
-
-/* .buttons{
-    display: flex;
-    padding: 10px;
-    height: 15px;
-    justify-content: flex-end;
-}
-
-.cart{
-    margin-right: 25px;
-    width: 25px;
-    height: 25px;
-    background-color: #7b1d46;
-    border: #7b1d46;
-}
-
-.fa-circle-user{
-    margin-right: 25px;
-    color: #fff;
-    font-size: 27px;
-
-}
-
-.fa-cart-shopping{
-    margin-right: 25px;
-    color: #fff;
-    font-size: 25px;
-
-}
-
-
-.user{
-    margin-right: 25px;
-    width: 25px;
-    height: 25px;
-    background-color: #7b1d46;
-    border: #7b1d46;
-    
-}
- */
-
-/* ---------------------------FOOTER------------------------------- */
-
-/* .pieDePagina{
-    background-color: #7b1d46;
-    width: 100%;
-
-}
-.pieDePagina {
-    background-color: #7b1d46;
-    width: 100%;
-    margin: auto; 
-    padding: 25px 10px;
-}
-
-.pieDePagina .box{
-    text-align:center;
-    width: 360px; 
-}
-
-.pieDePagina .box h2{
-    color: #d9d1c5;
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-.pieDePagina .box h3{
-    color: #d9d1c5;
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-.pieDePagina .box li{
-    color: #d9d1c5;
-    margin-bottom: 10px;
-    list-style-type: none; 
-}
-
-.pieDePagina .redSocial a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #d9d1c5;
-    margin-right: 10px;
-    background-color: #770d3b;
-    text-align: center;
-    transition: all 300ms ease;
-}
-.pieDePagina .redSocial{
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-.pieDePagina .redSocial a:hover{
-    color: aqua; 
-}
-.pieDePagina .grupo2{
-    background-color: #770d3b;
-    padding: 15px 20px;
-    text-align: center;
-    color: #d9d1c5;
-}
-
-.pieDePagina .box1 h3{
-    color: #d9d1c5;
-    padding:15px 0 15px;
-    text-align: center;
-}
-
-.pieDePagina .box1 .payments{
-    text-align: center;
-}
-
-.shipping {
-    color: #770d3b;
-}
-
-.rules{
-    color: #770d3b;
-} */
-
-/* -----------------MEDIA QUERIES------------------- */
-/* @media (min-width: 361px){
-    
-    .pieDePagina{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .pieDePagina .box .redSocial{
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0 0 0 40px;
-        width: 100px;
-        
-    }
-
-    .pieDePagina .box h2{
-        display: flex;
-        justify-content: flex-start;
-        margin: 0 0 10px 15px;
-        width: 100px;
-    }
-
-    .pieDePagina ul{
-        display: flex;
-        flex-direction: column;
-        
-    }
-}
-
-@media (min-width: 769px){ */
-
-    /* -----------------HEADER----------------------- */
-
-    
-    /* -----------------FOOTER------------------ */
-    /* footer{
-        width: 100vw;
-        }
-    
-        .pieDePagina{
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        
-        .pieDePagina .box{
-            font-size: 20px;
-            width: 25vw;
-        }
-    
-        .pieDePagina .box1{
-            font-size: 20px;
-            width: 25vw;
-        }
-    
-        .pieDePagina .box1 .payments .banelco{
-            font-size: 40px;
-            width: 75px;
-            height: 50px;
-            margin: 5px
-        }
-        .pieDePagina .box1 .payments .visa{
-            font-size: 40px;
-            width: 75px;
-            height: 50px;
-            margin: 5px
-        }
-        .pieDePagina .box1 .payments .mastercard{
-            font-size: 40px;
-            width: 75px;
-            height: 50px;
-            margin: 5px
-        }
-        .pieDePagina .box1 .payments .mercadopago{
-            font-size: 40px;
-            width: 75px;
-            height: 50px;
-            margin: 5px
-        }
-        .pieDePagina .box1 .payments .rapipago{
-            font-size: 40px;
-            width: 75px;
-            height: 50px;
-            margin: 5px
-        }
-        .pieDePagina .box1 .payments .pagofacil{
-            font-size: 40px;
-            width: 75px;
-            height: 50px;
-            margin: 5px
-        }
-}
-
-@media (min-width: 1280px){
-    footer{
-        width: 100vw;
-    }
-
-    .pieDePagina{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .pieDePagina .box .redSocial {
-        width: 30vw;
-    }
-
-    .pieDePagina .box h2{
-        margin: 10px 10px 10px 60px;
-    }
-
-    .pieDePagina .box .redSocial a{
-        font-size: 30px;
-        width: 10vw;
-        text-align: center;
-    }
-
-    .pieDePagina .box ul{
-        width: 30vw;
-    }
-
-    .pieDePagina .box1{
-        width: 30vw;
-    }
-
-    
-} */
 
 
 
