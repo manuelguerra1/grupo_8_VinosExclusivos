@@ -12,7 +12,7 @@
                 <tr>
                     <th class="th-trolley">Producto</th>
                     <th class="th-trolley">Cantidad</th>
-                    <th class="th-trolley">Subtotal</th>
+                    <!-- <th class="th-trolley">Subtotal</th> -->
                 </tr>
                 
                 <tr>
@@ -25,6 +25,7 @@
                             </div>
                         </div>
                     </td>
+                    
                     <td class="td-trolley"><select class='prod-amount 'name="prod-amount" id="">
                         <option value="">1</option>
                         <option value="">2</option>
@@ -32,7 +33,7 @@
                         <option value="">4</option>
                         <option value="">5</option>
                     </select></td>
-                    <td class="td-trolley">$10.000</td>
+                    <!-- <td class="td-trolley">$10.000</td> -->
                 </tr>
             </table>
     
@@ -46,6 +47,7 @@
                     <td class="td-trolley">Envio</td>
                         <td class="td-trolley">$3.000</td>
                     </tr>
+                    
                     <tr>
                         <td class="td-trolley">Total</td>
                         <td class="td-trolley">$13.000</td>
@@ -53,6 +55,12 @@
                 </table>
             </div>
         </div>
+        <div class="compra-carrito-button">
+            <button type="submit" class="finish-purchase-carrito"> 
+                <a href="../views/404.ejs">Finalizar compra</a> 
+            </button>
+        </div>
+        
         </main>
         
         <%- include('./partials/footer') %> 
