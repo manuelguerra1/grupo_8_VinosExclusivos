@@ -61,3 +61,15 @@ Ejecutar el proyecto:
 npm start
 
 (En caso de no tener nodemon instalado instalarlo con el comando npm i nodemon)
+
+Nuestra Propuesta
+Generar sinergias y optimizacion logistica a los productores nacionales.
+
+
+Sustentabilidad
+En Foo&Drinks la Sustentabilidad constituye uno de los tres pilares estratégicos de la compañía, junto con Rentabilidad y Crecimiento. En conjunto, componen la hoja de ruta para plasmar el Ser F&D y su Propósito: “Nos apasiona crear experiencias para compartir juntos un mejor vivir y es en el Modelo de Sustentabilidad con sus tres dimensiones (personas, planeta y marcas) donde se apalanca la Promoción del Consumo Responsable de Alcohol.
+
+Promover y educar en una cultura de Consumo Responsable de Alcohol representa una contribución concreta a la comunidad, entregando mensajes en positivos, de manera clara y propositiva sobre sus productos y de cómo consumirlos en forma correcta y consciente.
+Esa es una tarea que la compañía ha estado siempre comprometida como parte de su visi n de negocio. Sin embargo, el acercamiento al alcohol es una tarea que compete a muchos actores de la sociedad tales como las autoridades que ejercen un rol regulatorio, fiscalizador y, especialmente, educativo con la comunidad; el comercio, que son los que tienen la relación más cercana con los consumidores; todos quienes trabajan en empresas F&D como grandes embajadores; las familias que son los principales educadores de sus hijos y son ejemplo para ellos; los proveedores como grandes socios para extender el mensaje, y sobre todo, los consumidores como principales actores del autocuidado personal.
+
+Con esta visión, F&D desarrolla el Programa de Promoción del Consumo Responsable de Alcohol F&D 360 , estrategia integrada de acciones que invita a distintos actores de la sociedad a desarrollar una diversidad de iniciativas con el objetivo de educar e informar. Los  ámbitos en que se apalanca este Programa son la prevenci n del consumo de alcohol en menores de edad, la educación en el consumo responsable de alcohol y la promoción de la seguridad vial.
