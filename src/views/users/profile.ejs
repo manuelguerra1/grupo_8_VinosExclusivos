@@ -8,23 +8,25 @@
 
     <%- include('../partials/header') %> 
     <hr>
-    <main class="register-main">
-            <div class="register">
+    <main class="profile-view">
+            <div class="profile-section">
 
-                <h3> MI PERFIL </h3>
+                <h3 class="profile-h3"> MI PERFIL </h3>
                 <br>
-                <img src="/img/user/<%= locals.userLogged.avatar%>">
+                <img class="profile-img" src="/img/user/<%= locals.userLogged.avatar%>">
 
                 <br>
                 <!-- Revisar css -->
-
-                <span>Hola <%= locals.userLogged.name %> <%= locals.userLogged.lastname %>!</span>
+                <div class="profile-info">
+                    <span class="profile-span">Hola <%= locals.userLogged.name %> <%= locals.userLogged.lastname %>!</span>
                 <br>
     
-                <span>Tu usuario es: <%= locals.userLogged.username %></span>
+                <span class="profile-span">Tu usuario es: <%= locals.userLogged.username %></span>
                 <br>
-                <span>Tu email: <%= locals.userLogged.email %></span>
+                <span class="profile-span">Tu email: <%= locals.userLogged.email %></span>
                 <br>
+                </div>
+                
 
                         <!-- <a href="/userModify/<%= locals.userLogged.id %>" ><button type="sumit">Editar Perfil</button></a> -->
                         <!--Retiramos el editar perfil porque no se pide en el Sprint 4, 5 y 6.-->

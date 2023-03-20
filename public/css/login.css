@@ -50,6 +50,19 @@
     color: #d9d1c5;
 }
 
+.loginBox .rememberme-login{
+    display: flex;
+    
+}
+
+.loginBox .rememberme-login input{
+    margin-left: 50px;
+}
+
+.loginBox .rememberme-login p{
+    margin-right: 50px;
+}
+
 .loginBox input[type="submit"]{
     border: none;
     outline: none;

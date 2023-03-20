@@ -3,6 +3,17 @@ main.register-main{
     text-align: center;
 }
 
+.register h3.h3-register{
+    font-size: 36px;
+    margin: 20px;
+    color:#7b1d46 ;
+    text-decoration: underline;
+}
+
+.register h4.profile-img-register{
+    font-size: 20px;
+}
+
 .register input{
     margin: 10px;
     padding: 10px;
@@ -10,13 +21,8 @@ main.register-main{
     border: 2px solid black;
 }
 
-.register p{
-    margin: 10px 0 3px 10px;
-    padding: 10px 0 3px 4px;
-}
-
-.register input[type="date"]{
-    margin-top: 5px;
+.register input[type="file"]{
+    background-color: #fff;
 }
 
 button.register-buttons{

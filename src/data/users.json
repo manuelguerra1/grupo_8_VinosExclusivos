@@ -113,5 +113,15 @@
   "username": "test2",
   "password": "$2b$10$RsuzbA060sBHEYhI6yde..9TKVxHED0dlCv/fBdztwxDE./zMRLg6",
   "confirmpassword": "$2b$10$.kN.TXeYUzjf1ya79dKTL.ULf227bBu.IGIosnpAw1j4jWAJnigQ6"
+ },
+ {
+  "id": 1679267468236,
+  "avatar": "user-1679267468228.png",
+  "name": "dd",
+  "lastname": "ss",
+  "email": "1@gmail.com",
+  "username": "dd",
+  "password": "$2b$10$1X1qgkNd.6lBeLkjyRBxmeM7Ky8gK1SFyAEyruNJ.SdvLK1ej.Pii",
+  "confirmpassword": "$2b$10$SlB51D2sJcerUTTM9yMNP.AyoHeShZMLLvI9YQUxbJy0eUHllSGLq"
  }
 ]
