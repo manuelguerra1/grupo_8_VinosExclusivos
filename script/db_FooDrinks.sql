@@ -8,12 +8,18 @@ CREATE TABLE `users` (
    `password` VARCHAR(255) NOT NULL,
    `confirm_password` VARCHAR(255) NOT NULL,
    `rol_id` INT NOT NULL,
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`Id`)
 );
 
 CREATE TABLE `rols` (
    `id` INT NOT NULL,
    `rol_name` VARCHAR(255) NOT NULL,
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
@@ -29,24 +35,36 @@ CREATE TABLE `products` (
    `category_id` INT,
    `image` VARCHAR(255),
    `brand_id` INT,
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `categories` (
    `id` INT NOT NULL,
    `category_name` VARCHAR(255),
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `brands` (
    `id` INT NOT NULL,
    `brand_name` VARCHAR(255),
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `varietales` (
    `id` INT NOT NULL,
    `varietal_name` VARCHAR(255),
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
@@ -59,6 +77,9 @@ CREATE TABLE `regions` (
 CREATE TABLE `origenes` (
    `id` INT NOT NULL,
    `country` VARCHAR(255),
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
@@ -66,6 +87,9 @@ CREATE TABLE `payments` (
    `id` INT NOT NULL,
    `method` VARCHAR(255) NOT NULL,
    `installments` INT NOT NULL,
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
@@ -75,6 +99,9 @@ CREATE TABLE `carts` (
    `payment_id` INT NOT NULL,
    `item_id` INT NOT NULL,
    `user_id` INT NOT NULL,
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
@@ -83,6 +110,9 @@ CREATE TABLE `cart_products` (
    `quantity` INT NOT NULL,
    `product_id` INT NOT NULL,
    `cart_id` INT NOT NULL,
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT NULL,
    PRIMARY KEY (`id`)
 );
 
