@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
       paranoid: true,
     };
   
-    const User = sequelize.define(alias, cols, config);
+    const Product = sequelize.define(alias, cols, config);
   
-    return User;
+    return Product;
   };
