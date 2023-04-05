@@ -9,24 +9,34 @@ module.exports = (sequelize, DataTypes) => {
       name: {
         type: DataTypes.STRING(255),
       },
-      last_name: {
+      description: {
         type: DataTypes.STRING(255),
       },
-      email: {
+      price: {
         type: DataTypes.STRING(255),
       },
-      user_name: {
-        type: DataTypes.STRING(255),
-      },
-      password: {
-        type: DataTypes.STRING(255),
-      },
-      confirm_password: {
-        type: DataTypes.STRING(255),
-      },
-      rol_id: {
+      varietal_id: {
         type: DataTypes.INTEGER,
       },
+      year: {
+        type: DataTypes.STRING(255),
+      },
+      origen_id: {
+        type: DataTypes.INTEGER,
+      },
+      region_id:  {
+        type: DataTypes.INTEGER,
+      },
+      category_id: {
+        type: DataTypes.INTEGER,
+      },
+      image: {
+        type: DataTypes.STRING(255),
+      } ,
+      brand_id: {
+        type: DataTypes.INTEGER,
+      },
+      
     };
     let config = {
       timestamps: true,
