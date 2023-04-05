@@ -12,15 +12,11 @@ module.exports = (sequelize, DataTypes) => {
       product_id:{
         type:DataTypes.INTEGER,
       },
-      cart_id:{
-        type:DataTypes.INTEGER,
-      }
-     
 
     };
     let config = {
       timestamps: true,
-      creaded_at: "created_at",
+      created_at: "created_at",
       updated_at: "updated_at",
       deleted_at: "deleted_at",
       paranoid: true,

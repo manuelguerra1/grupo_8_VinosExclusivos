@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Brands";
+    let alias = "Brand";
     let cols = {
       id: {
         type: DataTypes.INTEGER,
@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     };
     let config = {
       timestamps: true,
-      creaded_at: "created_at",
+      created_at: "created_at",
       updated_at: "updated_at",
       deleted_at: "deleted_at",
       paranoid: true,
     };
   
-    const Brands = sequelize.define(alias, cols, config);
+    const Brand = sequelize.define(alias, cols, config);
   
-    return Brands;
+    return Brand;
   };
