@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     id: {
         type:DataTypes.INTEGER,
         autoIncrement: true,
+        primaryKey: true,
     },
     total: {
         type:DataTypes.DECIMAL,
