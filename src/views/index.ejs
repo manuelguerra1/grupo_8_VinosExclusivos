@@ -2,10 +2,10 @@
 <html lang="en">
 
     <%- include('./partials/head') %> 
-    <body>
+    <body class="body-index">
 
     <%- include('./partials/header') %> 
-    <hr>
+    <!-- <hr> -->
 
         <main>
             <img class="carrusel-index" src="../img/carrusel/carrusel3.3.jpg" alt="carrusel">
@@ -15,24 +15,50 @@
                 <div class="productContainer-index">
 
                     <!-- LE PASAMOS A LA URL EL ID DEL PRODUCTO DE LA ITERACION -->
-                    <% productList.forEach(product => { %>
-                        <div class="product-index">
-                            <a href="/productDetail/<%= product.id %>">
+                    <!-- <% productList.forEach(product => { %> -->
+                        <!-- <div class="product-index"> -->
+                            <!-- <a href="/productDetail/<%= product.id %>"> -->
                             <!-- <div class="imgProduct-index"> -->
                                 <!-- IMPRIME LA IMAGEN DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
-                                <img src="/img/product/<%= product.image %>">
+                                <!-- <img src="/img/product/<%= product.image %>"> -->
                             <!-- </div> -->
-                            </a>
+                            <!-- </a> -->
                             <!-- IMPRIME EL NOMBRE DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
-                            <h3 class="prod-name-index"><%= product.name %></h3>
+                            <!-- <h3 class="prod-name-index"><%= product.name %></h3> -->
                             <!-- IMPRIME EL PRECIO DE LA ITERACION TRAIDO DEL JSON DE PRODUCTOS-->
-                            <h2 class="prod-price-index"><%= product.price %></h2>
-                                <p class="country-index"> <img class="country-icon-index" src="../img/icons/icono-AR-48.png" alt="bandera-pais"> Mendoza, Argentina</p>
+                            <!-- <h2 class="prod-price-index"><%= product.price %></h2> -->
+                                <!-- <p class="country-index"> <img class="country-icon-index" src="../img/icons/icono-AR-48.png" alt="bandera-pais"> Mendoza, Argentina</p>
                                 <p class="shipping-index"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
                                 <p class="rules-index"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
-                        </div>
-                    <% }) %>
+                        </div> -->
+                    <!-- <% }) %> -->
+                    <h1 class="h1-home"> ¡NUESTRA TIENDA! </h1>
 
+                    <div class="prod-home">
+                        <a class="prod-a-home" href="/404">
+                            <div class="gin-home">
+                                <img src="/imagenesPrueba/gin2.jpg" alt="" class="prod-img-home">
+                            <h2 class="h2-prod-home"> GIN <i class="fa-solid fa-martini-glass-citrus"></i> </h2>
+                            </div>
+                        </a>
+                        
+                        <a href="/404">
+                            <div class="wine-home">
+                                <img src="/imagenesPrueba/vino4.jpg" alt="" class="prod-img-home">
+                            <h2 class="h2-prod-home"> VINO <i class="fa-solid fa-wine-glass"></i> </h2>
+                            </div>
+                        </a>
+                        
+
+                        <a href="/404">
+                            <div class="whisky-home">
+                                <img src="/imagenesPrueba/whisky2.jpg" alt="" class="prod-img-home">
+                            <h2 class="h2-prod-home"> WHISKY <i class="fa-solid fa-whiskey-glass"></i> </h2>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </section>         
         </main>
