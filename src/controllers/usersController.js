@@ -1,8 +1,8 @@
-const path = require("path");
-const fs = require("fs");
+const db = require("../database/models");
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 const bcrypt = require('bcrypt');
 
-const usersPath = path.join(__dirname, "/../data/users.json");
 
 const usersController = {
   getUsers: () => {

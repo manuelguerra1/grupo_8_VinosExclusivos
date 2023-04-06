@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS `db_foodrinks`;
+CREATE DATABASE `db_foodrinks`;
+USE `db_foodrinks`;
+
 CREATE TABLE `users` (
    `Id` INT NOT NULL AUTO_INCREMENT,
    `avatar` VARCHAR(255),
@@ -10,7 +14,7 @@ CREATE TABLE `users` (
    `rol_id` INT NOT NULL,
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`Id`)
 );
 
@@ -19,7 +23,7 @@ CREATE TABLE `rols` (
    `rol_name` VARCHAR(255) NOT NULL,
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
@@ -37,7 +41,7 @@ CREATE TABLE `products` (
    `brand_id` INT,
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
@@ -46,7 +50,7 @@ CREATE TABLE `categories` (
    `category_name` VARCHAR(255),
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
@@ -55,7 +59,7 @@ CREATE TABLE `brands` (
    `brand_name` VARCHAR(255),
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
@@ -64,13 +68,16 @@ CREATE TABLE `varietales` (
    `varietal_name` VARCHAR(255),
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `regions` (
    `id` INT NOT NULL,
    `region` VARCHAR(255),
+   `created_at` TIMESTAMP DEFAULT current_timestamp,
+   `updated_at` TIMESTAMP DEFAULT current_timestamp,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
@@ -79,7 +86,7 @@ CREATE TABLE `origenes` (
    `country` VARCHAR(255),
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
@@ -89,7 +96,7 @@ CREATE TABLE `payments` (
    `installments` INT NOT NULL,
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
@@ -101,7 +108,7 @@ CREATE TABLE `carts` (
    `user_id` INT NOT NULL,
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 
@@ -112,7 +119,7 @@ CREATE TABLE `cart_products` (
    `cart_id` INT NOT NULL,
    `created_at` TIMESTAMP DEFAULT current_timestamp,
    `updated_at` TIMESTAMP DEFAULT current_timestamp,
-   `deleted_at` TIMESTAMP DEFAULT NULL,
+   `deleted_at` TIMESTAMP DEFAULT current_timestamp,
    PRIMARY KEY (`id`)
 );
 

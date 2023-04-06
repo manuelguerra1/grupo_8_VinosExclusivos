@@ -61,3 +61,5 @@ Nos reunimos Anto, Diego, Lili y Vivi armamos tabla de usuarios, instalamos sequ
 comentamos los header de Css de los archivos excepto el partial porque lo estaban pisando. No se veia que se hubiera trabajado del modo mobile first. Queda pendiente arreglar la vista en version mobile para poder seguir con las media querie de tablet y Desktop. Usuario para probar username: test2 password: test2123 // Fixeamos el proyecto ya se encuentra funcionando login. 
 
 19/03 CSS: Borramos lo comentado de todos los css y ejs. Arreglamos el index, login, crear productos del admin, footer todo en formato mobile.
+
+6/4 EL CARRITO NO CARGA PRODUCTOS

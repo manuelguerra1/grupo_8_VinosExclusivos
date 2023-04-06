@@ -123,5 +123,15 @@
   "username": "dd",
   "password": "$2b$10$1X1qgkNd.6lBeLkjyRBxmeM7Ky8gK1SFyAEyruNJ.SdvLK1ej.Pii",
   "confirmpassword": "$2b$10$SlB51D2sJcerUTTM9yMNP.AyoHeShZMLLvI9YQUxbJy0eUHllSGLq"
+ },
+ {
+  "id": 1680806462855,
+  "avatar": "user-1680806462846.jpg",
+  "name": "Lilian",
+  "lastname": "Devico",
+  "email": "ldevico@hotmail.com",
+  "username": "lilian.devico",
+  "password": "$2b$10$h3wLlgXngiIYT8i49IOMfuhMeN0.oSEibpDlKVPpu5f/tgdhWNmGG",
+  "confirmpassword": "$2b$10$0MrpUm5u/r19oK.sjPPXfuBf9popZ/8P8EId38qKk8K0.1OC3tcHu"
  }
 ]
