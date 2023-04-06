@@ -1,23 +1,26 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Category";
+    let alias = "Payment";
     let cols = {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
       },
-      category_name: {
+      method: {
         type: DataTypes.STRING(255),
       },
+	  installments: {
+		type: DataTypes.INTEGER,
+	  },  
     };
     let config = {
       timestamps: true,
-      created_at: "created_at",
+      creaded_at: "created_at",
       updated_at: "updated_at",
       deleted_at: "deleted_at",
       paranoid: true,
     };
   
-    const Category = sequelize.define(alias, cols, config);
+    const Payment = sequelize.define(alias, cols, config);
   
-    return Category;
+    return Payment;
   };
