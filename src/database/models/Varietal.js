@@ -18,6 +18,13 @@ module.exports = (sequelize, DataTypes) => {
     };
   
     const Varietal = sequelize.define(alias, cols, config);
+
+    Varietal.associate = function (models) {
+      Varietal.hasMany(models.Product, {
+          as: 'Product',
+          foreignKey: 'varietal_id'
+      })
+  }
   
     return Varietal;
   };

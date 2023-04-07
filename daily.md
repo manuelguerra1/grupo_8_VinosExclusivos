@@ -63,3 +63,5 @@ comentamos los header de Css de los archivos excepto el partial porque lo estaba
 19/03 CSS: Borramos lo comentado de todos los css y ejs. Arreglamos el index, login, crear productos del admin, footer todo en formato mobile.
 
 6/4 EL CARRITO NO CARGA PRODUCTOS
+
+7/4 Poblamos las tablas de SQL, configuramos la conexion de con mySQL. Hicimos una prueba en el controlador mainController para verificar la misma. Estudiamos las relaciones y asociamos Product/Varietal. Falta configurar el resto. 
