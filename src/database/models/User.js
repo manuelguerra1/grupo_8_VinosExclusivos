@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   let config = {
     timestamps: true,
+    tablename: 'users',
     created_at: "created_at",
     updated_at: "updated_at",
     deleted_at: "deleted_at",
@@ -42,5 +43,13 @@ module.exports = (sequelize, DataTypes) => {
 
   const User = sequelize.define(alias, cols, config);
 
+  User.associate = function (models) {
+    User.belongsTo(models.User, {
+        as: 'Rol',
+        foreignKey: 'rol_id'
+    });
+  };
+
   return User;
+  
 };

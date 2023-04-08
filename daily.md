@@ -65,3 +65,5 @@ comentamos los header de Css de los archivos excepto el partial porque lo estaba
 6/4 EL CARRITO NO CARGA PRODUCTOS
 
 7/4 Poblamos las tablas de SQL, configuramos la conexion de con mySQL. Hicimos una prueba en el controlador mainController para verificar la misma. Estudiamos las relaciones y asociamos Product/Varietal. Falta configurar el resto. 
+
+8/4 Se termino de configurar las relaciones entre las tablas Region, Origin, Category, Brand, Rol, User y Product.
