@@ -23,7 +23,8 @@ img.header-logo {
   justify-content: center;
 }
 .top-header {
-  background-color: #7b1d46;
+  /* background-color: #7b1d46; */
+  background-color: #350218;
 
 }
 .searching {
@@ -140,11 +141,8 @@ img.header-logo {
 
 /* ---------------------------FOOTER------------------------------- */
 .pieDePagina {
-  background-color: #7b1d46;
-  width: 100%;
-}
-.pieDePagina {
-  background-color: #7b1d46;
+  /* background-color: #7b1d46; */
+  background-color: #350218;
   width: 100%;
   margin: auto;
   padding: 25px 10px;
