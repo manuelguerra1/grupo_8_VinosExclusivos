@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
     tablename: 'users',
     created_at: "created_at",
     updated_at: "updated_at",
-    deleted_at: "deleted_at",
+    deleted_at: false,
     paranoid: true,
     underscored: true
   };

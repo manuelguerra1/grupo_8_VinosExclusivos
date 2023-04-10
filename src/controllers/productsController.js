@@ -1,19 +1,13 @@
-const { Console } = require('console');
-const fs = require('fs');
-const path = require('path');
-
-const productsPath = path.join(__dirname, '/../data/products.json');
+const db = require("../database/models");
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 const productsController = {
-    getProducts: () => {
-        return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
-    },
-
-
     allProduct: function (req, res) {
-        res.render('./products/allProduct', {
-            productList: productsController.getProducts()
-        });
+        db.Product.findAll()
+        .then(products => {
+            res.render('./products/allProduct', {products})
+        })
     },
 
     productDetail: function (req, res) {

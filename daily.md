@@ -67,3 +67,5 @@ comentamos los header de Css de los archivos excepto el partial porque lo estaba
 7/4 Poblamos las tablas de SQL, configuramos la conexion de con mySQL. Hicimos una prueba en el controlador mainController para verificar la misma. Estudiamos las relaciones y asociamos Product/Varietal. Falta configurar el resto. 
 
 8/4 Se termino de configurar las relaciones entre las tablas Region, Origin, Category, Brand, Rol, User y Product. En todos los model se agrego underscored en el let config de cada uno, y allowNull en cada tipo de dato.
+
+9/4 Se inicio el metodo que lista los productos. Corregimos la base de datos.
