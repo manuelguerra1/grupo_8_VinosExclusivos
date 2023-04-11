@@ -20,48 +20,51 @@ const productsController = {
     },
 
     create: function (req, res) {
-        res.render('./products/productCreateForm')
+        let varietal = db.Varietal.findAll()
+        let brand = db.Brand.findAll()
+        let category = db.Category.findAll()
+        let region = db.Region.findAll()
+        let origin = db.Origin.findAll()
+
+        Promise
+
+        .all([varietal, brand, category, region, origin])
+
+        .then(([varietal, brand, category, region, origin]) => {
+            return res.render('./products/productCreateForm', {
+                varietal, brand, category, region, origin
+            })
+        })
+        .catch(error => res.send(error))
+
     },
 
     store: (req, res) => {
-
-        let product = productsController.getProducts();
-        // let image = [];
-
-        // if (req.files) {
-        //     req.files.forEach(file =>{
-        //         image.push({
-        //             "id": Date.now(),
-        //             "name": file.filename,
-        //         });
-        //     });
-
-        // } else{
-        //     image.push("default.jpg");
-        // } 
-
-        let newProducts = {
-            "id": Date.now(),
+        
+        let newProduct = {
             "name": req.body.name,
             "description": req.body.description,
             "price": req.body.price,
-            "varietal": req.body.price,
+            "varietal_id": req.body.varietal,
+            "brand_id": req.body.brand,
             "year": req.body.year,
-            "origen": req.body.origen,
-            "region": req.body.region,
-            "category": req.body.category,
+            "origen_id": req.body.origen,
+            "region_id": req.body.region,
+            "category_id": req.body.category,
             "available": true,
             "image": req.file.filename
-
         }
 
-        // console.log("nuevo producto", newProducts);
+        console.log(newProduct);
 
-        product.push(newProducts);
 
-        fs.writeFileSync(productsPath, JSON.stringify(product, null, ' '));
+        db.Product.create(newProduct)
 
-        res.redirect('/');
+        .then(() => {
+            res.redirect('/allProduct')
+        })
+        
+        .catch(error => res.send(error))
     },
 
     productEdit: function (req, res) {
