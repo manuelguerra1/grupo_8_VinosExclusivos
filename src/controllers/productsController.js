@@ -70,19 +70,25 @@ const productsController = {
 
         let product = db.Product.findByPk(id)
         let varietal = db.Varietal.findAll()
+        let varietalById = db.Varietal.findByPk(id)
         let brand = db.Brand.findAll()
+        let brandById = db.Brand.findByPk(id)
         let category = db.Category.findAll()
+        let categoryById = db.Category.findByPk(id)
         let region = db.Region.findAll()
+        let regionById = db.Region.findByPk(id)
         let origin = db.Origin.findAll()
+        let originById = db.Origin.findByPk(id)
+
         
         
         Promise
 
-        .all([product, varietal, brand, category, region, origin])
+        .all([product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById])
 
-        .then(([product, varietal, brand, category, region, origin]) => {
+        .then(([product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById]) => {
             return res.render('./products/productEditForm', {
-                product, varietal, brand, category, region, origin
+                product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById
             })
         })
         .catch(error => res.send(error))
