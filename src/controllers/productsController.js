@@ -130,20 +130,8 @@ const productsController = {
 
     },
 
-    delete: (req, res) => {
-        let productId = req.params.id;
-        let product = productsController.getProducts().find(product => product.id == productId);
-
-        res.render('./products/productDeleteForm', {
-            title: 'Eliminar producto',
-            product: product
-        });
-
-    },
-
     destroy: (req, res) => {
         const id = req.params.id;
-        let product = db.Product.findByPk(id)
         
         db.Product.destroy({where: {id: id}, force: true})
 
