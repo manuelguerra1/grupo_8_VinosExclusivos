@@ -66,14 +66,28 @@ const productsController = {
     },
 
     productEdit: function (req, res) {
-        let productId = req.params.id;
-        let producto = productsController.getProducts().find(producto => producto.id == productId);
+        const id = req.params.id
 
+        let product = db.Product.findByPk(id)
+        let varietal = db.Varietal.findAll()
+        let brand = db.Brand.findAll()
+        let category = db.Category.findAll()
+        let region = db.Region.findAll()
+        let origin = db.Origin.findAll()
+        
+        
+        Promise
 
-        return res.render('./products/productEditForm', {
-            product: producto,
-            id: req.params.id
-        });
+        .all([product, varietal, brand, category, region, origin])
+
+        .then(([product, varietal, brand, category, region, origin]) => {
+            return res.render('./products/productEditForm', {
+                product, varietal, brand, category, region, origin
+            })
+        })
+        .catch(error => res.send(error))
+
+        
     },
 
     update: (req, res) => {
