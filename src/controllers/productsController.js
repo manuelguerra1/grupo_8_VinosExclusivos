@@ -11,12 +11,10 @@ const productsController = {
     },
 
     productDetail: function (req, res) {
-        let productId = req.params.id;
-        let producto = productsController.getProducts().find(producto => producto.id == productId);
-
-        res.render('./products/productDetail', {
-            product: producto
-        });
+        db.Product.findByPk(req.params.id)
+        .then(product => {
+            res.render('./products/productDetail', {product})
+        })
     },
 
     create: function (req, res) {
