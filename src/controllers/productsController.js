@@ -91,29 +91,34 @@ const productsController = {
     },
 
     update: (req, res) => {
-        let productId = req.params.id;
-        let productos = productsController.getProducts();
+        const id = req.params.id
 
-        productos.forEach((producto, index) => {
-            if (producto.id == productId) {
-                producto.name = req.body.name,
-                    producto.id = req.body.id,
-                    producto.description = req.body.description,
-                    producto.price = req.body.price,
-                    producto.varietal = req.body.varietal,
-                    producto.year = req.body.year,
-                    producto.origen = req.body.origen,
-                    producto.region = req.body.region,
-                    producto.category = req.body.category,
-                    //ponemos un ternario para que si me trae una imagen cambie el valor o foto y sino queda la misma imagen
-                    producto.image = req.file ? req.file.filename : producto.image
+        db.Product.update(
+            {
+                "name": req.body.name,
+                "description": req.body.description,
+                "price": req.body.price,
+                "varietal_id": req.body.varietal,
+                "brand_id": req.body.brand,
+                "year": req.body.year,
+                "origen_id": req.body.origen,
+                "region_id": req.body.region,
+                "category_id": req.body.category,
+                "available": true,
+            },
+            {
+                where: {id: id}
+        })
 
-
-                productos[index] = producto;
-            }
-        });
-
-        fs.writeFileSync(productsPath, JSON.stringify(productos, null, ' '));
+        .then(function(data){
+            const res = { success: true, data: data, message:"Actualización exitosa!" }
+            return res;
+          })
+          .catch(error=>{
+            const res = { success: false, error: error }
+            return res;
+          })
+         
 
         res.redirect('/');
 
