@@ -11,8 +11,8 @@ router.post('/save', upload.single('image') ,productsController.store);
 router.get ('/edit/:id', productsController.productEdit);
 router.put ('/modify/:id', productsController.update);
 // Eliminar
-router.get ('/delete/:id', productsController.delete);
-router.delete ('/eliminate/:id', productsController.destroy);
+router.delete ('/delete/:id', productsController.destroy);
+// router.delete ('/eliminate/:id', productsController.destroy);
 
 router.get('/productDetail/:id', productsController.productDetail);
 

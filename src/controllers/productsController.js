@@ -126,7 +126,7 @@ const productsController = {
           })
          
 
-        res.redirect('/');
+        res.redirect('/allProduct');
 
     },
 
@@ -142,28 +142,21 @@ const productsController = {
     },
 
     destroy: (req, res) => {
-        let productId = req.params.id;
-        let products = productsController.getProducts();
+        const id = req.params.id;
+        let product = db.Product.findByPk(id)
+        
+        db.Product.destroy({where: {id: id}, force: true})
 
-        // NO FUNCIONA 
-        // products = products.filter(product => product.id != productId);
+        .then(function(data){
+            const res = { success: true, data: data, message:"Borrado con exito!" }
+            return res;
+          })
+          .catch(error=>{
+            const res = { success: false, error: error }
+            return res;
+          })
 
-        // ENCUENTRA EL PRODUCTO
-        let product = products.find(product => product.id == productId)
-        //ENCUENTRA EL INDICE DEL PRODUCTO
-        let productIndex = products.indexOf(product)
-
-        // ELIMINA EL PRODUCTO QUE COINCIDE CON EL INDICE DEL PRODUCTO
-        products.splice(productIndex, 1)
-
-        // PREGUNTA SI TIENE IMAGEN CUANDO ELIMINA UN PRODUCTO
-        // SI TIENE UNA IMAGEN, LA BORRA DE LA CARPETA IMGS
-        // fs.unlinkSync(__dirname, `../../public/img/product/${product.image}`)
-
-
-        fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
-
-        res.redirect('/');
+        res.redirect('/allProduct');
     }
 
 }
