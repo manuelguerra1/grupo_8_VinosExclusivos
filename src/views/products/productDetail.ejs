@@ -13,7 +13,7 @@
                 <button class="add-menu-prod-detail" type="submit">EDITAR</button>
             </div>
         </form>
-        <form class="prod-detail-form"  action="/delete/<%= product.id %>" >
+        <form class="prod-detail-form"  action="/delete/<%= product.id %>?_method=DELETE" method="POST">
             <div class="btn-edit-prod-detail">
                 <button class="add-menu-prod-detail" type="submit">ELIMINAR</button>
             </div>

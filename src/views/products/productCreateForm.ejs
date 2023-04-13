@@ -31,12 +31,6 @@
             
             <h3> CREACIÓN DE PRODUCTOS</h3>
 
-            <br>
-            <label for="codigo"></label>
-            <h4>Código de Producto: </h4>
-            <input  type="number" name="id" id="id" placeholder="Código" required> 
-            <br>
-
             <label for="nameproduct"></label>
             <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" required>
             <br>
@@ -49,33 +43,56 @@
             <h4>Precio: </h4>
             <input type="number" name="price" id="price" placeholder="Precio">
             <br>
-            
-            <label for="varietal"></label>
-            <h4>Variedad: </h4><input type="text" name="varietal" id="varietal" placeholder="Variedad" required>
-            <br>
 
             <label for="year"></label>
             <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" placeholder="Año de Cosecha" required>
             <br>
             
-            <label for="origen"></label>
-            <h4>País de Origen: </h4><input type="text" name="origen" id="origen" placeholder="País de Origen" required>
+            
+            <label for="varietal"><h4>Variedad: </h4></label>
+            <select name="varietal" id="varietal" required>
+                <option value="">Seleccione una variedad:</option>
+                
+                <% varietal.forEach(element => { %>
+                    <option value="<%= element.id %>"><%= element.varietal_name %></option>
+                <% }) %>
+                
+            </select>
+
+            <label for="brand"><h4>Marca: </h4></label>
+            <select name="brand" id="brand" required>
+                <option value="">Seleccione una marca:</option>
+                <% brand.forEach(element => { %>
+                    <option value="<%= element.id %>"><%= element.brand_name %></option>
+                <% }) %>
+            </select>
+            
             <br>
             
-            <label for="region"></label>
-            <h4>Región: </h4><input type="text" name="region" id="region" placeholder="Región" required>
-            <br>
-            
-            <label for="category"></label>
-            <h4>Categorías</h4>
-            <div class="categories-prod-create-form">
-                <select class="categorie-select-prod-create-form" name="category" id="" required>
-                    <option value="">Seleccionar</option>
-                    <option value="Destilados">Destilados</option>
-                    <option value="Vinos">Vinos</option>
-            
+            <label for="origen"> <h4>País de Origen:</h4></label>
+                <select  name="origen" id="origen" required>
+                    <option value="">Seleccione origen:</option>
+                    <% origin.forEach(element => { %>
+                        <option value="<%= element.id %>"><%= element.country %></option>
+                    <% }) %>
                 </select>
-                </div>
+            </br>
+            
+            <label for="region"><h4>Región: </h4></label>
+            <select name="region" id="region" required>
+                <option value="">Seleccione una región:</option>
+                <% region.forEach(element => { %>
+                    <option value="<%= element.id %>"><%= element.region %></option>
+                <% }) %>
+            </select>
+            
+            <label for="category"> <h4>Categorías</h4></label>
+                <select  name="category" id="category" required>
+                    <option value="">Seleccione una categoría:</option>
+                    <% category.forEach(element => { %>
+                        <option value="<%= element.id %>"><%= element.category_name %></option>
+                    <% }) %>
+                </select>
             </br>
             
             <label for="image"></label>
@@ -85,8 +102,6 @@
             <div class="prodCreate-buttons-prod-create-form">
                 <button type="submit" value="Crear">CREAR</button>
                 
-                <!-- <button type="reset" value="Borrar">BORRAR</button>
-                <br> -->
             </div>
 
             
