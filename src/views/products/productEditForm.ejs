@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<%- include('../partials/head') %>
 
-    <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/productEditForm.css">
-    <title>Login</title>
-</head> -->
-    <%- include('../partials/head') %>
     <body>
-    <!-- <header>
-        <div class="top-header">
 
-            <a href="/">
-                <div class="logo-to-menu"> <img class="header-logo" src="../img/imgs/logo-sin-fondo-1-beige.png" alt="logo" > </a>
-            </a>
-    </header> -->
 
         <%- include('../partials/header') %>
-        <main>
-            <form method="post" action = "/modify/<%= product.id %>?_method=PUT">
-                <div class="registroProducto-edit-form">
-                    <h3> EDICIÓN DE PRODUCTOS</h3>
+            <main>
+                <form method="post" action="/modify/<%= product.id %>?_method=PUT">
+                    <div class="registroProducto-edit-form">
+                        <h3> EDICIÓN DE PRODUCTOS</h3>
 
-                    <br>
-                    <label for="codigo"></label>
-                    <h4>Código de Producto: </h4>
-                    <input  type="number" name="id" id="id"  value="<%= product.id %>" > 
-                    <br>
-
-                    <label for="nameproduct"></label>
-                    <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" value="<%= product.name %>" >
-                    <br>
-
-                    <label for="description"></label>
-                    <h4>Descripción: </h4><input type="text" name="description" id="description" value="<%= product.description %>">
-                    <br>
-
-                    <label for="price"></label>
-                    <h4>Precio: </h4>
-                    <input type="number" name="price" id="price" value="<%= product.price %>">
-                    <br>
-                    
-                    <label for="varietal"></label>
-                    <h4>Variedad: </h4><input type="text" name="varietal" id="varietal" value="<%= product.varietal %>">
-                    <br>
-
-                    <label for="year"></label>
-                    <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" value="<%= product.year %>">
-                    <br>
-                    
-                    <label for="origen"></label>
-                    <h4>País de Origen: </h4><input type="text" name="origen" id="origen" value="<%= product.origen %>">
-                    <br>
-                    
-                    <label for="region"></label>
-                    <h4>Región: </h4><input type="text" name="region" id="region" value="<%= product.region %>">
-            
-                    <br>
-                    <label for="category"></label>
-                    <h4>Categorías</h4>
-                    <div class="categories">
-                        <select class="category-select-edit-form" name="category" id="category" value="<%= product.category %>">
-                            <option value="<%= product.category %>"><%= product.category %></option> 
-                            <option value="Destilados">Destilados</option>
-                            <option value="Vinos">Vinos</option>
-                    
-                        </select>
-                        </div>
-                    </br>
-                    
-                    <label for="image"></label>
-                    <h4>Imágen de producto</h4>
-                    <img class="edit-form-img-edit-form" src="/img/product/<%= product.image%>">
-                    <!-- <input type="file" name="image" id="image" value=""> -->
-                    <br>
-                    
-                    <div class="prodCreate-buttons-edit-form">
-                        <button type="submit" value="Actualizar">ACTUALIZAR</button>
-                        
-                        <!-- <button type="reset" value="Cancelar">CANCELAR</button> -->
+                        <label for="nameproduct"></label>
+                        <h4>Nombre del Producto: </h4><input type="text" name="name" id="name"
+                            value="<%= product.name %>">
                         <br>
+
+                        <label for="description"></label>
+                        <h4>Descripción: </h4><input type="text" name="description" id="description"
+                            value="<%= product.description %>">
+                        <br>
+
+                        <label for="price"></label>
+                        <h4>Precio: </h4>
+                        <input type="number" name="price" id="price" value="<%= product.price %>">
+                        <br>
+
+                        <label for="year"></label>
+                        <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" value="<%= product.year %>">
+                        <br>
+
+                        <label for="varietal"><h4>Variedad: </h4></label>
+                        <select name="varietal" id="varietal" required>
+                            <option value="">Seleccione una variedad:</option>
+                            <option value="<%= varietalById.id %>" selected><%= varietalById.varietal_name %></option>
+
+                            <% varietal.forEach(element=> { %>
+                                <option value="<%= element.id %>">
+                                    <%= element.varietal_name %>
+                                </option>
+                                <% }) %>
+
+                        </select>
+
+                        <label for="brand"><h4>Marca: </h4></label>
+                        <select name="brand" id="brand" required>
+                            <option value="">Seleccione una marca:</option>
+                            <option value="<%= brandById.id %>" selected><%= brandById.brand_name %></option>
+                            <% brand.forEach(element => { %>
+                                <option value="<%= element.id %>"><%= element.brand_name %></option>
+                            <% }) %>
+                        </select>
+                        
+                        <br>
+                        
+                        <label for="origen"> <h4>País de Origen:</h4></label>
+                            <select  name="origen" id="origen" required>
+                                <option value="">Seleccione origen:</option>
+                                <option value="<%= originById.id %>" selected><%= originById.country %></option>
+                                <% origin.forEach(element => { %>
+                                    <option value="<%= element.id %>"><%= element.country %></option>
+                                <% }) %>
+                            </select>
+                        </br>
+                        
+                        <label for="region"><h4>Región: </h4></label>
+                        <select name="region" id="region" required>
+                            <option value="">Seleccione una región:</option>
+                            <option value="<%= regionById.id %>" selected><%= regionById.region %></option>
+                            <% region.forEach(element => { %>
+                                <option value="<%= element.id %>"><%= element.region %></option>
+                            <% }) %>
+                        </select>
+                        
+                        <label for="category"> <h4>Categorías</h4></label>
+                            <select  name="category" id="category" required>
+                                <option value="">Seleccione una categoría:</option>
+                                <option value="<%= categoryById.id %>" selected><%= categoryById.category_name %></option>
+                                <% category.forEach(element => { %>
+                                    <option value="<%= element.id %>"><%= element.category_name %></option>
+                                <% }) %>
+                            </select>
+                        </br>
+
+                        <label for="image"></label>
+                        <h4>Imágen de producto</h4>
+                        <img class="edit-form-img-edit-form" src="/img/product/<%= product.image%>">
+                        <br>
+
+                        <div class="prodCreate-buttons-edit-form">
+                            <button type="submit" value="Actualizar">ACTUALIZAR</button>
+                            <br>
+                        </div>
+
+
                     </div>
-
-                    
+                </form>
+            </main>
+            <footer>
+                <div class="grupo2">
+                    <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
                 </div>
-            </form>
-        </main>
-        <footer>
-        <div class="grupo2">
-            <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
-        </div>
-        </footer>
+            </footer>
     </body>
-

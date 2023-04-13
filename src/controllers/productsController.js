@@ -66,79 +66,85 @@ const productsController = {
     },
 
     productEdit: function (req, res) {
-        let productId = req.params.id;
-        let producto = productsController.getProducts().find(producto => producto.id == productId);
+        const id = req.params.id
 
+        let product = db.Product.findByPk(id)
+        let varietal = db.Varietal.findAll()
+        let varietalById = db.Varietal.findByPk(id)
+        let brand = db.Brand.findAll()
+        let brandById = db.Brand.findByPk(id)
+        let category = db.Category.findAll()
+        let categoryById = db.Category.findByPk(id)
+        let region = db.Region.findAll()
+        let regionById = db.Region.findByPk(id)
+        let origin = db.Origin.findAll()
+        let originById = db.Origin.findByPk(id)
 
-        return res.render('./products/productEditForm', {
-            product: producto,
-            id: req.params.id
-        });
+        
+        
+        Promise
+
+        .all([product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById])
+
+        .then(([product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById]) => {
+            return res.render('./products/productEditForm', {
+                product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById
+            })
+        })
+        .catch(error => res.send(error))
+
+        
     },
 
     update: (req, res) => {
-        let productId = req.params.id;
-        let productos = productsController.getProducts();
+        const id = req.params.id
 
-        productos.forEach((producto, index) => {
-            if (producto.id == productId) {
-                producto.name = req.body.name,
-                    producto.id = req.body.id,
-                    producto.description = req.body.description,
-                    producto.price = req.body.price,
-                    producto.varietal = req.body.varietal,
-                    producto.year = req.body.year,
-                    producto.origen = req.body.origen,
-                    producto.region = req.body.region,
-                    producto.category = req.body.category,
-                    //ponemos un ternario para que si me trae una imagen cambie el valor o foto y sino queda la misma imagen
-                    producto.image = req.file ? req.file.filename : producto.image
+        db.Product.update(
+            {
+                "name": req.body.name,
+                "description": req.body.description,
+                "price": req.body.price,
+                "varietal_id": req.body.varietal,
+                "brand_id": req.body.brand,
+                "year": req.body.year,
+                "origen_id": req.body.origen,
+                "region_id": req.body.region,
+                "category_id": req.body.category,
+                "available": true,
+            },
+            {
+                where: {id: id}
+        })
 
+        .then(function(data){
+            const res = { success: true, data: data, message:"Actualización exitosa!" }
+            return res;
+          })
+          .catch(error=>{
+            const res = { success: false, error: error }
+            return res;
+          })
+         
 
-                productos[index] = producto;
-            }
-        });
-
-        fs.writeFileSync(productsPath, JSON.stringify(productos, null, ' '));
-
-        res.redirect('/');
-
-    },
-
-    delete: (req, res) => {
-        let productId = req.params.id;
-        let product = productsController.getProducts().find(product => product.id == productId);
-
-        res.render('./products/productDeleteForm', {
-            title: 'Eliminar producto',
-            product: product
-        });
+        res.redirect('/allProduct');
 
     },
 
     destroy: (req, res) => {
-        let productId = req.params.id;
-        let products = productsController.getProducts();
+        const id = req.params.id;
+        
+        db.Product.destroy({where: {id: id}, force: true})
 
-        // NO FUNCIONA 
-        // products = products.filter(product => product.id != productId);
+        .then(function(data){
+            const res = { success: true, data: data, message:"Borrado con exito!" }
+            return res;
+          })
+          .catch(error=>{
+            const res = { success: false, error: error }
+            return res;
+          })
 
-        // ENCUENTRA EL PRODUCTO
-        let product = products.find(product => product.id == productId)
-        //ENCUENTRA EL INDICE DEL PRODUCTO
-        let productIndex = products.indexOf(product)
-
-        // ELIMINA EL PRODUCTO QUE COINCIDE CON EL INDICE DEL PRODUCTO
-        products.splice(productIndex, 1)
-
-        // PREGUNTA SI TIENE IMAGEN CUANDO ELIMINA UN PRODUCTO
-        // SI TIENE UNA IMAGEN, LA BORRA DE LA CARPETA IMGS
-        // fs.unlinkSync(__dirname, `../../public/img/product/${product.image}`)
-
-
-        fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
-
-        res.redirect('/');
+        res.redirect('/allProduct');
     }
 
 }
