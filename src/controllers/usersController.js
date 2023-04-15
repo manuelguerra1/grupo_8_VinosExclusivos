@@ -5,9 +5,50 @@ const bcrypt = require('bcrypt');
 
 
 const usersController = {
-  getUsers: () => {
-    return JSON.parse(fs.readFileSync(usersPath, "utf-8"));
+
+  'user': (req, res) => {
+    db.User.findAll()
+        .then(users => {
+            res.json({users})
+        })
   },
+  register: async (req, res) => {
+        
+    try {
+        let rol = await db.Rol.findAll()
+
+        return res.render('./users/register', {
+            rol
+        })
+        
+    } catch (error) {
+        res.send(error)
+    }
+  },
+
+  usersStore: async (req, res) => {
+    try {
+      let newUsers = {
+        "avatar": req.file.filename,
+        "name": req.body.name,
+        "last_name": req.body.lastname,
+        "email": req.body.email,
+        "user_name": req.body.username,
+        "password": bcrypt.hashSync(req.body.password, 10),
+        "confirm_password": bcrypt.hashSync(req.body.confirmpassword, 10),
+        "rol_id": req.body.rol
+      }
+
+      await db.User.create(newUsers)
+
+      res.redirect('/login')
+      
+    } catch (error) {
+      res.send(error)
+    }
+  },
+
+  
   login: function (req, res) {
     res.render("./users/login");
   },
@@ -40,39 +81,7 @@ const usersController = {
     });
 },
 
-  register: function (req, res) {
-    res.render("./users/register");
-  },
-
-  usersCreate: function (req, res) {
-    res.render("./users/register");
-  },
-
-  usersStore: function (req, res) {
-    let user = usersController.getUsers();
-    console.log('avatar', req.file.filename);
-    console.log('req.file', req.file);
-
-    let newUsers = {
-      "id": Date.now(),
-      "avatar": req.file.filename,
-      "name": req.body.name,
-      "lastname": req.body.lastname,
-      "email": req.body.email,
-      "username": req.body.username,
-      "password": bcrypt.hashSync(req.body.password, 10),
-      "confirmpassword": bcrypt.hashSync(req.body.confirmpassword, 10)
-    }
-
-    // console.log("nuevo usuario", newUser);
-
-    user.push(newUsers);
-
-    fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '));
-
-    res.redirect("/");
-  },
-
+  
   usersEdit: function (req, res) {
     let userId = req.params.id;
     console.log('userId', userId);

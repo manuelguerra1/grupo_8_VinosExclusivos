@@ -72,3 +72,4 @@ comentamos los header de Css de los archivos excepto el partial porque lo estaba
 
 14/4 CRUD de productos terminado hecho con trycatch-async/await 
 15/5 AGREGAR ALERT PARA ELIMIAR PRODUCTO. Se corrigió el formulario de Edit de Productos porque no permitia editar por error en Varietal.
+- Crear Usuario funcionando, se modifico el archivo register ejs y se agrego la opción de seleccionar el tipo de usuario. 
