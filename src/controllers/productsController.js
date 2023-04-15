@@ -15,9 +15,16 @@ const productsController = {
 
     productDetail: async (req, res) => {
         try {
+            let varietal = await db.Varietal.findAll()
+            // let varietalById = db.Varietal.findByPk(id)
+            let brand = await db.Brand.findAll()
+            let category = await db.Category.findAll()
+            let region = await db.Region.findAll()
+            let origin = await db.Origin.findAll()
+
             const productId = await db.Product.findByPk(req.params.id)
             console.log(productId);
-            res.render('./products/productDetail', {productId})
+            res.render('./products/productDetail', {productId,  varietal, brand, category, region, origin})
         } catch (error) {
             res.send(error)
         }
