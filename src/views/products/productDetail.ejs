@@ -8,12 +8,12 @@
     </header>
 
     <main>
-        <form class="prod-detail-form"  action="/edit/<%= product.id %>" >
+        <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
             <div class="btn-edit-prod-detail">
                 <button class="add-menu-prod-detail" type="submit">EDITAR</button>
             </div>
         </form>
-        <form class="prod-detail-form"  action="/delete/<%= product.id %>?_method=DELETE" method="POST">
+        <form class="prod-detail-form"  action="/delete/<%= productId.id %>?_method=DELETE" method="POST">
             <div class="btn-edit-prod-detail">
                 <button class="add-menu-prod-detail" type="submit">ELIMINAR</button>
             </div>
@@ -22,10 +22,10 @@
             <div class="productContainer-prod-detail">
             </section>
             <div class="product-prod-detail">
-                    <div class="imgProduct-prod-detail"><img src="/img/product/<%= product.image%>"></div>
-                    <h3 class="prod-name-prod-detail"><%= product.name %></h3>
+                    <div class="imgProduct-prod-detail"><img src="/img/product/<%= productId.image%>"></div>
+                    <h3 class="prod-name-prod-detail"><%= productId.name %></h3>
                     <br>
-                    <h2 class="prod-price-prod-detail"><%= product.price %></h2>
+                    <h2 class="prod-price-prod-detail"><%= productId.price %></h2>
                     <br>
                     <form action="/carrito">
                         <button type="submit"> Agregar al carrito </button>
@@ -41,7 +41,7 @@
                     </select>
                     <p class="desc-prod-detail">Descripción: 
                         <br>
-                        <%= product.description %> 
+                        <%= productId.description %> 
                         <br>
                     </p>  
                         
