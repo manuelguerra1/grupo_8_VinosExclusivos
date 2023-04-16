@@ -31,6 +31,6 @@ router.post('/userSave', userUpload.single('avatar'), usersController.usersStore
 // // Eliminar
 // router.get ('/userDelete/:id', usersController.usersDelete);
 // router.delete ('/userEliminate/:id', usersController.usersDestroy);
-
+router.get('/admin', usersController.admin)
 
 module.exports = router;

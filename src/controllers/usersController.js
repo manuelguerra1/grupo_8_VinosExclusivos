@@ -1,3 +1,4 @@
+const {validationResult} = require('express-validator');
 const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -5,86 +6,141 @@ const bcrypt = require('bcrypt');
 
 
 const usersController = {
-
-  'user': (req, res) => {
-    db.User.findAll()
-        .then(users => {
-            res.json({users})
-        })
+  user: (req, res) => {
+    db.User.findAll().then((users) => {
+      res.json({ users });
+    });
   },
   register: async (req, res) => {
-        
     try {
-        let rol = await db.Rol.findAll()
+      let rol = await db.Rol.findAll();
 
-        return res.render('./users/register', {
-            rol
-        })
-        
+      return res.render("./users/register", {
+        rol,
+      });
     } catch (error) {
-        res.send(error)
+      res.send(error);
     }
   },
 
   usersStore: async (req, res) => {
     try {
       let newUsers = {
-        "avatar": req.file.filename,
-        "name": req.body.name,
-        "last_name": req.body.lastname,
-        "email": req.body.email,
-        "user_name": req.body.username,
-        "password": bcrypt.hashSync(req.body.password, 10),
-        "confirm_password": bcrypt.hashSync(req.body.confirmpassword, 10),
-        "rol_id": req.body.rol
-      }
+        avatar: req.file.filename,
+        name: req.body.name,
+        last_name: req.body.lastname,
+        email: req.body.email,
+        user_name: req.body.username,
+        password: bcrypt.hashSync(req.body.password, 10),
+        confirm_password: bcrypt.hashSync(req.body.confirmpassword, 10),
+        rol_id: req.body.rol,
+      };
 
-      await db.User.create(newUsers)
+      await db.User.create(newUsers);
 
-      res.redirect('/login')
-      
+      res.redirect("/users/login");
     } catch (error) {
-      res.send(error)
+      res.send(error);
     }
   },
 
-  
-  login: function (req, res) {
-    res.render("./users/login");
+  login: (req, res) => {
+    
+    res.render("./users/login",{
+    });
   },
-  processLogin: function (req, res) {
-    let users = JSON.parse(fs.readFileSync(usersPath, "utf-8"));
-    let user = users.find(user => user.username == req.body.username);
 
-    if (user) {
-      req.session.userLogged = user;
-      if(req.body.rememberme){
-        res.cookie(
-            'userLogged',
-            user,
-            { maxAge: 1000 * 60 *60 *24} //1 dia
-        );
-        
+  processLogin: async function (req, res) {
+    const error = validationResult(req);
+
+    if (!error.isEmpty()) {
+      return res.render("/login", {
+        error: error.mapped(),
+      });
+    };
+
+    try {
+      let userToLogin = await db.User.findOne({
+        where: {
+          username: req.body.username,
+        },
+        attributes: [
+          "id",
+          "avatar",
+          "name",
+          "last_name",
+          "email",
+          "user_name",
+          "password",
+          "confirm_password",
+          "rol_id",
+        ]
+      });
+
+      if (!userToLogin) {
+        return res.render("/login", {
+          error: {
+            username: {
+              msg: "Usuario no registrado",
+            }
+          },
+        });
       }
-      res.redirect('/profile');
+
+      const confirmPassword = bcrypt.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+
+      if (!confirmPassword) {
+        return res.render("/login", {
+          error: {
+            password: {
+              msg: "Contraseña incorrecta",
+            }
+          },
+        });
+      };
+
+      if (userToLogin.rol_id === 2) {
+        delete userToLogin.dataValues.password;
+
+        req.session.admin = userToLogin.dataValues;
+        return res.redirect("/admin");
+      };
+
+      if (userToLogin.rol_id === 1) {
+        delete userToLogin.dataValues.password;
+
+        req.session.userLogged = userToLogin.dataValues;
+
+        if (req.body.rememberme) {
+          res.cookie("userCookie", userToLogin.dataValues, {
+            maxage: 1000 * 60 * 60,
+          });
+        };
+        res.redirect("/profile");
+      };
+    } catch (error) {
+      res.render("../src/views/users/404.ejs");
     }
   },
+
   logout: (req, res) => {
-    res.clearCookie('userLogged')
+    res.clearCookie("userLogged");
     req.session.destroy();
-    return res.redirect('/');
-},
+    return res.redirect("/");
+  },
 
   profile: function (req, res) {
-    res.render('./users/profile', {
-        user: req.session.userLogged
+    res.render("./users/profile", {
+      user: req.session.userLogged,
     });
-},
+  },
 
-  
   usersEdit: function (req, res) {
     let userId = req.params.id;
-    console.log('userId', userId);
+    console.log("userId", userId);
     let usuario = usersController
       .getUsers()
       .find((usuario) => usuario.id == userId);
@@ -150,7 +206,14 @@ const usersController = {
     fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
 
     res.redirect("/");
-  }
+  },
+  admin: (req, res) =>{
+    const products = db.Product.findAll()
+            res.render('./admin', {products})
+
+  },
+
 };
+
 
 module.exports = usersController;
