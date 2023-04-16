@@ -3,6 +3,7 @@ const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const bcrypt = require('bcrypt');
+const { log } = require('console');
 
 
 const usersController = {
@@ -38,7 +39,7 @@ const usersController = {
 
       await db.User.create(newUsers);
 
-      res.redirect("/users/login");
+      res.redirect("./users/login");
     } catch (error) {
       res.send(error);
     }
@@ -54,7 +55,7 @@ const usersController = {
     const error = validationResult(req);
 
     if (!error.isEmpty()) {
-      return res.render("/login", {
+      return res.render("./users/login", {
         error: error.mapped(),
       });
     };
@@ -62,7 +63,7 @@ const usersController = {
     try {
       let userToLogin = await db.User.findOne({
         where: {
-          username: req.body.username,
+          user_name: req.body.username,
         },
         attributes: [
           "id",
@@ -75,25 +76,30 @@ const usersController = {
           "confirm_password",
           "rol_id",
         ]
+
+        
       });
+      console.log('usuario para loguear',userToLogin)
 
       if (!userToLogin) {
-        return res.render("/login", {
+        return res.render("./users/login", {
           error: {
-            username: {
+            user_name: {
               msg: "Usuario no registrado",
             }
           },
         });
-      }
+      };
 
       const confirmPassword = bcrypt.compareSync(
         req.body.password,
         userToLogin.password
       );
 
+      console.log('confirma password',confirmPassword);
+
       if (!confirmPassword) {
-        return res.render("/login", {
+        return res.render("./users/login", {
           error: {
             password: {
               msg: "Contraseña incorrecta",
@@ -102,27 +108,29 @@ const usersController = {
         });
       };
 
-      if (userToLogin.rol_id === 2) {
-        delete userToLogin.dataValues.password;
+      // if (userToLogin.rol_id === 2) {
+      //   delete userToLogin.dataValues.password;
 
-        req.session.admin = userToLogin.dataValues;
-        return res.redirect("/admin");
-      };
+      //   req.session.admin = userToLogin.dataValues;
+      //   return res.redirect("/admin");
+      // };
 
+      //Evalua usuario normal
       if (userToLogin.rol_id === 1) {
         delete userToLogin.dataValues.password;
 
         req.session.userLogged = userToLogin.dataValues;
+        console.log(userLogged,'userLogged');
 
         if (req.body.rememberme) {
-          res.cookie("userCookie", userToLogin.dataValues, {
-            maxage: 1000 * 60 * 60,
-          });
+          res.cookie("userLogged", userToLogin.dataValues, { maxage: 1000 * 60 * 60});
         };
+
         res.redirect("/profile");
       };
+      
     } catch (error) {
-      res.render("../src/views/users/404.ejs");
+      res.send(error)
     }
   },
 
