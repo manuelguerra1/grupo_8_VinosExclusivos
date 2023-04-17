@@ -13,47 +13,50 @@
 <header style="background-color: #2b3035;">
   <div class="container-fluid d-flex">
     <!-- NavBar -->
-    <nav class="navbar bg-dark  navbar-expand-lg bg-body-tertiary col-5 d-flex align-items-center" data-bs-theme="dark">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <nav class="navbar bg-dark  navbar-expand-lg bg-body-tertiary d-flex align-items-center navbar-collapse" data-bs-theme="dark">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">FooDrinks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Tienda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Inicia sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Registrate</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Carrito</a>
-          </li>
-        </ul>
+          <!-- Search -->
+          <div class="d-flex align-items-center">
+            <div>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <!-- <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button> -->
+              </form>
+            </div>
+            <!-- Cart -->
+            <div>
+              <button class="btn btn-outline-success" type="submit"><i class="bi bi-cart-fill"></i> </button>
+            </div>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">FooDrinks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tienda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inicia sesión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Registrate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Carrito</a>
+              </li>
+            </ul>
+
+          </div>
     </nav>
-    <div class="d-flex align-items-center">
-      <div class="col">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-        </form>
-      </div>
-      <!-- Cart -->
-      <div class="col-2">
-        <button class="btn btn-outline-success" type="submit"><i class="bi bi-cart-fill"></i> </button>
-      </div>
-    </div>
-    <!-- Search -->
 
   </div>
 </header>
