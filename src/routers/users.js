@@ -12,15 +12,12 @@ router.get('/pruebauser', usersController.user);
 router.get('/login', authMiddleware, usersController.login);
 router.post('/processLogin', usersController.processLogin);
 
-
-
 router.get('/profile',guestMiddleware, usersController.profile);
 
 router.get('/logout', usersController.logout);
 
 
 // Crear
-//TODO Agregar en la linea 13 -  upload.single('image')
 router.get('/register', usersController.register);
 router.post('/userSave', userUpload.single('avatar'), usersController.usersStore);
 
@@ -31,6 +28,5 @@ router.post('/userSave', userUpload.single('avatar'), usersController.usersStore
 // // Eliminar
 // router.get ('/userDelete/:id', usersController.usersDelete);
 // router.delete ('/userEliminate/:id', usersController.usersDestroy);
-router.get('/admin', usersController.admin)
 
 module.exports = router;

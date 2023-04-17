@@ -156,12 +156,7 @@ const usersController = {
     fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
 
     res.redirect("/");
-  },
-  admin: (req, res) =>{
-    const products = db.Product.findAll()
-            res.render('./admin', {products})
-
-  },
+  }
 
 };
 
