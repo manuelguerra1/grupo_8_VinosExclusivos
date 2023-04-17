@@ -51,87 +51,30 @@ const usersController = {
     });
   },
 
-  processLogin: async function (req, res) {
-    const error = validationResult(req);
+  processLogin: async (req, res) => {
+      try {
+        const user = await db.User.findOne({
+          where: {
+                user_name: req.body.username
+          },
+          include: "Rol"
+        })
 
-    if (!error.isEmpty()) {
-      return res.render("./users/login", {
-        error: error.mapped(),
-      });
-    };
-
-    try {
-      let userToLogin = await db.User.findOne({
-        where: {
-          user_name: req.body.username,
-        },
-        attributes: [
-          "id",
-          "avatar",
-          "name",
-          "last_name",
-          "email",
-          "user_name",
-          "password",
-          "confirm_password",
-          "rol_id",
-        ]
-
+        if(user) {
+          req.session.userLogged = user;
+          if(req.body.rememberme){
+            res.cookie(
+              'userLogged',
+              user,
+              {maxAge: 1000 * 60 *60 *2}
+            );
+          }
+          res.redirect('/profile')
+        }
         
-      });
-      console.log('usuario para loguear',userToLogin)
-
-      if (!userToLogin) {
-        return res.render("./users/login", {
-          error: {
-            user_name: {
-              msg: "Usuario no registrado",
-            }
-          },
-        });
-      };
-
-      const confirmPassword = bcrypt.compareSync(
-        req.body.password,
-        userToLogin.password
-      );
-
-      console.log('confirma password',confirmPassword);
-
-      if (!confirmPassword) {
-        return res.render("./users/login", {
-          error: {
-            password: {
-              msg: "Contraseña incorrecta",
-            }
-          },
-        });
-      };
-
-      // if (userToLogin.rol_id === 2) {
-      //   delete userToLogin.dataValues.password;
-
-      //   req.session.admin = userToLogin.dataValues;
-      //   return res.redirect("/admin");
-      // };
-
-      //Evalua usuario normal
-      if (userToLogin.rol_id === 1) {
-        delete userToLogin.dataValues.password;
-
-        req.session.userLogged = userToLogin.dataValues;
-        console.log(userLogged,'userLogged');
-
-        if (req.body.rememberme) {
-          res.cookie("userLogged", userToLogin.dataValues, { maxage: 1000 * 60 * 60});
-        };
-
-        res.redirect("/profile");
-      };
-      
-    } catch (error) {
-      res.send(error)
-    }
+      } catch (error) {
+        res.send(error);
+      }
   },
 
   logout: (req, res) => {

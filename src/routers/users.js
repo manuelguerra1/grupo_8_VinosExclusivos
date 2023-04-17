@@ -5,6 +5,7 @@ const router = express.Router();
 const userUpload = require ('../middlewares/userMulterMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware')
 const authMiddleware = require ('../middlewares/authMiddleware')
+const loginValidator = require ('../middlewares/loginValidator')
 //este middleware es para que el visitante pueda navegar en toda la web.
 
 router.get('/pruebauser', usersController.user);
