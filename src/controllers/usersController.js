@@ -39,7 +39,7 @@ const usersController = {
 
       await db.User.create(newUsers);
 
-      res.redirect("./users/login");
+      res.redirect("/");
     } catch (error) {
       res.send(error);
     }
@@ -71,7 +71,6 @@ const usersController = {
           }
           res.redirect('/profile')
         }
-        
       } catch (error) {
         res.send(error);
       }

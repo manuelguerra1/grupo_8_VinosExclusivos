@@ -8,16 +8,19 @@
     </header>
 
     <main>
-        <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
-            <div class="btn-edit-prod-detail">
-                <button class="add-menu-prod-detail" type="submit">EDITAR</button>
-            </div>
-        </form>
-        <form class="prod-detail-form"  action="/delete/<%= productId.id %>?_method=DELETE" method="POST">
-            <div class="btn-edit-prod-detail">
-                <button class="add-menu-prod-detail" type="submit">ELIMINAR</button>
-            </div>
-        </form>
+
+        <% if(locals.user && locals.user.rol_id == 2) {%>
+            <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
+                <div class="btn-edit-prod-detail">
+                    <button class="add-menu-prod-detail" type="submit">EDITAR</button>
+                </div>
+            </form>
+            <form class="prod-detail-form"  action="/delete/<%= productId.id %>?_method=DELETE" method="POST">
+                <div class="btn-edit-prod-detail">
+                    <button class="add-menu-prod-detail" type="submit">ELIMINAR</button>
+                </div>
+            </form> <%} %>
+        
         <section class="products-prod-detail">
             <div class="productContainer-prod-detail">
             </section>
