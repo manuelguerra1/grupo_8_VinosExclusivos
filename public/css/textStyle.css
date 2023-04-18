@@ -15,4 +15,15 @@
 
 .centered-paragraph{
     text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+/* DESKTOP */
+@media (min-width: 1280px) {
+    
+    .centered-paragraph{
+        text-align: center;
+        width: 60%;
+    }
 }
