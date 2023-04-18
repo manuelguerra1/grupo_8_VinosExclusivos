@@ -5,3 +5,14 @@
     margin-top: 50px;
     margin-bottom: 10px;
 }
+
+.centered-subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 5px 0;
+}
+
+.centered-paragraph{
+    text-align: center;
+}
