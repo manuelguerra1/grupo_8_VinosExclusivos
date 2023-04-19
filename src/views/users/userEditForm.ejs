@@ -17,7 +17,7 @@
           <h4 class="prod-img-prod-create-form">Foto de perfil</h4>
           <input type="file" name="avatar" id="image" />
           <br />
-          Revisar css
+      
 
           <label for="name"></label>
           <input
@@ -36,7 +36,7 @@
             name="lastname"
             id="last-name"
             placeholder="Apellido"
-            value="<%= locals.userLogged.lastname %>"
+            value="<%= locals.userLogged.last_name %>"
             required
           />
           <br />
@@ -58,7 +58,7 @@
             name="username"
             id="user-name"
             placeholder="Nombre de usuario"
-            value="<%= locals.userLogged.username %>"
+            value="<%= locals.userLogged.user_name %>"
             required
           />
           <br />
@@ -80,7 +80,7 @@
             name="confirmpassword"
             id="confirm-password"
             placeholder="Confirmar contraseña"
-            value="<%= locals.userLogged.confirmpassword %>"
+            value="<%= locals.userLogged.confirm_password %>"
             required
           />
           <br />
@@ -94,11 +94,11 @@
           />Acepto las condiciones de uso y políticas de privacidad.
         </div>
         <br />
-        buscar que type debemos usar para que el button cancele
+        <form action="/">
         <button class="register-buttons" type="reset" value="Cancelar">
           CANCELAR
         </button>
-
+        </form>
         <button class="register-buttons" type="submit" value="Enviar">
           ACTUALIZAR
         </button>
