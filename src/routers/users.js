@@ -21,9 +21,9 @@ router.get('/logout', usersController.logout);
 router.get('/register', usersController.register);
 router.post('/userSave', userUpload.single('avatar'), usersController.usersStore);
 
-// // Editar
-// router.get ('/userEdit/:id', usersController.usersEdit);
-// router.put ('/userModify/:id', usersController.usersUpdate);
+// Editar
+router.get ('/userEdit/:id', usersController.usersEdit);
+router.put ('/userModify/:id', usersController.usersUpdate);
 
 // // Eliminar
 // router.get ('/userDelete/:id', usersController.usersDelete);

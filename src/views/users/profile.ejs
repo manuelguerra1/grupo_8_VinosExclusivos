@@ -1,5 +1,4 @@
-<!-- //TODO en construccion hay que renderizar la pagina solo copie desde el register hay que 
-//ver los campos si estan bien sino modificar algunos nombres -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +25,8 @@
                 <span class="profile-span">Tu email: <%= locals.userLogged.email %></span>
                 <br>
                 <div class="category"> Categoría: <%= locals.user.rol_id %> </div>
+                <br>
+                <form action="/userEdit/<%= user.id %>"><button type="submit">Editar</button></form>
                 </div>
                 
 
