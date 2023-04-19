@@ -97,29 +97,28 @@ const usersController = {
     }
   },
 
-  usersUpdate: (req, res) => {
-    let userId = req.params.id;
-    let usuarios = usersController.getUsers();
+  usersUpdate: async (req, res) => {
+    const id = req.params.id;
+  try {
+    await db.User.update(
+      {
+        "avatar":req.body.avatar,
+        "name":req.body.name,
+        "last_name":req.body.lastname,
+        "email":req.body.email,
+        "user_name":req.body.username,
+        "password":req.body.password,
+        "confirm_password":req.body.confirmpassword,
+      },
+      {
+        where:{id:id}
+      })
 
-    usuarios.forEach((usuario, index) => {
-      if (usuario.id == userId) {
-        (usuario.name = req.body.name),
-          (usuario.lastname = req.body.lastname),
-          (usuario.email = req.body.email),
-          (usuario.username = req.body.username),
-          (usuario.password = req.body.password),
-          (usuario.confirmpassword = req.body.confirmpassword),
-          // usuario.image = req.body.image,
-
-          //ponemos un ternario para que si me trae una imagen cambie el valor o foto y sino queda la misma imagen
-          (usuario.image = req.file ? req.file.filename : usuario.image);
-
-        usuarios[index] = usuario;
-      }
-    });
-    fs.writeFileSync(usersPath, JSON.stringify(usuarios, null, " "));
-
-    res.redirect("/");
+    return res.redirect('/profile/' + id);
+    
+  } catch (error) {
+    res.send(error)
+  }
   },
 
   usersDelete: (req, res) => {

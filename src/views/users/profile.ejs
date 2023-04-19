@@ -24,9 +24,9 @@
                 <br>
                 <span class="profile-span">Tu email: <%= locals.userLogged.email %></span>
                 <br>
-                <div class="category"> Categoría: <%= locals.user.rol_id %> </div>
+                <div class="category"> Categoría: <%= locals.userLogged.rol_id %> </div>
                 <br>
-                <form action="/userEdit/<%= user.id %>"><button type="submit">Editar</button></form>
+                <form action="/userEdit/<%= locals.userLogged.id %>"><button type="submit">Editar</button></form>
                 </div>
                 
 
