@@ -46,34 +46,28 @@ const usersController = {
   },
 
   login: (req, res) => {
-    
-    res.render("./users/login",{
-    });
+    res.render("./users/login", {});
   },
 
   processLogin: async (req, res) => {
-      try {
-        const user = await db.User.findOne({
-          where: {
-                user_name: req.body.username
-          },
-          include: "Rol"
-        })
+    try {
+      const user = await db.User.findOne({
+        where: {
+          user_name: req.body.username,
+        },
+        include: "Rol",
+      });
 
-        if(user) {
-          req.session.userLogged = user;
-          if(req.body.rememberme){
-            res.cookie(
-              'userLogged',
-              user,
-              {maxAge: 1000 * 60 *60 *2}
-            );
-          }
-          res.redirect('/profile')
+      if (user) {
+        req.session.userLogged = user;
+        if (req.body.rememberme) {
+          res.cookie("userLogged", user, { maxAge: 1000 * 60 * 60 * 2 });
         }
-      } catch (error) {
-        res.send(error);
+        res.redirect("/profile");
       }
+    } catch (error) {
+      res.send(error);
+    }
   },
 
   logout: (req, res) => {
@@ -88,29 +82,32 @@ const usersController = {
     });
   },
 
-  usersEdit: async (req, res)=> {
-    const userId = req.params.id;
-   
-   try {
-    let user = await db.User.findByPk(id)
-console.log(user);
-let avatar = await db.User.findAll()
-let name = await db.User.findAll()
-let lastname = await db.User.findAll()
-let email = await db.User.findAll()
-let username = await db.User.findAll()
-let password = await db.User.findAll()
-let confirmpassword = await db.User.findAll()
-    
-return res.render("./users/userEditForm", {
-  avatar, name, lastname, email, username, password, confirmpassword
-}); 
+  usersEdit: async (req, res) => {
+    const id = req.params.id;
 
-} catch (error) {
-    res.send(error)
-   }
+    try {
+      let user = await db.User.findByPk(id);
+      console.log(user);
+      let avatar = await db.User.findAll();
+      let name = await db.User.findAll();
+      let lastname = await db.User.findAll();
+      let email = await db.User.findAll();
+      let username = await db.User.findAll();
+      let password = await db.User.findAll();
+      let confirmpassword = await db.User.findAll();
 
-    
+      return res.render("./users/userEditForm", {
+        avatar,
+        name,
+        lastname,
+        email,
+        username,
+        password,
+        confirmpassword,
+      });
+    } catch (error) {
+      res.send(error);
+    }
   },
 
   usersUpdate: (req, res) => {
@@ -168,8 +165,7 @@ return res.render("./users/userEditForm", {
     fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
 
     res.redirect("/");
-  }
-
+  },
 };
 
 
