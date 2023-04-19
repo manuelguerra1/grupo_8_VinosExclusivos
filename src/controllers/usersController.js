@@ -88,17 +88,29 @@ const usersController = {
     });
   },
 
-  usersEdit: function (req, res) {
-    let userId = req.params.id;
-    console.log("userId", userId);
-    let usuario = usersController
-      .getUsers()
-      .find((usuario) => usuario.id == userId);
+  usersEdit: async (req, res)=> {
+    const userId = req.params.id;
+   
+   try {
+    let user = await db.User.findByPk(id)
+console.log(user);
+let avatar = await db.User.findAll()
+let name = await db.User.findAll()
+let lastname = await db.User.findAll()
+let email = await db.User.findAll()
+let username = await db.User.findAll()
+let password = await db.User.findAll()
+let confirmpassword = await db.User.findAll()
+    
+return res.render("./users/userEditForm", {
+  avatar, name, lastname, email, username, password, confirmpassword
+}); 
 
-    return res.render("./users/userEditForm", {
-      user: usuario,
-      id: req.params.id,
-    });
+} catch (error) {
+    res.send(error)
+   }
+
+    
   },
 
   usersUpdate: (req, res) => {
