@@ -108,22 +108,28 @@ const usersController = {
 
   try {
     
-    await db.User.update(
+   const user = await db.User.update(
     {
     "name":req.body.name,
-    "last_name":req.body.lastname,
+    "last_name":req.body.last_name,
     "email":req.body.email,
-    "user_name":req.body.username,
+    "user_name":req.body.user_name,
     "password":req.body.password,
     "confirm_password":req.body.confirmpassword,
-    "rol_id":req.body.rol,
+    "rol_id":req.body.rol_id,
     "available": true,
   },
   {
     where: {id: id}
     })
+
+    if (req.body) {
+      req.session.userLogged= {...req.body}
+
+      return res.redirect("/profile");
+    }
     
-    return res.redirect("/");
+    
     
   } catch (error) {
     res.send(error)

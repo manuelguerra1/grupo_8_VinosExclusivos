@@ -20,7 +20,7 @@
             <br />
 
             <label for="last-name"></label>
-            <input type="text" name="lastname" id="last-name" placeholder="Apellido" value="<%= user.last_name %>"
+            <input type="text" name="last_name" id="last-name" placeholder="Apellido" value="<%= user.last_name %>"
               required />
             <br />
 
@@ -29,7 +29,7 @@
             <br />
 
             <label for="user-name"></label>
-            <input type="text" name="username" id="user-name" placeholder="Nombre de usuario"
+            <input type="text" name="user_name" id="user-name" placeholder="Nombre de usuario"
               value="<%= user.user_name %>" required />
             <br />
 
@@ -39,12 +39,12 @@
             <br />
 
             <label for="confirm-password"></label>
-            <input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña"
+            <input type="password" name="confirm_password" id="confirm-password" placeholder="Confirmar contraseña"
               value="<%= user.confirm_password %>" required />
             <label for="rol">
               <h4>Tipo de Usuario: </h4>
             </label>
-            <select name="rol" id="rol">
+            <select name="rol_id" id="rol">
               <option value="">Seleccione un Rol:</option>
 
               <% rol.forEach(element=> { %>
