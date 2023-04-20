@@ -12,21 +12,21 @@
 
                 <h3 class="profile-h3"> MI PERFIL </h3>
                 <br>
-                <img class="profile-img" src="/img/user/<%= locals.userLogged.avatar%>">
+                <img class="profile-img" src="/img/user/<%= user.avatar%>">
 
                 <br>
                 <!-- Revisar css -->
                 <div class="profile-info">
-                    <span class="profile-span">Hola <%= locals.userLogged.name %> <%= locals.userLogged.lastname %>!</span>
+                    <span class="profile-span">Hola <%= user.name %> <%= user.last_name %>!</span>
                 <br>
     
-                <span class="profile-span">Tu usuario es: <%= locals.userLogged.username %></span>
+                <span class="profile-span">Tu usuario es: <%= user.user_name %></span>
                 <br>
-                <span class="profile-span">Tu email: <%= locals.userLogged.email %></span>
+                <span class="profile-span">Tu email: <%= user.email %></span>
                 <br>
-                <div class="category"> Categoría: <%= locals.userLogged.rol_id %> </div>
+                <div class="category"> Categoría: <%= user.rol_id %> </div>
                 <br>
-                <form action="/userEdit/<%= locals.userLogged.id %>"><button type="submit">Editar</button></form>
+                <form action="/userEdit/<%= user.id %>"><button type="submit">Editar</button></form>
                 </div>
                 
 

@@ -3,7 +3,7 @@ const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const bcrypt = require('bcrypt');
-const { log } = require('console');
+const { log, Console } = require('console');
 
 
 const usersController = {
@@ -87,10 +87,11 @@ const usersController = {
 
     try {
       let user = await db.User.findByPk(id);
-      console.log(user);
+      let rol = await db.Rol.findAll();
+      let rolById = await db.Rol.findByPk(id);
       
       return res.render("./users/userEditForm", {
-       user
+       user, rol, rolById
       });
     } catch (error) {
       res.send(error);
@@ -100,21 +101,24 @@ const usersController = {
   usersUpdate: async (req, res) => {
     const id = req.params.id;
   try {
+    
     await db.User.update(
-      {
-        "avatar":req.body.avatar,
-        "name":req.body.name,
-        "last_name":req.body.lastname,
-        "email":req.body.email,
-        "user_name":req.body.username,
-        "password":req.body.password,
-        "confirm_password":req.body.confirmpassword,
-      },
-      {
-        where:{id:id}
-      })
-
-    return res.redirect('/profile/' + id);
+    {
+    "name":req.body.name,
+    "last_name":req.body.lastname,
+    "email":req.body.email,
+    "user_name":req.body.username,
+    "password":req.body.password,
+    "confirm_password":req.body.confirmpassword,
+    "rol_id":req.body.rol,
+    "available": true,
+  },
+  {
+    where: {id: id}
+    })
+    console.log(req.body,"name","user_name")
+    
+    return res.redirect("/profile");
     
   } catch (error) {
     res.send(error)

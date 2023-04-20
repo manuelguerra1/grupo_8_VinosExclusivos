@@ -6,8 +6,8 @@
     <%- include('../partials/header') %>
     <main>
       <form
-        method="post"
-        action="/userModify/<%= locals.userLogged.id %>?_method=PUT"
+        method="POST"
+        action="/userModify/<%= user.id %>?_method=PUT"
         enctype="multipart/form-data"
       >
         <div class="registroUsuario-edit-form">
@@ -15,7 +15,7 @@
 
           <label for="image"></label>
           <h4 class="prod-img-prod-create-form">Foto de perfil</h4>
-          <input type="file" name="avatar" id="image" />
+          <img class="profile-img" src="/img/user/<%= user.avatar%>">
           <br />
       
 
@@ -25,7 +25,7 @@
             name="name"
             id="name"
             placeholder="Nombre"
-            value="<%= locals.userLogged.name %>"
+            value="<%= user.name %>"
             required
           />
           <br />
@@ -36,7 +36,7 @@
             name="lastname"
             id="last-name"
             placeholder="Apellido"
-            value="<%= locals.userLogged.last_name %>"
+            value="<%= user.last_name %>"
             required
           />
           <br />
@@ -47,7 +47,7 @@
             name="email"
             id="email"
             placeholder="E-mail"
-            value="<%= locals.userLogged.email %>"
+            value="<%= user.email %>"
             required
           />
           <br />
@@ -58,7 +58,7 @@
             name="username"
             id="user-name"
             placeholder="Nombre de usuario"
-            value="<%= locals.userLogged.user_name %>"
+            value="<%= user.user_name %>"
             required
           />
           <br />
@@ -69,7 +69,7 @@
             name="password"
             id="password"
             placeholder="Contraseña"
-            value="<%= locals.userLogged.password %>"
+            value="<%= user.password %>"
             required
           />
           <br />
@@ -80,30 +80,26 @@
             name="confirmpassword"
             id="confirm-password"
             placeholder="Confirmar contraseña"
-            value="<%= locals.userLogged.confirm_password %>"
+            value="<%= user.confirm_password %>"
             required
           />
+          <label for="rol"><h4>Tipo de Usuario: </h4></label>
+                <select name="rol" id="rol">
+                <option value="">Seleccione un Rol:</option>
+                
+                <% rol.forEach(element => { %>
+                    <option value="<%= element.id %>"><%= element.rol_name %></option>
+                <% }) %>
+                
+                </select>
           <br />
         </div>
-        <div class="terms-cond-register">
-          <input
-            type="checkbox"
-            name="terminos y condiciones"
-            id=""
-            required
-          />Acepto las condiciones de uso y políticas de privacidad.
-        </div>
         <br />
-        <form action="/">
-        <button class="register-buttons" type="reset" value="Cancelar">
-          CANCELAR
-        </button>
-        </form> 
-        <form action="/profile/<%=locals.userLogged.id %>">
-        <button class="register-buttons" type="submit" value="Enviar">
-          ACTUALIZAR
-        </button>
-      </form>
+        
+        <div class="prodCreate-buttons-edit-form">
+          <button type="submit" value="Actualizar">ACTUALIZAR</button>
+          <br>
+      </div>
       </form>
     </main>
 
