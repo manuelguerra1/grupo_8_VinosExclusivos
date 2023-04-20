@@ -84,7 +84,6 @@ const usersController = {
 
   usersEdit: async (req, res) => {
     const id = req.params.id;
-
     try {
       let user = await db.User.findByPk(id);
       let rol = await db.Rol.findAll();
@@ -99,7 +98,14 @@ const usersController = {
   },
 
   usersUpdate: async (req, res) => {
+    const body = req.body;
     const id = req.params.id;
+      
+      console.log( 'hola')
+      console.log(id)
+      console.log(body);
+      console.log('chau');
+
   try {
     
     await db.User.update(
@@ -116,9 +122,8 @@ const usersController = {
   {
     where: {id: id}
     })
-    console.log(req.body,"name","user_name")
     
-    return res.redirect("/profile");
+    return res.redirect("/");
     
   } catch (error) {
     res.send(error)

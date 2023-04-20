@@ -1,108 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head') %>
+<%- include('../partials/head') %>
 
   <body>
     <%- include('../partials/header') %>
-    <main>
-      <form
-        method="POST"
-        action="/userModify/<%= user.id %>?_method=PUT"
-        enctype="multipart/form-data"
-      >
-        <div class="registroUsuario-edit-form">
-          <h3>EDICIÓN DE USUARIO</h3>
+      <main>
+        <form method="POST" action="/userModify/<%= user.id %>?_method=PUT">
+          <div class="registroUsuario-edit-form">
+            <h3>EDICIÓN DE USUARIO</h3>
 
-          <label for="image"></label>
-          <h4 class="prod-img-prod-create-form">Foto de perfil</h4>
-          <img class="profile-img" src="/img/user/<%= user.avatar%>">
-          <br />
-      
+            <label for="image"></label>
+            <h4 class="prod-img-prod-create-form">Foto de perfil</h4>
+            <img class="profile-img" src="/img/user/<%= user.avatar%>">
+            <br />
 
-          <label for="name"></label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Nombre"
-            value="<%= user.name %>"
-            required
-          />
-          <br />
 
-          <label for="last-name"></label>
-          <input
-            type="text"
-            name="lastname"
-            id="last-name"
-            placeholder="Apellido"
-            value="<%= user.last_name %>"
-            required
-          />
-          <br />
+            <label for="name"></label>
+            <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>" required />
+            <br />
 
-          <label for="email"></label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="E-mail"
-            value="<%= user.email %>"
-            required
-          />
-          <br />
+            <label for="last-name"></label>
+            <input type="text" name="lastname" id="last-name" placeholder="Apellido" value="<%= user.last_name %>"
+              required />
+            <br />
 
-          <label for="user-name"></label>
-          <input
-            type="text"
-            name="username"
-            id="user-name"
-            placeholder="Nombre de usuario"
-            value="<%= user.user_name %>"
-            required
-          />
-          <br />
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="E-mail" value="<%= user.email %>" required />
+            <br />
 
-          <label for="password"></label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Contraseña"
-            value="<%= user.password %>"
-            required
-          />
-          <br />
+            <label for="user-name"></label>
+            <input type="text" name="username" id="user-name" placeholder="Nombre de usuario"
+              value="<%= user.user_name %>" required />
+            <br />
 
-          <label for="confirm-password"></label>
-          <input
-            type="password"
-            name="confirmpassword"
-            id="confirm-password"
-            placeholder="Confirmar contraseña"
-            value="<%= user.confirm_password %>"
-            required
-          />
-          <label for="rol"><h4>Tipo de Usuario: </h4></label>
-                <select name="rol" id="rol">
-                <option value="">Seleccione un Rol:</option>
-                
-                <% rol.forEach(element => { %>
-                    <option value="<%= element.id %>"><%= element.rol_name %></option>
+            <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= user.password %>"
+              required />
+            <br />
+
+            <label for="confirm-password"></label>
+            <input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña"
+              value="<%= user.confirm_password %>" required />
+            <label for="rol">
+              <h4>Tipo de Usuario: </h4>
+            </label>
+            <select name="rol" id="rol">
+              <option value="">Seleccione un Rol:</option>
+
+              <% rol.forEach(element=> { %>
+                <option value="<%= element.id %>">
+                  <%= element.rol_name %>
+                </option>
                 <% }) %>
-                
-                </select>
-          <br />
-        </div>
-        <br />
-        
-        <div class="prodCreate-buttons-edit-form">
-          <button type="submit" value="Actualizar">ACTUALIZAR</button>
-          <br>
-      </div>
-      </form>
-    </main>
 
-    <%- include('../partials/footer') %>
+            </select>
+            <br />
+          </div>
+          <br />
+
+          <div class="prodCreate-buttons-edit-form">
+            <button type="submit" value="Actualizar">ACTUALIZAR</button>
+            <br>
+          </div>
+        </form>
+      </main>
+
+      <%- include('../partials/footer') %>
   </body>
+
 </html>
