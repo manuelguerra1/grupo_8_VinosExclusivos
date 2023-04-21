@@ -1,114 +1,133 @@
+const {validationResult} = require('express-validator');
 const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const bcrypt = require('bcrypt');
+const { log, Console } = require('console');
 
 
 const usersController = {
-  getUsers: () => {
-    return JSON.parse(fs.readFileSync(usersPath, "utf-8"));
+  user: (req, res) => {
+    db.User.findAll().then((users) => {
+      res.json({ users });
+    });
   },
-  login: function (req, res) {
-    res.render("./users/login");
-  },
-  processLogin: function (req, res) {
-    let users = JSON.parse(fs.readFileSync(usersPath, "utf-8"));
-    let user = users.find(user => user.username == req.body.username);
+  register: async (req, res) => {
+    try {
+      let rol = await db.Rol.findAll();
 
-    if (user) {
-      req.session.userLogged = user;
-      if(req.body.rememberme){
-        res.cookie(
-            'userLogged',
-            user,
-            { maxAge: 1000 * 60 *60 *24} //1 dia
-        );
-        
-      }
-      res.redirect('/profile');
+      return res.render("./users/register", {
+        rol,
+      });
+    } catch (error) {
+      res.send(error);
     }
   },
+
+  usersStore: async (req, res) => {
+    try {
+      let newUsers = {
+        avatar: req.file.filename,
+        name: req.body.name,
+        last_name: req.body.lastname,
+        email: req.body.email,
+        user_name: req.body.username,
+        password: bcrypt.hashSync(req.body.password, 10),
+        confirm_password: bcrypt.hashSync(req.body.confirmpassword, 10),
+        rol_id: req.body.rol,
+      };
+
+      await db.User.create(newUsers);
+
+      res.redirect("/");
+    } catch (error) {
+      res.send(error);
+    }
+  },
+
+  login: (req, res) => {
+    res.render("./users/login", {});
+  },
+
+  processLogin: async (req, res) => {
+    try {
+      const user = await db.User.findOne({
+        where: {
+          user_name: req.body.username,
+        },
+        include: "Rol",
+      });
+
+      if (user) {
+        req.session.userLogged = user;
+        if (req.body.rememberme) {
+          res.cookie("userLogged", user, { maxAge: 1000 * 60 * 60 * 2 });
+        }
+        res.redirect("/profile");
+      }
+    } catch (error) {
+      res.send(error);
+    }
+  },
+
   logout: (req, res) => {
-    res.clearCookie('userLogged')
+    res.clearCookie("userLogged");
     req.session.destroy();
-    return res.redirect('/');
-},
+    return res.redirect("/");
+  },
 
   profile: function (req, res) {
-    res.render('./users/profile', {
-        user: req.session.userLogged
+    res.render("./users/profile", {
+      user: req.session.userLogged,
     });
-},
-
-  register: function (req, res) {
-    res.render("./users/register");
   },
 
-  usersCreate: function (req, res) {
-    res.render("./users/register");
+  usersEdit: async (req, res) => {
+    const id = req.params.id;
+    try {
+      let user = await db.User.findByPk(id);
+      let rol = await db.Rol.findAll();
+      let rolById = await db.Rol.findByPk(id);
+      
+      return res.render("./users/userEditForm", {
+       user, rol, rolById
+      });
+    } catch (error) {
+      res.send(error);
+    }
   },
+  
+  usersUpdate: async (req, res) => {
+    const id = req.params.id;
 
-  usersStore: function (req, res) {
-    let user = usersController.getUsers();
-    console.log('avatar', req.file.filename);
-    console.log('req.file', req.file);
+  try {
+    
+    await db.User.update(
+    {
+    "name":req.body.name,
+    "last_name":req.body.last_name,
+    "email":req.body.email,
+    "user_name":req.body.user_name,
+    "password":req.body.password,
+    "confirm_password":req.body.confirmpassword,
+  },
+  {
+    where: {id: id}
+    });
 
-    let newUsers = {
-      "id": Date.now(),
-      "avatar": req.file.filename,
-      "name": req.body.name,
-      "lastname": req.body.lastname,
-      "email": req.body.email,
-      "username": req.body.username,
-      "password": bcrypt.hashSync(req.body.password, 10),
-      "confirmpassword": bcrypt.hashSync(req.body.confirmpassword, 10)
+    const userUpdate = await db.User.findOne({
+       where: {id: id}
+    });
+
+    if (userUpdate) {
+      req.session.userLogged = userUpdate;
+      res.redirect("/profile");
     }
 
-    // console.log("nuevo usuario", newUser);
-
-    user.push(newUsers);
-
-    fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '));
-
-    res.redirect("/");
-  },
-
-  usersEdit: function (req, res) {
-    let userId = req.params.id;
-    console.log('userId', userId);
-    let usuario = usersController
-      .getUsers()
-      .find((usuario) => usuario.id == userId);
-
-    return res.render("./users/userEditForm", {
-      user: usuario,
-      id: req.params.id,
-    });
-  },
-
-  usersUpdate: (req, res) => {
-    let userId = req.params.id;
-    let usuarios = usersController.getUsers();
-
-    usuarios.forEach((usuario, index) => {
-      if (usuario.id == userId) {
-        (usuario.name = req.body.name),
-          (usuario.lastname = req.body.lastname),
-          (usuario.email = req.body.email),
-          (usuario.username = req.body.username),
-          (usuario.password = req.body.password),
-          (usuario.confirmpassword = req.body.confirmpassword),
-          // usuario.image = req.body.image,
-
-          //ponemos un ternario para que si me trae una imagen cambie el valor o foto y sino queda la misma imagen
-          (usuario.image = req.file ? req.file.filename : usuario.image);
-
-        usuarios[index] = usuario;
-      }
-    });
-    fs.writeFileSync(usersPath, JSON.stringify(usuarios, null, " "));
-
-    res.redirect("/");
+    
+  } catch (error) {
+    res.send(error)
+  }
   },
 
   usersDelete: (req, res) => {
@@ -141,7 +160,8 @@ const usersController = {
     fs.writeFileSync(usersPath, JSON.stringify(users, null, " "));
 
     res.redirect("/");
-  }
+  },
 };
+
 
 module.exports = usersController;

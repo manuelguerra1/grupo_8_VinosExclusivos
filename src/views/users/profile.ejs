@@ -1,5 +1,4 @@
-<!-- //TODO en construccion hay que renderizar la pagina solo copie desde el register hay que 
-//ver los campos si estan bien sino modificar algunos nombres -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,28 +8,30 @@
     <%- include('../partials/header') %> 
     <hr>
     <main class="profile-view">
+            <h3 class="profile-h3"> MI PERFIL </h3>
+            <br>
             <div class="profile-section">
-
-                <h3 class="profile-h3"> MI PERFIL </h3>
-                <br>
-                <img class="profile-img" src="/img/user/<%= locals.userLogged.avatar%>">
-
+                <div class="profile-img">
+                    <img class="profile-img" src="/img/user/<%= user.avatar%>">
+                </div>
                 <br>
                 <!-- Revisar css -->
                 <div class="profile-info">
-                    <span class="profile-span">Hola <%= locals.userLogged.name %> <%= locals.userLogged.lastname %>!</span>
+                    <span class="profile-span">Hola <%= user.name %> <%= user.last_name %>!</span>
                 <br>
     
-                <span class="profile-span">Tu usuario es: <%= locals.userLogged.username %></span>
+                <span class="profile-span">Tu usuario es: <%= user.user_name %></span>
                 <br>
-                <span class="profile-span">Tu email: <%= locals.userLogged.email %></span>
+                <span class="profile-span">Tu email: <%= user.email %></span>
                 <br>
+                <div class="category"> Categoría: <%= user.rol_id %> </div>
+                <br>
+                <form action="/userEdit/<%= user.id %>"><button type="submit">Editar</button></form>
                 </div>
+            </div>
                 
 
-                        <!-- <a href="/userModify/<%= locals.userLogged.id %>" ><button type="sumit">Editar Perfil</button></a> -->
-                        <!--Retiramos el editar perfil porque no se pide en el Sprint 4, 5 y 6.-->
-                <!-- Revisar el CSS boton con la accion para editar perfil a futuro -->
+                
     </main>
 
     <%- include('../partials/footer') %> 

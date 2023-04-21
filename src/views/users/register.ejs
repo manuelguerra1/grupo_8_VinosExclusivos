@@ -8,7 +8,7 @@
     <%- include('../partials/header') %> 
     <hr>
     <main class="register-main">
-        <form action = "/userSave" method="post" enctype="multipart/form-data" >
+        <form method="post" action = "/userSave"  enctype="multipart/form-data" >
             <div class="register">
                 
                 <h3 class="h3-register"> ¡Registrate! </h3>
@@ -22,7 +22,7 @@
                 <!-- Revisar css -->
 
                 <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="Nombre"  required>
+                <input type="text" name="name" id="name" placeholder="Nombre" required>
                 <br>
     
                 <label for="last-name"></label>
@@ -30,15 +30,11 @@
                 <br>
     
                 <label for="email"></label>
-                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <input type="text" name="email" id="email" placeholder="E-mail" required>
                 <br>
     
                 <label for="user-name"></label>
                 <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" required>
-                <br>
-    
-                <label for="phone-number"></label>
-                <input type="number" name="telefono" id="phone-number" placeholder="Teléfono celular" required> 
                 <br>
                 
                 <label for="password"></label>
@@ -48,20 +44,27 @@
                 <label for="confirm-password"></label>
                 <input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña" required>
                 <br>
+
+                <label for="rol"><h4>Tipo de Usuario: </h4></label>
+                <select name="rol" id="rol">
+                <option value="">Seleccione un Rol:</option>
                 
+                <% rol.forEach(element => { %>
+                    <option value="<%= element.id %>"><%= element.rol_name %></option>
+                <% }) %>
                 
-            </div>
-            <div class="terms-cond-register">
-                <input type="checkbox" name="terminos-y-condiciones" id="" required>Acepto las condiciones de uso y políticas de privacidad.
-            </div>
-            <br>
+                </select>
+                
+                <div class="terms-cond-register">
+                    <input type="checkbox" name="terminos-y-condiciones" id="" required>Acepto las condiciones de uso y políticas de privacidad.
+                </div>
+                <div class="register-buttons">
+                    <button type="submit" value="Crear">GUARDAR</button>    
+                </div>
+            </div>          
 
-            <button class="register-buttons"  type="reset" value="Borrar">BORRAR</button>
 
-            <button class="register-buttons"  type="submit" value="Enviar">GUARDAR</button>
-
-
-        </form>
+         </form>
     </main>
     
     <%- include('../partials/footer') %> 
