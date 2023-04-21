@@ -34,3 +34,10 @@ Puntos a mejorar:
 - Programar ambas reuniones, designa un responsable que escriba lo que se habla en cada de ellas.
 
 A pesar de todo llegamos a terminarlo y presentarlo.
+
+Retro Sprint 5
+1. Comenzar a hacer: Pensar mas en trabajar como un equipo, colaborando en el proyecto y en la formacion de cada uno y de los integrantes.
+2. Hacer más. Asignar responsables a las tareas
+3. Continuar haciendo. Trabajar en equipo y explicar al que no pudo estar lo realizado.
+4. Hacer menos.Priorizar lo que se hace individualmente y enfocarnos en sacar el proyecto en equipo.
+5. Dejar de hacer. Aprovechar el tiempo que queda del curso priorizando el trabajo en el proyecto por sobre otras actividades individuales.
