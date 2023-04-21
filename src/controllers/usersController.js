@@ -110,8 +110,6 @@ const usersController = {
     "user_name":req.body.user_name,
     "password":req.body.password,
     "confirm_password":req.body.confirmpassword,
-    "rol_id":req.body.rol_id,
-    "available": true,
   },
   {
     where: {id: id}
