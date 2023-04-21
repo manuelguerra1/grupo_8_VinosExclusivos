@@ -33,9 +33,8 @@
 
                         <label for="varietal"><h4>Variedad: </h4></label>
                         <select name="varietal" id="varietal" required>
-                            <option value="">Seleccione una variedad:</option>
-                            <option value="<%= varietal.id %>" selected><%= varietal.varietal_name %></option>
-
+                            <option selected disabled>Seleccione una variedad:</option>
+                            
                             <% varietal.forEach(element=> { %>
                                 <option value="<%= element.id %>">
                                     <%= element.varietal_name %>
@@ -47,7 +46,7 @@
                         <label for="brand"><h4>Marca: </h4></label>
                         <select name="brand" id="brand" required>
                             <option disabled selected>Seleccione una marca:</option>
-                            <option value="<%= brand.id %>" selected><%= brand.brand_name %></option>
+                
                             <% brand.forEach(element => { %>
                                 <option value="<%= element.id %>"><%= element.brand_name %></option>
                             <% }) %>
