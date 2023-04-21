@@ -3,104 +3,65 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const productsController = {
-    allProduct: function (req, res) {
-        db.Product.findAll()
-        .then(products => {
+    allProduct: async (req, res) => {
+        try {
+            const products = await db.Product.findAll()
             res.render('./products/allProduct', {products})
-        })
+            
+        } catch (error) {
+            res.send(error)
+        }
     },
 
-    productDetail: function (req, res) {
-        db.Product.findByPk(req.params.id)
-        .then(product => {
-            res.render('./products/productDetail', {product})
-        })
+    productDetail: async (req, res) => {
+        try {
+            let varietal = await db.Varietal.findAll()
+            // let varietalById = db.Varietal.findByPk(id)
+            let brand = await db.Brand.findAll()
+            let category = await db.Category.findAll()
+            let region = await db.Region.findAll()
+            let origin = await db.Origin.findAll()
+
+            const productId = await db.Product.findByPk(req.params.id)
+            console.log(productId);
+            res.render('./products/productDetail', {productId,  varietal, brand, category, region, origin})
+        } catch (error) {
+            res.send(error)
+        }
     },
 
-    create: function (req, res) {
-        let varietal = db.Varietal.findAll()
-        let brand = db.Brand.findAll()
-        let category = db.Category.findAll()
-        let region = db.Region.findAll()
-        let origin = db.Origin.findAll()
+    create: async (req, res) => {
+        
+        try {
+            let varietal = await db.Varietal.findAll()
+            let brand = await db.Brand.findAll()
+            let category = await db.Category.findAll()
+            let region = await db.Region.findAll()
+            let origin = await db.Origin.findAll()
 
-        Promise
-
-        .all([varietal, brand, category, region, origin])
-
-        .then(([varietal, brand, category, region, origin]) => {
             return res.render('./products/productCreateForm', {
                 varietal, brand, category, region, origin
             })
-        })
-        .catch(error => res.send(error))
-
-    },
-
-    store: (req, res) => {
-        
-        let newProduct = {
-            "name": req.body.name,
-            "description": req.body.description,
-            "price": req.body.price,
-            "varietal_id": req.body.varietal,
-            "brand_id": req.body.brand,
-            "year": req.body.year,
-            "origen_id": req.body.origen,
-            "region_id": req.body.region,
-            "category_id": req.body.category,
-            "available": true,
-            "image": req.file.filename
+            
+        } catch (error) {
+            res.send(error)
         }
+        // Promise
 
-        console.log(newProduct);
+        // .all([varietal, brand, category, region, origin])
 
+        // .then(([varietal, brand, category, region, origin]) => {
+        //     return res.render('./products/productCreateForm', {
+        //         varietal, brand, category, region, origin
+        //     })
+        // })
+        // .catch(error => res.send(error))
 
-        db.Product.create(newProduct)
-
-        .then(() => {
-            res.redirect('/allProduct')
-        })
-        
-        .catch(error => res.send(error))
     },
 
-    productEdit: function (req, res) {
-        const id = req.params.id
-
-        let product = db.Product.findByPk(id)
-        let varietal = db.Varietal.findAll()
-        let varietalById = db.Varietal.findByPk(id)
-        let brand = db.Brand.findAll()
-        let brandById = db.Brand.findByPk(id)
-        let category = db.Category.findAll()
-        let categoryById = db.Category.findByPk(id)
-        let region = db.Region.findAll()
-        let regionById = db.Region.findByPk(id)
-        let origin = db.Origin.findAll()
-        let originById = db.Origin.findByPk(id)
-
-        
-        
-        Promise
-
-        .all([product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById])
-
-        .then(([product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById]) => {
-            return res.render('./products/productEditForm', {
-                product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById
-            })
-        })
-        .catch(error => res.send(error))
-
-        
-    },
-
-    update: (req, res) => {
-        const id = req.params.id
-
-        db.Product.update(
-            {
+    store: async (req, res) => {
+        try {
+            let newProduct = {
                 "name": req.body.name,
                 "description": req.body.description,
                 "price": req.body.price,
@@ -111,40 +72,91 @@ const productsController = {
                 "region_id": req.body.region,
                 "category_id": req.body.category,
                 "available": true,
-            },
-            {
-                where: {id: id}
-        })
+                "image": req.file.filename
+            }
+            
+            await db.Product.create(newProduct)
 
-        .then(function(data){
-            const res = { success: true, data: data, message:"Actualización exitosa!" }
-            return res;
-          })
-          .catch(error=>{
-            const res = { success: false, error: error }
-            return res;
-          })
-         
+            res.redirect('/allProduct')
 
-        res.redirect('/allProduct');
+        } catch (error) {
 
+            res.send(error)
+        }
     },
 
-    destroy: (req, res) => {
-        const id = req.params.id;
-        
-        db.Product.destroy({where: {id: id}, force: true})
+    productEdit: async (req, res) => {
+        const id = req.params.id
+        try {
+            let product = await db.Product.findByPk(id)
+            // include: [
+            //     {association:'Varietal'  },
+            //     {association:'Origin'  },
+            //     {association:'Region'  },
+            //     {association:'Brand'  },
+            //     {association:'Category'  }
+            // ]
+            console.log(product);
+            let varietal = await db.Varietal.findAll()
+            let varietalById = await db.Varietal.findByPk(id)
+            let brand = await db.Brand.findAll()
+            let brandById = await db.Brand.findByPk(id)
+            let category = await db.Category.findAll()
+            let categoryById = await db.Category.findByPk(id)
+            let region = await db.Region.findAll()
+            let regionById = await db.Region.findByPk(id)
+            let origin = await db.Origin.findAll()
+            let originById = await db.Origin.findByPk(id)
+            
+            return res.render('./products/productEditForm', {
+                product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById
+            })
+            
+        } catch (error) {
+            res.send(error)
+        }    
+    },
 
-        .then(function(data){
-            const res = { success: true, data: data, message:"Borrado con exito!" }
-            return res;
-          })
-          .catch(error=>{
-            const res = { success: false, error: error }
-            return res;
-          })
+    update: async (req, res) => {
+        const id = req.params.id
+        try {
+            await db.Product.update(
+                {
+                    "name": req.body.name,
+                    "description": req.body.description,
+                    "price": req.body.price,
+                    "varietal_id": req.body.varietal,
+                    "brand_id": req.body.brand,
+                    "year": req.body.year,
+                    "origen_id": req.body.origen,
+                    "region_id": req.body.region,
+                    "category_id": req.body.category,
+                    "available": true,
+                },
+                {
+                    where: {id: id}
+            })
+            // const res = { success: true, data: data, message:"Actualización exitosa!" }
 
-        res.redirect('/allProduct');
+            return res.redirect('/productDetail/' + id);
+
+        } catch (error) {
+            res.send(error)
+        }
+    },
+
+    destroy: async (req, res) => {
+
+        try {
+            const id = req.params.id;
+            // borre el force: true porque ya tiene borrado logico en el modelo de productos
+            await db.Product.destroy({where: {id: id}})
+            
+            res.redirect('/allProduct');
+
+        } catch (error) {
+            res.send(error)
+        }
     }
 
 }

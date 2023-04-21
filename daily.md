@@ -69,3 +69,7 @@ comentamos los header de Css de los archivos excepto el partial porque lo estaba
 8/4 Se termino de configurar las relaciones entre las tablas Region, Origin, Category, Brand, Rol, User y Product. En todos los model se agrego underscored en el let config de cada uno, y allowNull en cada tipo de dato.
 
 9/4 Se inicio el metodo que lista los productos. Corregimos la base de datos.
+
+14/4 CRUD de productos terminado hecho con trycatch-async/await 
+15/5 AGREGAR ALERT PARA ELIMIAR PRODUCTO. Se corrigió el formulario de Edit de Productos porque no permitia editar por error en Varietal.
+- Crear Usuario funcionando, se modifico el archivo register ejs y se agrego la opción de seleccionar el tipo de usuario. 

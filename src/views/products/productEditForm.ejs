@@ -34,7 +34,7 @@
                         <label for="varietal"><h4>Variedad: </h4></label>
                         <select name="varietal" id="varietal" required>
                             <option value="">Seleccione una variedad:</option>
-                            <option value="<%= varietalById.id %>" selected><%= varietalById.varietal_name %></option>
+                            <option value="<%= varietal.id %>" selected><%= varietal.varietal_name %></option>
 
                             <% varietal.forEach(element=> { %>
                                 <option value="<%= element.id %>">
@@ -46,8 +46,8 @@
 
                         <label for="brand"><h4>Marca: </h4></label>
                         <select name="brand" id="brand" required>
-                            <option value="">Seleccione una marca:</option>
-                            <option value="<%= brandById.id %>" selected><%= brandById.brand_name %></option>
+                            <option disabled selected>Seleccione una marca:</option>
+                            <option value="<%= brand.id %>" selected><%= brand.brand_name %></option>
                             <% brand.forEach(element => { %>
                                 <option value="<%= element.id %>"><%= element.brand_name %></option>
                             <% }) %>
@@ -57,8 +57,8 @@
                         
                         <label for="origen"> <h4>País de Origen:</h4></label>
                             <select  name="origen" id="origen" required>
-                                <option value="">Seleccione origen:</option>
-                                <option value="<%= originById.id %>" selected><%= originById.country %></option>
+                                <option disabled selected>Seleccione origen:</option>
+                                <!-- <option value="%= originById.id %>" selected>%= originById.country %></option> -->
                                 <% origin.forEach(element => { %>
                                     <option value="<%= element.id %>"><%= element.country %></option>
                                 <% }) %>
@@ -67,8 +67,8 @@
                         
                         <label for="region"><h4>Región: </h4></label>
                         <select name="region" id="region" required>
-                            <option value="">Seleccione una región:</option>
-                            <option value="<%= regionById.id %>" selected><%= regionById.region %></option>
+                            <option disabled selected>Seleccione una región:</option>
+                            <!-- <option value="%= regionById.id %>" selected>%= regionById.region %></option> -->
                             <% region.forEach(element => { %>
                                 <option value="<%= element.id %>"><%= element.region %></option>
                             <% }) %>
@@ -76,8 +76,8 @@
                         
                         <label for="category"> <h4>Categorías</h4></label>
                             <select  name="category" id="category" required>
-                                <option value="">Seleccione una categoría:</option>
-                                <option value="<%= categoryById.id %>" selected><%= categoryById.category_name %></option>
+                                <option disabled selected>Seleccione una categoría:</option>
+                                <!-- <option value="%= categoryById.id %>" selected>%= categoryById.category_name %></option> -->
                                 <% category.forEach(element => { %>
                                     <option value="<%= element.id %>"><%= element.category_name %></option>
                                 <% }) %>
