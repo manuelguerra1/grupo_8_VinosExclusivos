@@ -13,10 +13,34 @@
     border-radius: 10px;
 }
 
+.centered-img{
+    display: flex;;
+    align-items: center;
+}
+
+.centered-img img{
+    width: 100%;
+    height: auto
+}
+
+.line {
+    border-top: 1px solid #778da97f;
+    height: 2px;
+    width: 90%;
+    margin: 15px auto 30px auto;
+  }
+
+  .container-icon{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
 /* TABLET */
 @media (min-width: 361px) {
     .container-img{
         display: flex;
+        justify-content: space-evenly;
     }
     .container-img-category{
         display: flex;
@@ -36,5 +60,9 @@
 
 /* DESKTOP */
 @media (min-width: 1280px) {
-    
+    .container-icon{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 15%;
+      }
 }

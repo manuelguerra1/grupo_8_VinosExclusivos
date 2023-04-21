@@ -2,21 +2,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .centered-subtitle{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px 0 5px 0;
+    margin: 5px 0 0 0;
 }
 
 .centered-paragraph{
     text-align: center;
     width: 90%;
-    margin: auto;
+    margin: 0px auto 10px auto;
+    padding: 0 20px;
+}
+
+.container-list{
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
+
+.container-list ul{
+    margin: 0;
+    padding: 0;
+}
+
+.container-list ul li {
+    list-style: none;
+}
+
+/* TABLET */
+@media (min-width: 361px) {
+    
+    .centered-title{
+        padding-bottom: 20PX;
+    }
 }
 
 /* DESKTOP */

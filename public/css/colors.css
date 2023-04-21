@@ -2,6 +2,25 @@
     background-color: #fffbff !important;
 }
 
-.dark-red{
-    color: #3f0018;
+.primary-color{
+    color: #212529;
+}
+
+.secondary-color{
+    color:#C7CCD8;
+}
+
+.dark-background{
+    background-color: #212529;
+    padding: 20px 0;
+}
+
+.super-dark-background{
+    background-color: #212229;
+    padding: 20px 0;
+}
+
+.neutral-background{
+    background-color: #fff;
+    padding: 20px 0;
 }
