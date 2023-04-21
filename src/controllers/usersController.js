@@ -96,19 +96,13 @@ const usersController = {
       res.send(error);
     }
   },
-
+  
   usersUpdate: async (req, res) => {
-    const body = req.body;
     const id = req.params.id;
-      
-      console.log( 'hola')
-      console.log(id)
-      console.log(body);
-      console.log('chau');
 
   try {
     
-   const user = await db.User.update(
+    await db.User.update(
     {
     "name":req.body.name,
     "last_name":req.body.last_name,
@@ -121,15 +115,17 @@ const usersController = {
   },
   {
     where: {id: id}
-    })
+    });
 
-    if (req.body) {
-      req.session.userLogged= {...req.body}
+    const userUpdate = await db.User.findOne({
+       where: {id: id}
+    });
 
-      return res.redirect("/profile");
+    if (userUpdate) {
+      req.session.userLogged = userUpdate;
+      res.redirect("/profile");
     }
-    
-    
+
     
   } catch (error) {
     res.send(error)
