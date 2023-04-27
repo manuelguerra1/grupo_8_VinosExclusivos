@@ -90,8 +90,8 @@ const productsController = {
             res.redirect('/allProduct')
 
         } catch (error) {
-
-            res.send(error)
+            console.log(error);
+            res.json(error)
         }
     },
 

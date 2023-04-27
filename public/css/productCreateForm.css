@@ -10,6 +10,9 @@ body{
 }
 
 /* --------------------------------MAIN------------------------------- */
+h4{
+    margin: 17px 20px 4px 20px;
+}
 
 div.registroProducto-prod-create-form{
     background-color: #7b1d46;
@@ -27,7 +30,7 @@ div.registroProducto-prod-create-form{
 
 div.registroProducto-prod-create-form input{
     border-radius: 5px;
-    width: 50%;
+    width: 70%;
     padding: 9px;
     margin: 7px;
     background-color: #e9dee2;
@@ -51,6 +54,7 @@ div.categories-prod-create-form{
 }
 
 div.prodCreate-buttons-prod-create-form button{
+    width: 165px;
     background-color: #d9d1c5;
     color: #7b1d46;
     border: 2px solid black;
@@ -61,13 +65,29 @@ div.prodCreate-buttons-prod-create-form button{
     font-weight:800;
 }
 
-.categorie-select-prod-create-form{
-    background-color: #7b1d46;
-    color: #d9d1c5;
-    padding: 4px;
+.select-prod-create{
+    border-radius: 5px;
+    width: 70%;
+    padding: 9px;
+    margin: 7px;
+    background-color: #e9dee2;
+    color: #7b1d46;
     font-weight: bold;
-    border: 1px solid #7b1d46;
-    border-radius: 4px;
+    border: 2px solid black;
+}
+
+.js-front-prod-create-error{
+    color:#7b1d46;
+    background-color: #d9d1c5;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 8px;
+    text-decoration: underline;
+    text-decoration-color: #d9d1c5;
     text-transform: uppercase;
-    font-size: 11px;
+    border: 1px solid #d9d1c5;
+    border-radius: 5px;
+    padding: 3px;
+    width: 50%;
+    max-width: 500px;
 }
