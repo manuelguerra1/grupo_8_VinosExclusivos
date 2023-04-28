@@ -15,15 +15,17 @@ div.registroProducto-edit-form{
 }
 
 div.registroProducto-edit-form input{
-    border-radius: 3px;
-    width: 50%;
-    padding: 5px;
+    border-radius: 5px;
+    width: 70%;
+    padding: 9px;
     margin: 7px;
     background-color: #e9dee2;
+    color: #7b1d46;
+    font-weight: bold;
     border: 2px solid black;
 } 
 
-div.prodCreate-buttons-edit-form button{
+div.prodEdit-buttons-edit-form button{
     font-weight: bold;
     font-size: 15px;
     padding: 4px;
@@ -40,14 +42,31 @@ img.edit-form-img-edit-form{
     width: 110px;
 }
 
-.category-select-edit-form{
-    display: flex;
+.select-prod-edit{
+    border-radius: 5px;
+    width: 70%;
+    padding: 9px;
+    margin: 7px;
     background-color: #e9dee2;
     color: #7b1d46;
+    font-weight: bold;
     border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px 10px 10px 10px;
-    margin: 7px;
-    font-weight: 800;
+}
+
+
+
+.js-front-prod-edit-error{
+    color:#7b1d46;
+    background-color: #d9d1c5;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 8px;
+    text-decoration: underline;
+    text-decoration-color: #d9d1c5;
     text-transform: uppercase;
+    border: 1px solid #d9d1c5;
+    border-radius: 5px;
+    padding: 3px;
+    width: 50%;
+    max-width: 500px;
 }

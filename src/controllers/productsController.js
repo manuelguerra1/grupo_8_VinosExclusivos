@@ -127,7 +127,10 @@ const productsController = {
         }    
     },
 
+    
+
     update: async (req, res) => {
+        console.log(req.body);
         const id = req.params.id
         try {
             await db.Product.update(
