@@ -55,52 +55,53 @@ const productsController = {
         } catch (error) {
             res.send(error)
         }
-        // Promise
-
-        // .all([varietal, brand, category, region, origin])
-
-        // .then(([varietal, brand, category, region, origin]) => {
-        //     return res.render('./products/productCreateForm', {
-        //         varietal, brand, category, region, origin
-        //     })
-        // })
-        // .catch(error => res.send(error))
-
     },
 
     store: async (req, res) => {
+         let errors = validationResult(req);
+         //si hay errores los atrapo
+        if (!errors.isEmpty()) {
 
-        let errors = validationResult(req)
+            let varietal = await db.Varietal.findAll()
+            let brand = await db.Brand.findAll()
+            let category = await db.Category.findAll()
+            let region = await db.Region.findAll()
+            let origin = await db.Origin.findAll()
 
-        if (errors.isEmpty()){
-            try {
-                let newProduct = {
-                    "name": req.body.name,
-                    "description": req.body.description,
-                    "price": req.body.price,
-                    "varietal_id": req.body.varietal,
-                    "brand_id": req.body.brand,
-                    "year": req.body.year,
-                    "origen_id": req.body.origen,
-                    "region_id": req.body.region,
-                    "category_id": req.body.category,
-                    "available": true,
-                    "image": req.file.filename
-                }
-                
-                await db.Product.create(newProduct)
-    
-                res.redirect('/allProduct')
-    
-            } catch (error) {
-                console.log(error);
-                res.json(error)
-            }
+            return  res.render('./products/productCreateForm', {
+                varietal,
+                brand, 
+                category, 
+                region, 
+                origin, 
+                errors: errors.mapped()
+            })
         } else {
-            res.render('./products/productCreateForm', {errors: errors.mapped(), old: req.body});
+            
         }
+        try {
+            let newProduct = {
+                "name": req.body.name,
+                "description": req.body.description,
+                "price": req.body.price,
+                "varietal_id": req.body.varietal,
+                "brand_id": req.body.brand,
+                "year": req.body.year,
+                "origen_id": req.body.origen,
+                "region_id": req.body.region,
+                "category_id": req.body.category,
+                "available": true,
+                "image": req.file.filename
+            }
+            
+            await db.Product.create(newProduct)
 
-        
+            res.redirect('/allProduct')
+
+        } catch (error) {
+            console.log(error);
+            res.json(error)
+        }
     },
 
     productEdit: async (req, res) => {
