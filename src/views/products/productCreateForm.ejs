@@ -35,12 +35,17 @@
             <h3> CREACIÓN DE PRODUCTOS</h3>
 
             <label for="nameproduct"></label>
-            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" >
-            <!-- <p class="p"></p> -->
+            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= locals.old && old.name %>">
+            <% if (locals.errors && errors.name) { %>
+            <p class="feedback"><%= errors.name %></p>
+            <% } %>
             <br>
 
             <label for="description"></label>
-            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Descripción"><p class="p"></p>
+            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Descripción" value="<%= locals.old && old.description %>">
+            <% if (locals.errors && errors.description) { %>
+                <p class="feedback"><%= errors.description %></p>
+                <% } %>
             <br>
 
             <label for="price"></label>
@@ -104,7 +109,10 @@
             </br>
             
             <label for="image"></label>
-            <h4 class="prod-img-prod-create-form">Imágen de producto</h4><input type="file" name="image" id="image"><p class="p"></p>
+            <h4 class="prod-img-prod-create-form">Imágen de producto</h4><input type="file" name="image" id="image" value="<%= locals.old && old.image %>">
+            <% if (locals.errors && errors.image) { %>
+                <p class="feedback"><%= errors.image %></p>
+                <% } %>
             
             <br>
             <div class="prodCreate-buttons-prod-create-form">
@@ -116,8 +124,8 @@
         </div>
     </form>
 </main>
-    <script src="/js/prodCreate.js" type="text/javascript"></script>
-    <script src="/js/createFunctions.js" type="text/javascript"></script>
+    <!-- <script src="/js/prodCreate.js" type="text/javascript"></script>
+    <script src="/js/createFunctions.js" type="text/javascript"></script> -->
 </body>
 <br>
 <footer>

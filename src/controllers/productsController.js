@@ -1,6 +1,5 @@
 const db = require("../database/models");
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+const {validationResult} = require("express-validator");
 
 const productsController = {
     allProduct: async (req, res) => {
@@ -70,29 +69,38 @@ const productsController = {
     },
 
     store: async (req, res) => {
-        try {
-            let newProduct = {
-                "name": req.body.name,
-                "description": req.body.description,
-                "price": req.body.price,
-                "varietal_id": req.body.varietal,
-                "brand_id": req.body.brand,
-                "year": req.body.year,
-                "origen_id": req.body.origen,
-                "region_id": req.body.region,
-                "category_id": req.body.category,
-                "available": true,
-                "image": req.file.filename
+
+        let errors = validationResult(req)
+
+        if (errors.isEmpty()){
+            try {
+                let newProduct = {
+                    "name": req.body.name,
+                    "description": req.body.description,
+                    "price": req.body.price,
+                    "varietal_id": req.body.varietal,
+                    "brand_id": req.body.brand,
+                    "year": req.body.year,
+                    "origen_id": req.body.origen,
+                    "region_id": req.body.region,
+                    "category_id": req.body.category,
+                    "available": true,
+                    "image": req.file.filename
+                }
+                
+                await db.Product.create(newProduct)
+    
+                res.redirect('/allProduct')
+    
+            } catch (error) {
+                console.log(error);
+                res.json(error)
             }
-            
-            await db.Product.create(newProduct)
-
-            res.redirect('/allProduct')
-
-        } catch (error) {
-            console.log(error);
-            res.json(error)
+        } else {
+            res.render('./products/productCreateForm', {errors: errors.mapped(), old: req.body});
         }
+
+        
     },
 
     productEdit: async (req, res) => {
