@@ -1,6 +1,5 @@
 const db = require("../database/models");
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+const {validationResult} = require("express-validator");
 
 const productsController = {
     allProduct: async (req, res) => {
@@ -56,20 +55,29 @@ const productsController = {
         } catch (error) {
             res.send(error)
         }
-        // Promise
-
-        // .all([varietal, brand, category, region, origin])
-
-        // .then(([varietal, brand, category, region, origin]) => {
-        //     return res.render('./products/productCreateForm', {
-        //         varietal, brand, category, region, origin
-        //     })
-        // })
-        // .catch(error => res.send(error))
-
     },
 
     store: async (req, res) => {
+         let errors = validationResult(req);
+         //si hay errores los atrapo
+        if (!errors.isEmpty()) {
+
+            let varietal = await db.Varietal.findAll()
+            let brand = await db.Brand.findAll()
+            let category = await db.Category.findAll()
+            let region = await db.Region.findAll()
+            let origin = await db.Origin.findAll()
+
+            return  res.render('./products/productCreateForm', {
+                varietal,
+                brand, 
+                category, 
+                region, 
+                origin, 
+                errors: errors.mapped()
+            })
+        }
+        
         try {
             let newProduct = {
                 "name": req.body.name,

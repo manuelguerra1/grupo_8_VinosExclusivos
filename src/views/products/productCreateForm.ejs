@@ -35,12 +35,18 @@
             <h3> CREACIÓN DE PRODUCTOS</h3>
 
             <label for="nameproduct"></label>
-            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto" >
-            <!-- <p class="p"></p> -->
+            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto">
+            <% if (locals.errors && locals.errors.name) { %>
+               <p style="color: red;"><%= errors.name.msg %></p>  
+            <% } %>
             <br>
+            <!-- paso los errores de back a front porque el codigo de frontend se puede llegar manipular -->
 
             <label for="description"></label>
-            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Descripción"><p class="p"></p>
+            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Descripción">
+            <% if (locals.errors && locals.errors.description) { %>
+                <p style="color: red;"><%= errors.description.msg %></p>  
+             <% } %>
             <br>
 
             <label for="price"></label>
@@ -104,7 +110,10 @@
             </br>
             
             <label for="image"></label>
-            <h4 class="prod-img-prod-create-form">Imágen de producto</h4><input type="file" name="image" id="image"><p class="p"></p>
+            <h4 class="prod-img-prod-create-form">Imágen de producto</h4><input type="file" name="image" id="image">
+            <% if (locals.errors && locals.errors.image) { %>
+                <p style="color: red;"><%= errors.image.msg %></p>  
+             <% } %>
             
             <br>
             <div class="prodCreate-buttons-prod-create-form">
