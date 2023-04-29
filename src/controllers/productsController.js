@@ -59,6 +59,7 @@ const productsController = {
 
     store: async (req, res) => {
          let errors = validationResult(req);
+         console.log('validationResult',errors);
          //si hay errores los atrapo
         if (!errors.isEmpty()) {
 
