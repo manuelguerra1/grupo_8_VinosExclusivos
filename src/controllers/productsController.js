@@ -76,9 +76,8 @@ const productsController = {
                 origin, 
                 errors: errors.mapped()
             })
-        } else {
-            
         }
+        
         try {
             let newProduct = {
                 "name": req.body.name,
