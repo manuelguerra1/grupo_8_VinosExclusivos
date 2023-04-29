@@ -1,5 +1,5 @@
 const { body } = require("express-validator");
-
+const path = require('path')
 const productValidator = [
   // aca van los campos
   body("name")
