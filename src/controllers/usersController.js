@@ -25,6 +25,15 @@ const usersController = {
   },
 
   usersStore: async (req, res) => {
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      let rol = await db.Rol.findAll()
+
+      return  res.render('./users/register', {
+        rol, 
+        errors: errors.mapped()
+    })
+    }
     try {
       let newUsers = {
         avatar: req.file.filename,
