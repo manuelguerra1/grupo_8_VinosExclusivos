@@ -8,10 +8,10 @@ const productValidator = require('../middlewares/productValidator')
 router.get('/allProduct', productsController.allProduct);
 // Crear
 router.get ('/create', productsController.create);
-router.post('/save', upload.single('image'),productValidator ,productsController.store);
+router.post('/save', upload.single('image'), productValidator, productsController.store);
 // Editar
 router.get ('/edit/:id', productsController.productEdit);
-router.put ('/modify/:id', productsController.update);
+router.put ('/modify/:id', productValidator, productsController.update);
 // Eliminar
 router.delete ('/delete/:id', productsController.destroy);
 //Listar por id
