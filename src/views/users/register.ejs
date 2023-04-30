@@ -9,9 +9,7 @@
     <hr>
     <main class="register-main">
         <form class= "user-register-form" method="post" action = "/userSave"  enctype="multipart/form-data" >
-            <ul class ="errores">
-
-            </ul>
+            
             <div class="register">
                 
                 <h3 class="h3-register"> ¡Registrate! </h3>
@@ -21,49 +19,49 @@
             
                 <label for="image"></label>
                 <input type="file" name="avatar" id="image">
-                <% if (locals.errors && locals.errors.avatar) { %>
+                <% if (locals.errors && errors.avatar) { %>
                     <p style="color: red;"><%= errors.avatar.msg %></p>  
                  <% } %>
                 <br>
 
                 <label for="name"></label>
                 <h4>Nombre: </h4><input type="text" name="name" id="name" placeholder="Nombre" required>
-                <% if (locals.errors && locals.errors.name) { %>
+                <% if (locals.errors && errors.name) { %>
                     <p style="color: red;"><%= errors.name.msg %></p>  
                  <% } %>
                 <br>
     
                 <label for="last-name"></label>
                 <h4>Apellido: </h4><input type="text" name="lastname" id="last-name" placeholder="Apellido" required>
-                <% if (locals.errors && locals.errors.lastname) { %>
+                <% if (locals.errors && errors.lastname) { %>
                     <p style="color: red;"><%= errors.lastname.msg %></p>  
                  <% } %>
                 <br>
     
                 <label for="email"></label>
-                <h4>E-mail: </h4><input type="text" name="email" id="email" placeholder="E-mail" required>
-                <% if (locals.errors && locals.errors.email) { %>
+                <h4>E-mail: </h4><input type="email" name="email" id="email" placeholder="E-mail" required>
+                <% if (locals.errors && errors.email) { %>
                     <p style="color: red;"><%= errors.email.msg %></p>  
                  <% } %>
                 <br>
     
                 <label for="user-name"></label>
                 <h4>Nombre de Usuario: </h4><input type="text" name="username" id="user-name" placeholder="Nombre de usuario" required>
-                <% if (locals.errors && locals.errors.username) { %>
+                <% if (locals.errors && errors.username) { %>
                     <p style="color: red;"><%= errors.username.msg %></p>  
                  <% } %>
                 <br>
                 
                 <label for="password"></label>
                 <h4>Contraseña: </h4><input type="password" name="password" id="password" placeholder="Contraseña" required>
-                <% if (locals.errors && locals.errors.password) { %>
+                <% if (locals.errors && errors.password) { %>
                     <p style="color: red;"><%= errors.password.msg %></p>  
                  <% } %>
                 <br>
     
                 <label for="confirm-password"></label>
                 <h4>Confirme Contraseña: </h4><input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña" required>
-                <% if (locals.errors && locals.errors.confirmpassword) { %>
+                <% if (locals.errors && errors.confirmpassword) { %>
                     <p style="color: red;"><%= errors.confirmpassword.msg %></p>  
                  <% } %>
                 <br>

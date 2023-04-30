@@ -1,9 +1,10 @@
 function imgFormat(input, ErrorId) {
 
-    let extensions = ['.jpg', '.jpeg', '.png', '.gif']
+    let extensions = ['.jpg', '.jpeg', '.png', '.gif','.JPG','.JPEG', '.PNG', '.GIF']
     let inputExtension = input.value.substring(input.value.lastIndexOf('.'));
+        inputExtension = inputExtension.toLowerCase()
     if (!extensions.includes(inputExtension)) {
-
+ 
         let nameError = document.getElementById(ErrorId)
 
         if (nameError) {

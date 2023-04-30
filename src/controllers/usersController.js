@@ -26,15 +26,18 @@ const usersController = {
 
   usersStore: async (req, res) => {
     let errors = validationResult(req);
+  
     if (!errors.isEmpty()) {
       let rol = await db.Rol.findAll()
-
+      console.log(errors.mapped(), "estoy en el if")
       return  res.render('./users/register', {
         rol, 
-        errors: errors.mapped()
+        errors: errors.mapped(),
+        oldBody : req.body
     })
     }
     try {
+      
       let newUsers = {
         avatar: req.file.filename,
         name: req.body.name,
@@ -45,7 +48,23 @@ const usersController = {
         confirm_password: bcrypt.hashSync(req.body.confirmpassword, 10),
         rol_id: req.body.rol,
       };
+const userRegistered = await db.User.findOne({
+  where: {email: req.body.email
 
+  }
+})
+if (userRegistered) {
+  let rol = await db.Rol.findAll()
+  return res.render ('./users/register', {
+    rol, 
+    errors:{
+      email:{
+        msg: "Correo ya registrado"
+      }
+    },
+    oldBody : req.body
+})
+}
       await db.User.create(newUsers);
 
       res.redirect("/");

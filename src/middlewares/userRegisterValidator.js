@@ -4,7 +4,7 @@ const userValidator = [
   // aca van los campos
   body("avatar").custom((value, { req }) => {
     const file = req.file;
-    const validExtensions = [".jpg", ".jpeg", ".png", ".gif"];
+    const validExtensions = [".jpg", ".jpeg", ".png", ".gif", ".JPG", ".JPEG", ".PNG", ".GIF"];
     if (!file) {
       throw new Error("ingresar una imagen");
     }
@@ -23,7 +23,7 @@ const userValidator = [
     .bail()
     .isLength({ min: 2 })
     .withMessage("El campo debe tener minimo 2 caracteres"),
-  body("last-name")
+  body("lastname")
     .notEmpty()
     .withMessage("El campo requiere un nombre")
     .bail()
