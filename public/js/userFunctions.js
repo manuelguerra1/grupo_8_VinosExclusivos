@@ -111,9 +111,42 @@ function inputMinLength (input, length, ErrorId) {
         
         return true
 
+    }    
+}
+
+function validateEmail(input, createErrorId){
+                
+    const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+
+    if( !validEmail.test(input.value) ){
+        let nameError = document.getElementById(createErrorId)
+
+    if (nameError) {
+        nameError.remove()
+    }
+    
+    let error = document.createElement('p');
+            
+    error.innerHTML = `Email invalido`
+    
+    error.setAttribute('id', createErrorId)
+
+    error.classList.add('js-front-prod-create-error')
+    
+    input.insertAdjacentElement('afterend', error)
+
+    return false
+        
+    }else{
+        let nameError = document.getElementById(createErrorId)
+    
+        if (nameError) {
+        nameError.remove()
+    }
+        return true;
     }
 
-    
+
 }
 
 

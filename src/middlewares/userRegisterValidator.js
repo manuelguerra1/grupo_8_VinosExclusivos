@@ -38,6 +38,7 @@ const userValidator = [
   body("password")
     .isLength({ min: 8 })
     .withMessage("El campo debe tener minimo 8 caracteres"),
+
 ];
 
 module.exports = userValidator;

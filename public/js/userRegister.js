@@ -33,7 +33,7 @@ button.addEventListener("click", (e) => {
     errors = inputIsNotEmpty(email, 'email-error')
     if (!errors) e.preventDefault();
 
-    errors = invalid('email-error')
+    errors = validateEmail(email, 'email-validate-error')
     if (!errors) e.preventDefault();
 
     errors = inputIsNotEmpty(username, 'name-error')
