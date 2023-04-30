@@ -78,14 +78,42 @@ if (userRegistered) {
   },
 
   processLogin: async (req, res) => {
+    const error = validationResult(req)
+    if (!error.isEmpty()){
+      return res.render("./users/login", {
+        errors: error.mapped(), 
+        oldEmail: req.body.email
+      });
+    }
     try {
       const user = await db.User.findOne({
         where: {
-          user_name: req.body.username,
+          email: req.body.email,
         },
         include: "Rol",
       });
-
+      if (!user) {
+        return res.render("./users/login", {
+          errors:{
+            email:{
+              msg: "Debe registrarte primero"
+            }
+          }
+        });
+      }
+  
+      const passwordValid = await bcrypt.compare(
+        req.body.password, user.password
+      )
+      if (!passwordValid){
+        return res.render("./users/login", {
+          errors:{
+            password:{
+              msg: "Contraseña Invalida"
+            }
+          }
+        });
+      }
       if (user) {
         req.session.userLogged = user;
         if (req.body.rememberme) {
