@@ -36,6 +36,10 @@
     margin: 20px;
   }
 
+  .card-center{
+    margin: 15px auto 30px auto;
+  }
+
 /* TABLET */
 @media (min-width: 361px) {
     .container-img{

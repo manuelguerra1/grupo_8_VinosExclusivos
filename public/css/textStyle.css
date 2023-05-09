@@ -33,6 +33,12 @@
     list-style: none;
 }
 
+.bold{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
 /* TABLET */
 @media (min-width: 361px) {
     

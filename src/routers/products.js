@@ -6,6 +6,8 @@ const productValidator = require('../middlewares/productValidator')
 
 //Listar
 router.get('/allProduct', productsController.allProduct);
+router.get('/allProducts2', productsController.allProducts2);
+
 // Crear
 router.get ('/create', productsController.create);
 router.post('/save', upload.single('image'), productValidator, productsController.store);

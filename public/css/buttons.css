@@ -1,0 +1,14 @@
+.btn-amount{
+    margin-top: 10px;
+    justify-content: center
+}
+
+.btn-amount button{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.btn-amount input {
+    text-align: center;
+    color: #252429;
+}
