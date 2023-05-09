@@ -1,0 +1,28 @@
+.background{
+    background-color: #fffbff !important;
+}
+
+.primary-color{
+    color: #212529;
+}
+
+.secondary-color{
+    color:#d9d1c5;
+}
+
+.dark-background{
+    background-color: #212529;
+    padding: 20px 0;
+}
+
+.super-dark-background{
+    background-color: #212229;
+    padding: 20px 0;
+}
+
+.neutral-background{
+    background-color: #d9d1c5;
+    padding: 20px 0;
+}
+
+/* d9d1c5 */
