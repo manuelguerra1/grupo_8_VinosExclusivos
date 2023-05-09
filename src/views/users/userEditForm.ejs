@@ -41,19 +41,7 @@
             <label for="confirm-password"></label>
             <input type="password" name="confirm_password" id="confirm-password" placeholder="Confirmar contraseña"
               value="<%= user.confirm_password %>" required />
-            <label for="rol">
-              <h4>Tipo de Usuario: </h4>
-            </label>
-            <select name="rol_id" id="rol">
-              <option value="">Seleccione un Rol:</option>
-
-              <% rol.forEach(element=> { %>
-                <option value="<%= element.id %>">
-                  <%= element.rol_name %>
-                </option>
-                <% }) %>
-
-            </select>
+            
             <br />
           </div>
           <br />

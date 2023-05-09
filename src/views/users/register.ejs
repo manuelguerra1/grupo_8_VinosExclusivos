@@ -8,7 +8,8 @@
     <%- include('../partials/header') %> 
     <hr>
     <main class="register-main">
-        <form method="post" action = "/userSave"  enctype="multipart/form-data" >
+        <form class= "user-register-form" method="post" action = "/userSave"  enctype="multipart/form-data" >
+            
             <div class="register">
                 
                 <h3 class="h3-register"> ¡Registrate! </h3>
@@ -18,31 +19,51 @@
             
                 <label for="image"></label>
                 <input type="file" name="avatar" id="image">
+                <% if (locals.errors && errors.avatar) { %>
+                    <p style="color: red;"><%= errors.avatar.msg %></p>  
+                 <% } %>
                 <br>
-                <!-- Revisar css -->
 
                 <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="Nombre" required>
+                <h4>Nombre: </h4><input type="text" name="name" id="name" placeholder="Nombre" required>
+                <% if (locals.errors && errors.name) { %>
+                    <p style="color: red;"><%= errors.name.msg %></p>  
+                 <% } %>
                 <br>
     
                 <label for="last-name"></label>
-                <input type="text" name="lastname" id="last-name" placeholder="Apellido" required>
+                <h4>Apellido: </h4><input type="text" name="lastname" id="last-name" placeholder="Apellido" required>
+                <% if (locals.errors && errors.lastname) { %>
+                    <p style="color: red;"><%= errors.lastname.msg %></p>  
+                 <% } %>
                 <br>
     
                 <label for="email"></label>
-                <input type="text" name="email" id="email" placeholder="E-mail" required>
+                <h4>E-mail: </h4><input type="email" name="email" id="email" placeholder="E-mail" required>
+                <% if (locals.errors && errors.email) { %>
+                    <p style="color: red;"><%= errors.email.msg %></p>  
+                 <% } %>
                 <br>
     
                 <label for="user-name"></label>
-                <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" required>
+                <h4>Nombre de Usuario: </h4><input type="text" name="username" id="user-name" placeholder="Nombre de usuario" required>
+                <% if (locals.errors && errors.username) { %>
+                    <p style="color: red;"><%= errors.username.msg %></p>  
+                 <% } %>
                 <br>
                 
                 <label for="password"></label>
-                <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                <h4>Contraseña: </h4><input type="password" name="password" id="password" placeholder="Contraseña" required>
+                <% if (locals.errors && errors.password) { %>
+                    <p style="color: red;"><%= errors.password.msg %></p>  
+                 <% } %>
                 <br>
     
                 <label for="confirm-password"></label>
-                <input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña" required>
+                <h4>Confirme Contraseña: </h4><input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña" required>
+                <% if (locals.errors && errors.confirmpassword) { %>
+                    <p style="color: red;"><%= errors.confirmpassword.msg %></p>  
+                 <% } %>
                 <br>
 
                 <label for="rol"><h4>Tipo de Usuario: </h4></label>
@@ -58,7 +79,7 @@
                 <div class="terms-cond-register">
                     <input type="checkbox" name="terminos-y-condiciones" id="" required>Acepto las condiciones de uso y políticas de privacidad.
                 </div>
-                <div class="register-buttons">
+                <div class="userRegister-buttons-user-register-form">
                     <button type="submit" value="Crear">GUARDAR</button>    
                 </div>
             </div>          
@@ -66,6 +87,8 @@
 
          </form>
     </main>
+    <script src="/js/userRegister.js" type="text/javascript"></script>
+    <script src="/js/userFunctions.js" type="text/javascript"></script>
     
     <%- include('../partials/footer') %> 
 </body>

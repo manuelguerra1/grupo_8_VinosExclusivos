@@ -8,12 +8,12 @@
     <%- include('../partials/header') %> 
     <hr>
     <main class="profile-view">
+            <h3 class="profile-h3"> MI PERFIL </h3>
+            <br>
             <div class="profile-section">
-
-                <h3 class="profile-h3"> MI PERFIL </h3>
-                <br>
-                <img class="profile-img" src="/img/user/<%= user.avatar%>">
-
+                <div class="profile-img">
+                    <img class="profile-img" src="/img/user/<%= user.avatar%>">
+                </div>
                 <br>
                 <!-- Revisar css -->
                 <div class="profile-info">
@@ -28,6 +28,7 @@
                 <br>
                 <form action="/userEdit/<%= user.id %>"><button type="submit">Editar</button></form>
                 </div>
+            </div>
                 
 
                 

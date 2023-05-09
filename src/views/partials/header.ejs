@@ -51,10 +51,12 @@
         <li><a href="/">Home</a></li>
         <li><a href="/allProduct">Productos</a></li>
         <li><a href="/carrito">Carrito</a></li>
+        <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
         <li><a href="/create">Crear</a></li>
+        <% } %>
         <% if (locals.userLogged) { %>
           <li><a href="/logout">Cerrar sesión</a></li>
-      <% } else { %>
+        <% } else { %>
           <li><a href="/login">Iniciar sesión</a></li>
           <li><a href="/register">Registro</a></li>
       <% } %>

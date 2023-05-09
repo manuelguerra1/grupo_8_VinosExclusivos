@@ -26,7 +26,8 @@ Integrantes 🍷
 
 • Manuel Guerra Hola, soy Manuel Guerra, tengo 17 años. Estoy haciendo un curso en Digital House con el cual quiero tener y construir un futuro. Me gusta mucho la tecnologia, en especial las computadoras, y espero les guste este proyecto!.
 
-• Pablo Florio Hola, mi nombre es Pablo, tengo 29 años. Estoy por presentar mi tesis como Licenciado en Contador en UBA, tengo pensado empezar despues la carrera de Sistemas de informacion contable, y el plan de estudio de Digital me intereso y me sirve para complementar. Me gusta el voley y los juegos de mesa.
+• Antonella Rodríguez. ¡Hola! tengo 30 años. Me gustan los videosjuegos, los libros y soy apasionada de la actividad física. Me gusta desde el crossfit a salir andar en bici por el río.
+ Me encuentro estudiando la Lic. en nutrición en la Universidad de Buenos Aires. Soy muy autodidacta, tuve un acercamiento a la programación previamente y tengo unos de proyectos. Me anote en este curso porque quiero seguir aprendiendo más y hacer un cambio laboral.
 
 • Viviana Suarez Cardona Hola, mi nombre es Viviana, me gusta que me digan vivi, tengo 28 años y vivo en Rionegro, Colombia. Me encanta ver películas inspiradas en historias de la vida real, leer, escuchar música, ver atardeceres, nadar y montar bici. Soy comunicadora social, diseñadora gráfica y una apasionada por la tecnología, la fotografía y el marketing. Me gusta estar constantemente estudiando y la programación es un área que siempre me ha llamado la atención; quiero conocerla he integrarla con mis otros conocimientos.
 

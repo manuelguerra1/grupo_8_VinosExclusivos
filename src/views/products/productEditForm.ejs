@@ -8,88 +8,137 @@
 
         <%- include('../partials/header') %>
             <main>
-                <form method="post" action="/modify/<%= product.id %>?_method=PUT">
+                <form class="prod-edit-form" method="post" action="/modify/<%= product.id %>?_method=PUT">
+                    <ul class="errores">
+            
+                    </ul>
                     <div class="registroProducto-edit-form">
                         <h3> EDICIÓN DE PRODUCTOS</h3>
 
                         <label for="nameproduct"></label>
                         <h4>Nombre del Producto: </h4><input type="text" name="name" id="name"
-                            value="<%= product.name %>">
+                            value="<%= product.name %>"><p class="p"></p>
+                            <% if (locals.errors && locals.errors.name) { %>
+                                <p style="color: red;"><%= errors.name.msg %></p>  
+                             <% } %>
                         <br>
+                        <!-- paso los errores de back a front porque el codigo de frontend se puede llegar manipular -->
+
 
                         <label for="description"></label>
                         <h4>Descripción: </h4><input type="text" name="description" id="description"
-                            value="<%= product.description %>">
+                            value="<%= product.description %>"><p class="p"></p>
+                            <% if (locals.errors && locals.errors.description) { %>
+                                <p style="color: red;"><%= errors.description.msg %></p>  
+                             <% } %>
                         <br>
 
                         <label for="price"></label>
                         <h4>Precio: </h4>
-                        <input type="number" name="price" id="price" value="<%= product.price %>">
+                        <input type="number" name="price" id="price" value="<%= product.price %>"><p class="p"></p>
                         <br>
 
                         <label for="year"></label>
-                        <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" value="<%= product.year %>">
+                        <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" value="<%= product.year %>"><p class="p"></p>
                         <br>
 
                         <label for="varietal"><h4>Variedad: </h4></label>
-                        <select name="varietal" id="varietal" required>
-                            <option value="">Seleccione una variedad:</option>
-                            <option value="<%= varietal.id %>" selected><%= varietal.varietal_name %></option>
+                        <select class="select-prod-edit" name="varietal" id="varietal" >
+                            <!-- <option selected disabled>Seleccione una variedad:</option> -->
+                            
 
                             <% varietal.forEach(element=> { %>
-                                <option value="<%= element.id %>">
-                                    <%= element.varietal_name %>
-                                </option>
+                                <% if (product.varietal_id == element.id) { %>
+                                    <option selected value="<%= element.id %>">
+                                        <%= element.varietal_name %>
+                                    </option>
+                                <% } %>
+                                <% if (product.varietal_id != element.id) { %>
+                                    <option value="<%= element.id %>">
+                                        <%= element.varietal_name %>
+                                    </option>
+                                <% } %>
                                 <% }) %>
 
-                        </select>
+                        </select><p class="p"></p>
+                        <br>
 
                         <label for="brand"><h4>Marca: </h4></label>
-                        <select name="brand" id="brand" required>
+                        <select class="select-prod-edit" name="brand" id="brand" >
                             <option disabled selected>Seleccione una marca:</option>
-                            <option value="<%= brand.id %>" selected><%= brand.brand_name %></option>
+                            
+                
                             <% brand.forEach(element => { %>
-                                <option value="<%= element.id %>"><%= element.brand_name %></option>
+                                <% if (product.brand_id == element.id) { %>
+                                    <option selected value="<%= element.id %>"><%= element.brand_name %></option>
+                                <% } %>
+                                <% if (product.brand_id != element.id) { %>
+                                    <option value="<%= element.id %>"><%= element.brand_name %></option>
+                                <% } %>
+                                
                             <% }) %>
-                        </select>
+                        </select><p class="p"></p>
                         
                         <br>
                         
                         <label for="origen"> <h4>País de Origen:</h4></label>
-                            <select  name="origen" id="origen" required>
-                                <option disabled selected>Seleccione origen:</option>
-                                <!-- <option value="%= originById.id %>" selected>%= originById.country %></option> -->
-                                <% origin.forEach(element => { %>
+                        <select class="select-prod-edit"  name="origen" id="origen" >
+                            <!-- <option disabled selected>Seleccione origen:</option> -->
+                            
+                            <% origin.forEach(element => { %>
+                                <% if (product.origen_id == element.id) { %>
+                                    <option selected value="<%= element.id %>"><%= element.country %></option>
+                                <% } %>
+                                <% if (product.origen_id != element.id) { %>
                                     <option value="<%= element.id %>"><%= element.country %></option>
-                                <% }) %>
-                            </select>
+                                <% } %>
+                                
+                            <% }) %>
+                        </select><p class="p"></p>
                         </br>
                         
                         <label for="region"><h4>Región: </h4></label>
-                        <select name="region" id="region" required>
-                            <option disabled selected>Seleccione una región:</option>
-                            <!-- <option value="%= regionById.id %>" selected>%= regionById.region %></option> -->
+                        <select class="select-prod-edit" name="region" id="region" >
+                            <!-- <option disabled selected>Seleccione una región:</option> -->
+                            
+
                             <% region.forEach(element => { %>
-                                <option value="<%= element.id %>"><%= element.region %></option>
+                                <% if (product.region_id == element.id) { %>
+                                    <option selected value="<%= element.id %>"><%= element.region %></option>
+                                <% } %>
+                                <% if (product.region_id != element.id) { %>
+                                    <option value="<%= element.id %>"><%= element.region %></option>
+                                <% } %>
+                                
                             <% }) %>
-                        </select>
+                        </select><p class="p"></p>
+                        <br>
                         
                         <label for="category"> <h4>Categorías</h4></label>
-                            <select  name="category" id="category" required>
-                                <option disabled selected>Seleccione una categoría:</option>
-                                <!-- <option value="%= categoryById.id %>" selected>%= categoryById.category_name %></option> -->
+                            <select class="select-prod-edit" name="category" id="category" >
+                                <!-- <option disabled selected>Seleccione una categoría:</option> -->
+                                
+                                
                                 <% category.forEach(element => { %>
-                                    <option value="<%= element.id %>"><%= element.category_name %></option>
+                                    <% if (product.category_id == element.id) { %>
+                                        <option selected value="<%= element.id %>"><%= element.category_name %></option>
+                                    <% } %>
+                                    <% if (product.category_id != element.id) { %>
+                                        <option value="<%= element.id %>"><%= element.category_name %></option>
+                                    <% } %>
+                                    
                                 <% }) %>
-                            </select>
+                            </select><p class="p"></p>
                         </br>
 
                         <label for="image"></label>
                         <h4>Imágen de producto</h4>
                         <img class="edit-form-img-edit-form" src="/img/product/<%= product.image%>">
                         <br>
+                        <% if (locals.errors && locals.errors.image) { %>
+                         <% } %>
 
-                        <div class="prodCreate-buttons-edit-form">
+                        <div class="prodEdit-buttons-edit-form">
                             <button type="submit" value="Actualizar">ACTUALIZAR</button>
                             <br>
                         </div>
@@ -103,4 +152,6 @@
                     <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
                 </div>
             </footer>
+        <script src="/js/prodEdit.js" type="text/javascript"></script>
+        <script src="/js/editFunctions.js" type="text/javascript"></script>
     </body>

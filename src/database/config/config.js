@@ -2,7 +2,7 @@ module.exports=
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "farindola",
     "database": "db_FooDrinks",
     "host": "127.0.0.1",
     "dialect": "mysql"

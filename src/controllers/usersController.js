@@ -25,7 +25,19 @@ const usersController = {
   },
 
   usersStore: async (req, res) => {
+    let errors = validationResult(req);
+  
+    if (!errors.isEmpty()) {
+      let rol = await db.Rol.findAll()
+      console.log(errors.mapped(), "estoy en el if")
+      return  res.render('./users/register', {
+        rol, 
+        errors: errors.mapped(),
+        oldBody : req.body
+    })
+    }
     try {
+      
       let newUsers = {
         avatar: req.file.filename,
         name: req.body.name,
@@ -36,7 +48,23 @@ const usersController = {
         confirm_password: bcrypt.hashSync(req.body.confirmpassword, 10),
         rol_id: req.body.rol,
       };
+const userRegistered = await db.User.findOne({
+  where: {email: req.body.email
 
+  }
+})
+if (userRegistered) {
+  let rol = await db.Rol.findAll()
+  return res.render ('./users/register', {
+    rol, 
+    errors:{
+      email:{
+        msg: "Correo ya registrado"
+      }
+    },
+    oldBody : req.body
+})
+}
       await db.User.create(newUsers);
 
       res.redirect("/");
@@ -50,14 +78,42 @@ const usersController = {
   },
 
   processLogin: async (req, res) => {
+    const error = validationResult(req)
+    if (!error.isEmpty()){
+      return res.render("./users/login", {
+        errors: error.mapped(), 
+        oldEmail: req.body.email
+      });
+    }
     try {
       const user = await db.User.findOne({
         where: {
-          user_name: req.body.username,
+          email: req.body.email,
         },
         include: "Rol",
       });
-
+      if (!user) {
+        return res.render("./users/login", {
+          errors:{
+            email:{
+              msg: "Debe registrarte primero"
+            }
+          }
+        });
+      }
+  
+      const passwordValid = await bcrypt.compare(
+        req.body.password, user.password
+      )
+      if (!passwordValid){
+        return res.render("./users/login", {
+          errors:{
+            password:{
+              msg: "Contraseña Invalida"
+            }
+          }
+        });
+      }
       if (user) {
         req.session.userLogged = user;
         if (req.body.rememberme) {
@@ -110,8 +166,6 @@ const usersController = {
     "user_name":req.body.user_name,
     "password":req.body.password,
     "confirm_password":req.body.confirmpassword,
-    "rol_id":req.body.rol_id,
-    "available": true,
   },
   {
     where: {id: id}
