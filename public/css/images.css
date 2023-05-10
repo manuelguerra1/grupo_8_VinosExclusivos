@@ -114,4 +114,8 @@
     .logo img{
         width: 20%;
     }
+
+    .col-center{
+      padding: 40px 0px 40px 0px;
+    }
 }
