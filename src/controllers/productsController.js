@@ -201,7 +201,13 @@ const productsController = {
         } catch (error) {
             res.send(error)
         }
-    }
+    },
+
+    productCreateForm2 :
+        function(req,res) {
+            res.render('./products/productCreateForm2')
+        }
+    
 
 }
 

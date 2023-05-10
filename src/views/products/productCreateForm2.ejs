@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+
+    <script src="https://kit.fontawesome.com/b5956fc21b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d4cb0f35d2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/partials.css">
+    <link rel="stylesheet" href="../css/productCreateForm.css">
+    <title>Login</title>
+</head>
+<body>
+<!-- <header>
+    <div class="top-header">
+
+        <a href="/">
+            <div class="logo-to-menu"> <img class="header-logo" src="../img/icons/logo-sin-fondo-1-beige.png" alt="logo" > </a>
+        </a>
+</header> -->
+<main class="product-create-main2">
+    <form class="prod-create-form2" method="post" action="/save" enctype="multipart/form-data">
+        <ul class="errores">
+
+        </ul>
+        <div class="registroProducto-prod-create-form2">
+            <div class="prod-create-form2-box">
+
+                <h1> CREACIÓN DE PRODUCTOS</h1>
+
+                <div class="nameproduct2">
+                    <label for="nameproduct"></label>
+                    <h4>Nombre del Producto: </h4><input type="text" name="name" id="name"
+                        placeholder="Nombre del Producto">
+                    <% if (locals.errors && locals.errors.name) { %>
+                        <p style="color: red;">
+                            <%= errors.name.msg %>
+                        </p>
+                        <% } %>
+                </div>
+                <br>
+                <!-- paso los errores de back a front porque el codigo de frontend se puede llegar manipular -->
+
+                <div class="description2">
+                    <label for="description"></label>
+                    <h4>Descripción: </h4><input type="text" name="description" id="description"
+                        placeholder="Descripción">
+                    <% if (locals.errors && locals.errors.description) { %>
+                        <p style="color: red;">
+                            <%= errors.description.msg %>
+                        </p>
+                        <% } %>
+                </div>
+                <br>
+
+                <div class="price2">
+                    <label for="price"></label>
+                    <h4>Precio: </h4>
+                    <input type="number" name="price" id="price" placeholder="Precio">
+                    <p class="p"></p>
+                </div>
+                <br>
+
+                <div class="year2">
+                    <label for="year"></label>
+                    <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" placeholder="Año de Cosecha">
+                    <p class="p"></p>
+                </div>
+                <br>
+
+                <div class="varietal2">
+                    <label for="varietal">
+                        <h4>Variedad: </h4>
+                    </label>
+                    <select class="select-prod-create" name="varietal" id="varietal">
+                        <option value="">Seleccione una variedad:</option>
+
+                        <% varietal.forEach(element=> { %>
+                            <option value="<%= element.id %>">
+                                <%= element.varietal_name %>
+                            </option>
+                            <% }) %>
+
+                    </select>
+                    <p class="p"></p>
+                </div>
+                <br>
+
+                <div class="brand2">
+                    <label for="brand">
+                        <h4>Marca: </h4>
+                    </label>
+                    <select class="select-prod-create" name="brand" id="brand">
+                        <option value="">Seleccione una marca:</option>
+                        <% brand.forEach(element=> { %>
+                            <option value="<%= element.id %>">
+                                <%= element.brand_name %>
+                            </option>
+                            <% }) %>
+                    </select>
+                    <p class="p"></p>
+                </div>
+                <br>
+
+                <div class="origen2">
+                    <label for="origen">
+                        <h4>País de Origen:</h4>
+                    </label>
+                    <select class="select-prod-create" name="origen" id="origen">
+                        <option value="">Seleccione origen:</option>
+                        <% origin.forEach(element=> { %>
+                            <option value="<%= element.id %>">
+                                <%= element.country %>
+                            </option>
+                            <% }) %>
+                    </select>
+                    <p class="p"></p>
+                </div>
+                <br>
+
+                <div class="region2">
+                    <label for="region">
+                        <h4>Región: </h4>
+                    </label>
+                    <select class="select-prod-create" name="region" id="region">
+                        <option value="">Seleccione una región:</option>
+                        <% region.forEach(element=> { %>
+                            <option value="<%= element.id %>">
+                                <%= element.region %>
+                            </option>
+                            <% }) %>
+                    </select>
+                    <p class="p"></p>
+                </div>
+                <br>
+
+                <div class="catgory2">
+                    <label for="category">
+                        <h4>Categorías</h4>
+                    </label>
+                    <select class="select-prod-create" name="category" id="category">
+                        <option value="">Seleccione una categoría:</option>
+                        <% category.forEach(element=> { %>
+                            <option value="<%= element.id %>">
+                                <%= element.category_name %>
+                            </option>
+                            <% }) %>
+                    </select>
+                    <p class="p"></p>
+                </div>
+                <br>
+
+                <div class="image2">
+                    <label for="image"></label>
+                    <h4 class="prod-img-prod-create-form2">Imágen de producto</h4><input type="file" name="image"
+                        id="image">
+                    <% if (locals.errors && locals.errors.image) { %>
+                        <p style="color: red;">
+                            <%= errors.image.msg %>
+                        </p>
+                        <% } %>
+                </div>
+                <br>
+                <div class="prodCreate-buttons-prod-create-form" 2>
+                    <button type="submit" value="Crear">CREAR</button>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+</main>
+    <script src="/js/prodCreate.js" type="text/javascript"></script>
+    <script src="/js/createFunctions.js" type="text/javascript"></script>
+</body>
+<br>
+<footer>
+    <div class="grupo2">
+    <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
+</div>
+</footer>

@@ -17,5 +17,6 @@ router.delete ('/delete/:id', productsController.destroy);
 //Listar por id
 router.get('/productDetail/:id', productsController.productDetail);
 
+router.get ('/productCreateForm2', productsController.productCreateForm2);
 
 module.exports = router;
