@@ -79,6 +79,11 @@
         justify-content: left;
     }
 
+    .container-card{
+        margin-bottom: 50px;
+
+    }
+
 }
 
 /* DESKTOP */

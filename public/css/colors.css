@@ -10,20 +10,12 @@
     color:#d9d1c5;
 }
 
-.tertiary-color{
-    color: #00A650;
-}
-
 .dark-background{
     background-color: #212529;
     padding: 20px 0;
 }
 
-.second-dark-background{
-    background-color: #292c2b;
-}
-
-.tertiary-dark-background{
+.secondary-dark-background{
     background-color: #262a2e;
 }
 

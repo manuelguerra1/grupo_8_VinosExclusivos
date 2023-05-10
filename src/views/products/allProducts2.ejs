@@ -19,14 +19,14 @@
     <%- include('../partials/header2') %>
 
         <!-- Catalogue -->
-        <div class="container-fluid tertiary-dark-background">
+        <div class="container-fluid secondary-dark-background">
 
             <div class="logo">
                 <img src="../img/icons/logo-sin-fondo-1-beige.png" alt="logo" />
                 <h1 class=" secondary-color">Tienda FooDrinks</h1>
             </div>
             <!-- Example Code -->
-            <div class="row row-cols-1 row-cols-md-3">
+            <div class="container-card row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card text-bg-dark">
                         <div class="card-body text-center">
@@ -37,11 +37,12 @@
                                 de deshielo de Aconcagua.</p>
                             <div class="line"></div>
                             <p class="bold secondary-color">$4500</p>
+                            <a href="#" class="btn btn-outline-light">Agregar al carrito</a>
                             <!-- amount -->
                             <div class="d-flex btn-amount btn   ">
-                                <button type="button" class="btn btn-outline-secondary col-2">-</button>
-                                <input type="text" id="amount" class="placeholder bg-light col-4">
-                                <button type="button" class="btn btn-outline-secondary col-2">+</button>
+                                <button type="button" class="btn btn-outline-light col-2">-</button>
+                                <input type="text" id="amount" class="btn btn-outline-light col-4">
+                                <button type="button" class="btn btn-outline-light col-2">+</button>
                             </div>
                         </div>
                     </div>
@@ -124,6 +125,7 @@
                 </div>
             </div>
             <!-- End Example Code -->
+
         </div>
 
         <%- include('../partials/footer2') %>
