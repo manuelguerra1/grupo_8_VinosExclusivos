@@ -1,0 +1,78 @@
+<header>
+  <div class="top-header2">
+    <a href="/">
+      <div class="logo-to-menu2">
+        <img
+          class="header-logo"
+          src="../img/icons/logo-sin-fondo-1-blanco.png"
+          alt="logo"
+        />
+      </div>
+    </a>
+
+    <!-- <button>
+            <div class="burger-menu">
+                <i class="fa fa-bars burger"></i>
+            </div>
+        </button> -->
+
+    <div class="searching-reg2">
+      <input
+        class="search-nav"
+        type="search"
+        name="search-nav"
+        placeholder="Busca tu producto"
+      />
+
+      <button type="submit-reg2">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+    <div class="buttons-reg2">
+          <% if (locals.userLogged) 
+          { %>
+              <button class="user">
+                <a href="profile">
+                  <i class="fa-solid fa-circle-user"></i>
+                </a>
+              </button>
+              
+            <% } 
+            
+          %>
+      <button class="cart-reg2">
+        <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+      </button>
+    </div>
+  </div>
+  <nav>
+    <div>
+      <ul class="navegacionBarra-reg2">
+        <li><a href="/">Home</a></li>
+        <li><a href="/allProduct">Productos</a></li>
+        <li><a href="/carrito">Carrito</a></li>
+        <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
+        <li><a href="/create">Crear</a></li>
+        <% } %>
+        <% if (locals.userLogged) { %>
+          <li><a href="/logout">Cerrar sesión</a></li>
+        <% } else { %>
+          <li><a href="/login">Iniciar sesión</a></li>
+          <li><a href="/register">Registro</a></li>
+      <% } %>
+      </ul>
+    </div>
+  </nav>
+  <!-- <nav>
+    <div class="nav-bar-reg2">
+      <ul>
+                <li> <i class="fa-solid fa-wine-glass-empty"></i> <a href="">Vinos</a> </li>
+                <li> <i class="fa-solid fa-wine-bottle"></i> <a href="">Destilados</a> </li>
+                <li> <i class="fa-solid fa-utensils"></i> <a href="">Maridajes</a> </li>
+                <li> <i class="fa-solid fa-martini-glass-citrus"></i> <a href="">Cócteles</a> </li>
+                <li> <i class="fa-solid fa-tags"></i> <a href="">Ofertas</a> </li>
+
+            </ul>
+    </div>
+  </nav> -->
+</header>

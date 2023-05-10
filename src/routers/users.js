@@ -19,6 +19,7 @@ router.get('/logout', usersController.logout);
 
 // Crear
 router.get('/register', usersController.register);
+router.get('/register2', usersController.register2);
 router.post('/userSave', userUpload.single('avatar'), usersController.usersStore);
 
 // Editar

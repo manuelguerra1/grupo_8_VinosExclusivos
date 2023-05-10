@@ -23,6 +23,17 @@ const usersController = {
       res.send(error);
     }
   },
+  register2: async (req, res) => {
+    try {
+      let rol = await db.Rol.findAll();
+
+      return res.render("./users/register2", {
+        rol,
+      });
+    } catch (error) {
+      res.send(error);
+    }
+  },
 
   usersStore: async (req, res) => {
     try {

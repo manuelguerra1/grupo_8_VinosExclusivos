@@ -1,0 +1,224 @@
+/* -----------------------------REGISTER2----------------------------- */
+body.reg2-body{
+    background-color: #191c1b;
+}
+
+input::placeholder{
+    font-size: 15px;
+}
+
+.reg2-box{
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+main.register2-main{
+    text-align: center;
+}
+
+.register2 h1{
+    color: #ede9e9;
+    margin: 50px 20px;
+}
+
+.reg2-name-lastname{
+    margin: 20px;
+}
+
+.reg2-name-lastname input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+
+.reg2-username-email{
+    margin: 20px;
+}
+
+.reg2-username-email input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+
+.reg2-password-confpassword{
+    margin: 20px;
+}
+
+.reg2-password-confpassword input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+
+.reg2-prof-img{
+    margin: 20px;
+}
+
+.reg2-prof-img h2{
+    color: #ede9e9;
+    margin: 20px;
+}
+
+.reg2-prof-img input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #777e7c;
+    font-size: 15px;
+}
+
+input#file-upload-button{
+    background-color: #292c2b;
+}
+
+.reg2-terms-cond-register{
+    margin: 20px;
+    color: #fff;
+    padding: 10px;
+    
+}
+
+.reg2-terms-cond-register:hover{
+    text-decoration: underline;
+}
+
+.reg2-terms-cond-register input{
+    margin: 10px;
+}
+
+.reg2-button{
+    margin: 40px 20px;
+    text-align: left;
+}
+
+.reg2-button button{
+    padding: 22px 30px;
+    font-size: 15px;
+    background-color: #292c2b;
+    color: #ede9e9;
+    border: 1px solid #292c2b;
+    border-radius: 1px;
+    width: 160px;
+}
+
+.reg2-button button:hover{
+    transition: 500ms;
+    padding: 22px 30px;
+    font-size: 15px;
+    background-color: #8c9a96;
+    color: #ede9e9;
+    border: 1px solid #292c2b;
+    border-radius: 1px;
+    width: 160px;
+}
+
+.sub-btn-reg2{
+    margin: 15px;
+}
+
+.del-btn-reg2{
+    margin: 15px;
+}
+
+
+@media (min-width: 749px) {
+    .reg2-name-lastname{
+        margin: 15px 80px;
+        display: flex;
+    }
+    
+    .reg2-name-lastname input{
+        width: 100%;
+        padding: 18px 20px;
+        background-color: #292c2b;
+        border: 1px solid #292c2b;
+        border-radius: 0;
+    }
+
+    .reg2-name-lastname input#name{
+        margin-right: 10px;
+    }
+
+    .reg2-name-lastname input#lastname{
+        margin-left: 10px;
+    }
+
+    .reg2-username-email{
+        margin: 10px 80px;
+    }
+    
+    .reg2-username-email input{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px 20px;
+        background-color: #292c2b;
+        border: 1px solid #292c2b;
+        border-radius: 0;
+    }
+
+    .reg2-password-confpassword{
+        margin: 15px 80px;
+        display: flex;
+    }
+    
+    .reg2-password-confpassword input{
+        width: 100%;
+        padding: 18px 20px;
+        background-color: #292c2b;
+        border: 1px solid #292c2b;
+        border-radius: 0;
+    }
+
+    .reg2-password-confpassword input#password{
+        margin-right: 10px;
+    }
+
+    .reg2-password-confpassword input#confpassword{
+        margin-left: 10px;
+    }
+
+    .reg2-prof-img{
+        margin: 15px 80px;
+    }
+    
+    .reg2-prof-img h2{
+        color: #ede9e9;
+        margin: 20px;
+    }
+    
+    .reg2-prof-img input{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px 20px;
+        background-color: #292c2b;
+        border: 1px solid #292c2b;
+        border-radius: 0;
+    }
+
+    .reg2-button{
+        margin: 15px 80px;
+        display: flex;
+    }
+
+    .sub-btn-reg2{
+        margin-right: 4%;
+    }
+    
+    .del-btn-reg2{
+        margin-left: 4%;
+    }
+}

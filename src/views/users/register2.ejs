@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %> 
+<body class="reg2-body">
+    
+
+    <%- include('../partials/header2') %> 
+    <main class="register2-main">
+        <form method="post" action = "/userSave"  enctype="multipart/form-data" >
+            <div class="register2">
+                <div class="reg2-box">
+
+                    <h1>! Crear Cuenta !</h1>
+
+                    <div class="reg2-name-lastname">
+
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name" placeholder="Nombre">
+
+                        <label for="lastname"></label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Apellido">
+
+                    </div>
+
+                    <div class="reg2-username-email">
+
+                        <label for="username"></label>
+                        <input type="text" name="username" id="username" placeholder="Nombre de usuario">
+
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Correo electrónico">
+
+                    </div>
+
+                    <div class="reg2-password-confpassword">
+
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" placeholder="Contraseña">
+
+                        <label for="confpassword"></label>
+                        <input type="password" name="confpassword" id="confpassword" placeholder="Confirmar contraseña">
+
+                    </div>
+
+                    <div class="reg2-prof-img">
+                        <label for="image"></label>
+                        <h2>Foto de perfil</h2>
+                        <input type="file" name="image" id="image">
+                    </div>
+
+                    <div class="reg2-terms-cond-register">
+                        <input type="checkbox" name="terminos-y-condiciones" id="" required>Acepto las condiciones de uso y políticas de privacidad.
+                    </div>
+                    <div class="reg2-button">
+                        <button class="sub-btn-reg2" type="submit" value="Crear">REGISTRARTE</button> 
+                        <button class="del-btn-reg2 type="reset" value="Borrar">BORRAR</button>   
+                    </div>
+                </div>
+                
+            </div>          
+
+
+         </form>
+    </main>
+    
+    <%- include('../partials/footer') %> 
+</body>
+</html>
