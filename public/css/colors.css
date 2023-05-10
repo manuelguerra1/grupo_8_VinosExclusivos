@@ -19,6 +19,14 @@
     padding: 20px 0;
 }
 
+.second-dark-background{
+    background-color: #292c2b;
+}
+
+.tertiary-dark-background{
+    background-color: #262a2e;
+}
+
 .super-dark-background{
     background-color: #212229;
     padding: 20px 0;

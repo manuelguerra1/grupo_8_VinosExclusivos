@@ -40,6 +40,19 @@
     margin: 15px auto 30px auto;
   }
 
+  .logo{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto 0px auto;
+    padding: 20px 0 20px 0;
+    align-items: center;
+  }
+
+  .logo img{
+    width: 30%;
+  }
+
 /* TABLET */
 @media (min-width: 361px) {
     .container-img{
@@ -60,6 +73,12 @@
         padding: 5px;
         border-radius: 10px;
     }
+
+    .logo{
+        display: flex;
+        justify-content: left;
+    }
+
 }
 
 /* DESKTOP */
@@ -69,4 +88,14 @@
         justify-content: space-evenly;
         margin: 20px 15%;
       }
+
+    .logo{
+        display: flex;
+        justify-content: left;
+        width: 90%;
+      }
+
+    .logo img{
+        width: 20%;
+    }
 }
