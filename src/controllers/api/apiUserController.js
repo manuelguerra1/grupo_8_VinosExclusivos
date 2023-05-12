@@ -15,8 +15,21 @@ const apiUserController = {
 
     },
 
-    userDetail(){
-        
+    userDetail(req, res){
+        db.User.
+            findByPk(req.params.id)
+        .then(user => {
+            return res.status(200).json({
+                id: user.id,
+                user_img: `http://localhost:3008/api/users/${user.avatar}`,
+                name: user.name,
+                lastName: user.last_name,
+                email: user.email,
+                user_name: user.user_name,
+            })
+        })
+
+        .catch(error => res.status(500).json('ERROR: DB_ERROR' + error))
     },
 };
 
