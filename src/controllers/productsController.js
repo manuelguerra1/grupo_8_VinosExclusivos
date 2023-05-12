@@ -57,6 +57,24 @@ const productsController = {
         }
     },
 
+  productCreateForm2: async (req, res) => {
+        
+        try {
+            let varietal = await db.Varietal.findAll()
+            let brand = await db.Brand.findAll()
+            let category = await db.Category.findAll()
+            let region = await db.Region.findAll()
+            let origin = await db.Origin.findAll()
+
+            return res.render('./products/productCreateForm2', {
+                varietal, brand, category, region, origin
+            })
+            
+        } catch (error) {
+            res.send(error)
+        }
+    },
+
     store: async (req, res) => {
          let errors = validationResult(req);
          //si hay errores los atrapo
