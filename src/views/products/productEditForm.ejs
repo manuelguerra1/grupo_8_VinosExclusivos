@@ -18,11 +18,19 @@
                         <label for="nameproduct"></label>
                         <h4>Nombre del Producto: </h4><input type="text" name="name" id="name"
                             value="<%= product.name %>"><p class="p"></p>
+                            <% if (locals.errors && locals.errors.name) { %>
+                                <p style="color: red;"><%= errors.name.msg %></p>  
+                             <% } %>
                         <br>
+                        <!-- paso los errores de back a front porque el codigo de frontend se puede llegar manipular -->
+
 
                         <label for="description"></label>
                         <h4>Descripción: </h4><input type="text" name="description" id="description"
                             value="<%= product.description %>"><p class="p"></p>
+                            <% if (locals.errors && locals.errors.description) { %>
+                                <p style="color: red;"><%= errors.description.msg %></p>  
+                             <% } %>
                         <br>
 
                         <label for="price"></label>
@@ -127,6 +135,8 @@
                         <h4>Imágen de producto</h4>
                         <img class="edit-form-img-edit-form" src="/img/product/<%= product.image%>">
                         <br>
+                        <% if (locals.errors && locals.errors.image) { %>
+                         <% } %>
 
                         <div class="prodEdit-buttons-edit-form">
                             <button type="submit" value="Actualizar">ACTUALIZAR</button>

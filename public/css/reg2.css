@@ -32,7 +32,7 @@ main.register2-main{
     padding: 12px 20px;
     background-color: #292c2b;
     border: 1px solid #292c2b;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .reg2-username-email{
@@ -45,7 +45,7 @@ main.register2-main{
     padding: 12px 20px;
     background-color: #292c2b;
     border: 1px solid #292c2b;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .reg2-password-confpassword{
@@ -58,7 +58,7 @@ main.register2-main{
     padding: 12px 20px;
     background-color: #292c2b;
     border: 1px solid #292c2b;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .reg2-prof-img{
@@ -76,7 +76,7 @@ main.register2-main{
     padding: 12px 20px;
     background-color: #292c2b;
     border: 1px solid #292c2b;
-    border-radius: 0;
+    border-radius: 5px;
     color: #777e7c;
     font-size: 15px;
 }
@@ -101,18 +101,24 @@ input#file-upload-button{
 }
 
 .reg2-button{
-    margin: 40px 20px;
+    display: flex;
+    /* margin: 40px 20px; */
     text-align: left;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .reg2-button button{
-    padding: 22px 30px;
+    display: flex;
+    padding: 26px 4px;
     font-size: 15px;
     background-color: #292c2b;
     color: #ede9e9;
     border: 1px solid #292c2b;
     border-radius: 1px;
     width: 160px;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .reg2-button button:hover{

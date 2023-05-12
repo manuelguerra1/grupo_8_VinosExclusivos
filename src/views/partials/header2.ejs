@@ -1,78 +1,52 @@
-<header>
-  <div class="top-header2">
-    <a href="/">
-      <div class="logo-to-menu2">
-        <img
-          class="header-logo"
-          src="../img/icons/logo-sin-fondo-1-blanco.png"
-          alt="logo"
-        />
-      </div>
-    </a>
-
-    <!-- <button>
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
-        </button> -->
-
-    <div class="searching-reg2">
-      <input
-        class="search-nav"
-        type="search"
-        name="search-nav"
-        placeholder="Busca tu producto"
-      />
-
-      <button type="submit-reg2">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
+ <header style="background-color: #2b3035;">
+    <div class="container-fluid d-flex">
+      <!-- NavBar -->
+      <nav
+        class="navbar bg-dark  navbar-expand-lg bg-body-tertiary d-flex align-items-center navbar-collapse flex-lg-row-reverse"
+        data-bs-theme="dark">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Search -->
+        <div class="d-flex align-items-center">
+          <div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <!-- <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button> -->
+            </form>
+          </div>
+          <!-- Cart -->
+          <div>
+            <button class="btn btn-outline-success" type="submit"><i class="bi bi-cart-fill"></i> </button>
+          </div>
+        </div>
+  
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">FooDrinks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicia sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registrate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carrito</a>
+            </li>
+          </ul>
+  
+        </div>
+      </nav>
+  
     </div>
-    <div class="buttons-reg2">
-          <% if (locals.userLogged) 
-          { %>
-              <button class="user">
-                <a href="profile">
-                  <i class="fa-solid fa-circle-user"></i>
-                </a>
-              </button>
-              
-            <% } 
-            
-          %>
-      <button class="cart-reg2">
-        <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-      </button>
-    </div>
-  </div>
-  <nav>
-    <div>
-      <ul class="navegacionBarra-reg2">
-        <li><a href="/">Home</a></li>
-        <li><a href="/allProduct">Productos</a></li>
-        <li><a href="/carrito">Carrito</a></li>
-        <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
-        <li><a href="/create">Crear</a></li>
-        <% } %>
-        <% if (locals.userLogged) { %>
-          <li><a href="/logout">Cerrar sesión</a></li>
-        <% } else { %>
-          <li><a href="/login">Iniciar sesión</a></li>
-          <li><a href="/register">Registro</a></li>
-      <% } %>
-      </ul>
-    </div>
-  </nav>
-  <!-- <nav>
-    <div class="nav-bar-reg2">
-      <ul>
-                <li> <i class="fa-solid fa-wine-glass-empty"></i> <a href="">Vinos</a> </li>
-                <li> <i class="fa-solid fa-wine-bottle"></i> <a href="">Destilados</a> </li>
-                <li> <i class="fa-solid fa-utensils"></i> <a href="">Maridajes</a> </li>
-                <li> <i class="fa-solid fa-martini-glass-citrus"></i> <a href="">Cócteles</a> </li>
-                <li> <i class="fa-solid fa-tags"></i> <a href="">Ofertas</a> </li>
-
-            </ul>
-    </div>
-  </nav> -->
-</header>
+  </header>

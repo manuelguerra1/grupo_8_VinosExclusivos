@@ -14,15 +14,22 @@
                    <img class="avatar-login-img" src="../img/imgs/logo-sin-fondo-1-beige.png"/>
                       <h1 class="login-h1">Logueate aquí</h1>
 
-                      <form action="/processLogin" method="post">
+                      <form action="/processLogin" method="post" class="login-form">
                           <!--Nombre Usuario-->
-                          <label for="nombreUsuario">Ingresá tu nombre de Usuario</label>
-                          <input type="text" placeholder="Enter Username" name="username">
+                          <label for="nombreUsuario">Ingresá tu Correo</label>
+                          <input type="email" placeholder="Enter email" name="email" id="email">
+                            <% if (locals.errors && errors.email) { %>
+                            <p style="color: red"> <%= errors.email.msg %></p>
+                            <% } %>  
+                        
       
                           <!--Password-->
                           <label for="password">Ingresá tu contraseña</label>
-                          <input type="password" placeholder="Enter Password" name="password">
-                          
+                          <input type="password" placeholder="Enter Password" name="password" id="password">
+                          <% if (locals.errors && errors.password) { %>
+                            <p style="color: red"> <%= errors.password.msg %></p>
+                            <% } %>  
+                        
                           <div class="rememberme-login">
                             <input type="checkbox" name="rememberme" id="rememberme"><p>Recordame</p>
                           </div>
@@ -30,7 +37,9 @@
    
                            <!-- PASAR EL INPUT SUBMIT A UN BUTTON SUBMIT -->
                            
-                           <input type="submit" value="Log in"> 
+                        <div>
+                            <button type="submit" value="INICIAR SESIÓN">INICIAR SESIÓN</button>
+                        </div>
                            
                            <!-- PASAR EL INPUT SUBMIT A UN BUTTON SUBMIT -->
                            
@@ -43,7 +52,9 @@
                </div>
             </section>
         </main>
+
         <%- include('../partials/footer') %> 
-        
+        <!-- <script src="/js/loginValidator.js" type="text/javascript"></script> -->
+        <script src="/js/createFunctions.js" type="text/javascript"></script>
     </body>
 </html>

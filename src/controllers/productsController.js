@@ -1,6 +1,5 @@
 const db = require("../database/models");
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+const {validationResult} = require("express-validator");
 
 const productsController = {
     allProduct: async (req, res) => {
@@ -56,20 +55,29 @@ const productsController = {
         } catch (error) {
             res.send(error)
         }
-        // Promise
-
-        // .all([varietal, brand, category, region, origin])
-
-        // .then(([varietal, brand, category, region, origin]) => {
-        //     return res.render('./products/productCreateForm', {
-        //         varietal, brand, category, region, origin
-        //     })
-        // })
-        // .catch(error => res.send(error))
-
     },
 
     store: async (req, res) => {
+         let errors = validationResult(req);
+         //si hay errores los atrapo
+        if (!errors.isEmpty()) {
+
+            let varietal = await db.Varietal.findAll()
+            let brand = await db.Brand.findAll()
+            let category = await db.Category.findAll()
+            let region = await db.Region.findAll()
+            let origin = await db.Origin.findAll()
+
+            return  res.render('./products/productCreateForm', {
+                varietal,
+                brand, 
+                category, 
+                region, 
+                origin, 
+                errors: errors.mapped()
+            })
+        }
+        
         try {
             let newProduct = {
                 "name": req.body.name,
@@ -99,14 +107,6 @@ const productsController = {
         const id = req.params.id
         try {
             let product = await db.Product.findByPk(id)
-            // include: [
-            //     {association:'Varietal'  },
-            //     {association:'Origin'  },
-            //     {association:'Region'  },
-            //     {association:'Brand'  },
-            //     {association:'Category'  }
-            // ]
-            console.log(product);
             let varietal = await db.Varietal.findAll()
             let varietalById = await db.Varietal.findByPk(id)
             let brand = await db.Brand.findAll()
@@ -130,7 +130,39 @@ const productsController = {
     
 
     update: async (req, res) => {
-        console.log(req.body);
+        let errors = validationResult(req);
+        console.log('validationResult',errors);
+         //si hay errores los atrapo
+        if(!errors.isEmpty()) {
+            const id = req.params.id
+            let product = await db.Product.findByPk(id)
+            let varietal = await db.Varietal.findAll()
+            let varietalById = await db.Varietal.findByPk(id)
+            let brand = await db.Brand.findAll()
+            let brandById = await db.Brand.findByPk(id)
+            let category = await db.Category.findAll()
+            let categoryById = await db.Category.findByPk(id)
+            let region = await db.Region.findAll()
+            let regionById = await db.Region.findByPk(id)
+            let origin = await db.Origin.findAll()
+            let originById = await db.Origin.findByPk(id)
+
+            return res.render('./products/productEditForm', {
+                product, 
+                varietal, 
+                varietalById, 
+                brand, 
+                brandById, 
+                category, 
+                categoryById, 
+                region, 
+                regionById, 
+                origin, 
+                originById,
+                errors: errors.mapped()
+            })
+        }
+
         const id = req.params.id
         try {
             await db.Product.update(
@@ -149,7 +181,6 @@ const productsController = {
                 {
                     where: {id: id}
             })
-            // const res = { success: true, data: data, message:"Actualización exitosa!" }
 
             return res.redirect('/productDetail/' + id);
 

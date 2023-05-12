@@ -17,6 +17,10 @@ const mainController = {
         .then(users => {
             res.json({users})
         })
+},
+home2: function (req, res) {
+ 
+  res.render("home2");
 }
   // prueba: async function (req, res) {
   //   try {
