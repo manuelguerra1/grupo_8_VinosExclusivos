@@ -16,41 +16,17 @@ const apiProductController = {
     },
 
     //detail va a aca
-    // detail (req, res) {
-    //     db.Product.findByPk(req.params.id, {include: {association: 'Category'}})
-    //     .then(response => {
-    //         res.status(200).json({
-    //             products: response.map(prod=> productsResponse(prod))
-    //         })
-    //     })
-
-    //     .catch(error=> res.status(500).json('Error: Db_error' + error))
-    // },
-    detail :async(req, res) => {
-        try {
-            let id = req.params.id
-            let producto = await db.Product.findByPk(id, {
-                include: [
-                    {association: 'varietal_id'},
-                    {association: 'origen_id'},
-                    {association: 'region_id'},
-                    {association: 'category_id'},
-                    {association: 'brand_id'}
-                ]
-            })
-            console.log(producto);
+    detail (req, res) {
+        db.Product.findByPk(req.params.id, {include: {association: 'Category'}})
+        .then(response => {
             res.status(200).json({
-                status : 200,
-                data: producto
+                products: response.map(prod=> productsResponse(prod))
             })
-        } catch (error) {
-            res.json({
-                status: 400,
-                error
-            });
-        }
-    
+        })
+
+        .catch(error=> res.status(500).json('Error: Db_error' + error))
     },
+   
 }
 const productsResponse = (prod) => {
     const productsByUrl = {
