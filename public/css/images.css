@@ -59,6 +59,10 @@
     width: 30%;
   }
 
+  table{
+    margin: 15px 0 15px 0;
+  }
+
 /* TABLET */
 @media (min-width: 361px) {
     .container-img{
