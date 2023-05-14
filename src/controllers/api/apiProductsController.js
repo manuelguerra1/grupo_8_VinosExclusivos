@@ -40,4 +40,4 @@ const productsResponse = (prod) => {
     return productsByUrl
 }
 
-module.exports = apiProductController
+module.exports = apiProductController;
