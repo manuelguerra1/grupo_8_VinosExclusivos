@@ -23,3 +23,11 @@
 .container-buttons .btn{
     margin: 5px 0 5px 0;
 }
+
+@media (min-width: 576px) {
+    .button-box{
+        margin: 15px 30px 0 30px;
+        padding-top: 20px;
+    }
+
+}

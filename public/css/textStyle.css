@@ -45,12 +45,34 @@
     font-size: 22px;
 }
 
+.none-media-small{
+    display: none;
+}
 
 /* TABLET */
 @media (min-width: 361px) {
     
     .centered-title{
         padding-bottom: 20PX;
+    }
+
+    .container-subtitle{
+        width: 80%;
+        max-width: 1016px;
+    }
+}
+
+@media (min-width: 576px) {
+    .none-media-medium{
+        display: none;
+      }
+
+      .none-media-small{
+        display: block;
+    }
+
+    .container-subtitle table{
+        max-width: 600px;
     }
 }
 
@@ -61,4 +83,6 @@
         text-align: center;
         width: 60%;
     }
+
+   
 }

@@ -97,8 +97,19 @@
       width: 21rem;
     }
 
-    
+}
 
+@media (min-width: 576px) {
+  .container-img-category img{
+    width: 270px;
+  }
+
+  .top-container{
+    display: flex ;
+    align-items: flex-end;
+    justify-content: space-around;
+    max-width: 1016px;
+  }
 }
 
 /* DESKTOP */
