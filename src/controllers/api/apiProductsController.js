@@ -18,13 +18,8 @@ const apiProductController = {
     //detail va a aca
     detail (req, res) {
         db.Product.findByPk(req.params.id, {include: {association: 'Category'}})
-        .then(response => {
-            res.status(200).json({
-                products: response.map(prod=> productsResponse(prod))
-            })
-        })
-
-        .catch(error=> res.status(500).json('Error: Db_error' + error))
+        .then(response=>res.status(200).json(productsResponse(response)))
+            .catch(error=> res.status(500).json('ERROR: DB_ERROR'+ error))
     },
    
 }
