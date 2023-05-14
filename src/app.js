@@ -45,6 +45,7 @@ app.use(carritoRouter);
 app.use(productsRouter);
 
 app.use(apiProductsRoutes);
+app.use(apiUserRouter);
 app.use((req,res) =>{
     res.status(404).render('404', {
         title: '404'
