@@ -14,7 +14,7 @@ const mainRouter = require("./routers/main");
 const usersRouter = require("./routers/users");
 const carritoRouter = require("./routers/carrito");
 const productsRouter = require("./routers/products");
-
+const apiUserRouter = require("./routers/api/apiUserRoutes")
 const apiProductsRoutes = require("./routers/api/apiProductsRoutes")
 
 app.set('view engine', 'ejs');
