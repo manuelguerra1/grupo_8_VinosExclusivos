@@ -232,18 +232,6 @@ input#image {
 
 
 @media (min-width: 749px) {
-    .reg2-product{
-        margin: 15px 80px;
-        display: flex;
-    }
-    
-    .reg2-product input{
-        width: 100%;
-        padding: 18px 20px;
-        background-color: #292c2b;
-        border: 1px solid #292c2b;
-        border-radius: 0;
-    }
 
     .reg2-image{
         margin: 20px;
