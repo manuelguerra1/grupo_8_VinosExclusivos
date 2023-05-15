@@ -16,7 +16,7 @@ body.reg2-body{
 
 input::placeholder{
     font-size: 15px;
-    color: #ede9e9;
+    color: #777e7c;
 }
 
 .reg2-box{
@@ -146,25 +146,32 @@ main.product2-main{
     border-radius: 4px;
     box-sizing: border-box;
     background-color: #292c2b; /* Cambio del fondo a #777e7c */
-    color: #ede9e9; /* Cambio del color de las letras a #ede9e9 */
+    color: #777e7c; /* Cambio del color de las letras a #ede9e9 */
   }
   
   .select-prod-create option {
     font-size: 16px;
-    color: #ede9e9; /* Cambio del color de las letras de las opciones a #ede9e9 */
+    color: #ffffff; /* Cambio del color de las letras de las opciones a #ede9e9 */
   }
 .reg2-image{
-    margin: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
 }
 
 .reg2-image- h2{
     color: #ede9e9;
+    font-size: 16px;
     margin: 20px;
     
 }
 .prod-img-prod-create-form2 {
+    display: flex;
     color: #ede9e9;
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 10px
   }
 
@@ -231,16 +238,17 @@ main.product2-main{
         border-radius: 0;
     }
 
-    .reg2-imagen{
+    .reg2-image{
         margin: 15px 80px;
+        
     }
     
-    .reg2-imagen h2{
+    .reg2-image h2{
         color: #ede9e9;
         margin: 20px;
     }
     
-    .reg2-imagen input{
+    .reg2-image input{
         width: 100%;
         margin-bottom: 20px;
         padding: 12px 20px;
