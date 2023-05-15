@@ -123,8 +123,10 @@
             <br>
             
             <div class="reg2-image">
+            <h2 class="prod-img-prod-create-form2">Carga la Imágen de producto</h2>
             <label for="image"></label>
-            <h2 class="prod-img-prod-create-form2">Carga la Imágen de producto</h2><input type="file" name="image" id="image">
+            <input type="file" name="image" id="image">
+            
             <% if (locals.errors && locals.errors.image) { %>
                 <p style="color: red;"><%= errors.image.msg %></p>  
              <% } %>
