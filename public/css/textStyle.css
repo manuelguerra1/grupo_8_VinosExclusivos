@@ -74,6 +74,11 @@
     .container-subtitle table{
         max-width: 600px;
     }
+
+    .bottom-container{
+        margin: 0 10px;
+        max-width: 688px;
+    }
 }
 
 /* DESKTOP */

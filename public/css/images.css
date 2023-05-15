@@ -106,9 +106,7 @@
 
   .top-container{
     display: flex ;
-    align-items: flex-end;
-    justify-content: space-around;
-    max-width: 1016px;
+    max-width: 1300px;
   }
 }
 
@@ -132,5 +130,9 @@
 
     .col-center{
       padding: 40px 0px 40px 0px;
+    }
+
+    .top-container{
+      justify-content: space-between;
     }
 }

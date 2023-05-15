@@ -30,3 +30,10 @@
 }
 
 /* d9d1c5 */
+@media (min-width: 361px) {
+    .secondary-dark-background{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
