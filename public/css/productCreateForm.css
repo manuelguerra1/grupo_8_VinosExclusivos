@@ -10,84 +10,253 @@ body{
 }
 
 /* --------------------------------MAIN------------------------------- */
-h4{
-    margin: 17px 20px 4px 20px;
+body.reg2-body{
+    background-color: #191c1b;
 }
 
-div.registroProducto-prod-create-form{
-    background-color: #7b1d46;
-    margin: 20px;
-    padding: 10px;
-    display:flex;
-    flex-direction: column;
+input::placeholder{
+    font-size: 15px;
+    color: #ede9e9;
+}
+
+.reg2-box{
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+main.product2-main{
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: #d9d1c5;
-    text-decoration: underline;
+}
+
+.product2 h1{
+    color: #ede9e9;
+    margin: 50px 20px;
+}
+
+.reg2-name-product{
+    margin: 20px;
+}
+
+.reg2-name-product input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+
+.reg2-description{
+    margin: 20px;
+}
+
+.reg2-description input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+
+.reg2-price{
+    margin: 20px;
+}
+
+.reg2-price input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+.reg2-year{
+    margin: 20px;
+}
+.reg2-year input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+.reg2-varietal{
+    margin: 20px;
+}
+.reg2-varietal input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+.reg2-brand{
+    margin: 20px;
+}
+.reg2-brand input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+.reg2-origen{
+    margin: 20px;
+}
+.reg2-origen input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+.reg2-region{
+    margin: 20px;
+}
+.reg2-region input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+.reg2-category{
+    margin: 20px;
+}
+.reg2-catgory input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+}
+.select-prod-create {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #292c2b;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #292c2b; /* Cambio del fondo a #777e7c */
+    color: #ede9e9; /* Cambio del color de las letras a #ede9e9 */
+  }
+  
+  .select-prod-create option {
+    font-size: 16px;
+    color: #ede9e9; /* Cambio del color de las letras de las opciones a #ede9e9 */
+  }
+.reg2-image{
+    margin: 20px;
+}
+
+.reg2-image- h2{
+    color: #ede9e9;
+    margin: 20px;
+    
+}
+.prod-img-prod-create-form2 {
+    color: #ede9e9;
     font-size: 20px;
+    padding-bottom: 10px
+  }
+
+.reg2-imagen.prod-img-prod-create-form2 input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #777e7c;
+    font-size: 15px;
 }
-
-div.registroProducto-prod-create-form input{
-    border-radius: 5px;
-    width: 70%;
-    padding: 9px;
-    margin: 7px;
-    background-color: #e9dee2;
-    color: #7b1d46;
-    font-weight: bold;
-    border: 2px solid black;
-} 
-
-/* #prod-img-prod-create-form{
-    background-color: #7b1d46;
-} */
-
-div.categories-prod-create-form{
+.reg2-button {
     display: flex;
-    background-color: #e9dee2;
-    color: #7b1d46;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px 10px 10px 10px;
-    margin: 7px ;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sub-btn-reg2 {
+    font-family: "Tillium", sans-serif; /* Fuente Tillium */
+    font-size: 20px; /* Tamaño de fuente de 20px */
+    font-weight: bold; /* Negrita */
+  }
+
+.reg2-button button{
+    padding: 22px 30px;
+    font-size: 15px;
+    background-color: #292c2b;
+    color: #ede9e9;
+    border: 1px solid #292c2b;
+    border-radius: 1px;
+    width: 160px;
 }
 
-div.prodCreate-buttons-prod-create-form button{
-    width: 165px;
-    background-color: #d9d1c5;
-    color: #7b1d46;
-    border: 2px solid black;
-    border-radius: 9px;
-    padding: 10px;
-    margin: 0 10px 20px 10px;
-    opacity: 0.9;
-    font-weight:800;
+.reg2-button button:hover{
+    transition: 500ms;
+    padding: 22px 30px;
+    font-size: 15px;
+    background-color: #8c9a96;
+    color: #ede9e9;
+    border: 1px solid #292c2b;
+    border-radius: 1px;
+    width: 160px;
 }
 
-.select-prod-create{
-    border-radius: 5px;
-    width: 70%;
-    padding: 9px;
-    margin: 7px;
-    background-color: #e9dee2;
-    color: #7b1d46;
-    font-weight: bold;
-    border: 2px solid black;
+.sub-btn-reg2{
+    margin: 15px;
 }
 
-.js-front-prod-create-error{
-    color:#7b1d46;
-    background-color: #d9d1c5;
-    font-weight: bold;
-    font-size: 13px;
-    margin: 8px;
-    text-decoration: underline;
-    text-decoration-color: #d9d1c5;
-    text-transform: uppercase;
-    border: 1px solid #d9d1c5;
-    border-radius: 5px;
-    padding: 3px;
-    width: 50%;
-    max-width: 500px;
+
+
+@media (min-width: 749px) {
+    .reg2-product{
+        margin: 15px 80px;
+        display: flex;
+    }
+    
+    .reg2-product input{
+        width: 100%;
+        padding: 18px 20px;
+        background-color: #292c2b;
+        border: 1px solid #292c2b;
+        border-radius: 0;
+    }
+
+    .reg2-imagen{
+        margin: 15px 80px;
+    }
+    
+    .reg2-imagen h2{
+        color: #ede9e9;
+        margin: 20px;
+    }
+    
+    .reg2-imagen input{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px 20px;
+        background-color: #292c2b;
+        border: 1px solid #292c2b;
+        border-radius: 0;
+    }
+
+    .reg2-button{
+        margin: 15px 80px;
+        display: flex;
+    }
+
+    .sub-btn-reg2{
+        margin-right: 4%;
+    }
+    
+    
 }

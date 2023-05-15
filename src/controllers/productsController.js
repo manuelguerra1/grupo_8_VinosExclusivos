@@ -57,7 +57,7 @@ const productsController = {
         }
     },
 
-  productCreateForm2: async (req, res) => {
+  productCreateForm: async (req, res) => {
         
         try {
             let varietal = await db.Varietal.findAll()
@@ -66,7 +66,7 @@ const productsController = {
             let region = await db.Region.findAll()
             let origin = await db.Origin.findAll()
 
-            return res.render('./products/productCreateForm2', {
+            return res.render('./products/productCreateForm', {
                 varietal, brand, category, region, origin
             })
             
