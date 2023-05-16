@@ -30,7 +30,8 @@ main.product2-main{
 }
 
 .product2 h1{
-    color: #ede9e9;
+    text-align: center;
+    color: #777e7c;;
     margin: 50px 20px;
 }
 
@@ -45,6 +46,7 @@ main.product2-main{
     background-color: #292c2b;
     border: 1px solid #292c2b;
     border-radius: 0;
+    color:#777e7c;
 }
 
 .reg2-description{
@@ -58,6 +60,7 @@ main.product2-main{
     background-color: #292c2b;
     border: 1px solid #292c2b;
     border-radius: 0;
+    color:#777e7c;
 }
 
 .reg2-price{
@@ -71,6 +74,7 @@ main.product2-main{
     background-color: #292c2b;
     border: 1px solid #292c2b;
     border-radius: 0;
+    color:#777e7c;
 }
 .reg2-year{
     margin: 20px;
@@ -83,6 +87,13 @@ main.product2-main{
     border: 1px solid #292c2b;
     border-radius: 0;
 }
+input#year{
+    font-size: 16px;
+    color: #777e7c;;
+    background-color:#292c2b;
+}
+    
+
 .reg2-varietal{
     margin: 20px;
 }
@@ -94,6 +105,11 @@ main.product2-main{
     border: 1px solid #292c2b;
     border-radius: 0;
 }
+
+input#varietal{
+    color:#ede9e9;
+}
+    
 .reg2-brand{
     margin: 20px;
 }
@@ -105,6 +121,10 @@ main.product2-main{
     border: 1px solid #292c2b;
     border-radius: 0;
 }
+input#brand{
+    color:#ede9e9;
+}
+    
 .reg2-origen{
     margin: 20px;
 }
@@ -116,6 +136,11 @@ main.product2-main{
     border: 1px solid #292c2b;
     border-radius: 0;
 }
+option#origen{
+    color:#ede9e9;
+    background-color: #292c2b;
+}
+    
 .reg2-region{
     margin: 20px;
 }
@@ -127,10 +152,15 @@ main.product2-main{
     border: 1px solid #292c2b;
     border-radius: 0;
 }
+option#region{
+    color:#ede9e9;
+    background-color: #292c2b;
+}
+    
 .reg2-category{
     margin: 20px;
 }
-.reg2-catgory input{
+.reg2-category input{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
@@ -138,6 +168,7 @@ main.product2-main{
     border: 1px solid #292c2b;
     border-radius: 0;
 }
+    
 .select-prod-create {
     width: 100%;
     padding: 8px;
@@ -151,7 +182,8 @@ main.product2-main{
   
   .select-prod-create option {
     font-size: 16px;
-    color: #ffffff; /* Cambio del color de las letras de las opciones a #ede9e9 */
+    color: #777e7c;;
+    background-color:#292c2b;
   }
 .reg2-image{
     margin:20px;
