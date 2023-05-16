@@ -1,0 +1,280 @@
+/* -----------------MAIN----------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d9d1c5;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------------------MAIN------------------------------- */
+body.edit-body-product2{
+    background-color: #191c1b;
+}
+
+/* input::placeholder{
+    font-size: 15px;
+    color: #777e7c;
+} */
+
+main.prod-edit-form-main{
+    text-align: center;
+}
+
+.edit2-box{
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+.registroProducto-edit-form2 h1{
+    text-align: center;
+    color: #ede9e9;
+    margin: 50px 20px;
+}
+
+.edit2-name-product{
+    margin: 20px;
+}
+
+.edit2-name-product input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color:#ede9e9;
+}
+
+.edit2-description{
+    margin: 20px;
+}
+
+.edit2-description input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+}
+
+.edit2-price{
+    margin: 20px;
+}
+
+.edit2-price input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+}
+.edit2-year{
+    margin: 20px;
+}
+.edit2-year input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+}
+
+.edit2-varietal{
+    margin: 20px;
+}
+.edit2-varietal input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+}
+
+.edit2-brand{
+    margin: 20px;
+}
+.edit2-brand input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+}
+
+.edit2-origen{
+    margin: 20px;
+}
+.edit2-origen input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+}
+
+.edit2-region{
+    margin: 20px;
+}
+
+.edit2-region input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+}
+.edit2-category{
+    margin: 20px;
+}
+.edit2-category input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+}
+
+.select-prod-edit {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #292c2b;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #292c2b;
+    color: #ede9e9;;
+  }
+  
+  .select-prod-edit option {
+    font-size: 16px;
+    color: #ede9e9;
+  }
+
+.edit2-image{
+    margin:20px;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.edit2-image-product-form2 h2{
+    color: #ede9e9;
+    font-size: 16px; 
+}
+
+.edit2-image-product-form2 {
+    
+    color: #ede9e9;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+.edit2-image-product-form2 input{
+    width: 100%;
+    background-color: #292c2b;
+    border: 1px solid #292c2b;
+    border-radius: 0;
+    color: #ede9e9;
+    font-size: 15px;
+}
+
+input#image {
+    background-color: #292c2b;
+    color: #777e7c;;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+
+.prodEdit-buttons-edit-form2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sub-prodEdit-buttons-edit-form2 {
+    font-family: "Tillium", sans-serif; /* Fuente Tillium */
+    font-size: 20px; /* Tamaño de fuente de 20px */
+    font-weight: bold; /* Negrita */
+  }
+
+.prodEdit-buttons-edit-form2 button{
+    padding: 22px 30px;
+    font-size: 15px;
+    background-color: #292c2b;
+    color: #ede9e9;
+    border: 1px solid #292c2b;
+    border-radius: 1px;
+    width: 160px;
+}
+
+.prodEdit-buttons-edit-form2 button:hover{
+    transition: 500ms;
+    padding: 22px 30px;
+    font-size: 15px;
+    background-color: #8c9a96;
+    color: #ede9e9;
+    border: 1px solid #292c2b;
+    border-radius: 1px;
+    width: 160px;
+}
+
+.sub-prodEdit-buttons-edit-form2{
+    margin: 15px;
+}
+
+
+
+@media (min-width: 749px) {
+    .edit2-image{
+        margin: 20px;  
+    }
+    
+    .edit2-image-product-form2 h2{
+        color: #ede9e9;
+    }
+    
+    .edit2-image input{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px 20px;
+        background-color: #292c2b;
+        border: 1px solid #292c2b;
+        border-radius: 0;
+    }
+
+    .prodEdit-buttons-edit-form2{
+        margin: 15px 80px;
+        display: flex;
+    }
+
+    .sub-prodEdit-buttons-edit-form2{
+        margin-right: 4%;
+    }
+    
+    
+}
