@@ -25,42 +25,42 @@
                 <br>
 
                 <label for="name"></label>
-                <h4>Nombre: </h4><input type="text" name="name" id="name" placeholder="Nombre" required>
+                <h4>Nombre: </h4><input type="text" name="name" id="name" placeholder="Nombre" >
                 <% if (locals.errors && errors.name) { %>
                     <p style="color: red;"><%= errors.name.msg %></p>  
                  <% } %>
                 <br>
     
                 <label for="last-name"></label>
-                <h4>Apellido: </h4><input type="text" name="lastname" id="last-name" placeholder="Apellido" required>
+                <h4>Apellido: </h4><input type="text" name="lastname" id="last-name" placeholder="Apellido" >
                 <% if (locals.errors && errors.lastname) { %>
                     <p style="color: red;"><%= errors.lastname.msg %></p>  
                  <% } %>
                 <br>
     
                 <label for="email"></label>
-                <h4>E-mail: </h4><input type="email" name="email" id="email" placeholder="E-mail" required>
+                <h4>E-mail: </h4><input type="email" name="email" id="email" placeholder="E-mail" >
                 <% if (locals.errors && errors.email) { %>
                     <p style="color: red;"><%= errors.email.msg %></p>  
                  <% } %>
                 <br>
     
                 <label for="user-name"></label>
-                <h4>Nombre de Usuario: </h4><input type="text" name="username" id="user-name" placeholder="Nombre de usuario" required>
+                <h4>Nombre de Usuario: </h4><input type="text" name="username" id="user-name" placeholder="Nombre de usuario" >
                 <% if (locals.errors && errors.username) { %>
                     <p style="color: red;"><%= errors.username.msg %></p>  
                  <% } %>
                 <br>
                 
                 <label for="password"></label>
-                <h4>Contraseña: </h4><input type="password" name="password" id="password" placeholder="Contraseña" required>
+                <h4>Contraseña: </h4><input type="password" name="password" id="password" placeholder="Contraseña" >
                 <% if (locals.errors && errors.password) { %>
                     <p style="color: red;"><%= errors.password.msg %></p>  
                  <% } %>
                 <br>
     
                 <label for="confirm-password"></label>
-                <h4>Confirme Contraseña: </h4><input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña" required>
+                <h4>Confirme Contraseña: </h4><input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña" >
                 <% if (locals.errors && errors.confirmpassword) { %>
                     <p style="color: red;"><%= errors.confirmpassword.msg %></p>  
                  <% } %>
@@ -77,7 +77,7 @@
                 </select>
                 
                 <div class="terms-cond-register">
-                    <input type="checkbox" name="terminos-y-condiciones" id="" required>Acepto las condiciones de uso y políticas de privacidad.
+                    <input type="checkbox" name="terminos-y-condiciones" id="" >Acepto las condiciones de uso y políticas de privacidad.
                 </div>
                 <div class="userRegister-buttons-user-register-form">
                     <button type="submit" value="Crear">GUARDAR</button>    

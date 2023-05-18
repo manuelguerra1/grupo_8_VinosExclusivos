@@ -41,7 +41,7 @@ const usersController = {
     if (!errors.isEmpty()) {
       let rol = await db.Rol.findAll()
       console.log(errors.mapped(), "estoy en el if")
-      return  res.render('./users/register', {
+      return  res.render('./users/register2', {
         rol, 
         errors: errors.mapped(),
         oldBody : req.body
@@ -57,7 +57,7 @@ const usersController = {
         user_name: req.body.username,
         password: bcrypt.hashSync(req.body.password, 10),
         confirm_password: bcrypt.hashSync(req.body.confirmpassword, 10),
-        rol_id: req.body.rol,
+        rol_id: 1,
       };
 const userRegistered = await db.User.findOne({
   where: {email: req.body.email
