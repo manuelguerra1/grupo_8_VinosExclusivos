@@ -96,6 +96,10 @@
         justify-content: center;
     }
 
+    .logo img{
+      width: 25%;
+  }
+
     .container-card{
         justify-content: center
     }
@@ -124,16 +128,6 @@
         justify-content: space-evenly;
         margin: 20px 15%;
       }
-
-    .logo{
-        display: flex;
-        justify-content: left;
-        width: 90%;
-      }
-
-    .logo img{
-        width: 20%;
-    }
 
     .col-center{
       padding: 40px 0px 40px 0px;
