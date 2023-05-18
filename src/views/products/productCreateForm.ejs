@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../css/productCreateForm.css">
     <title>Login</title>
 </head>
-<body>
+<body class="reg2-body">
 <header>
     <div class="top-header">
 
@@ -26,40 +26,47 @@
         </a>
 </header>
 <main>
-    <form class="prod-create-form" method="post" action = "/save" enctype="multipart/form-data">
+    <form class="product2-main" method="post" action = "/save" enctype="multipart/form-data">
         <ul class="errores">
             
         </ul>
-        <div class="registroProducto-prod-create-form">
+        <div class="product2">
+            <div class="reg2-box">
             
-            <h3> CREACIÓN DE PRODUCTOS</h3>
+            <h1>¡Crea Producto!</h1>
 
+            <div class="reg2-name-product">
             <label for="nameproduct"></label>
-            <h4>Nombre del Producto: </h4><input type="text" name="name" id="name" placeholder="Nombre del Producto">
+            <input type="text" name="name" id="name" placeholder="Nombre del Producto">
             <% if (locals.errors && locals.errors.name) { %>
                <p style="color: red;"><%= errors.name.msg %></p>  
             <% } %>
+            </div>
             <br>
             <!-- paso los errores de back a front porque el codigo de frontend se puede llegar manipular -->
-
+            <div class="reg2-description">
             <label for="description"></label>
-            <h4>Descripción: </h4><input type="text" name="description" id="description" placeholder="Descripción">
+            <input type="text" name="description" id="description" placeholder="Descripción">
             <% if (locals.errors && locals.errors.description) { %>
                 <p style="color: red;"><%= errors.description.msg %></p>  
              <% } %>
+            </div>
             <br>
-
+            
+            <div class="reg2-price">
             <label for="price"></label>
-            <h4>Precio: </h4>
             <input type="number" name="price" id="price" placeholder="Precio"><p class="p"></p>
+            </div>
             <br>
 
+            <div class="reg2-year">
             <label for="year"></label>
-            <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" placeholder="Año de Cosecha" ><p class="p"></p>
+            <input type="text" name="year" id="year" placeholder="Año de Cosecha" ><p class="p"></p>
+            </div>
             <br>
             
-            
-            <label for="varietal"><h4>Variedad: </h4></label>
+            <div class="reg2-varietal">
+            <label for="varietal"></label>
             <select class="select-prod-create" name="varietal" id="varietal" >
                 <option value="">Seleccione una variedad:</option>
                 
@@ -68,56 +75,65 @@
                 <% }) %>
                 
             </select><p class="p"></p>
-
+            </div>
             <br>
 
-            <label for="brand"><h4>Marca: </h4></label>
+            <div class="reg2-brand">
+            <label for="brand"></label>
             <select class="select-prod-create" name="brand" id="brand" >
                 <option value="">Seleccione una marca:</option>
                 <% brand.forEach(element => { %>
                     <option value="<%= element.id %>"><%= element.brand_name %></option>
                 <% }) %>
             </select><p class="p"></p>
-            
+            </div>
             <br>
             
-            <label for="origen"> <h4>País de Origen:</h4></label>
+            <div class="reg2-origen">
+            <label for="origen"></label>
                 <select class="select-prod-create" name="origen" id="origen" >
                     <option value="">Seleccione origen:</option>
                     <% origin.forEach(element => { %>
                         <option value="<%= element.id %>"><%= element.country %></option>
                     <% }) %>
                 </select><p class="p"></p>
+            </div>
             </br>
             
-            <label for="region"><h4>Región: </h4></label>
+            <div class="reg2-region">
+            <label for="region"></label>
             <select class="select-prod-create" name="region" id="region" >
                 <option value="">Seleccione una región:</option>
                 <% region.forEach(element => { %>
                     <option value="<%= element.id %>"><%= element.region %></option>
                 <% }) %>
             </select><p class="p"></p>
-
+            </div>
             <br>
             
-            <label for="category"> <h4>Categorías</h4></label>
+            <div class="reg2-category">
+            <label for="category"></label>
                 <select class="select-prod-create" name="category" id="category" >
                     <option value="">Seleccione una categoría:</option>
                     <% category.forEach(element => { %>
                         <option value="<%= element.id %>"><%= element.category_name %></option>
                     <% }) %>
                 </select><p class="p"></p>
+            </div>
             <br>
             
+            <div class="reg2-image">
+            <h2 class="prod-img-prod-create-form2">Carga la Imágen de producto</h2>
             <label for="image"></label>
-            <h4 class="prod-img-prod-create-form">Imágen de producto</h4><input type="file" name="image" id="image">
+            <input type="file" name="image" id="image">
+            
             <% if (locals.errors && locals.errors.image) { %>
                 <p style="color: red;"><%= errors.image.msg %></p>  
              <% } %>
-            
+            </div>
             <br>
-            <div class="prodCreate-buttons-prod-create-form">
-                <button type="submit" value="Crear">CREAR</button>
+            <div class="reg2-button">
+                <button class="sub-btn-reg2" type="submit" value="Crear">CREAR</button>
                 
             </div>
 

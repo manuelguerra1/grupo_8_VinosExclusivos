@@ -14,6 +14,8 @@ const mainRouter = require("./routers/main");
 const usersRouter = require("./routers/users");
 const carritoRouter = require("./routers/carrito");
 const productsRouter = require("./routers/products");
+const apiUserRouter = require("./routers/api/apiUserRoutes")
+const apiProductsRoutes = require("./routers/api/apiProductsRoutes")
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
@@ -41,6 +43,9 @@ app.use(mainRouter);
 app.use(usersRouter);
 app.use(carritoRouter);
 app.use(productsRouter);
+
+app.use(apiProductsRoutes);
+app.use(apiUserRouter);
 app.use((req,res) =>{
     res.status(404).render('404', {
         title: '404'
