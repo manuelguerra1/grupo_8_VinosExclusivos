@@ -1,0 +1,33 @@
+.btn-amount{
+    margin-top: 10px;
+    justify-content: center
+}
+
+.btn-amount button{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.btn-amount input {
+    text-align: center;
+    color: black;
+    margin: 0 5px 0 5px;
+}
+
+.container-buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.container-buttons .btn{
+    margin: 5px 0 5px 0;
+}
+
+@media (min-width: 576px) {
+    .button-box{
+        margin: 15px 30px 0 30px;
+        padding-top: 20px;
+    }
+
+}

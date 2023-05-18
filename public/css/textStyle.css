@@ -12,6 +12,13 @@
     margin: 5px 0 0 0;
 }
 
+.container-subtitle{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 0 15px;
+    padding-left: 5px;    
+}
+
 .centered-paragraph{
     text-align: center;
     width: 90%;
@@ -33,11 +40,44 @@
     list-style: none;
 }
 
+.bold{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.none-media-small{
+    display: none;
+}
+
 /* TABLET */
 @media (min-width: 361px) {
     
     .centered-title{
         padding-bottom: 20PX;
+    }
+
+    .container-subtitle{
+        width: 80%;
+        max-width: 1016px;
+    }
+}
+
+@media (min-width: 576px) {
+    .none-media-medium{
+        display: none;
+      }
+
+      .none-media-small{
+        display: block;
+    }
+
+    .container-subtitle table{
+        max-width: 600px;
+    }
+
+    .bottom-container{
+        margin: 0 10px;
+        max-width: 688px;
     }
 }
 
@@ -48,4 +88,6 @@
         text-align: center;
         width: 60%;
     }
+
+   
 }
