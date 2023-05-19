@@ -1,5 +1,5 @@
 window.addEventListener("load", (e) => {
-    let form = document.querySelector(".prod-create-form");
+    let form = document.querySelector(".product2-main");
     // let ul = document.querySelector(".errores");
     let name = document.getElementById("name");
     let description = document.getElementById("description");
@@ -12,7 +12,7 @@ window.addEventListener("load", (e) => {
     let region = document.getElementById("region");
     let category = document.getElementById("category");
     let paragraph = document.querySelector(".p");
-    let button = document.querySelector('.prodCreate-buttons-prod-create-form')
+    let button = document.querySelector('.sub-btn-reg2')
     //   let campos = [
     //     name,
     //     description,
