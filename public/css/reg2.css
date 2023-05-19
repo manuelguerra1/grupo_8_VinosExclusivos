@@ -1,17 +1,14 @@
 /* -----------------------------REGISTER2----------------------------- */
 body.reg2-body{
-    background-color: #1c1b19;
+    background-color: #312f2d;
 }
 
 
 
 input{
-    color: #fff;
+    color: #fff
 }
 
-input::placeholder{
-    font-size: 15px;
-}
 
 
 .reg2-box{
@@ -38,8 +35,9 @@ main.register2-main{
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #350218;
+    opacity: 0.5;
+    border: 1px solid #350218;
     border-radius: 5px;
 }
 
@@ -51,8 +49,9 @@ main.register2-main{
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #350218;
+    opacity: 0.5;
+    border: 1px solid #350218;
     border-radius: 5px;
 }
 
@@ -64,8 +63,9 @@ main.register2-main{
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #350218;
+    opacity: 0.5;
+    border: 1px solid #350218;
     border-radius: 5px;
 }
 
@@ -82,8 +82,9 @@ main.register2-main{
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #350218;
+    opacity: 0.5;
+    border: 1px solid #350218;
     border-radius: 5px;
     color: #777e7c;
     font-size: 15px;
@@ -122,7 +123,7 @@ main.register2-main{
     background-color: #292c2b;
     color: #ede9e9;
     border: 1px solid #292c2b;
-    border-radius: 1px;
+    border-radius: 5px;
     width: 160px;
     align-items: center;
     justify-content: space-around;
@@ -147,7 +148,7 @@ main.register2-main{
     .reg2-name-lastname input{
         width: 100%;
         padding: 18px 20px;
-        border: 1px solid #292c2b;
+        border: 1px solid #350218;
     }
     
     .reg2-name-lastname input#name{
@@ -166,8 +167,6 @@ main.register2-main{
         width: 100%;
         margin-bottom: 20px;
         padding: 12px 20px;
-        background-color: #292c2b;
-        border: 1px solid #292c2b;
         
     }
     
@@ -179,11 +178,9 @@ main.register2-main{
     .reg2-password-confpassword input{
         width: 100%;
         padding: 18px 20px;
-        background-color: #292c2b;
-        border: 1px solid #292c2b;
         
     }
-
+    
     .reg2-password-confpassword input#password{
         margin-right: 10px;
     }
@@ -205,8 +202,6 @@ main.register2-main{
         width: 100%;
         margin-bottom: 20px;
         padding: 12px 20px;
-        background-color: #292c2b;
-        border: 1px solid #292c2b;
         
     }
     
@@ -239,5 +234,15 @@ input:hover{
     border: 1px solid #292c2b;
     border-radius: 5px;
     width: 160px;
+    
+}
 
+p{
+    color: #6F233F  #A0445D  #CB5C64  #A0445D;
+}
+
+input::placeholder{
+    font-size: 15px;
+    color: #fff;
+    opacity: 1;
 }
