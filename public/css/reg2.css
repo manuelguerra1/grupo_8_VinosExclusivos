@@ -1,11 +1,18 @@
 /* -----------------------------REGISTER2----------------------------- */
 body.reg2-body{
-    background-color: #191c1b;
+    background-color: #1c1b19;
+}
+
+
+
+input{
+    color: #fff;
 }
 
 input::placeholder{
     font-size: 15px;
 }
+
 
 .reg2-box{
     position: relative;
@@ -27,6 +34,7 @@ main.register2-main{
 }
 
 .reg2-name-lastname input{
+    color: #fff;
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
@@ -81,19 +89,18 @@ main.register2-main{
     font-size: 15px;
 }
 
-input#file-upload-button{
-    background-color: #292c2b;
-}
+/* input#file-upload-button{
+    color: #292c2b;
+} */
 
 .reg2-terms-cond-register{
-    margin: 20px;
+    margin: 30px;
     color: #fff;
-    padding: 10px;
-    
 }
 
 .reg2-terms-cond-register:hover{
     text-decoration: underline;
+    transition: 500ms;
 }
 
 .reg2-terms-cond-register input{
@@ -121,16 +128,6 @@ input#file-upload-button{
     justify-content: space-around;
 }
 
-.reg2-button button:hover{
-    transition: 500ms;
-    padding: 22px 30px;
-    font-size: 15px;
-    background-color: #8c9a96;
-    color: #ede9e9;
-    border: 1px solid #292c2b;
-    border-radius: 1px;
-    width: 160px;
-}
 
 .sub-btn-reg2{
     margin: 15px;
@@ -150,19 +147,17 @@ input#file-upload-button{
     .reg2-name-lastname input{
         width: 100%;
         padding: 18px 20px;
-        background-color: #292c2b;
         border: 1px solid #292c2b;
-        border-radius: 0;
     }
-
+    
     .reg2-name-lastname input#name{
         margin-right: 10px;
     }
-
+    
     .reg2-name-lastname input#lastname{
         margin-left: 10px;
     }
-
+    
     .reg2-username-email{
         margin: 10px 80px;
     }
@@ -173,9 +168,9 @@ input#file-upload-button{
         padding: 12px 20px;
         background-color: #292c2b;
         border: 1px solid #292c2b;
-        border-radius: 0;
+        
     }
-
+    
     .reg2-password-confpassword{
         margin: 15px 80px;
         display: flex;
@@ -186,17 +181,17 @@ input#file-upload-button{
         padding: 18px 20px;
         background-color: #292c2b;
         border: 1px solid #292c2b;
-        border-radius: 0;
+        
     }
 
     .reg2-password-confpassword input#password{
         margin-right: 10px;
     }
-
+    
     .reg2-password-confpassword input#confpassword{
         margin-left: 10px;
     }
-
+    
     .reg2-prof-img{
         margin: 15px 80px;
     }
@@ -212,9 +207,9 @@ input#file-upload-button{
         padding: 12px 20px;
         background-color: #292c2b;
         border: 1px solid #292c2b;
-        border-radius: 0;
+        
     }
-
+    
     .reg2-button{
         margin: 15px 80px;
         display: flex;
@@ -227,4 +222,22 @@ input#file-upload-button{
     .del-btn-reg2{
         margin-left: 4%;
     }
+}
+
+input:hover{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: 300ms;
+}
+
+.reg2-button button:hover{
+    transition: 500ms;
+    padding: 26px 4px;
+    font-size: 15px;
+    background-color: #8c9a96;
+    color: #ede9e9;
+    border: 1px solid #292c2b;
+    border-radius: 5px;
+    width: 160px;
+
 }

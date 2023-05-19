@@ -23,17 +23,6 @@ const usersController = {
       res.send(error);
     }
   },
-  register2: async (req, res) => {
-    try {
-      let rol = await db.Rol.findAll();
-
-      return res.render("./users/register2", {
-        rol,
-      });
-    } catch (error) {
-      res.send(error);
-    }
-  },
 
   usersStore: async (req, res) => {
     let errors = validationResult(req);
@@ -41,7 +30,7 @@ const usersController = {
     if (!errors.isEmpty()) {
       let rol = await db.Rol.findAll()
       console.log(errors.mapped(), "estoy en el if")
-      return  res.render('./users/register2', {
+      return  res.render('./users/register', {
         rol, 
         errors: errors.mapped(),
         oldBody : req.body
