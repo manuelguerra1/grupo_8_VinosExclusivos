@@ -1,4 +1,4 @@
-function imgFormat(input, ErrorId) {
+function imgFormatUser(input, ErrorId) {
 
     let extensions = ['.jpg', '.jpeg', '.png', '.gif','.JPG','.JPEG', '.PNG', '.GIF']
     let inputExtension = input.value.substring(input.value.lastIndexOf('.'));
@@ -37,7 +37,7 @@ function imgFormat(input, ErrorId) {
     }
 }
     
-function inputIsNotEmpty (input, registerErrorId) {
+function inputIsNotEmptyUser (input, registerErrorId) {
 
 
     if (input.value == '') {
@@ -77,7 +77,7 @@ function inputIsNotEmpty (input, registerErrorId) {
 } 
 
 
-function inputMinLength (input, length, ErrorId) {
+function inputMinLengthUser (input, length, ErrorId) {
 
 
     if (input.value.length < length) {
@@ -114,7 +114,7 @@ function inputMinLength (input, length, ErrorId) {
     }    
 }
 
-function validateEmail(input, createErrorId){
+function validateEmailUser(input, createErrorId){
                 
     const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 

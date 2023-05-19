@@ -35,7 +35,7 @@ function inputIsNotEmpty (input, createErrorId) {
     }
 
 
-} 
+}
 
 
 function inputMinLength (input, length, createErrorId) {

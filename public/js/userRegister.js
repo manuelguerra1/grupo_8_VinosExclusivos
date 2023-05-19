@@ -17,45 +17,45 @@ window.addEventListener("load", (e) => {
   button.addEventListener("click", (e) => {
     let errors;
     // e.preventDefault()
-    errors = imgFormat(image, "image-error");
+    errors = imgFormatUser(image, "image-error");
     if (!errors) e.preventDefault();
 
-    errors = inputIsNotEmpty(name, "name-error");
+    errors = inputIsNotEmptyUser(name, "name-error");
     if (!errors) e.preventDefault();
-    errors = inputMinLength(name, 2, "name-length-error");
-    if (!errors) e.preventDefault();
-
-    errors = inputIsNotEmpty(lastname, "last-name-error");
-    if (!errors) e.preventDefault();
-    errors = inputMinLength(lastname, 2, "last-name-length-error");
+    errors = inputMinLengthUser(name, 2, "name-length-error");
     if (!errors) e.preventDefault();
 
-    errors = inputIsNotEmpty(email, "email-error");
+    errors = inputIsNotEmptyUser(lastname, "last-name-error");
+    if (!errors) e.preventDefault();
+    errors = inputMinLengthUser(lastname, 2, "last-name-length-error");
     if (!errors) e.preventDefault();
 
-    errors = validateEmail(email, "email-validate-error");
+    errors = inputIsNotEmptyUser(email, "email-error");
     if (!errors) e.preventDefault();
 
-    errors = inputIsNotEmpty(username, "name-error");
-    if (!errors) e.preventDefault();
-    errors = inputMinLength(username, 2, "name-length-error");
+    errors = validateEmailUser(email, "email-validate-error");
     if (!errors) e.preventDefault();
 
-    errors = inputIsNotEmpty(password, "password-error");
+    errors = inputIsNotEmptyUser(username, "name-error");
     if (!errors) e.preventDefault();
-    errors = inputMinLength(password, 8, "password-length-error");
+    errors = inputMinLengthUser(username, 2, "name-length-error");
     if (!errors) e.preventDefault();
 
-    errors = inputIsNotEmpty(confirmpassword, "confirm-password-error");
+    errors = inputIsNotEmptyUser(password, "password-error");
     if (!errors) e.preventDefault();
-    errors = inputMinLength(
+    errors = inputMinLengthUser(password, 8, "password-length-error");
+    if (!errors) e.preventDefault();
+
+    errors = inputIsNotEmptyUser(confirmpassword, "confirm-password-error");
+    if (!errors) e.preventDefault();
+    errors = inputMinLengthUser(
       confirmpassword,
       8,
       "confirm-password-length-error"
     );
     if (!errors) e.preventDefault();
 
-    errors = inputIsNotEmpty(rol, "confirm-rol-error");
+    errors = inputIsNotEmptyUser(rol, "confirm-rol-error");
     if (!errors) e.preventDefault();
   });
 });
