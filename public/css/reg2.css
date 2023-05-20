@@ -1,12 +1,12 @@
 /* -----------------------------REGISTER2----------------------------- */
 body.reg2-body{
-    background-color: #1c1b19;
+    background-color: #201a1b;
 }
 
 
 
 input{
-    color: #fff;
+    color: #ffd9e2;
 }
 
 input::placeholder{
@@ -25,7 +25,7 @@ main.register2-main{
 }
 
 .register2 h1{
-    color: #ede9e9;
+    color: #ffd9e2;
     margin: 50px 20px;
 }
 
@@ -34,12 +34,12 @@ main.register2-main{
 }
 
 .reg2-name-lastname input{
-    color: #fff;
+    color: #ffd9e2;
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 5px;
 }
 
@@ -51,8 +51,8 @@ main.register2-main{
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 5px;
 }
 
@@ -64,8 +64,8 @@ main.register2-main{
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 5px;
 }
 
@@ -82,8 +82,8 @@ main.register2-main{
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 5px;
     color: #777e7c;
     font-size: 15px;
@@ -95,7 +95,7 @@ main.register2-main{
 
 .reg2-terms-cond-register{
     margin: 30px;
-    color: #fff;
+    color: #ffd9e2;
 }
 
 .reg2-terms-cond-register:hover{
@@ -119,8 +119,8 @@ main.register2-main{
     display: flex;
     padding: 26px 4px;
     font-size: 15px;
-    background-color: #292c2b;
-    color: #ede9e9;
+    background-color: #7B2949;
+    color: #ffd9e2;
     border: 1px solid #292c2b;
     border-radius: 1px;
     width: 160px;
@@ -147,7 +147,7 @@ main.register2-main{
     .reg2-name-lastname input{
         width: 100%;
         padding: 18px 20px;
-        border: 1px solid #292c2b;
+        border: 1px solid #ffd9e2;
     }
     
     .reg2-name-lastname input#name{
@@ -166,8 +166,8 @@ main.register2-main{
         width: 100%;
         margin-bottom: 20px;
         padding: 12px 20px;
-        background-color: #292c2b;
-        border: 1px solid #292c2b;
+        background-color: #514346;
+        border: 1px solid #ffd9e2;
         
     }
     
@@ -179,8 +179,8 @@ main.register2-main{
     .reg2-password-confpassword input{
         width: 100%;
         padding: 18px 20px;
-        background-color: #292c2b;
-        border: 1px solid #292c2b;
+        background-color: #514346;
+        border: 1px solid #ffd9e2;
         
     }
 
@@ -205,8 +205,8 @@ main.register2-main{
         width: 100%;
         margin-bottom: 20px;
         padding: 12px 20px;
-        background-color: #292c2b;
-        border: 1px solid #292c2b;
+        background-color: #514346;
+        border: 1px solid #ffd9e2;
         
     }
     
@@ -234,8 +234,8 @@ input:hover{
     transition: 500ms;
     padding: 26px 4px;
     font-size: 15px;
-    background-color: #8c9a96;
-    color: #ede9e9;
+    background-color: #ffd9e2;
+    color: #7B2949;
     border: 1px solid #292c2b;
     border-radius: 5px;
     width: 160px;
