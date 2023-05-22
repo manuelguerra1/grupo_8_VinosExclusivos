@@ -14,6 +14,7 @@ input::placeholder{
 }
 
 
+
 .reg2-box{
     position: relative;
     width: 90%;
@@ -122,7 +123,7 @@ main.register2-main{
     background-color: #7B2949;
     color: #ffd9e2;
     border: 1px solid #292c2b;
-    border-radius: 1px;
+    border-radius: 5px;
     width: 160px;
     align-items: center;
     justify-content: space-around;
@@ -183,7 +184,7 @@ main.register2-main{
         border: 1px solid #ffd9e2;
         
     }
-
+    
     .reg2-password-confpassword input#password{
         margin-right: 10px;
     }
@@ -239,7 +240,7 @@ input:hover{
     border: 1px solid #292c2b;
     border-radius: 5px;
     width: 160px;
-
+    
 }
 
 .js-front-user-register-error{
@@ -255,4 +256,14 @@ input:hover{
     padding: 3px;
     width: 50%;
     max-width: 500px;
+}
+
+p{
+    color: #6F233F  #A0445D  #CB5C64  #A0445D;
+}
+
+input::placeholder{
+    font-size: 15px;
+    color: #fff;
+    opacity: 1;
 }
