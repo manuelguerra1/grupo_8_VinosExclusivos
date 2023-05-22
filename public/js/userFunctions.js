@@ -17,7 +17,7 @@ function imgFormatUser(input, ErrorId) {
         
         error.setAttribute('id', ErrorId)
 
-        error.classList.add('js-front-user-register-error')
+        error.classList.add('js-front-prod-create-error')
         
         input.insertAdjacentElement('afterend', error)
 
@@ -52,9 +52,9 @@ function inputIsNotEmptyUser (input, registerErrorId) {
                 
         error.innerHTML = `El campo no puede estar vacio`
         
-        error.setAttribute('id', ErrorId)
+        error.setAttribute('id', registerErrorId)
 
-        error.classList.add('js-front-user-register-error')
+        error.classList.add('js-front-prod-create-error')
         
         input.insertAdjacentElement('afterend', error)
 
@@ -94,7 +94,7 @@ function inputMinLengthUser (input, length, ErrorId) {
         
         error.setAttribute('id', ErrorId)
 
-        error.classList.add('js-front-user-register-error')
+        error.classList.add('js-front-prod-create-error')
         
         input.insertAdjacentElement('afterend', error)
 

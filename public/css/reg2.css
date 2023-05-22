@@ -241,3 +241,18 @@ input:hover{
     width: 160px;
 
 }
+
+.js-front-user-register-error{
+    color:#7b1d46;
+    background-color: #d9d1c5;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 8px;
+    text-decoration: underline;
+    text-decoration-color: #d9d1c5;
+    border: 1px solid #d9d1c5;
+    border-radius: 5px;
+    padding: 3px;
+    width: 50%;
+    max-width: 500px;
+}

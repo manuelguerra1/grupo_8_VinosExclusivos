@@ -6,6 +6,8 @@
     <%- include('../partials/header2') %> 
     <main class="register2-main">
         <form class="user-register-form" method="post" action = "/userSave"  enctype="multipart/form-data" >
+            <ul class="errores">
+            </ul>
             <div class="register2">
                 <div class="reg2-box">
 
@@ -14,13 +16,13 @@
                     <div class="reg2-name-lastname">
 
                         <label for="name"></label>
-                        <input type="text" name="name" id="name" placeholder="Nombre">
+                        <input type="text" name="name" id="name" placeholder="Nombre"> <p class="p"></p>
                         <% if (locals.errors && errors.name) { %>
                             <p style="color: red;"><%= errors.name.msg %></p>  
                          <% } %>
 
                         <label for="last-name"></label>
-                        <input type="text" name="lastname" id="last-name" placeholder="Apellido">
+                        <input type="text" name="lastname" id="last-name" placeholder="Apellido"> <p class="p"></p>
                         <% if (locals.errors && errors.lastname) { %>
                             <p style="color: red;"><%= errors.lastname.msg %></p>  
                          <% } %>
@@ -30,7 +32,7 @@
                     <div class="reg2-username-email">
 
                         <label for="user-name"></label>
-                        <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" >
+                        <input type="text" name="username" id="user-name" placeholder="Nombre de usuario" > <p class="p"></p>
                         <% if (locals.errors && errors.username) { %>
                             <p style="color: red;"><%= errors.username.msg %></p>  
                          <% } %>
@@ -46,13 +48,13 @@
                     <div class="reg2-password-confpassword">
 
                         <label for="password"></label>
-                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                        <input type="password" name="password" id="password" placeholder="Contraseña"> <p class="p"></p>
                         <% if (locals.errors && errors.password) { %>
                             <p style="color: red;"><%= errors.password.msg %></p>  
                          <% } %>
 
                         <label for="confirm-password"></label>
-                        <input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña">
+                        <input type="password" name="confirmpassword" id="confirm-password" placeholder="Confirmar contraseña"><p class="p"></p>
                         <% if (locals.errors && errors.confirmpassword) { %>
                             <p style="color: red;"><%= errors.confirmpassword.msg %></p>  
                          <% } %>
@@ -62,7 +64,7 @@
                     <div class="reg2-prof-img">
                         <label for="image"></label>
                         <h2>Foto de perfil</h2>
-                        <input type="file" name="avatar" id="image">
+                        <input type="file" name="avatar" id="image"><p class="p"></p>
                         <% if (locals.errors && errors.avatar) { %>
                             <p style="color: red;"><%= errors.avatar.msg %></p>  
                          <% } %>
@@ -88,6 +90,6 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
     <script src="/js/userRegister.js" type="text/javascript"></script>
-    <script src="/js/userFunctions.js" type="text/javascript"></script>
+    <script src="/js/createFunctions.js" type="text/javascript"></script>
 </body>
 </html>
