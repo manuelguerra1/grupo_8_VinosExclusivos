@@ -48,15 +48,12 @@
 
   .logo{
     display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto 0px auto;
-    padding: 20px 0 20px 0;
-    align-items: center;
+    justify-content: start;
+    width: 50%;
   }
 
   .logo img{
-    width: 30%;
+    width: 200px;
   }
 
   table{
@@ -90,15 +87,6 @@
         padding: 5px;
         border-radius: 10px;
     }
-
-    .logo{
-        display: flex;
-        justify-content: center;
-    }
-
-    .logo img{
-      width: 25%;
-  }
 
     .container-card{
         justify-content: center
