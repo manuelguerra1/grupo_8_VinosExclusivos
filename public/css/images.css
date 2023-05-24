@@ -107,6 +107,7 @@
   .top-container{
     display: flex ;
     max-width: 1300px;
+    justify-content: center;
   }
 }
 
