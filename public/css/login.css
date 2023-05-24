@@ -1,3 +1,7 @@
+body.login-body{
+    background-color: #201a1b;
+}
+
 .login-section{
     display: flex;
     align-items: center;
@@ -9,8 +13,8 @@
 .loginBox{
     width: 320px;
     height: 420px;
-    background-color: #770d3b;
-    color: #d9d1c5;
+    background-color: #201a1b;
+    color: #ffd9e2;
     box-sizing: border-box;
     padding: 70px 30px;
     display: flex;
@@ -24,57 +28,72 @@
     border-radius: 50%;
 
 }
-.loginBox h1.login-h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
+.loginBox h2.login-h2{
+    color: #ffd9e2;
+    margin: 20px 0 50px 0;
 }
 .loginBox label{
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
     font-weight: bold;
     display: block;
+    text-align: center;
 }
 .loginBox input{
-    width: 100%;
+    width: 20%;
     margin-bottom: 20px;
 }
 .loginBox input[type="email"],
 .loginBox input[type="password"]{
-    border: none;
-    border-bottom: 1px solid #d9d1c5;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #d9d1c5;
-}
-
-.loginBox .rememberme-login{
-    display: flex;
-    
-}
-
-.loginBox .rememberme-login input{
-    margin-left: 50px;
-}
-
-.loginBox .rememberme-login p{
-    margin-right: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 5px;
 }
 
 .loginBox button[type="submit"]{
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #d9d1c5;
-    color: #770d3b;
-    font-size: 18px;
-    border-radius: 20px;
+    display: flex;
+    margin: 10px auto;
+    padding: 16px 4px;
+    font-size: 15px;
+    background-color: #7B2949;
+    color: #ffd9e2;
+    border: 1px solid #292c2b;
+    border-radius: 5px;
+    width: 160px;
+    align-items: center;
+    justify-content: space-around;
 }
 .loginBox a.login-a{
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
-    color: darkgray;
+    margin:  5px 0;
+}
+
+input:hover{
+    border: 1px solid #ffd9e2;
+    border-radius: 5px;
+    transition: 300ms;
+}
+
+.reg2-button button:hover{
+    transition: 500ms;
+    padding: 26px 4px;
+    font-size: 15px;
+    background-color: #ffd9e2;
+    color: #7B2949;
+    border: 1px solid #292c2b;
+    border-radius: 5px;
+    width: 160px;
+    
+}
+
+.container-login-a{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    align-items: center;
 }
