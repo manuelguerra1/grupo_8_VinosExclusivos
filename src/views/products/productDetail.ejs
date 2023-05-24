@@ -1,68 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%- include('../partials/head2') %> 
 
-<%- include('../partials/head') %> 
 <body>
-    <header>
-        <%- include('../partials/header') %> 
-    </header>
+    <%- include('../partials/header2') %>
 
-    <main>
-
-        <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
-            <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
-                <div class="btn-edit-prod-detail">
-                    <button class="add-menu-prod-detail" type="submit">EDITAR</button>
-                </div>
-            </form>
-            <form class="prod-detail-form"  action="/delete/<%= productId.id %>?_method=DELETE" method="POST">
-                <div class="btn-edit-prod-detail">
-                    <button class="add-menu-prod-detail" type="submit">ELIMINAR</button>
-                </div>
-            </form> <%} %>
-        
-        <section class="products-prod-detail">
-            <div class="productContainer-prod-detail">
-            </section>
-            <div class="product-prod-detail">
-                    <div class="imgProduct-prod-detail"><img src="/img/product/<%= productId.image%>"></div>
-                    <h3 class="prod-name-prod-detail"><%= productId.name %></h3>
-                    <br>
-                    <h2 class="prod-price-prod-detail"><%= productId.price %></h2>
-                    <br>
-                    <form action="/carrito">
-                        <button type="submit"> Agregar al carrito </button>
-                    </form>
-                    <br>
-                    
-                    <h4 class="prod-amount-prod-detail"> Cantidad: </h4> <select name="product-amount" id="">
-                        <option value="one">1</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5</option>
-                    </select>
-                    <p class="desc-prod-detail">Descripción: 
-                        <br>
-                        <%= productId.description %> 
-                        <br>
-                    </p>  
-                    <p class="desc-prod-detail">Variedad:<%= productId.Varietal.varietal_name %> 
-
-                        
-                    </p>
-                    <br>
-                    <p class="desc-prod-detail">Región:<%= productId.Region.region %></p>
-                    <br>
-                    <p class="desc-prod-detail">Origen:<%= productId.Origin.country %></p>
-                    <br>
-                        
-                    <p class="shipping-prod-detail"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
-                    <p class="rules-prod-detail"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+    <div class="opacity-dark-background">
+        <div class="top-container">
+            <!-- Img -->
+            <div class="container-img">
+                <div class="container-img-detail">
+                    <h4 class="none-media-medium centered-title primary-color">Gin Aconcagua</h4>
+                    <img src="/img/product/<%= productId.image%>" alt="...">
                 </div>
             </div>
-        </section>
-    </main>
-    <%- include('../partials/footer') %> 
+            <!--Button box -->
+            <div class="button-box">
+                <div class="container-subtitle">
+                    <h4 class="primary-color none-media-small"><%= productId.name %></h4>
+                    <p class="bold primary-color"><%= productId.price %></p>
+                    <p class="primary-color none-media-small">Llega gratis mañana </p>
+                    <p class="primary-color none-media-small">Retirá gratis a partir de mañana en otros puntos</p>
+                    <a class="primary-color"  data-bs-toggle="modal"  data-bs-target="#staticBackdrop">Ver medios de pagos</a>
+                </div>
+                <div  class="container-buttons d-flex flex-column p-4">
+                    <!-- Amount -->
+                    <select name="amount" id="amount" class="btn btn-outline-primary m-1">
+                        <option value="1">Cantidad: 1 unidad</option>
+                        <option value="2">Cantidad: 2 unidades</option>
+                        <option value="3">Cantidad: 3 unidades</option>
+                        <option value="4">Cantidad: 4 unidades</option>
+                        <option value="5">Cantidad: 5 unidades</option>
+                        <option value="6">Cantidad: 6 unidades</option>
+                    </select>
+                    <!--  -->
+                    <a href="#" class="btn btn-outline-primary m-1">Comprar Ahora</a>
+                    <a href="#" class="btn btn-outline-primary m-1">Agregar al carrito</a>
+                    <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
+                        <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
+                            <div class="btn-edit-prod-detail">
+                                <a class="btn btn-secondary m-1">Editar</a>
+                            </div>
+                        </form>
+                        <form class="prod-detail-form"  action="/delete/<%= productId.id %>?_method=DELETE" method="POST">
+                            <div class="btn-edit-prod-detail">
+                                <a  class="btn btn-secondary m-1">Eliminar</a>
+                            </div>
+                        </form> <%} %>
+
+                </div>
+
+            </div>
+        </div>
+            <!-- Description -->
+                <div class="bottom-container">
+                <div class="line"></div>
+                
+                    <div class="container-subtitle primary-color">
+                        <h5>Características principales</h5>
+                        <ul>
+                            <li><%= productId.Category.category_name %></li>
+                            <li><%= productId.Varietal.varietal_name %></li>
+                            <li>Prohibida su venta a menores de 18 años</li>
+                        </ul>
+                        <h5>Información del producto</h5>
+                        <table>
+                            <tr>
+                                <th>Marca</th>
+                                <td><%= productId.Brand.brand_name %></td>
+                            </tr>
+                            <tr>
+                                <th>Origen</th>
+                                <td><%= productId.Origin.country %></td>
+                            </tr>
+                            <tr>
+                                <th>Región</th>
+                                <td><%= productId.Region.region %></td>
+                            </tr>
+                            <tr>
+                                <th>Categoría</th>
+                                <td><%= productId.Category.category_name %></td>
+                            </tr>
+                            <tr>
+                                <th>Variedad</th>
+                                <td><%= productId.Varietal.varietal_name %></td>
+                            </tr>
+                            <tr>
+                                <th>Año de cosecha</th>
+                                <td><%= productId.year %> </td>
+                            </tr>
+                        </table>
+                        <div class="line none-media-medium"></div>
+                        <h5>Descripción</h5>
+                        <p><%= productId.description %> </p>
+                    </div>
+                </div>
+        </div>  
+    </div>
+
+    <%- include('../partials/footer2') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </body>
 </html>
