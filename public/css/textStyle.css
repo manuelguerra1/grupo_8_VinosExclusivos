@@ -79,6 +79,10 @@
         margin: 0 10px;
         max-width: 688px;
     }
+
+    .box-footer{
+        width: 30%;
+    }
 }
 
 /* DESKTOP */
