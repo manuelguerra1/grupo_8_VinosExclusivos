@@ -48,12 +48,12 @@
 
   .logo{
     display: flex;
-    justify-content: start;
-    width: 50%;
+    width: 80%;
+    margin: 10px;
   }
 
   .logo img{
-    width: 200px;
+    max-width: 100px;
   }
 
   table{
@@ -95,6 +95,7 @@
     .card{
       width: 21rem;
     }
+
 
 }
 
