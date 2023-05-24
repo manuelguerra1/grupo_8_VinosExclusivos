@@ -11384,4 +11384,10 @@ textarea.form-control-lg {
   background-color: #7B2949 !important;
 }
 
+.text-bg-dark {
+  color: #ffd9e2 !important;
+  background-color: #201a1b !important;
+  opacity: 0.9 !important;
+}
+
 /*# sourceMappingURL=bootstrap-custom.css.map */
