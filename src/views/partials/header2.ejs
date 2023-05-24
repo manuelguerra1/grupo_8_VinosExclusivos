@@ -15,14 +15,22 @@
             <li class="nav-item">
               <a class="nav-link" href="/allProduct">Tienda</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login">Inicia sesión</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/register">Registrate</a>
-            </li>
+          <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
+            <li><a class="nav-link" href="/create">Crear producto</a></li>
+            <% } %>
             <li class="nav-item">
               <a class="nav-link" href="/carrito">Carrito</a>
+              <% if (locals.userLogged) { %>
+                <li><a class="nav-link" href="/logout">Cerrar sesión</a></li>
+              <% } else { %>
+                <li><a class="nav-link" href="/login">Inicia sesión</a></li>
+                <li><a class="nav-link" href="/register">Registrate</a></li>
+            <% } %>
+            <% if (locals.userLogged) 
+            { %>
+                <li><a class="nav-link" href="profile">Mi perfil</a></li>
+                <% } 
+                %>
             </li>
           </ul>
         </div>
