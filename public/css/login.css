@@ -30,16 +30,17 @@ body.login-body{
 }
 .loginBox h2.login-h2{
     color: #ede9e9;
-    margin: 20px;
+    margin: 20px 0 50px 0;
 }
 .loginBox label{
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
     font-weight: bold;
     display: block;
+    text-align: center;
 }
 .loginBox input{
-    width: 100%;
+    width: 20%;
     margin-bottom: 20px;
 }
 .loginBox input[type="email"],
@@ -52,22 +53,10 @@ body.login-body{
     border-radius: 5px;
 }
 
-.loginBox .rememberme-login{
-    display: flex;
-    
-}
-
-.loginBox .rememberme-login input{
-    margin-left: 50px;
-}
-
-.loginBox .rememberme-login p{
-    margin-right: 50px;
-}
-
 .loginBox button[type="submit"]{
     display: flex;
-    padding: 26px 4px;
+    margin: 10px auto;
+    padding: 16px 4px;
     font-size: 15px;
     background-color: #7B2949;
     color: #ffd9e2;
@@ -81,11 +70,11 @@ body.login-body{
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
-    color: darkgray;
+    margin:  5px 0;
 }
 
 input:hover{
-    border: 1px solid #fff;
+    border: 1px solid #ffd9e2;
     border-radius: 5px;
     transition: 300ms;
 }
@@ -100,4 +89,11 @@ input:hover{
     border-radius: 5px;
     width: 160px;
     
+}
+
+.container-login-a{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    align-items: center;
 }

@@ -6,7 +6,6 @@ const productValidator = require('../middlewares/productValidator')
 
 //Listar
 router.get('/allProduct', productsController.allProduct);
-// router.get('/productDetail2', productsController.productDetail2);
 
 // Crear
 router.get ('/create', productsController.create);
