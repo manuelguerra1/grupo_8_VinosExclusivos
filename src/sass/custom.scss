@@ -1,11 +1,19 @@
 $primary: #ffd9e2;
 $secondary: #7B2949;
 $dark: #201a1b;
-
+$dark-bg-subtle: #7B2949;
+$navbar-light-color:  $primary;
+$navbar-light-active-color: $primary;
+$navbar-light-icon-color: $primary;
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
   "dark": $dark,
 );
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+
+  @import "../../node_modules/bootstrap/scss/bootstrap";
+
+  .bg-navbar-wine{
+    background-color: $secondary !important;
+}
