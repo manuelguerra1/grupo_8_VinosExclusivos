@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %> 
+<%- include('../partials/head2') %> 
+
 
 <body>
-    <%- include('../partials/header') %>
-    <main>
-        <section class="products-all-prod">
-            <div class="productContainer-all-prod">
-                <ul class="ul-all-prod">
-                    <% products.forEach (product =>  { %>
-                        <!-- LO COMENTO PORQUE NO TIENE NINGUNA FUNCION -->
-                        <!-- <li>
-                            <a href="/products/<%= product.id %>"><%= product.name %></a>
-                        </li> -->
-                        <div class="product-all-prod">
-                            <a href="/productDetail/<%= product.id %>">
-                                <!-- <div class="imgProduct-all-prod"> -->
-                                    <img src="/img/product/<%= product.image%>">
-                                <!-- </div> -->
+    <%- include('../partials/header2') %>
+
+        <!-- Catalogue -->
+        <div class="container-fluid opacity-dark-background">
+            <h2 class="centered-title primary-color">Nuestros productos</h2>
+            <!-- Example Code -->
+            <div class="container-card row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+                <% products.forEach (product =>  { %>
+                <div class="col col-center">
+                    <div class="card text-bg-secondary" >
+                        <div class="card-body text-center">
+                            <a href="/productDetail2">
+                                <img src="/img/product/<%= product.image%>" class="card-img-top"
+                                alt="...">
                             </a>
-                            <h3 class="prod-name-all-prod">
-                                <%= product.name %>
-                            </h3>
-                            <p class="prev-price-all-prod">
-                                <span class="previous-price-all-prod">$10.000</span>
-                            </p>
-                            <h2 class="prod-price-all-prod"><%= product.price %></h2>
-                            <button class="add-cart-all-prod" type="submit"> Agregar al carrito </button>
-                            <h4 class="prod-amount-all-prod"> Cantidad: </h4> <select name="product-amount" id="">
-                                <option value="one">1</option>
-                                <option value="two">2</option>
-                                <option value="three">3</option>
-                                <option value="four">4</option>
-                                <option value="five">5</option>
-                            </select>
-
-                            <p class="country-all-prod"> <img class="country-icon-all-prod" src="../img/icons/icono-AR-48.png"
-                                alt="bandera-pais"><%= product.origen %> <%= product.region %></p>
-                            <p class="shipping-all-prod"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
-                            <p class="rules-all-prod"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS
-                            </p>
-
+                            <h5 class="card-title primary-color"><%= product.name %></h5>
+                            <p class="card-text primary-color"><%= product.description %></p>
+                            <div class="line"></div>
+                            <p class="bold primary-color"><%= product.price %></p>
+                            <a href="#" class="btn btn-outline-primary">Agregar al carrito</a>
+                            <!-- amount -->
+                            <div class="d-flex justify-content-evenly btn-amount btn">
+                                <button type="button" class="btn btn-outline-primary col-2">-</button>
+                                <input type="text" id="amount" class="btn btn-outline-primary col-4">
+                                <button type="button" class="btn btn-outline-primary col-2">+</button>
+                            </div>
                         </div>
-                    <% }) %>
-                </ul>
+                    </div>
+                </div>      
+                <% }) %>
             </div>
-        </section>
-    </main>
-    <%- include('../partials/footer') %>
+            <!-- End Example Code -->
 
+        </div>
 
+        <%- include('../partials/footer2') %>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+                crossorigin="anonymous"></script>
 </body>
+
+<body class="">
 
 </html>
