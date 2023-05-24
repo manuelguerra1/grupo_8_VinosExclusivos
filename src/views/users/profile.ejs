@@ -2,38 +2,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %> 
+<%- include('../partials/head2') %> 
 <body>
 
-    <%- include('../partials/header') %> 
-    <hr>
-    <main class="profile-view">
-            <h3 class="profile-h3"> MI PERFIL </h3>
-            <br>
+    <%- include('../partials/header2') %> 
+    <main class="opacity-dark-background">
+            <div class="centered-title">
+                <h3 class="primary-color"> MI PERFIL </h3>
+            </div>
+            <div>
             <div class="profile-section">
                 <div class="profile-img">
                     <img class="profile-img" src="/img/user/<%= user.avatar%>" id="avatar">
                 </div>
-                <br>
-                <!-- Revisar css -->
-                <div class="profile-info">
-                    <span class="profile-span">Hola <%= user.name %> <%= user.last_name %>!</span>
-                <br>
-    
-                <span class="profile-span">Tu usuario es: <%= user.user_name %></span>
-                <br>
-                <span class="profile-span">Tu email: <%= user.email %></span>
-                <br>
-                <div class="category"> Categoría: <%= user.rol_id %> </div>
-                <br>
-                <form action="/userEdit/<%= user.id %>"><button type="submit">Editar</button></form>
+                
+                <div class="container-user">
+                    <div class="profile-info">
+                        <p class="left-paragraph primary-color">Nombre y Apellido: <%= user.name %> <%= user.last_name %></p>
+                        <p class="left-paragraph primary-color">Usuario: <%= user.user_name %></p>
+                        <p class="left-paragraph primary-color">Email: <%= user.email %></p>
+                    </div>
+                    <div class="container-btn">
+                        <form action="/userEdit/<%= user.id %>"><button class="btn btn-secondary" type="submit">Editar</button></form>
+                    </div>
                 </div>
             </div>
+            
                 
 
                 
     </main>
 
-    <%- include('../partials/footer') %> 
+    <%- include('../partials/footer2') %> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 </body>
 </html>

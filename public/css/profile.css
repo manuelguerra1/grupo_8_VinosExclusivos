@@ -8,7 +8,6 @@ h3.profile-h3{
     text-align: center;
     color: #7b1d46;
     font-size: 40px;
-    text-decoration: underline;
 }
 
 img.profile-img{
@@ -21,7 +20,6 @@ img.profile-img{
 }
 
 div.profile-img{
-    background-color: #d9d1c5;
     width: 300px;
     align-self: center;
     padding: 5px;
@@ -30,17 +28,26 @@ div.profile-img{
 }
 
 div.profile-info{
-    background-color: #d9d1c5;
+    background-color: #201a1b;
+    opacity: 0.98;
     width: 300px;
     align-self: center;
     padding: 5px;
     margin: 10px;
-    border: 2px solid #7b1d46;
     border-radius: 6px;
 }
 
 span.profile-span{
     text-align: center;
-    font-size: 25px;
-    color: #7b1d46;
+    font-size: 20px;
+    color: #ffd9e2;
+}
+
+.profile-view{
+    background-color: #201a1b;
+}
+
+.container-btn{
+    display: flex;
+    justify-content: center;
 }
