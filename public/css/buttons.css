@@ -14,12 +14,6 @@
     margin: 0 5px 0 5px;
 }
 
-.container-buttons{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-}
-
 .container-buttons .btn{
     margin: 5px 0 5px 0;
 }

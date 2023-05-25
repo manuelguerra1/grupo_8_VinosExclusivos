@@ -1,4 +1,4 @@
-function imgFormat(input, ErrorId) {
+function imgFormatUser(input, ErrorId) {
 
     let extensions = ['.jpg', '.jpeg', '.png', '.gif','.JPG','.JPEG', '.PNG', '.GIF']
     let inputExtension = input.value.substring(input.value.lastIndexOf('.'));
@@ -17,7 +17,7 @@ function imgFormat(input, ErrorId) {
         
         error.setAttribute('id', ErrorId)
 
-        error.classList.add('js-front-user-register-error')
+        error.classList.add('js-front-prod-create-error')
         
         input.insertAdjacentElement('afterend', error)
 
@@ -37,7 +37,7 @@ function imgFormat(input, ErrorId) {
     }
 }
     
-function inputIsNotEmpty (input, registerErrorId) {
+function inputIsNotEmptyUser (input, registerErrorId) {
 
 
     if (input.value == '') {
@@ -52,9 +52,9 @@ function inputIsNotEmpty (input, registerErrorId) {
                 
         error.innerHTML = `El campo no puede estar vacio`
         
-        error.setAttribute('id', ErrorId)
+        error.setAttribute('id', registerErrorId)
 
-        error.classList.add('js-front-user-register-error')
+        error.classList.add('js-front-prod-create-error')
         
         input.insertAdjacentElement('afterend', error)
 
@@ -77,7 +77,7 @@ function inputIsNotEmpty (input, registerErrorId) {
 } 
 
 
-function inputMinLength (input, length, ErrorId) {
+function inputMinLengthUser (input, length, ErrorId) {
 
 
     if (input.value.length < length) {
@@ -94,7 +94,7 @@ function inputMinLength (input, length, ErrorId) {
         
         error.setAttribute('id', ErrorId)
 
-        error.classList.add('js-front-user-register-error')
+        error.classList.add('js-front-prod-create-error')
         
         input.insertAdjacentElement('afterend', error)
 
@@ -114,7 +114,7 @@ function inputMinLength (input, length, ErrorId) {
     }    
 }
 
-function validateEmail(input, createErrorId){
+function validateEmailUser(input, createErrorId){
                 
     const validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 

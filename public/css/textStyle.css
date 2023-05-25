@@ -26,6 +26,14 @@
     padding: 0 20px;
 }
 
+.left-paragraph{
+    text-align: left;
+    width: 90%;
+    margin: 0px auto 10px auto;
+    padding: 0 20px;
+}
+
+
 .container-list{
     text-align: center;
     margin: 20px auto 20px auto;
@@ -76,8 +84,12 @@
     }
 
     .bottom-container{
-        margin: 0 10px;
+        margin: auto;
         max-width: 688px;
+    }
+
+    .box-footer{
+        width: 30%;
     }
 }
 

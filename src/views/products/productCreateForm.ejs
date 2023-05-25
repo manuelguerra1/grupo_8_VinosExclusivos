@@ -37,7 +37,7 @@
 
             <div class="reg2-name-product">
             <label for="nameproduct"></label>
-            <input type="text" name="name" id="name" placeholder="Nombre del Producto">
+            <input type="text" name="name" id="name" placeholder="Nombre del Producto"> <p class="p"></p>
             <% if (locals.errors && locals.errors.name) { %>
                <p style="color: red;"><%= errors.name.msg %></p>  
             <% } %>
@@ -46,7 +46,7 @@
             <!-- paso los errores de back a front porque el codigo de frontend se puede llegar manipular -->
             <div class="reg2-description">
             <label for="description"></label>
-            <input type="text" name="description" id="description" placeholder="Descripción">
+            <input type="text" name="description" id="description" placeholder="Descripción"><p class="p"></p>
             <% if (locals.errors && locals.errors.description) { %>
                 <p style="color: red;"><%= errors.description.msg %></p>  
              <% } %>
@@ -123,10 +123,16 @@
             <br>
             
             <div class="reg2-image">
+<<<<<<< HEAD
                 <label for = "image"></label>
                 <h2>Carga la Imágen de producto</h2>
             
             <input type="file" name="image" id="image">
+=======
+            <h2 class="prod-img-prod-create-form2">Carga la Imágen de producto</h2>
+            <label for="image"></label>
+            <input type="file" name="image" id="image"><p class="p"></p>
+>>>>>>> 3a024039886cb025c49c8c576dca01f081453e50
             
             <% if (locals.errors && locals.errors.image) { %>
                 <p style="color: red;"><%= errors.image.msg %></p>  

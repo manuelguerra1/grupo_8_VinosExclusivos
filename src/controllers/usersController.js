@@ -46,7 +46,7 @@ const usersController = {
         user_name: req.body.username,
         password: bcrypt.hashSync(req.body.password, 10),
         confirm_password: bcrypt.hashSync(req.body.confirmpassword, 10),
-        rol_id: req.body.rol,
+        rol_id: 1,
       };
 const userRegistered = await db.User.findOne({
   where: {email: req.body.email

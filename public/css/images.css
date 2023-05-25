@@ -48,15 +48,12 @@
 
   .logo{
     display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto 0px auto;
-    padding: 20px 0 20px 0;
-    align-items: center;
+    width: 80%;
+    margin: 10px;
   }
 
   .logo img{
-    width: 30%;
+    max-width: 100px;
   }
 
   table{
@@ -91,15 +88,6 @@
         border-radius: 10px;
     }
 
-    .logo{
-        display: flex;
-        justify-content: center;
-    }
-
-    .logo img{
-      width: 25%;
-  }
-
     .container-card{
         justify-content: center
     }
@@ -107,6 +95,7 @@
     .card{
       width: 21rem;
     }
+
 
 }
 
@@ -118,6 +107,8 @@
   .top-container{
     display: flex ;
     max-width: 1300px;
+    justify-content: center;
+    margin: auto;
   }
 }
 
@@ -131,9 +122,5 @@
 
     .col-center{
       padding: 40px 0px 40px 0px;
-    }
-
-    .top-container{
-      justify-content: space-between;
     }
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %> 
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <section class="products-all-prod">
+            <div class="productContainer-all-prod">
+                <ul class="ul-all-prod">
+                    <% products.forEach (product =>  { %>
+                        <!-- LO COMENTO PORQUE NO TIENE NINGUNA FUNCION -->
+                        <!-- <li>
+                            <a href="/products/<%= product.id %>"><%= product.name %></a>
+                        </li> -->
+                        <div class="product-all-prod">
+                            <a href="/productDetail/<%= product.id %>">
+                                <!-- <div class="imgProduct-all-prod"> -->
+                                    <img src="/img/product/<%= product.image%>">
+                                <!-- </div> -->
+                            </a>
+                            <h3 class="prod-name-all-prod">
+                                <%= product.name %>
+                            </h3>
+                            <p class="prev-price-all-prod">
+                                <span class="previous-price-all-prod">$10.000</span>
+                            </p>
+                            <h2 class="prod-price-all-prod"><%= product.price %></h2>
+                            <button class="add-cart-all-prod" type="submit"> Agregar al carrito </button>
+                            <h4 class="prod-amount-all-prod"> Cantidad: </h4> <select name="product-amount" id="">
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                                <option value="five">5</option>
+                            </select>
+
+                            <p class="country-all-prod"> <img class="country-icon-all-prod" src="../img/icons/icono-AR-48.png"
+                                alt="bandera-pais"><%= product.origen %> <%= product.region %></p>
+                            <p class="shipping-all-prod"> <i class="fa-solid fa-box-open"></i> Envíos a todo el país</p>
+                            <p class="rules-all-prod"> <i class="fa-solid fa-lock"></i> PROHIBIDA SU VENTA A MENORES DE 18 AÑOS
+                            </p>
+
+                        </div>
+                    <% }) %>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+
+
+</body>
+
+</html>
