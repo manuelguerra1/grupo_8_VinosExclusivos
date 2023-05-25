@@ -11,12 +11,12 @@ body{
 
 /* --------------------------------MAIN------------------------------- */
 body.reg2-body{
-    background-color: #191c1b;
+    background-color: #201a1b;
 }
 
 input::placeholder{
     font-size: 15px;
-    color: #777e7c;
+    color: #ffd9e2;
 }
 
 .reg2-box{
@@ -31,7 +31,7 @@ main.product2-main{
 
 .product2 h1{
     text-align: center;
-    color: #777e7c;;
+    color: #ffd9e2;
     margin: 50px 20px;
 }
 
@@ -43,10 +43,10 @@ main.product2-main{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
-    color:#777e7c;
+    color:#ffd9e2;
 }
 
 .reg2-description{
@@ -57,10 +57,10 @@ main.product2-main{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
-    color:#777e7c;
+    color:#ffd9e2;
 }
 
 .reg2-price{
@@ -71,10 +71,10 @@ main.product2-main{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
-    color:#777e7c;
+    color:#ffd9e2;
 }
 .reg2-year{
     margin: 20px;
@@ -83,14 +83,14 @@ main.product2-main{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
 }
 input#year{
     font-size: 16px;
-    color: #777e7c;;
-    background-color:#292c2b;
+    color: #ffd9e2;;
+    background: color #201a1b;;
 }
     
 
@@ -101,13 +101,13 @@ input#year{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
 }
 
 input#varietal{
-    color:#ede9e9;
+    color:#ffd9e2;
 }
     
 .reg2-brand{
@@ -117,8 +117,8 @@ input#varietal{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
 }
 input#brand{
@@ -132,13 +132,13 @@ input#brand{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
 }
 option#origen{
     color:#ede9e9;
-    background-color: #292c2b;
+    background-color: #201a1b;
 }
     
 .reg2-region{
@@ -148,13 +148,13 @@ option#origen{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
 }
 option#region{
-    color:#ede9e9;
-    background-color: #292c2b;
+    color:#ffd9e2;
+    background-color: #514346;
 }
     
 .reg2-category{
@@ -164,8 +164,8 @@ option#region{
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 0;
 }
     
@@ -173,56 +173,42 @@ option#region{
     width: 100%;
     padding: 8px;
     font-size: 16px;
-    border: 1px solid #292c2b;
+    border: 1px solid #ffd9e2;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: #292c2b; /* Cambio del fondo a #777e7c */
-    color: #777e7c; /* Cambio del color de las letras a #ede9e9 */
+    background-color: #514346; /* Cambio del fondo a #777e7c */
+    color: #ffd9e2 /* Cambio del color de las letras a #ede9e9 */
   }
   
   .select-prod-create option {
     font-size: 16px;
-    color: #777e7c;;
-    background-color:#292c2b;
+    color: #ffd9e2;;
+    background-color:#514346;
   }
 .reg2-image{
-    margin:20px;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
-    border-radius: 0;
-    box-sizing: border-box;
+    margin: 20px;
 }
-
-.reg2-image- h2{
-    color: #ede9e9;
-    font-size: 16px;
+.reg2-image h2{
+    color: #ffd9e2;
+    font-size: 15px;
+    padding-bottom: 10;
+    text-align: left;
    
     
 }
-.prod-img-prod-create-form2 {
-    display: flex;
-    color: #ede9e9;
-    font-size: 18px;
-    padding: 10px;
-     box-sizing: border-box;
-  }
-
-.reg2-imagen.prod-img-prod-create-form2 input{
+.reg2-image input{
     width: 100%;
-    background-color: #292c2b;
-    border: 1px solid #292c2b;
-    border-radius: 0;
-    color: #ede9e9;
+    margin-bottom: 20px;
+    padding: 12px 20 px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 5px;
+    color: #ffd9e2;
     font-size: 15px;
 }
-input#image {
+
+
    
-    background-color: #292c2b;
-    color: #777e7c;;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-  }
 
 .reg2-button {
     display: flex;
@@ -239,8 +225,8 @@ input#image {
 .reg2-button button{
     padding: 22px 30px;
     font-size: 15px;
-    background-color: #292c2b;
-    color: #ede9e9;
+    background-color: #7B2949;
+    color: #ffd9e2;
     border: 1px solid #292c2b;
     border-radius: 1px;
     width: 160px;
@@ -250,9 +236,9 @@ input#image {
     transition: 500ms;
     padding: 22px 30px;
     font-size: 15px;
-    background-color: #8c9a96;
-    color: #ede9e9;
-    border: 1px solid #292c2b;
+    background-color: #514346;
+    color: #ffd9e2;
+    border: 1px solid #201a1b;
     border-radius: 1px;
     width: 160px;
 }
@@ -271,7 +257,7 @@ input#image {
     }
     
     .reg2-image h2{
-        color: #ede9e9;
+        color: #ffd9e2;
       
     }
     
@@ -279,8 +265,8 @@ input#image {
         width: 100%;
         margin-bottom: 20px;
         padding: 12px 20px;
-        background-color: #292c2b;
-        border: 1px solid #292c2b;
+        background-color: #514346;
+        border: 1px solid #ffd9e2;
         border-radius: 0;
     }
 
@@ -292,6 +278,14 @@ input#image {
     .sub-btn-reg2{
         margin-right: 4%;
     }
+    p{
+        color: #6F233F  #A0445D  #CB5C64  #A0445D;
+    }
     
+    input::placeholder{
+        font-size: 15px;
+        color: #ffd9e2;
+        opacity: 1;
+    }   
     
 }
