@@ -1,72 +1,288 @@
 /* -----------------MAIN----------------- */
 
-div.registroProducto-edit-form{
-    background-color: #7b1d46;
-    margin: 20px;
-    padding: 10px;
-    display:flex;
-    flex-direction: column;
-    text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #201a1b;
     align-items: center;
     justify-content: center;
-    color: #d9d1c5;
-    text-decoration: underline;
-    font-size: 20px;
 }
 
-div.registroProducto-edit-form input{
-    border-radius: 5px;
-    width: 70%;
-    padding: 9px;
-    margin: 7px;
-    background-color: #e9dee2;
-    color: #7b1d46;
-    font-weight: bold;
-    border: 2px solid black;
-} 
+/* --------------------------------MAIN------------------------------- */
+body.edit-body-product2{
+    background-color: #201a1b;
+}
 
-div.prodEdit-buttons-edit-form button{
-    font-weight: bold;
-    font-size: 15px;
-    padding: 4px;
-    margin: 15px;
-    background-color: #d9d1c5;
-    color: #7b1d46;
-    border: 1px solid black;
+main.prod-edit-form-main{
+    text-align: center;
+}
+
+.edit2-box{
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+.registroProducto-edit-form2 h1{
+    text-align: center;
+    color: #ffd9e2;
+    margin: 90px 20px;
+    font-size: 32px;
+    /* font-family: lato sans-serif; */
+}
+
+.edit2-name-product{
+    margin: 20px;
+}
+
+.edit2-name-product input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color:#ffd9e2;
+}
+
+.edit2-description{
+    margin: 20px;
+}
+
+.edit2-description input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+}
+
+.edit2-price{
+    margin: 20px;
+}
+
+.edit2-price input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+}
+.edit2-year{
+    margin: 20px;
+}
+.edit2-year input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+}
+
+.edit2-varietal{
+    margin: 20px;
+}
+.edit2-varietal input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+}
+
+.edit2-brand{
+    margin: 20px;
+}
+.edit2-brand input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+}
+
+.edit2-origen{
+    margin: 20px;
+}
+.edit2-origen input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+}
+
+.edit2-region{
+    margin: 20px;
+}
+
+.edit2-region input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+}
+.edit2-category{
+    margin: 20px;
+}
+.edit2-category input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+}
+
+.select-prod-edit {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
     border-radius: 4px;
+    box-sizing: border-box;
+    color: #ffd9e2;;
+  }
+  
+  .select-prod-edit option {
+    font-size: 16px;
+    color: #ffd9e2;
+  }
+
+.edit2-image{
+    /* display: flex;
+    flex-direction: column; */
+    margin:20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    box-sizing: border-box;
 }
 
-img.edit-form-img-edit-form{
-    margin-top: 10px;
-    height: 300px;
-    width: 110px;
+.edit2-image-product-form2 h2{
+    color: #ffd9e2;
+    font-size: 16px; 
 }
 
-.select-prod-edit{
-    border-radius: 5px;
-    width: 70%;
-    padding: 9px;
-    margin: 7px;
-    background-color: #e9dee2;
-    color: #7b1d46;
-    font-weight: bold;
-    border: 2px solid black;
+.edit2-image-product-form2 {
+    text-align: center;
+    color: #ffd9e2;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* .edit-form-img-edit-form img{
+    justify-content: center;
+  } */
+
+
+.edit2-image-product-form2 input{
+    width: 100%;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 0;
+    color: #ffd9e2;
+    font-size: 15px;
+}
+
+input#image {
+    background-color: #514346;
+    color: #ffd9e2;
+    border: 1px solid #ffd9e2;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+
+.prodEdit-buttons-edit-form2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sub-prodEdit-buttons-edit-form2 {
+    font-family: "Tillium", sans-serif; /* Fuente Tillium */
+    font-size: 20px; /* Tamaño de fuente de 20px */
+    font-weight: bold; /* Negrita */
+  }
+
+.prodEdit-buttons-edit-form2 button{
+    padding: 22px 30px;
+    font-size: 15px;
+    background-color: #7b2949;
+    border: 1px solid #292c2b;
+    color: #ffd9e2;
+    border-radius: 1px;
+    width: 160px;
+}
+
+.prodEdit-buttons-edit-form2 button:hover{
+    transition: 500ms;
+    padding: 22px 30px;
+    font-size: 15px;
+    background-color: #514346;
+    border: 1px solid #201a1b;
+    color: #ffd9e2;
+    border-radius: 1px;
+    width: 160px;
+}
+
+.sub-prodEdit-buttons-edit-form2{
+    margin: 15px;
+}
+
+.grupo2{
+    text-align: center;
 }
 
 
+@media (min-width: 749px) {
+    .edit2-image{
+        margin: 20px;  
+    }
+    
+    .edit2-image-product-form2 h2{
+        color: #ffd9e2;
+    }
+    
+    .edit2-image input{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px 20px;
+        background-color: #514346;
+        border: 1px solid #ffd9e2;
+        border-radius: 0;
+    }
 
-.js-front-prod-edit-error{
-    color:#7b1d46;
-    background-color: #d9d1c5;
-    font-weight: bold;
-    font-size: 13px;
-    margin: 8px;
-    text-decoration: underline;
-    text-decoration-color: #d9d1c5;
-    text-transform: uppercase;
-    border: 1px solid #d9d1c5;
-    border-radius: 5px;
-    padding: 3px;
-    width: 50%;
-    max-width: 500px;
+    .prodEdit-buttons-edit-form2{
+        margin: 15px 80px;
+        display: flex;
+    }
+
+    .sub-prodEdit-buttons-edit-form2{
+        margin-right: 4%;
+    }
+    
+    
 }

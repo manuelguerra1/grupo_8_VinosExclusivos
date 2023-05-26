@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %>
+<%- include('../partials/head2') %>
 
-    <body>
-
-
-        <%- include('../partials/header') %>
+    <body class="edit-body-product2">
+        <%- include('../partials/header2') %>
             <main>
-                <form class="prod-edit-form" method="post" action="/modify/<%= product.id %>?_method=PUT">
+                <form class="prod-edit-form-main" method="post" action="/modify/<%= product.id %>?_method=PUT">
                     <ul class="errores">
             
                     </ul>
-                    <div class="registroProducto-edit-form">
-                        <h3> EDICIÓN DE PRODUCTOS</h3>
+                    <div class="registroProducto-edit-form2">
+                        <div class="edit2-box">
 
+                        <h1>EDITAR PRODUCTO</h1>
+
+                        <div class="edit2-name-product">
                         <label for="nameproduct"></label>
-                        <h4>Nombre del Producto: </h4><input type="text" name="name" id="name"
+                        <input type="text" name="name" id="name"
                             value="<%= product.name %>"><p class="p"></p>
                             <% if (locals.errors && locals.errors.name) { %>
                                 <p style="color: red;"><%= errors.name.msg %></p>  
                              <% } %>
+                        </div>
                         <br>
                         <!-- paso los errores de back a front porque el codigo de frontend se puede llegar manipular -->
 
-
+                        <div class="edit2-description">
                         <label for="description"></label>
-                        <h4>Descripción: </h4><input type="text" name="description" id="description"
+                        <input type="text" name="description" id="description"
                             value="<%= product.description %>"><p class="p"></p>
                             <% if (locals.errors && locals.errors.description) { %>
                                 <p style="color: red;"><%= errors.description.msg %></p>  
                              <% } %>
+                        </div>
                         <br>
 
+                        <div class="edit2-price">
                         <label for="price"></label>
-                        <h4>Precio: </h4>
                         <input type="number" name="price" id="price" value="<%= product.price %>"><p class="p"></p>
+                        </div>
                         <br>
 
+                        <div class="edit2-year">
                         <label for="year"></label>
-                        <h4>Año de Cosecha: </h4><input type="text" name="year" id="year" value="<%= product.year %>"><p class="p"></p>
+                        <input type="text" name="year" id="year" value="<%= product.year %>"><p class="p"></p>
+                        </div>
                         <br>
 
-                        <label for="varietal"><h4>Variedad: </h4></label>
+                        <div class="edit2-varietal">
+                        <label for="varietal"></label>
                         <select class="select-prod-edit" name="varietal" id="varietal" >
                             <!-- <option selected disabled>Seleccione una variedad:</option> -->
                             
@@ -61,9 +68,11 @@
                                 <% }) %>
 
                         </select><p class="p"></p>
+                        </div>
                         <br>
 
-                        <label for="brand"><h4>Marca: </h4></label>
+                        <div class="edit2-brand">
+                        <label for="brand"></label>
                         <select class="select-prod-edit" name="brand" id="brand" >
                             <option disabled selected>Seleccione una marca:</option>
                             
@@ -78,10 +87,11 @@
                                 
                             <% }) %>
                         </select><p class="p"></p>
-                        
+                        </div>
                         <br>
                         
-                        <label for="origen"> <h4>País de Origen:</h4></label>
+                        <div class="edit2-origen">
+                        <label for="origen"></label>
                         <select class="select-prod-edit"  name="origen" id="origen" >
                             <!-- <option disabled selected>Seleccione origen:</option> -->
                             
@@ -95,9 +105,11 @@
                                 
                             <% }) %>
                         </select><p class="p"></p>
+                        </div>
                         </br>
                         
-                        <label for="region"><h4>Región: </h4></label>
+                        <div class="edit2-region">
+                        <label for="region"></label>
                         <select class="select-prod-edit" name="region" id="region" >
                             <!-- <option disabled selected>Seleccione una región:</option> -->
                             
@@ -112,9 +124,11 @@
                                 
                             <% }) %>
                         </select><p class="p"></p>
+                        </div>
                         <br>
                         
-                        <label for="category"> <h4>Categorías</h4></label>
+                        <div class="edit2-category">
+                        <label for="category"></label>
                             <select class="select-prod-edit" name="category" id="category" >
                                 <!-- <option disabled selected>Seleccione una categoría:</option> -->
                                 
@@ -129,29 +143,34 @@
                                     
                                 <% }) %>
                             </select><p class="p"></p>
+                        </div>
                         </br>
 
+                        <div class="edit2-image">
+                        <h2 class="edit2-image-product-form2">Carga la imágen de producto</h2>
                         <label for="image"></label>
-                        <h4>Imágen de producto</h4>
+                        <input type="file" name="product" id="image">
                         <img class="edit-form-img-edit-form" src="/img/product/<%= product.image%>">
+                        </div>
                         <br>
                         <% if (locals.errors && locals.errors.image) { %>
                          <% } %>
 
-                        <div class="prodEdit-buttons-edit-form">
-                            <button type="submit" value="Actualizar">ACTUALIZAR</button>
+                        <div class="prodEdit-buttons-edit-form2">
+                            <button class="sub-prodEdit-buttons-edit-form2" type="submit" value="Actualizar">ACTUALIZAR</button>
                             <br>
                         </div>
-
-
                     </div>
-                </form>
-            </main>
-            <footer>
-                <div class="grupo2">
-                    <small>&copy; 2023 <b>Foo Drinks.Co</b> - Todos los derechos reservados</small>
                 </div>
-            </footer>
-        <script src="/js/prodEdit.js" type="text/javascript"></script>
-        <script src="/js/editFunctions.js" type="text/javascript"></script>
-    </body>
+                </form>
+          
+            </main>
+                
+                <footer>
+                    <%- include('../partials/footer2') %>
+                </footer>
+                <script src="/js/prodEdit.js" type="text/javascript"></script>
+                <script src="/js/editFunctions.js" type="text/javascript"></script>
+
+            </body>
+            <br>
