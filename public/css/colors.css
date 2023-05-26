@@ -52,6 +52,12 @@
     }
 }
 
+@media (min-width: 950px) {
+    .opacity-light-background{
+        border-radius: 0.375rem;
+    }
+}
+
 @media (min-width: 1280px) {
     .opacity-dark-background{
         min-height: 700px;
@@ -60,7 +66,7 @@
     .opacity-light-background{
         background-color: #ffd9e2;
         padding: 20px 0;
-        opacity: 0.97;
+        opacity: 0.9;
         width: 900px;
         height: 900px;
         margin: auto;
