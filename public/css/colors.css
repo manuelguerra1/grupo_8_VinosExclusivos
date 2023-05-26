@@ -42,3 +42,10 @@
         align-items: center;
     }
 }
+
+@media (min-width: 1280px) {
+    .opacity-dark-background{
+        height: 600px;
+    }
+}
+
