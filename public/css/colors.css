@@ -45,7 +45,7 @@
 
 @media (min-width: 1280px) {
     .opacity-dark-background{
-        height: 700px;
+        min-height: 700px;
     }
 }
 
