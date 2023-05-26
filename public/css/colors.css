@@ -22,6 +22,15 @@
     padding: 20px 0;
 }
 
+.opacity-light-background{
+    background-color: #ffd9e2;
+    padding: 20px 0;
+    opacity: 0.9;
+    width: auto;
+    max-width: 950px;
+    margin: 10px auto;
+}
+
 .neutral-background{
     background-color: #7B2949;
     padding: 20px 0;
@@ -46,6 +55,15 @@
 @media (min-width: 1280px) {
     .opacity-dark-background{
         min-height: 700px;
+    }
+
+    .opacity-light-background{
+        background-color: #ffd9e2;
+        padding: 20px 0;
+        opacity: 0.97;
+        width: 900px;
+        height: 900px;
+        margin: auto;
     }
 }
 
