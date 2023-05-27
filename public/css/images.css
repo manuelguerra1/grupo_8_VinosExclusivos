@@ -24,7 +24,7 @@
 }
 
 .line {
-    border-top: 1px solid #778da97f;
+    border-top: 1px solid #7B2949;
     height: 2px;
     width: 90%;
     margin: 15px auto 30px auto;
@@ -60,6 +60,13 @@
     margin: 15px 0 15px 0;
   }
 
+  .img-item{
+   margin: 0px 20px;
+  }
+
+  .img-item img {
+    width: 80px;
+  }
 /* TABLET */
 @media (min-width: 361px) {
     .container-img{

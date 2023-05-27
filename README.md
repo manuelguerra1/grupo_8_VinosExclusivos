@@ -64,13 +64,10 @@ npm start
 (En caso de no tener nodemon instalado instalarlo con el comando npm i nodemon)
 
 Nuestra Propuesta
-Generar sinergias y optimizacion logistica a los productores nacionales.
-Somos una grupo de jóvenes amigos buscando acompañarlos de la mejor manera para que acercarles "nuestros productos", productos realizados por empresas con capitales argentinos. Porque creemos que podemos potenciar la industria nacional y al mismo tiempo divertirnos con ustedes y alegrarlos con nuestra presencia. 
 
-Quisimos crear una propuesta que les hiciera sentir igual que nuestra compañía, un sitio pensado por y para los jóvenes y no tan jovenes: con diversidad de productos, con un espacio para todos los productores y sobre todo, atractivo. Así nació Foo&Drinks. Lanzamos este sitio con dos bebidas, dos tradicionales; el wisky y la otra bien argenta como es el vino y una en franco crecimiento como lo es el gin, pero Foo&Drinks esta preparada para crecer y dar espacio a mas productores nacionales.
+Quisimos crear una propuesta pensada por y para los jóvenes y no tan jovenes: con diversidad de productos, en un espacio para todos los productores y sobre todo, atractivo. Así nació Foo&Drinks. Lanzamos este sitio con tres tipos de bebidas, dos tradicionales; el wisky y la otra bien argenta como es el vino; y una en franco crecimiento como lo es el gin. Sin embargo, Foo&Drinks esta preparada para crecer y dar espacio a mas productores nacionales permitiendoles generar sinergias y optimizacion logistica para su operaciones.
 
-Nuestro mundo es un lugar distinto, donde no hay reglas y todxs son bienvendidxs. Nos gusta innovar y crear cosas únicas, siempre priorizando la armonía de todos nuestros sentidos. Pero no lo vamos a negar, nuestra actitud de animales domésticos prevalece así que nos gusta sentirnos como en casa todo el tiempo. Hoy Foo&Drinks es la llave a nuestro fantástico mundo, a nuestra casa. Queremos que seas parte de nuestra propuesta también, queremos que innoves con nosotros y te sientas parte de todo esto.
-
+Nuestro mundo es un lugar distinto, donde no hay reglas y todxs son bienvendidxs. Nos gusta innovar y crear cosas únicas, siempre priorizando la armonía de todos nuestros sentidos. Hoy Foo&Drinks es la llave para muchos productores que pueden en sitio y bajando sus costos llegar a muchas mesas, vasos y copas. Queremos que seas parte de nuestra propuesta también, queremos que innoves con nosotros y te sientas parte de todo esto.
 
 Sustentabilidad
 En Foo&Drinks la Sustentabilidad constituye uno de los tres pilares estratégicos de la compañía, junto con Rentabilidad y Crecimiento. En conjunto, componen la hoja de ruta para plasmar el Ser F&D y su Propósito: “Nos apasiona crear experiencias para compartir juntos un mejor vivir y es en el Modelo de Sustentabilidad con sus tres dimensiones (personas, planeta y marcas) donde se apalanca la Promoción del Consumo Responsable de Alcohol.

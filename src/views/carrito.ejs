@@ -1,69 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%- include('./partials/head2') %> 
 
-<%- include('./partials/head') %> 
 <body>
-    
-        <%- include('./partials/header') %> 
-        <!--Carrito detalle de items-->
-    <main>
-        <div class="carritoPag-trolley">
-            <table class="table-trolley">
-                <tr>
-                    <th class="th-trolley">Producto</th>
-                    <th class="th-trolley">Cantidad</th>
-                    <!-- <th class="th-trolley">Subtotal</th> -->
-                </tr>
-                
-                <tr>
-                    <td class="td-trolley">
-                        <div class="carritoInfo-trolley">
-                            <img src="../img/product/gin-bosque-alta-montaña.webp" alt="">
-                            <div class="detalleProducto-trolley">
-                                <p class="prod-name-trolley"> Gin Bosque</p>
-                                <small class="tiny-price-trolley">Precio $10.000</small>
+    <%- include('./partials/header2') %>
+
+
+    <div class="opacity-dark-background">
+        <div class="opacity-light-background">
+            
+                <!-- item -->
+                <div class="container-item">
+                    <div class="data-item">
+                        <div class="img-item">
+                            <img src="/img/store/vodka/chibuzo-nwaneri-_ZMbf0W2CuQ-unsplash.jpg" alt="" srcset="">
+                        </div>
+                        <div class="text-item">
+                            <div class="top-text-item"><p>Flirt Vodka Chocolate 1Ltr</p></div>
+                            <div class="bottom-text-item">
+                                <p>1 unidad</p>
+                                <p>$4700</p>
                             </div>
                         </div>
-                    </td>
-                    
-                    <td class="td-trolley"><select class='prod-amount 'name="prod-amount" id="">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                    </select></td>
-                    <!-- <td class="td-trolley">$10.000</td> -->
-                </tr>
-            </table>
-    
-            <div class="totalPrecio-trolley"  >
-                <table class="final-table-trolley">
-                    <tr>
-                        <td class="td-trolley">Subtotal</td>
-                        <td class="td-trolley">$10.000</td>
-                    </tr>
-                    <tr>
-                    <td class="td-trolley">Envio</td>
-                        <td class="td-trolley">$3.000</td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="td-trolley">Total</td>
-                        <td class="td-trolley">$13.000</td>
-                    </tr>
-                </table>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="container-item">
+                    <div class="data-item">
+                        <div class="img-item">
+                            <img src="/img/store/vodka/chibuzo-nwaneri-_ZMbf0W2CuQ-unsplash.jpg" alt="" srcset="">
+                        </div>
+                        <div class="text-item">
+                            <div class="top-text-item"><p>Flirt Vodka Chocolate 1Ltr</p></div>
+                            <div class="bottom-text-item">
+                                <p>1 unidad</p>
+                                <p>$4700</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="container-item">
+                    <div class="data-item">
+                        <div class="img-item">
+                            <img src="/img/store/vodka/chibuzo-nwaneri-_ZMbf0W2CuQ-unsplash.jpg" alt="" srcset="">
+                        </div>
+                        <div class="text-item">
+                            <div class="top-text-item"><p>Flirt Vodka Chocolate 1Ltr</p></div>
+                            <div class="bottom-text-item">
+                                <p>1 unidad</p>
+                                <p>$4700</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            
+            <!-- total -->
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="paragraph-amount">
+                    <p>Total: </p>
+                    <p>$14.100</p>
+                </div>
+                
+                <button class="btn btn-secondary btn-buy m-4 w-75">Comprar</button>
             </div>
         </div>
-        <div class="compra-carrito-button">
-            <button type="submit" class="finish-purchase-carrito"> 
-                <a href="../views/404.ejs">Finalizar compra</a> 
-            </button>
-        </div>
-        
-        </main>
-        
-        <%- include('./partials/footer') %> 
-    </body>
+    </div>    
 
+    <%- include('./partials/footer2') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
 </html>

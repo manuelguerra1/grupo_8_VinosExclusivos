@@ -21,6 +21,30 @@ const apiProductController = {
         .then(response=>res.status(200).json(productsResponse(response)))
             .catch(error=> res.status(500).json('ERROR: DB_ERROR'+ error))
     },
+
+    last (req, res) {
+        db.Product.findOne ({
+        order: [
+            ['created_at', 'DESC']
+        ]
+        })
+        .then (response => res.json(productsResponse(response)))
+        .catch(error => res.json(error))
+    },
+
+    category: async (req, res)=>{
+        try {
+            let categorias = await db.Category.findAll()
+            let rol = await db.Rol.findAll()
+            res.json({
+                categorias,
+                rol
+            })
+        } catch (error) {
+           res.json(error) 
+        }
+        
+    }
    
 }
 const productsResponse = (prod) => {

@@ -33,7 +33,7 @@
         <div class="product2">
             <div class="reg2-box">
             
-            <h1>¡Crea Producto!</h1>
+            <h1>Crear Producto</h1>
 
             <div class="reg2-name-product">
             <label for="nameproduct"></label>
@@ -123,9 +123,16 @@
             <br>
             
             <div class="reg2-image">
+<<<<<<< HEAD
+                <label for = "image"></label>
+                <h2>Carga la Imágen de producto</h2>
+            
+            <input type="file" name="image" id="image">
+=======
             <h2 class="prod-img-prod-create-form2">Carga la Imágen de producto</h2>
             <label for="image"></label>
             <input type="file" name="image" id="image"><p class="p"></p>
+>>>>>>> 3a024039886cb025c49c8c576dca01f081453e50
             
             <% if (locals.errors && locals.errors.image) { %>
                 <p style="color: red;"><%= errors.image.msg %></p>  

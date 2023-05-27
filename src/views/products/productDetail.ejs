@@ -39,14 +39,14 @@
                     <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
                         <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
                             <div class="btn-edit-prod-detail">
-                                <a class="btn btn-secondary m-1">Editar</a>
+                                <button class=" btn btn-secondary m-1" type="submit">Editar</button>
                             </div>
                         </form>
                         <form class="prod-detail-form"  action="/delete/<%= productId.id %>?_method=DELETE" method="POST">
                             <div class="btn-edit-prod-detail">
-                                <a  class="btn btn-secondary m-1">Eliminar</a>
+                                <button class=" btn btn-secondary m-1" type="submit">Eliminar</button>
                             </div>
-                        </form> <%} %>
+                        </form><%} %>
 
                 </div>
 

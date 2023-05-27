@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require ('cors');
 
 //Agregamos express-session con (npm i express-session -S)
 const cookieParser = require('cookie-parser')
@@ -22,6 +23,9 @@ app.set('views', './src/views');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors({
+    origin:'*'
+}))
 
 app.use(cookieParser());
 app.use(session({
