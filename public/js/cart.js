@@ -9,7 +9,7 @@ const renderCart = () => {
         showProduct(product)// muestra el producto
         //agrega contenido html para mostrar los detalles, y cuando se toca Eliminar, se usa la funcion removeItem()
         cartContent.innerHTML += ` 
-        <small>${product.quantity}</small>
+        <small>${product.stock}</small>
         <button onclick="removeItem(${product.id})">Eliminar</button>
         <br> 
     `;
@@ -29,7 +29,7 @@ function clearCart() {
     localStorage.reload()
 }
 
-function removeItem(productId, quantity = null) {
+function removeItem(productId, stock = null) {
     let cart = getCart() // llama a la funcion getCart para traer el carrito actual.
 
     let newCart = cart.filter(product => product.id != productId) // genera una variable que contenga todos los productos, excepto el que tenga productId pasado como argumento.
@@ -46,7 +46,7 @@ function getTotal() {
 
     let total = 0 // se guarda el total del precio enuna variable.
 
-    cart.forEach(product => total += product.price * product.quantity) // itera sobre cada producto del carrito, y para cada producto se le multiplica su cantidad por el precio, y ese resultado se guarda en la variable total.
+    cart.forEach(product => total += product.price * product.stock) // itera sobre cada producto del carrito, y para cada producto se le multiplica su cantidad por el precio, y ese resultado se guarda en la variable total.
 
     return total // retorna el total del precio actualizado.
 
