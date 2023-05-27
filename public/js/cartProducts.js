@@ -1,4 +1,5 @@
-const api = 'https://fakestoreapi.com/products'
+const API = 'https://fakestoreapi.com/products'
+// const API = 'http://localhost:3008/api/products'
 
 const getProducts = async(api) => { // el parametro api representa la url de la api donde se obtendran los datos de los productos.
     try {
@@ -15,17 +16,17 @@ const getProducts = async(api) => { // el parametro api representa la url de la 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    getProducts(api) // inicia la solicitud de los datos de los productos desde la api.
-    .then(data => renderProducts(data)) // cuando los datos estan disponibles desde la api, esta funcion muestra los productos en la pagina.
+    // inicia la solicitud de los datos de los productos desde la api.
+    getProducts(API).then(data => renderProducts(data)) // cuando los datos estan disponibles desde la api, esta funcion muestra los productos en la pagina.
 })
 
 const renderProducts = (products) => {
-    products.forEach(product => { // itera sobre cada producto.
-        showProduct(product)
+    products.forEach(product => {
+        showProduct(product); // itera sobre cada producto.
         cartContent.innerHTML += ` 
         <button onclick = 'addToCart(this)'
-        data-id = '${db.Product.id}'
-        data-title = '${product.title}'
+        data-id = '${product.id}'
+        data-name = '${product.name}'
         data-img = '${product.image}'
         data-price = '${product.price}'
         >Añadir al carrito</button>
@@ -37,7 +38,7 @@ const addtoCart = (button) => { // busca si un producto ya existe en el carrito.
     
     let producto = {
         id: button.dataset.id,
-        title: button.dataset.title,
+        name: button.dataset.name,
         price: button.dataset.price,
         img: button.dataset.image,
         stock: 1
