@@ -1,56 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <%- include('./partials/head2') %> 
 
-    <%- include('./partials/head') %> 
-    <body class="body-index">
 
-    <%- include('./partials/header') %> 
-    <!-- <hr> -->
+<%- include('./partials/header2') %> 
 
-        <main>
-            <img class="carrusel-index" src="../img/carrusel/carrusel3.3.jpg" alt="carrusel">
-            
-            <!-- ---------------------------------------------------------- -->
-            <section class="products-index">
-                <div class="productContainer-index">
+<body class="background">
+  <!-- Carousel -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/img/carousel/andres-molina-eUg90Mb23HQ-unsplash.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/img/carousel/kym-ellis-aF1NPSnDQLw-unsplash.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/img/carousel/quan-nguyen-yDSe7sggb9Q-unsplash (2).jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+ 
+  <!-- Category -->
+  <div class="opacity-dark-background">
+    <div class="centered-title">
+      <h2 class="primary-color">Categorias</h2>
+    </div>
+    <div class="container-fluid container-img">
+      <div class="container-img-category">
+        <img src="/img/store/gin/dragomir-ralchev-p72tPmGEOao-unsplash.jpg" alt="gin">
+        <h4 class="centered-subtitle primary-color">Gin</h4>
+      </div>
+      <div class="container-img-category">
+        <img src="/img/store/vodka/alec-favale-KIqw3GIhdHA-unsplash.jpg" alt="vodka">
+        <h4 class="centered-subtitle primary-color">Vodka</h4>
+      </div>
+      <div class="container-img-category">
+        <img src="/img/store/wine/alexandre-vasconcelos-BegPCwXFE2A-unsplash.jpg" alt="vino">
+        <h4 class="centered-subtitle primary-color">Vino</h4>
+      </div>
+    </div>
+  </div>
 
-                    <h1 class="h1-home"> ¡NUESTRA TIENDA! </h1>
+  <!-- Proposal -->
+  <div class="dark-background">
+    <div>
+      <h2 class="centered-title primary-color">Nuestra propuesta</h2>
+    </div>
+    <div>
+      <p class="centered-paragraph primary-color"> Generar sinergias y optimizacion logistica a los productores nacionales.
+        Somos una grupo de jóvenes amigos buscando acompañarlos de la mejor manera para que acercarles "nuestros productos", productos realizados por empresas con capitales argentinos. Porque creemos que podemos potenciar la industria nacional y al mismo tiempo divertirnos con ustedes y alegrarlos con nuestra presencia. 
+        
+        Quisimos crear una propuesta que les hiciera sentir igual que nuestra compañía, un sitio pensado por y para los jóvenes y no tan jovenes: con diversidad de productos, con un espacio para todos los productores y sobre todo, atractivo. Así nació Foo&Drinks. Lanzamos este sitio con dos bebidas, dos tradicionales; el wisky y la otra bien argenta como es el vino y una en franco crecimiento como lo es el gin, pero Foo&Drinks esta preparada para crecer y dar espacio a mas productores nacionales.
+        
+        Nuestro mundo es un lugar distinto, donde no hay reglas y todxs son bienvendidxs. Nos gusta innovar y crear cosas únicas, siempre priorizando la armonía de todos nuestros sentidos. Pero no lo vamos a negar, nuestra actitud de animales domésticos prevalece así que nos gusta sentirnos como en casa todo el tiempo. Hoy Foo&Drinks es la llave a nuestro fantástico mundo, a nuestra casa. Queremos que seas parte de nuestra propuesta también, queremos que innoves con nosotros y te sientas parte de todo esto.</p>
+      </p>
+    </div>
+  </div>
+  <!-- supplies -->
+  <div class="container-fluid opacity-dark-background">
+      <div>
+        <h2 class="centered-title primary-color">Insumos locales</h2>
+      </div>
+      <div class="centered-img">
+        <img src="/img/store/foo/maja-petric-vGQ49l9I4EE-unsplash.jpg" alt="uvas">
+      </div>
+  </div>
+  <div class="container-fluid dark-background">
+    <div>
+      <h2 class="centered-title primary-color">Elaboración artesanal</h2>
+    </div>
+    <div class="centered-img">
+      <img src="/img/store/foo/katherine-conrad-Q4F3ap6GF10-unsplash.jpg" alt="uvas">
+    </div>
+  </div>
+    <div class="container-fluid opacity-dark-background">
+      <h4 class="centered-title primary-color">Sustentabilidad</h4>
+     
+        <p class="centered-paragraph primary-color ">En Foo&Drinks la Sustentabilidad constituye uno de los tres pilares estratégicos de la compañía, junto con Rentabilidad y Crecimiento. En conjunto, componen la hoja de ruta para plasmar el Ser F&D y su Propósito: “Nos apasiona crear experiencias para compartir juntos un mejor vivir y es en el Modelo de Sustentabilidad con sus tres dimensiones (personas, planeta y marcas) donde se apalanca la Promoción del Consumo Responsable de Alcohol.
 
-                    <div class="prod-home">
-                        <a class="prod-a-home" href="/404">
-                            <div class="gin-home">
-                                <img src="/imagenesPrueba/gin2.jpg" alt="" class="prod-img-home">
-                            <h2 class="h2-prod-home"> GIN <i class="fa-solid fa-martini-glass-citrus"></i> </h2>
-                            </div>
-                        </a>
-                        
-                        <a class="prod-a-home" href="/404">
-                            <div class="wine-home">
-                                <img src="/imagenesPrueba/vino4.jpg" alt="" class="prod-img-home">
-                            <h2 class="h2-prod-home"> VINO <i class="fa-solid fa-wine-glass"></i> </h2>
-                            </div>
-                        </a>
-                        
+          Promover y educar en una cultura de Consumo Responsable de Alcohol representa una contribución concreta a la comunidad, entregando mensajes en positivos, de manera clara y propositiva sobre sus productos y de cómo consumirlos en forma correcta y consciente.
+          Esa es una tarea que la compañía ha estado siempre comprometida como parte de su visión de negocio. Sin embargo, el acercamiento al alcohol es una tarea que compete a muchos actores de la sociedad tales como las autoridades que ejercen un rol regulatorio, fiscalizador y, especialmente, educativo con la comunidad; el comercio, que son los que tienen la relación más cercana con los consumidores; todos quienes trabajan en F&D como grandes embajadores; las familias que son los principales educadores de sus hijos y son ejemplo para ellos; los proveedores como grandes socios para extender el mensaje, y sobre todo, los consumidores como principales actores del autocuidado personal.
+          
+          Con esta visión, F&D desarrolla el Programa de Promoción del Consumo Responsable de Alcohol F&D 360 , estrategia integrada de acciones que invita a distintos actores de la sociedad a desarrollar una diversidad de iniciativas con el objetivo de educar e informar. Los  ámbitos en que se apalanca este Programa son la prevención del consumo de alcohol en menores de edad, la educación en el consumo responsable de alcohol y la promoción de la seguridad vial.
+          </p> 
+          
+          <div class="centered-img">
+            <img src="/img/carousel/quan-nguyen-yDSe7sggb9Q-unsplash (2).jpg" class="d-block w-100" alt="...">
 
-                        <a class="prod-a-home" href="/404">
-                            <div class="whisky-home">
-                                <img src="/imagenesPrueba/whisky2.jpg" alt="" class="prod-img-home">
-                            <h2 class="h2-prod-home"> WHISKY <i class="fa-solid fa-whiskey-glass"></i> </h2>
-                            </div>
-                        </a>
-                        
-                    </div>
-                    
-                    <h2 class="proposal-h2-home"> NUESTRA PROPUESTA: </h2>
-                    <div class="proposal-prod-home">
-                        <img class="prop-img-home" src="/imagenesPrueba/bsas-gin9.jpg" alt="Propuesta" class="bsas-gin-home" width="270px">
-                        <h4 class="prop-h4-home">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quis totam, maiores esse ad, adipisci voluptas reprehenderit illo distinctio voluptatem nobis quae ratione, eum accusamus excepturi nesciunt voluptates unde quibusdam?</h4>
-                    </div>
-                    
-                </div>
-            </section>         
-        </main>
-    <%- include('./partials/footer') %> 
-    
+          </div>
+      
+    </div>
+
+    <%- include('./partials/footer2') %> 
+
+    <!-- Incluir este script en todas las vistas para funcionalidad de navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

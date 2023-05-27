@@ -1,53 +1,61 @@
- <header style="background-color: #2b3035;">
+ <header style="background-color: #7B2949;">
     <div class="container-fluid d-flex">
       <!-- NavBar -->
       <nav
-        class="navbar bg-dark  navbar-expand-lg bg-body-tertiary d-flex align-items-center navbar-collapse flex-lg-row-reverse"
-        data-bs-theme="dark">
+        class="navbar bg-dark-subtle text-white navbar-expand-lg bg-body-tertiary d-flex align-items-center navbar-collapse">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
           aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-  
-        <!-- Search -->
-        <div class="d-flex align-items-center">
-          <div>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <!-- <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button> -->
-            </form>
-          </div>
-          <!-- Cart -->
-          <div>
-            <button class="btn btn-outline-success" type="submit"><i class="bi bi-cart-fill"></i> </button>
-          </div>
-        </div>
-  
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <!-- <a class="nav-link active" aria-current="page" href="#">FooDrinks</a> -->
+        <div class="collapse navbar-collapse align-items-start" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home2">FooDrinks</a>
+              <a class="nav-link" href="/">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/home2">Inicio</a>
+              <a class="nav-link" href="/allProduct">Tienda</a>
             </li>
+          <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
+            <li><a class="nav-link" href="/create">Crear producto</a></li>
+            <% } %>
             <li class="nav-item">
-              <a class="nav-link" href="/allProducts2">Tienda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login2">Inicia sesión</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/register2">Registrate</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/carrito2">Carrito</a>
+              <a class="nav-link" href="/carrito">Carrito</a>
+              <% if (locals.userLogged) { %>
+                <li><a class="nav-link" href="/logout">Cerrar sesión</a></li>
+              <% } else { %>
+                <li><a class="nav-link" href="/login">Inicia sesión</a></li>
+                <li><a class="nav-link" href="/register">Registrate</a></li>
+            <% } %>
+            <% if (locals.userLogged) 
+            { %>
+                <li><a class="nav-link" href="profile">Mi perfil</a></li>
+                <% } 
+                %>
             </li>
           </ul>
-          <img src="../img/icons/logo-sin-fondo-1-beige.png" alt="logo" />
         </div>
       </nav>
+       <!-- Logo -->
+       <div class="logo">
+        <img  src="../img/icons/logo-sin-fondo-header.png" alt="logo" />
+      </div>
+           <!-- Search -->
+           <div class="d-flex align-items-center justify-content-end">
+            <div class="ms-2">
+              <form class="d-flex" role="search">
+                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
+              </form>
+            </div>
+            <!-- Cart -->
+            <div class="ms-2">
+              <button class="btn btn-outline-primary" type="submit"><i class="bi bi-cart-fill"></i> </button>
+            </div>
+          </div>
+      
+
+
+       
       
     </div>
   </header>
