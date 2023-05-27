@@ -16,11 +16,12 @@ const getProducts = async(api) => { // el parametro api representa la url de la 
 
 document.addEventListener('DOMContentLoaded', () => {
     getProducts(API) // inicia la solicitud de los datos de los productos desde la api.
-    .then(data => showProduct(data)) // cuando los datos estan disponibles desde la api, esta funcion muestra los productos en la pagina.
+    .then(data => renderProducts(data)) // cuando los datos estan disponibles desde la api, esta funcion muestra los productos en la pagina.
 })
 
 const renderProducts = (products) => {
-    products.forEach(product => { // itera sobre cada producto.
+    products.forEach(product => {
+        showProduct(product); // itera sobre cada producto.
         cartContent.innerHTML += ` 
         <button onclick = 'addToCart(this)'
         data-id = '${product.id}'
