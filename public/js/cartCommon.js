@@ -1,4 +1,5 @@
-let cartContent = document.getElementById('cart-Products') // agarra el div de carrito.ejs
+let contentProducts = document.getElementById('products')
+
 
 function saveCart(cart) {
     // esta linea de codigo guarda su contenido en el almacenamiento local del navegador, con una key de cart, y el valor de la key tiene que ser si o si un string, por eso se usa el JSON.stringify
@@ -16,11 +17,12 @@ function productExists(product, cart){
 }
 
 // esta funcion le agrega contenido HTMl al producto cuando se renderice.
-const showProduct = (product) => {
-    cartContent.innerHTML += `
-    <h3>${product.title}</h3>
-    <small>$${product.price}</small>
-    <img src="${product.image}" width="130">
-    <br>
-    `
+const renderProduct = (product)  => {
+    contentProducts.innerHTML += `
+        <h3>${product.name}</h3>
+        <small>${product.price}</small>
+        <img src=${product.image}>
+        <br>
+        
+        ` // el (this) le dice 'te paso como parametro a vos mismo
 }

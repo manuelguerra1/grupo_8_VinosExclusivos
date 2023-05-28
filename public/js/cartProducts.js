@@ -1,5 +1,4 @@
-const API = 'https://fakestoreapi.com/products'
-// const API = 'http://localhost:3008/api/products'
+const API = 'http://localhost:3008/api/products'
 
 const getProducts = async(api) => { // el parametro api representa la url de la api donde se obtendran los datos de los productos.
     try {
@@ -21,55 +20,92 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const renderProducts = (products) => {
-    products.forEach(product => {
-        showProduct(product); // itera sobre cada producto.
-        cartContent.innerHTML += ` 
-        <button onclick = 'addToCart(this)'
-        data-id = '${product.id}'
-        data-name = '${product.name}'
-        data-img = '${product.image}'
-        data-price = '${product.price}'
-        >Añadir al carrito</button>
-    ` // se agrega contenido html con los atributos data-.
-    });
+    // console.log('renderProdsucts', products, products.products, Array.isArray(products.products));
+    products.products.forEach(product => {
+        renderProduct(product),
+        contentProducts.innerHTML +=
+        `<button onclick='addtoCart(this)'
+        data-id='${product.id}'
+        data-name='${product.name}'
+        data-image='${product.image}'
+        data-price='${product.price}'
+        >Añadir al carrito</button>`
+    }
+);
+        // showProduct(product); // itera sobre cada producto.
+        // contentProducts.innerHTML += `` // se agrega contenido html con los atributos data-.
 }
 
-const addtoCart = (button) => { // busca si un producto ya existe en el carrito. si existe, se incrementa la cantidad, sino, lo agrega al carrito, y luego, se guarda el carrito actualizado en el localStorage.
+// const renderProduct = (product)  => {
+//     contentProducts.innerHTML += `
+//         <h3>${product.name}</h3>
+//         <small>${product.price}</small>
+//         <br>
+//         <img src=${product.image}>
+//         <button onclick='addtoCart(this)'
+//         data-id='${product.id}'
+//         data-name='${product.name}'
+//         data-image='${product.image}'
+//         data-price='${product.price}'
+//         >Añadir al carrito</button>
+//         ` // el (this) le dice 'te paso como parametro a vos mismo
+// }
     
-    let producto = {
-        id: button.dataset.id,
-        name: button.dataset.name,
-        price: button.dataset.price,
-        img: button.dataset.image,
-        stock: 1
-    } // esta variable crea propiedades cuyos valores los obtienen de los atributos data-, a los cuales se accede mediante el dataset.
+const addtoCart = (button) => { // busca si un producto ya existe en el carrito. si existe, se incrementa la cantidad, sino, lo agrega al carrito, y luego, se guarda el carrito actualizado en el localStorage.
+        // console.log('addToCart', button);
+        let producto = {
+            id: button.dataset.id,
+            name: button.dataset.name,
+            price: button.dataset.price,
+            image: button.dataset.image,
+            quantity: 1
+        } // esta variable crea propiedades cuyos valores los obtienen de los atributos data-, a los cuales se accede mediante el dataset.
+        // console.log('addtoCart', producto);
 
-    let cart = getCart() // traigo al carrito del localStorage.
+        // traigo el carrito der localStorage
+        let cart = getCart()
 
-    if (cart.length) { // verifica si el carrito tiene productos.
+        if (cart.length) { // verifica si el carrito tiene productos.
+    
+            let product_exists = productExists(producto, cart) // se le pasa el resultado de llamar a la funcion productExists, con producto(el producto a agregar), y el cart(el carrito actualizado con su arreglo).
+            console.log('existe', product_exists);
 
-        let prodExist = productExists(producto, cart) // se le pasa el resultado de llamar a la funcion productExists, con producto(el producto a agregar), y el cart(el carrito actualizado con su arreglo).
-            
-            if (prodExist) {
+            if (product_exists) {
                 
                 cart.forEach(item => { // itera sobre cada elemento del carrito.
-                
-                    if (item.id == prodExist.id) item.stock++ // verifica si el id del elemento coinicide con el id del producto existente. si es asi, se incrementa la cantidad del elemento en el carrito 1.
-
+                    
+                    if (item.id == product_exists.id) item.quantity++ // verifica si el id del elemento coinicide con el id del producto existente. si es asi, se incrementa la cantidad del elemento en el carrito 1.
+                    
                 })
-
+                    
             } else {
-            
+                    
                 cart.push(producto) // se agrega el producto al cart, osea, se agrega un nuevo producto al carrito.
-            
+                    
             };
-        
-    } else {
+                
+        } else {
+                
+            cart.push(producto) // se agrega el producto al cart, osea, se agrega un nuevo producto al carrito.
+                
+                
+                
+                // saveCart(cart) // se llama a la funcion para que guarde el contenido del carrito en el localStorage.
+                
+            }
     
-        cart.push(producto) // se agrega el producto al cart, osea, se agrega un nuevo producto al carrito.
-    
-    }
+            // actualizo el localStorage
+            saveCart(cart)
+        }
 
-    saveCart(cart) // se llama a la funcion para que guarde el contenido del carrito en el localStorage.
+        
+        
+        
+        function saveCart(cart) {
+            
+    localStorage.setItem('cart', JSON.stringify(cart))
 
 }
+
+
+ 
