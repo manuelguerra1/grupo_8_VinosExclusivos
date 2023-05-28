@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+  <%- include('../partials/head2') %> 
 
   <body>
-    <%- include('../partials/header') %>
-      <main>
-        <form method="POST" action="/userModify/<%= user.id %>?_method=PUT" >
-          <div class="registroUsuario-edit-form">
-            <h3>EDICIÓN DE USUARIO</h3>
+    <%- include('../partials/header2') %> 
+      <main class="opacity-dark-background">
+
+        <div class="centered-title">
+          <h3 class="primary-color"> Edita tu perfil </h3>
+      </div>
+
+        <form class="user-edit" method="POST" action="/userModify/<%= user.id %>?_method=PUT" >
 
             <label for="image"></label>
-            <h4 class="prod-img-prod-create-form">Foto de perfil</h4>
             <img class="profile-img" src="/img/user/<%= user.avatar%>">
-            <br />
-
+           
 
             <label for="name"></label>
             <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>" required />
-            <br />
+           
 
             <label for="last-name"></label>
             <input type="text" name="last_name" id="last-name" placeholder="Apellido" value="<%= user.last_name %>"
               required />
-            <br />
+           
 
             <label for="email"></label>
             <input type="email" name="email" id="email" placeholder="E-mail" value="<%= user.email %>" required />
-            <br />
+          
 
             <label for="user-name"></label>
             <input type="text" name="user_name" id="user-name" placeholder="Nombre de usuario"
               value="<%= user.user_name %>" required />
-            <br />
+         
 
             <label for="password"></label>
             <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= user.password %>"
               required />
-            <br />
+         
 
             <label for="confirm-password"></label>
             <input type="password" name="confirm_password" id="confirm-password" placeholder="Confirmar contraseña"
               value="<%= user.confirm_password %>" required />
             
-            <br />
-          </div>
-          <br />
-
-          <div class="prodCreate-buttons-edit-form">
-            <button type="submit" value="Actualizar">ACTUALIZAR</button>
-            <br>
-          </div>
+            
+            <button class="btn btn-secondary" type="submit" value="Actualizar">ACTUALIZAR</button>
+            
         </form>
       </main>
 
-      <%- include('../partials/footer') %>
-  </body>
+      <%- include('../partials/footer2') %> 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>  </body>
 
 </html>

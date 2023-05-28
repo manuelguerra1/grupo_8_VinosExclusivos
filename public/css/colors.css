@@ -15,6 +15,7 @@
     opacity: 0.97;
     background-color: #201a1b;
     padding: 20px 0;
+
 }
 
 .light-background{
@@ -50,6 +51,10 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .opacity-dark-background{
+        min-height: 700px;
+    }
 }
 
 @media (min-width: 950px) {
@@ -59,10 +64,6 @@
 }
 
 @media (min-width: 1280px) {
-    .opacity-dark-background{
-        min-height: 700px;
-    }
-
     .opacity-light-background{
         background-color: #ffd9e2;
         padding: 20px 0;
