@@ -50,6 +50,11 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .opacity-dark-background{
+        min-height: 700px;
+    }
+
 }
 
 @media (min-width: 950px) {
@@ -59,9 +64,6 @@
 }
 
 @media (min-width: 1280px) {
-    .opacity-dark-background{
-        min-height: 700px;
-    }
 
     .opacity-light-background{
         background-color: #ffd9e2;
