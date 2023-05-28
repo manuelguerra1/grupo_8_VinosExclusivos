@@ -79,7 +79,7 @@ main.register2-main{
     margin: 20px;
 }
 
-.reg2-prof-img input, .user-edit input{
+.reg2-prof-img input{
     width: 100%;
     margin-bottom: 20px;
     padding: 12px 20px;
@@ -136,17 +136,6 @@ main.register2-main{
 
 .del-btn-reg2{
     margin: 15px;
-}
-
-.user-edit{
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin: auto;
-}
-
-.user-edit img{
-    margin: 40px 0 70px 0;
 }
 
 
@@ -233,10 +222,6 @@ main.register2-main{
     
     .del-btn-reg2{
         margin-left: 4%;
-    }
-
-    .user-edit{
-        width: 50%;
     }
 }
 
