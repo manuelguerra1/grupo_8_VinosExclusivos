@@ -53,6 +53,7 @@ const productsResponse = (prod) => {
         name: prod.name,
         description: prod.description,
         price: prod.price,
+        stock: prod.stock,
         varietal_id: prod.varietal_id,
         year: prod.year,
         origen_id: prod.origen_id,

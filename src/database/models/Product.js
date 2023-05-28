@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false
       },
+      stock: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
       varietal_id: {
         type: DataTypes.INTEGER,
         allowNull: false

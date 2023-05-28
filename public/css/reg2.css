@@ -90,9 +90,21 @@ main.register2-main{
     font-size: 15px;
 }
 
-/* input#file-upload-button{
-    color: #292c2b;
+/* .label-img{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: left;
+    display: none;
 } */
+
+input#file-upload-button{
+    background-color: #292c2b;
+}
 
 .reg2-terms-cond-register{
     margin: 30px;

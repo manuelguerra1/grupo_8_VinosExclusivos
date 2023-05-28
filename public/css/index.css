@@ -227,11 +227,79 @@
 }
 
 @media (min-width: 769px) {
+    .prod-home{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        align-items: center;
+    }
+
+    .prod-a-home{
+        width: 90vw;
+    }
+
+    .prod-img-home{
+        width: 60vw;
+        margin: 30px 16px 0 16px;
     
+    }
+
+    .h2-prod-home{
+        font-size: 30px;
+        text-decoration-color: rgb(39, 38, 37);
+        color: rgb(39, 38, 37);
+    }
+
+    .fa-martini-glass-citrus{
+        padding-left: 10px;
+    }
+
+    .fa-wine-glass{
+        padding-left: 10px;
+    }
+
+    .fa-whiskey-glass{
+        padding-left: 10px;
+    }
+
+    .proposal-h2-home{
+        color: #d9d1c5;
+        text-decoration: underline;
+        font-size: 2em;
+    }
+    
+    .proposal-prod-home{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 1.5em;
+
+    }
+    
+    .prop-h4-home{
+        background-color: #4a0422;
+        color: #a99e8c;
+        width: 81vw;
+        margin-bottom: 50px;
+        padding: 0 8px 30px 8px;
+    }
+
+    .prop-img-home{
+        background-color: #4a0422;
+        padding: 30px;
+        display: block;
+        height: 72vw;
+        width: 81vw;
+        align-self: center;
+    }
 }
 
 @media (min-width: 1280px) {
-
+    
 }
 
 
