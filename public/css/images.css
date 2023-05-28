@@ -29,6 +29,13 @@
     width: 90%;
     margin: 15px auto 30px auto;
   }
+  
+  .total-line{
+    border-top: 1px solid #7B2949;
+    height: 2px;
+    width: 100%;
+    margin: 15px auto 30px auto;
+  }
 
   .container-icon{
     display: flex;
@@ -66,6 +73,12 @@
 
   .img-item img {
     width: 80px;
+  }
+
+  .modal-image{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
   }
 /* TABLET */
 @media (min-width: 361px) {

@@ -10,10 +10,16 @@ $theme-colors: (
   "secondary": $secondary,
   "dark": $dark,
 );
+$modal-header-border-color: $secondary;
 
 
   @import "../../node_modules/bootstrap/scss/bootstrap";
 
   .bg-navbar-wine{
     background-color: $secondary !important;
+}
+
+.modal-content{
+  background-color: #ffd9e2;
+  opacity: 0.9;
 }
