@@ -5107,12 +5107,12 @@ textarea.form-control-lg {
   --bs-modal-header-padding-x: 1rem;
   --bs-modal-header-padding-y: 1rem;
   --bs-modal-header-padding: 1rem 1rem;
-  --bs-modal-header-border-color: var(--bs-border-color);
+  --bs-modal-header-border-color: #7B2949;
   --bs-modal-header-border-width: var(--bs-border-width);
   --bs-modal-title-line-height: 1.5;
   --bs-modal-footer-gap: 0.5rem;
   --bs-modal-footer-bg: ;
-  --bs-modal-footer-border-color: var(--bs-border-color);
+  --bs-modal-footer-border-color: #7B2949;
   --bs-modal-footer-border-width: var(--bs-border-width);
   position: fixed;
   top: 0;
@@ -11384,10 +11384,9 @@ textarea.form-control-lg {
   background-color: #7B2949 !important;
 }
 
-.text-bg-dark {
-  color: #ffd9e2 !important;
-  background-color: #201a1b !important;
-  opacity: 0.9 !important;
+.modal-content {
+  background-color: #ffd9e2;
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=bootstrap-custom.css.map */
