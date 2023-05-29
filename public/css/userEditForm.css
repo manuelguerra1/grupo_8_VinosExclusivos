@@ -1,0 +1,103 @@
+body.user-edit-body{
+    background-color: #201a1b;
+}
+
+input{
+    color: #ffd9e2;
+}
+
+input::placeholder{
+    font-size: 15px;
+}
+
+.user-edit-box{
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+main.user-edit-main{
+    text-align: center;
+}
+
+.registroUsuario-edit-form h1{
+    color: #ffd9e2;
+    margin: 30px 20px;
+    margin-top: 25px;
+    margin-bottom: -19px;
+}
+
+.user-edit-image h4{
+    color: #ffd9e2;
+    margin: 20px 30px;
+}
+
+.profile-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user-edit-name-lastname{
+    margin: 5px;
+}
+
+.user-edit-name-lastname input{
+    color: #ffd9e2;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 5px;
+}
+
+.user-edit-email{
+    margin: 5px;
+}
+
+.user-edit-email input{
+    color: #ffd9e2;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 5px;
+}
+
+.user-edit-password-confpassword{
+    margin: 5px;
+}
+
+.user-edit-password-confpassword input{
+    color: #ffd9e2;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 12px 20px;
+    background-color: #514346;
+    border: 1px solid #ffd9e2;
+    border-radius: 5px;
+}
+
+.user-edit-button{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user-edit-button button{
+    display: flex;
+    padding: 26px 4px;
+    font-size: 15px;
+    background-color: #7B2949;
+    color: #ffd9e2;
+    border: 1px solid #292c2b;
+    border-radius: 5px;
+    width: 160px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+

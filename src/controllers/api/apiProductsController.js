@@ -44,6 +44,27 @@ const apiProductController = {
            res.json(error) 
         }
         
+    },
+
+    delete: async (req, res)=>{
+        try {
+            console.log('estoy aca');
+            let {id} = req.params; 
+            await db.Product.destroy({
+                where: {
+                    id
+                }
+            })
+            
+            res.status(200).json({
+                status: 200,
+                data: true
+            });
+        } catch (error) {
+            console.log(error);
+            res.json(error);
+        }
+
     }
    
 }
@@ -53,7 +74,6 @@ const productsResponse = (prod) => {
         name: prod.name,
         description: prod.description,
         price: prod.price,
-        stock: prod.stock,
         varietal_id: prod.varietal_id,
         year: prod.year,
         origen_id: prod.origen_id,
