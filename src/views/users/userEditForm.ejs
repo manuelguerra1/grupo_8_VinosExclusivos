@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+  <%- include('../partials/head2') %>
 
-  <body>
-    <%- include('../partials/header') %>
-      <main>
+  <body class="user-edit-body">
+    <%- include('../partials/header2') %>
+      
+    <main class="user-edit-main">
+      
         <form method="POST" action="/userModify/<%= user.id %>?_method=PUT" >
+             
           <div class="registroUsuario-edit-form">
-            <h3>EDICIÓN DE USUARIO</h3>
+            <div class="user-edit-box">
+          
+              <h1>Editar Usuario</h1>
 
-            <label for="image"></label>
-            <h4 class="prod-img-prod-create-form">Foto de perfil</h4>
-            <img class="profile-img" src="/img/user/<%= user.avatar%>">
-            <br />
+             <div class="user-edit-image">
+               <label for="image"></label>
+               <h4>Foto de perfil</h4>
+               <img class="profile-img" src="/img/user/<%= user.avatar%>">
+              </div>
+              <br>
 
+            <div class="user-edit-name-lastname">
+              <label for="name"></label>
+              <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>" required />
 
-            <label for="name"></label>
-            <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>" required />
-            <br />
-
-            <label for="last-name"></label>
-            <input type="text" name="last_name" id="last-name" placeholder="Apellido" value="<%= user.last_name %>"
+              <label for="last-name"></label>
+              <input type="text" name="last_name" id="last-name" placeholder="Apellido" value="<%= user.last_name %>"
               required />
-            <br />
+              
+            </div>
 
-            <label for="email"></label>
-            <input type="email" name="email" id="email" placeholder="E-mail" value="<%= user.email %>" required />
-            <br />
+            <div class="user-edit-email">
+              <label for="email"></label>
+              <input type="email" name="email" id="email" placeholder="E-mail" value="<%= user.email %>" required />
 
-            <label for="user-name"></label>
-            <input type="text" name="user_name" id="user-name" placeholder="Nombre de usuario"
+              <label for="user-name"></label>
+              <input type="text" name="user_name" id="user-name" placeholder="Nombre de usuario"
               value="<%= user.user_name %>" required />
-            <br />
+            </div>
 
-            <label for="password"></label>
-            <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= user.password %>"
+            <div class="user-edit-password-confpassword">
+              <label for="password"></label>
+              <input type="password" name="password" id="password" placeholder="Contraseña" value="<%= user.password %>"
               required />
-            <br />
 
-            <label for="confirm-password"></label>
-            <input type="password" name="confirm_password" id="confirm-password" placeholder="Confirmar contraseña"
+              <label for="confirm-password"></label>
+              <input type="password" name="confirm_password" id="confirm-password" placeholder="Confirmar contraseña"
               value="<%= user.confirm_password %>" required />
-            
-            <br />
-          </div>
-          <br />
-
-          <div class="prodCreate-buttons-edit-form">
-            <button type="submit" value="Actualizar">ACTUALIZAR</button>
+            </div>
             <br>
+         
+
+          <div class="user-edit-button">
+            <button type="submit" value="Actualizar">ACTUALIZAR</button>
+          </div>
+          <br>
+
+            </div>
           </div>
         </form>
       </main>
 
-      <%- include('../partials/footer') %>
+        <%- include('../partials/footer2') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+    <script src="/js/userRegister.js" type="text/javascript"></script>
+    <script src="/js/editFunctions.js" type="text/javascript"></script>
   </body>
 
 </html>
