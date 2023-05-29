@@ -2,14 +2,6 @@ const db = require("../database/models");
 const {validationResult} = require("express-validator");
 
 const productsController = {
-    allProducts2: function (req, res) {
- 
-        res.render("./products/allProducts2");
-      },
-    productDetail2: function (req, res) {
- 
-        res.render("./products/productDetail2");
-      },
     allProduct: async (req, res) => {
         try {
             const products = await db.Product.findAll()

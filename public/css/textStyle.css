@@ -57,6 +57,38 @@
     display: none;
 }
 
+.text-item{
+    margin: 0 10px;
+}
+
+.data-item{
+    display: flex;
+}
+
+.top-text-item{
+    font-weight: bold;
+}
+
+.bottom-text-item{
+    display: flex ;
+}
+
+.bottom-text-item p{
+    margin: 5px ;
+}
+
+.paragraph-amount{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 75%;
+ margin: 20px;
+}
+
+.paragraph-amount p{
+    margin: 5px;
+}
+
 /* TABLET */
 @media (min-width: 361px) {
     

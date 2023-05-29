@@ -43,13 +43,23 @@
            <div class="d-flex align-items-center justify-content-end">
             <div class="ms-2">
               <form class="d-flex" role="search">
-                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search"></i></button>
+
+                <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <input class="form-control me-2" type="search" placeholder="Busca tu producto favorito" aria-label="Search">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </form>
             </div>
             <!-- Cart -->
             <div class="ms-2">
-              <button class="btn btn-outline-primary" type="submit"><i class="bi bi-cart-fill"></i> </button>
+              <a href="/carrito" class="btn btn-outline-primary" type="submit"><i class="bi bi-cart-fill"></i> </a>
             </div>
           </div>
       
