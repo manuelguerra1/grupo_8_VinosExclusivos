@@ -14,8 +14,8 @@ const productsController = {
 
     productDetail: async (req, res) => {
         try {
-
-            const productId = await db.Product.findByPk(req.params.id, {
+            let id = req.params.id
+            let productId = await db.Product.findByPk(id, {
                 include: [
                     // trae las asociaciones del modelo
                     { association: 'Varietal'},
