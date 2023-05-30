@@ -32,7 +32,7 @@
     .remove-item-btn{
         position: relative;
         left: 100px;
-        background-color: #fff;
+        /* background-color: #fff; */
     }
 
 }

@@ -6,6 +6,10 @@ div.btn-edit-prod-detail{
 
 }
 
+.href-anchor-prodDet:hover{
+    color: #ffd9e2;
+}
+
 button.add-menu-prod-detail{
     width: 100px;
     margin-top: 10px;

@@ -65,8 +65,8 @@ const renderCart = () => {
                                     <div class="remove-item-btn">
                                         <button  
                                         class="btn btn-secondary m-1" 
-                                        style="background-color: #ffd9e2; color: #7B2949;  padding: 2px 20px; border: 2px solid #7B2949; border-radius: 5px; position: relative;"
-                                        onclick='removeItem(${product.id})'
+                                        style="padding: 2px 20px; border: 2px solid #7B2949; border-radius: 5px; position: relative;"
+                                        onclick='removeItem(${product.id})' 
                                         > Eliminar </button>
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@ let sweetPurchase = async () => {
             showDenyButton: false,
             showCancelButton: false,
             confirmButtonColor: '#038c17',
-            confirmButtonText: '<a id="anchor-sweet-confirm" style="color: #fff; text-decoration: none; " href="/">Volver al Home',
+            confirmButtonText: '<a id="anchor-sweet-confirm" style="color: #fff; text-decoration: none; " href="/">Volver al Home</a>',
             customClass: {
                 container: 'mi-clase-container',
                 popup: 'mi-clase-popup',

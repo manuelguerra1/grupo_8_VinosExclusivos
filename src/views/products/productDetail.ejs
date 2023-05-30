@@ -34,7 +34,7 @@
                     data-name=<%= productId.name %>
                     data-description=<%= productId.description %>
                     data-price=<%= productId.price %> 
-                    class="btn btn-outline-primary m-1">Agregar al carrito</button>
+                    class="btn btn-outline-primary m-1">Agregar al carrito</button><br>
                     <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
                         <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
                             <div class="btn-edit-prod-detail">
