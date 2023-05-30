@@ -26,8 +26,9 @@
     background-color: #ffd9e2;
     padding: 20px 0;
     opacity: 0.9;
-    width: auto;
-    max-width: 950px;
+    width: 80%;
+    border-radius: 0.375rem;
+    /* max-width: 950px; */
     margin: 10px auto;
 }
 
@@ -69,8 +70,7 @@
         background-color: #ffd9e2;
         padding: 20px 0;
         opacity: 0.9;
-        width: 900px;
-        height: 900px;
+        
         margin: auto;
     }
 }

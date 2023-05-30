@@ -25,17 +25,14 @@
                 </div>
                 <div  class="container-buttons d-flex flex-column p-4">
                     <!-- Amount -->
-                    <select name="amount" id="amount" class="btn btn-outline-primary m-1">
-                        <option value="1">Cantidad: 1 unidad</option>
-                        <option value="2">Cantidad: 2 unidades</option>
-                        <option value="3">Cantidad: 3 unidades</option>
-                        <option value="4">Cantidad: 4 unidades</option>
-                        <option value="5">Cantidad: 5 unidades</option>
-                        <option value="6">Cantidad: 6 unidades</option>
-                    </select>
-                    <!--  -->
-                    <a href="#" class="btn btn-outline-primary m-1">Comprar Ahora</a>
-                    <a href="#" class="btn btn-outline-primary m-1">Agregar al carrito</a>
+                    
+                    <button onclick="addtoCart(this)" id="add-cart-btn" 
+                    data-id=<%= productId.id %>
+                    data-image="/img/product/<%= productId.image%>"
+                    data-name=<%= productId.name %>
+                    data-description=<%= productId.description %>
+                    data-price=<%= productId.price %> 
+                    class="btn btn-outline-primary m-1">Agregar al carrito</button>
                     <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
                         <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
                             <div class="btn-edit-prod-detail">
@@ -143,6 +140,12 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="/js/prodDelete.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- ESTE SCRIPT ES DE SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- ESTE SCRIPT ES DE SWEETALERT -->
+    <script src="/js/cartCommon.js"></script>
+    <script src="/js/cartProducts.js"></script>
+    <script src="/js/prodDetail.js"></script>
+    
+
+    
 </body>
 </html>

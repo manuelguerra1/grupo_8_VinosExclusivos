@@ -29,4 +29,10 @@
         padding-top: 20px;
     }
 
+    .remove-item-btn{
+        position: relative;
+        left: 100px;
+        background-color: #fff;
+    }
+
 }
