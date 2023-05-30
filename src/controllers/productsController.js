@@ -1,3 +1,4 @@
+const { Console } = require("console");
 const db = require("../database/models");
 const {validationResult} = require("express-validator");
 
@@ -144,8 +145,9 @@ const productsController = {
     
 
     update: async (req, res) => {
+        console.log("Hola!");
         let errors = validationResult(req);
-        console.log('validationResult',errors);
+        // console.log('validationResult',errors);
          //si hay errores los atrapo
         if(!errors.isEmpty()) {
             const id = req.params.id
@@ -160,7 +162,7 @@ const productsController = {
             let regionById = await db.Region.findByPk(id)
             let origin = await db.Origin.findAll()
             let originById = await db.Origin.findByPk(id)
-            console.log(req.body,'body');
+            
 
             return res.render('./products/productEditForm', {
                 product, 
@@ -180,6 +182,13 @@ const productsController = {
 
         const id = req.params.id
         try {
+            console.log(req.body, req.file);
+            let product;
+            if (!req.file){
+                 product = await db.Product.findOne({
+                    where: {id}
+                })
+            }
             await db.Product.update(
                 {
                     "name": req.body.name,
@@ -191,6 +200,7 @@ const productsController = {
                     "origen_id": req.body.origen,
                     "region_id": req.body.region,
                     "category_id": req.body.category,
+                    "image": req.file?req.file.filename:product.image,
                     "available": true,
                 },
                 {

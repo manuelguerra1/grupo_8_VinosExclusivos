@@ -6,7 +6,7 @@
     <body class="edit-body-product2">
         <%- include('../partials/header2') %>
             <main>
-                <form class="prod-edit-form-main" method="post" action="/modify/<%= product.id %>?_method=PUT">
+                <form class="prod-edit-form-main" method="post" action="/modify/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
                     <ul class="errores">
             
                     </ul>
