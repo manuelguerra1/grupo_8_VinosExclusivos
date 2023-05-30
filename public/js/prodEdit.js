@@ -49,5 +49,6 @@ window.addEventListener("load", (e) => {
 
     errors = inputIsNotEmpty(category, "category-error");
     if (!errors) e.preventDefault();
+    
   });
 });

@@ -26,17 +26,7 @@
                     </a>
                 </div>
                 <div  class="container-buttons d-flex flex-column p-4">
-                    <!-- Amount -->
-                    <select name="amount" id="amount" class="btn btn-outline-primary m-1">
-                        <option value="1">Cantidad: 1 unidad</option>
-                        <option value="2">Cantidad: 2 unidades</option>
-                        <option value="3">Cantidad: 3 unidades</option>
-                        <option value="4">Cantidad: 4 unidades</option>
-                        <option value="5">Cantidad: 5 unidades</option>
-                        <option value="6">Cantidad: 6 unidades</option>
-                    </select>
-                    <!--  -->
-                    <a href="#" class="btn btn-outline-primary m-1">Comprar Ahora</a>
+                    
                     <a href="#" class="btn btn-outline-primary m-1">Agregar al carrito</a>
                     <% if(locals.userLogged && locals.userLogged.rol_id == 2) {%>
                         <form class="prod-detail-form"  action="/edit/<%= productId.id %>" >
