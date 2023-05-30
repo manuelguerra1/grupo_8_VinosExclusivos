@@ -145,14 +145,16 @@
                             </select><p class="p"></p>
                         </div>
                         </br>
-
-                        <div class="edit2-image">
                         <h2 class="edit2-image-product-form2">Cargar imágen de producto</h2>
-                        <label for="image"></label>
-                        <input type="file" name="product" id="image">
-                        <img class="edit-form-img-edit-form" src="/img/product/<%= product.image%>">
+                        <div class="load-img-prod-edit">
+                            <label for="image"></label>
+                            <input type="file" name="product" id="image">
+                            <div class="edit2-image">
+                            <img class="edit-form-img-edit-form" src="/img/product/<%= product.image%>">
+                            </div>
+                            <br>
                         </div>
-                        <br>
+                        
                         <% if (locals.errors && locals.errors.image) { %>
                          <% } %>
 

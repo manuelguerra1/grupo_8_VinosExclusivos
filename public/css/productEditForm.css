@@ -170,13 +170,20 @@ main.prod-edit-form-main{
   }
 
 .edit2-image{
-    /* display: flex;
-    flex-direction: column; */
+    
     margin:20px;
     background-color: #514346;
     border: 1px solid #ffd9e2;
     border-radius: 0;
     box-sizing: border-box;
+}
+
+.load-img-prod-edit{
+    display: flex;
+    flex-direction: row;
+    columns: 2;
+    align-items: flex-end;
+
 }
 
 .edit2-image-product-form2 h2{
@@ -187,14 +194,11 @@ main.prod-edit-form-main{
 .edit2-image-product-form2 {
     text-align: center;
     color: #ffd9e2;
-    font-size: 18px;
+    font-size: 28px;
     padding: 10px;
+    margin-top: 20px;
     box-sizing: border-box;
-  }
-
-  /* .edit-form-img-edit-form img{
-    justify-content: center;
-  } */
+}
 
 
 .edit2-image-product-form2 input{
@@ -207,12 +211,15 @@ main.prod-edit-form-main{
 }
 
 input#image {
+    align-self: center;
     background-color: #514346;
     color: #ffd9e2;
     border: 1px solid #ffd9e2;
     padding: 10px;
     border: none;
     border-radius: 4px;
+    width: 54%;
+    margin-left: 23px;
   }
 
 .prodEdit-buttons-edit-form2 {
