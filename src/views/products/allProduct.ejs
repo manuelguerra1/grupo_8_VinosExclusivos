@@ -13,7 +13,7 @@
             <!-- Example Code -->
             <div class="container-card row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
                 <% products.forEach (product =>  { %>
-                <div class="col col-center">
+                <!-- <div class="col col-center">
                     <div class="card text-bg-secondary" >
                         <div class="card-body text-center">
                             <a href="/productDetail/<%= product.id %>">
@@ -24,8 +24,10 @@
                             <p class="card-text primary-color"><%= product.description %></p>
                             <div class="line"></div>
                             <p class="bold primary-color"><%= product.price %></p>
-                            <a href="/carrito" class="btn btn-outline-primary">Agregar al carrito</a>
-                            <!-- amount -->
+                            <button class="btn btn-outline-primary">
+                                <a href="/carrito" >Agregar al carrito</a>
+                            </button>
+                            
                             <div class="d-flex justify-content-evenly btn-amount btn">
                                 <button type="button" class="btn btn-outline-primary col-2">-</button>
                                 <input type="text" id="amount" class="btn btn-outline-primary col-4">
@@ -33,14 +35,24 @@
                             </div>
                         </div>
                     </div>
-                </div>      
+                </div>       -->
                 <% }) %>
             </div>
             <!-- End Example Code -->
-
+            
+            <div id="products" class="container-card row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- <div id="prod1"></div>
+                <div id="prod2"></div>
+                <div id="prod3"></div>
+                <div id="prod4"></div>
+                <div id="prod5"></div>
+                <div id="prod6"></div>
+                <div id="prod7"></div>
+                <div id="prod8"></div> -->
+            </div>
         </div>
-
-        <div id="products"></div>
+        
+        
         
         <%- include('../partials/footer2') %>
         

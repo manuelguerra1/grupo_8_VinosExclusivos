@@ -9,6 +9,8 @@ body{
     justify-content: center;
 }
 
+
+
 .add-menu {
     margin-right: 25px;
     width: 25px;
@@ -27,6 +29,8 @@ body{
     
 }
 /* ------------------------------MAIN--------------------------------- */
+
+
 
 ul.ul-all-prod{
     display: flex;

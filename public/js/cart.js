@@ -5,6 +5,7 @@ const renderCart = () => {
     let cart = getCart()
 
     cart.forEach(product => {
+        console.log(product.price);
         renderProduct(product),
         contentProducts.innerHTML +=
         `

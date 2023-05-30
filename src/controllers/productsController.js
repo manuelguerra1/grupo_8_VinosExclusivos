@@ -158,6 +158,7 @@ const productsController = {
             let regionById = await db.Region.findByPk(id)
             let origin = await db.Origin.findAll()
             let originById = await db.Origin.findByPk(id)
+            console.log(req.body,'body');
 
             return res.render('./products/productEditForm', {
                 product, 

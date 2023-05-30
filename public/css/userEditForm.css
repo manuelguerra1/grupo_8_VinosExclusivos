@@ -100,4 +100,15 @@ main.user-edit-main{
     justify-content: space-around;
 }
 
+.user-edit-button button:hover{
+    transition: 500ms;
+    padding: 26px 4px;
+    font-size: 15px;
+    background-color: #ffd9e2;
+    color: #7B2949;
+    border: 1px solid #292c2b;
+    border-radius: 5px;
+    width: 160px;
+}
+
 

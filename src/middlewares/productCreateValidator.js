@@ -1,6 +1,6 @@
 const { body } = require("express-validator");
 const path = require('path')
-const productValidator = [
+const productCreateValidator = [
   // aca van los campos
   body("name")
     .notEmpty().withMessage("El campo requiere un nombre").bail()
@@ -11,6 +11,7 @@ const productValidator = [
     .withMessage("El campo debe tener minimo 20 caracteres"),
     body("image")
     .custom((value, { req }) => {
+      // console.log(value, 'osdjfoh');
         const file = req.file;
         const validExtensions = [".jpg", ".png", ".svg", ".jpeg"];
         if (!file) {
@@ -27,4 +28,4 @@ const productValidator = [
 
 ];
 
-module.exports = productValidator;
+module.exports = productCreateValidator;

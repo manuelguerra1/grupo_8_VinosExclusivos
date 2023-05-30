@@ -22,14 +22,40 @@ document.addEventListener('DOMContentLoaded', () => {
 const renderProducts = (products) => {
     // console.log('renderProdsucts', products, products.products, Array.isArray(products.products));
     products.products.forEach(product => {
-        renderProduct(product),
-        contentProducts.innerHTML +=
-        `<button onclick='addtoCart(this)'
-        data-id='${product.id}'
-        data-name='${product.name}'
-        data-image='${product.image}'
-        data-price='${product.price}'
-        >Añadir al carrito</button>`
+        renderProduct(product);
+        
+        // contentProducts.innerHTML +=
+        // `<button onclick='addtoCart(this)' 
+        // data-id='${product.id}'
+        // data-image='${product.image}'
+        // data-name='${product.name}'
+        // data-description='${product.description}
+        // data-price='${product.price}'
+        // >Añadir al carrito</button>` // el (this) le dice 'te paso como parametro a vos mismo
+        // let productsImg = document.querySelector('.card-img-top')
+        // let prodName = document.querySelector('#products h3')
+        // let prodPrice = document.querySelector('#products small')
+        // let prodBtn = document.querySelector('#products button')
+        // let prodDesc = document.querySelector('#product h4')
+        // // contentProducts.classList.add = 'allProd-updated'
+        // // prodName.style.color = '#ffd9e2'
+        // // prodDesc.style.color = '#ffd9e2'
+        // console.log(prodDesc);
+        // prodBtn.style.backgroundColor = 'RGBA(123, 41, 73, var(--bs-bg-opacity, 1))'
+        // prodBtn.style.border = '1px solid #ffd9e2'
+        // prodBtn.style.color = '#ffd9e2'
+        // prodBtn.style.borderRadius = '7px'
+        // prodBtn.style.padding = '6px 12px'
+        // productsImg.style.margin = '20px'
+        // productsImg.style.height = '300px'
+        // prodPrice.style.color = '#ffd9e2'
+        // prodPrice.style.fontWeight = 'bold'
+        // prodPrice.style.fontSize = '22px'
+        // prodPrice.style.height = '23px'
+        // contentProducts.style.backgroundColor = 'RGBA(123, 41, 73, var(--bs-bg-opacity, 1))'
+        // contentProducts.style.width = '100%'
+
+        
     }
 );
         // showProduct(product); // itera sobre cada producto.
@@ -48,20 +74,21 @@ const renderProducts = (products) => {
 //         data-image='${product.image}'
 //         data-price='${product.price}'
 //         >Añadir al carrito</button>
-//         ` // el (this) le dice 'te paso como parametro a vos mismo
+//         ` 
 // }
     
 const addtoCart = (button) => { // busca si un producto ya existe en el carrito. si existe, se incrementa la cantidad, sino, lo agrega al carrito, y luego, se guarda el carrito actualizado en el localStorage.
-        // console.log('addToCart', button);
-        let producto = {
-            id: button.dataset.id,
-            name: button.dataset.name,
-            price: button.dataset.price,
-            image: button.dataset.image,
-            quantity: 1
-        } // esta variable crea propiedades cuyos valores los obtienen de los atributos data-, a los cuales se accede mediante el dataset.
-        // console.log('addtoCart', producto);
-
+    console.log('addToCart', button.dataset, 'askjdghakfj');
+    let producto = {
+        id: button.dataset.id,
+        image: button.dataset.image,
+        name: button.dataset.name,
+        description: button.dataset.description,
+        price: button.dataset.price,
+        quantity: 1
+    } // esta variable crea propiedades cuyos valores los obtienen de los atributos data-, a los cuales se accede mediante el dataset.
+    // console.log('addtoCart', producto);
+    
         // traigo el carrito der localStorage
         let cart = getCart()
 

@@ -11,12 +11,17 @@ h3.profile-h3{
 }
 
 img.profile-img{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     align-self: center;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border: 2px solid #7b1d46;
+    border: 2px solid #201a1b;
     border-radius: 6px;
+}
+
+img.profile-img:hover{
+    box-shadow: 0px 0px 25px rgb(100, 100, 100);
+    border: #ffd9e2;
+
 }
 
 div.profile-img{
