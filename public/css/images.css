@@ -55,11 +55,12 @@
 
   .logo{
     display: flex;
-    width: 80%;
+    width: 73%;
     margin: 10px;
   }
 
   .logo img{
+    max-height: 90px;
     max-width: 100px;
   }
 

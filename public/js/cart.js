@@ -20,11 +20,9 @@ const renderCart = () => {
     // }
 
     cart.forEach(product =>{ //esta funcion crea un bucle en cart, en el que product representa cada elemento de cart
-        // console.log(product.price);
-        // renderProduct(product);
 
 
-        contentProducts.innerHTML +=
+        contentProducts.innerHTML =
         `
         <div class="opacity-light-background">
             
@@ -55,29 +53,11 @@ const renderCart = () => {
                 <br><br><br><button onclick='clearCart()'>Limpiar carrito</button>
                 </div>
                 </div>
-                
                 ` // (button onclick='clearCart()'>Limpiar carrito</button>) agrega contenido html para mostrar los detalles, y cuando se toca Eliminar, se usa la funcion removeItem()
     });
-    
-//         
-//         showProduct(product)// muestra el producto
-//         
-//         cartContent.innerHTML += ` 
-//         <small>${product.stock}</small>
-//         <button onclick="removeItem(${product.id})">Eliminar</button>
-//         <br> 
-//     `;
-    
-
-//     cartContent.innerHTML += `
-//     <p>Total: ${getTotal()}</p>
-//     <br>
-//     <button onclick="clearCart()">Limpiar carrito</button>
-//     ` // agrega otro contenido, mostrando el total, y cuando se toca limpiar carrito, se utiliza la funcion clearCart()
 }
 
 function clearCart() {
-    // console.log(clearCart);
     // borra todos los datos del localStorage, sus claves y valores.
     localStorage.clear()
     // recarga el localStorage.

@@ -1,6 +1,5 @@
 window.addEventListener("load", (e) => {
     let form = document.querySelector(".login-form");
-    // let ul = document.querySelector(".errores");
     let email = document.getElementById("email");
     let password = document.getElementById("password");
 
