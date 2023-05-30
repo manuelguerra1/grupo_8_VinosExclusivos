@@ -155,6 +155,7 @@ input#file-upload-button{
     .reg2-name-lastname{
         margin: 15px 80px;
         display: flex;
+        flex-wrap: wrap;
     }
     
     .reg2-name-lastname input{
@@ -187,6 +188,7 @@ input#file-upload-button{
     .reg2-password-confpassword{
         margin: 15px 80px;
         display: flex;
+        flex-wrap: wrap;
     }
     
     .reg2-password-confpassword input{

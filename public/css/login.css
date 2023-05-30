@@ -11,6 +11,7 @@ body.login-body{
 }
 
 .loginBox{
+    margin: 50px;
     width: 320px;
     height: 420px;
     background-color: #201a1b;
@@ -30,7 +31,7 @@ body.login-body{
 }
 .loginBox h2.login-h2{
     color: #ffd9e2;
-    margin: 20px 0 50px 0;
+    margin: 20px 0 10px 0;
 }
 .loginBox label{
     margin: 10px 0;

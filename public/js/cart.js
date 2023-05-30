@@ -41,6 +41,20 @@ const renderCart = () => {
         if (e.target.id == 'anchor-sweet-confirm') {
             clearCart()
         }
+
+        let clearCartBtn = document.getElementById('clear-cart-btn')
+
+        if (cart.length == 0) {
+            if (e.target.id == 'clear-cart-btn') {
+                let purchaseError1 = sweetPurchaseError();
+                    if (purchaseError1) {
+                        sweetPurchaseError(noItems)
+                    }
+            }
+            
+        } else {
+            clearCart()
+        }
     })
 
   cart.forEach((product) => {
@@ -90,8 +104,8 @@ const renderCart = () => {
                               <div class="line"></div>
                               
                               <button id="purchase-btn" onclick="" class="btn btn-secondary btn-buy m-4 w-75">Comprar</button>
-                              <button 
-                              onclick='clearCart()'
+                              <button id="clear-cart-btn"
+                              onclick=''
                               style="background-color: #ffd9e2; color: #7B2949; padding: 2px 50px; border: 2px solid #7B2949; border-radius: 5px;"
                               >Limpiar carrito</button>
                           </div>
