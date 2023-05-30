@@ -1,6 +1,7 @@
 const userSessionMiddleware = (req, res, next) => {
     if (req.cookies && req.cookies.userLogged) {
         // Si el usuario quiso ser recordado lo recordamos
+        req.session.userLogged = req.cookies.userLogged;
         res.locals.userLogged = req.cookies.userLogged;
     }
     

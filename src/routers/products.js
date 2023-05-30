@@ -16,7 +16,7 @@ router.get ('/productCreateForm', productsController.productCreateForm);
 router.post('/save', upload.single('image'), productCreateValidator, productsController.store);
 // Editar
 router.get ('/edit/:id', productsController.productEdit);
-router.put ('/modify/:id', productEditValidator, productsController.update);
+router.put ('/modify/:id', upload.single('image'), productEditValidator, productsController.update);
 // Eliminar
 router.delete ('/delete/:id', productsController.destroy);
 //Listar por id

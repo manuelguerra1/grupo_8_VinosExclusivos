@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 h3.profile-h3{
@@ -10,7 +11,7 @@ h3.profile-h3{
     font-size: 40px;
 }
 
-img.profile-img{
+.profile-img{
     height: 300px;
     width: 300px;
     align-self: center;
@@ -39,6 +40,7 @@ div.profile-info{
     align-self: center;
     padding: 5px;
     margin: 10px;
+    border: 1px solid #7B2949;
     border-radius: 6px;
 }
 

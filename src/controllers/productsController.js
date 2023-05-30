@@ -130,6 +130,8 @@ const productsController = {
             let origin = await db.Origin.findAll()
             let originById = await db.Origin.findByPk(id)
             
+            
+            
             return res.render('./products/productEditForm', {
                 product, varietal, varietalById, brand, brandById, category, categoryById, region, regionById, origin, originById
             })

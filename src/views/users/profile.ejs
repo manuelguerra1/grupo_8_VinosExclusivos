@@ -12,15 +12,24 @@
             </div>
             <div>
             <div class="profile-section">
-                <div class="profile-img">
-                    <img class="profile-img" src="/img/user/<%= user.avatar%>" id="avatar">
+                <div class="profile-img-div">
+                    <img class="profile-img" src="/img/user/<%= user.avatar %>" id="avatar">
                 </div>
                 
                 <div class="container-user">
                     <div class="profile-info">
-                        <p class="left-paragraph primary-color">Nombre y Apellido: <%= user.name %> <%= user.last_name %></p>
+                        <br>
+                        <p class="left-paragraph primary-color">Nombre: <%= user.name %></p>
+                        <br>
+                        <p class="left-paragraph primary-color">Apellido: <%= user.last_name %></p>
+
+                        <br>
                         <p class="left-paragraph primary-color">Usuario: <%= user.user_name %></p>
+                        <br>
+
                         <p class="left-paragraph primary-color">Email: <%= user.email %></p>
+                        <br>
+
                     </div>
                     <div class="container-btn">
                         <form action="/userEdit/<%= user.id %>"><button class="btn btn-secondary" type="submit">Editar</button></form>

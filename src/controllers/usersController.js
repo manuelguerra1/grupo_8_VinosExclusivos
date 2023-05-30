@@ -125,14 +125,15 @@ if (userRegistered) {
       res.send(error);
     }
   },
-
+  
   logout: (req, res) => {
     res.clearCookie("userLogged");
     req.session.destroy();
     return res.redirect("/");
   },
-
+  
   profile: function (req, res) {
+    console.log(req.session.userLogged);
     res.render("./users/profile", {
       user: req.session.userLogged,
     });
@@ -160,6 +161,7 @@ if (userRegistered) {
     
     await db.User.update(
     {
+    // "avatar": req.file.filename,
     "name":req.body.name,
     "last_name":req.body.last_name,
     "email":req.body.email,
@@ -175,6 +177,12 @@ if (userRegistered) {
        where: {id: id}
     });
 
+    if (req.cookies.userLogged) {
+      res.clearCookie("userLogged");
+      res.cookie("userLogged", userUpdate, { maxAge: 1000 * 60 * 60 * 2 });
+
+    }
+    
     if (userUpdate) {
       req.session.userLogged = userUpdate;
       res.redirect("/profile");

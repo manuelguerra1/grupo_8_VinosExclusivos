@@ -36,8 +36,10 @@ const renderCart = () => {
         
         }
 
-        if (condition) {
-            
+        let anchorSweetConfirm = document.getElementById('anchor-sweet-confirm')
+
+        if (e.target.id == 'anchor-sweet-confirm') {
+            clearCart()
         }
     })
 
@@ -137,9 +139,7 @@ let sweetPurchase = async () => {
             showDenyButton: false,
             showCancelButton: false,
             confirmButtonColor: '#038c17',
-            cancelButtonColor: '#d33',
-            confirmButtonText: '<a style="color: #fff; text-decoration: none; " href="/">Volver al Home',
-            denyButtonText: `Cancelar`,
+            confirmButtonText: '<a id="anchor-sweet-confirm" style="color: #fff; text-decoration: none; " href="/">Volver al Home',
             customClass: {
                 container: 'mi-clase-container',
                 popup: 'mi-clase-popup',
@@ -156,6 +156,8 @@ let sweetPurchaseError = async () => {
             icon: 'error',
             title: 'Ups! Algo salió mal!',
             text: 'No tienes productos en el carrito!',
-            footer: '<a style="color: black; text-decoration: underline; text-decoration-color: blue; " href="/allProduct">Volver a la tienda!</a>'
+            confirmButtonColor: '#038c17',
+            confirmButtonText: 'Aceptar',
+            footer: '<a style="color: black; text-decoration: underline; font-weight: bold; " href="/allProduct"><i class="fa-solid fa-hand-back-point-right"></i>Añade productos a tu carrito!<i class="fa-solid fa-hand-back-point-left"></i></a>'
           })
     }
