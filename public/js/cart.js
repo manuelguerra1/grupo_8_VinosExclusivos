@@ -1,25 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => renderCart());
 
+let purchaseBtn = document.getElementById('purchase-btn')
+
+
 const renderCart = () => {
     
     let cart = getCart()
+    // if (purchaseBtn) {
+        
+    //     purchaseBtn.addEventListener('click', () => {
+    
+    //         let confirmPurchase = sweetPurchase();
+    //         console.log(confirmPurchase, 'sdkfhj');
+    //         if (confirmPurchase) {
+    //             sweetPurchase(confirm)
+    //         }
+    
+    //     })
+    // }
 
-    cart.forEach(product => {
-        console.log(product.price);
-        renderProduct(product),
+    cart.forEach(product =>{ //esta funcion crea un bucle en cart, en el que product representa cada elemento de cart
+        // console.log(product.price);
+        // renderProduct(product);
+
+
         contentProducts.innerHTML +=
         `
-        <span>Cantidad: ${product.quantity}</span>
-        <button onclick='removeItem(${product.id})'>Eliminar</button>
-        `
-    });
+        <div class="opacity-light-background">
+            
+                <div class="container-item">
+                    <div class="data-item">
+                        <div class="img-item">
+                            <img src="${product.image}" alt="" srcset="">
+                        </div>
+                        <div class="text-item">
+                            <div class="top-text-item"><p>Flirt Vodka Chocolate 1Ltr</p></div>
+                            <div class="bottom-text-item">
+                                <p>${product.quantity} unidad</p>
+                                <p>$${product.price}</p><button onclick='removeItem(${product.id})'> Eliminar </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
 
-    contentProducts.innerHTML +=
-        `<br><br><p>Total: ${getTotal()}</p><br><button onclick='clearCart()'>Limpiar carrito</button>`
+                
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="paragraph-amount">
+                <p>Total: </p>
+                <p>$${getTotal()}</p>
+                </div>
+                
+                <button id="purchase-btn" onclick="" class="btn btn-secondary btn-buy m-4 w-75">Comprar</button>
+                <br><br><br><button onclick='clearCart()'>Limpiar carrito</button>
+                </div>
+                </div>
+                
+                ` // (button onclick='clearCart()'>Limpiar carrito</button>) agrega contenido html para mostrar los detalles, y cuando se toca Eliminar, se usa la funcion removeItem()
+    });
     
-//         //esta funcion crea un bucle en cart, en el que product representa cada elemento de cart
+//         
 //         showProduct(product)// muestra el producto
-//         //agrega contenido html para mostrar los detalles, y cuando se toca Eliminar, se usa la funcion removeItem()
+//         
 //         cartContent.innerHTML += ` 
 //         <small>${product.stock}</small>
 //         <button onclick="removeItem(${product.id})">Eliminar</button>
@@ -64,4 +106,13 @@ function removeItem(productId, quantity = null) {
     return total // retorna el total del precio actualizado.
 
 }
-
+// let sweetPurchase = async () => {
+//     const confirm = await Swal.fire({
+//             title: 'Sweet!',
+//             text: 'Modal with a custom image.',
+//             imageUrl: 'https://unsplash.it/400/200',
+//             imageWidth: 400,
+//             imageHeight: 200,
+//             imageAlt: 'Custom image',
+//           })
+// }
