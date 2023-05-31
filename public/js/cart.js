@@ -52,8 +52,6 @@ const renderCart = () => {
                     }
             }
             
-        } else {
-            clearCart()
         }
     })
 
