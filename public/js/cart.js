@@ -42,6 +42,10 @@ const renderCart = () => {
             clearCart()
         }
 
+        if (e.target.id == 'clear-cart-btn') {
+            clearCart()
+        }
+
         let clearCartBtn = document.getElementById('clear-cart-btn')
 
         if (cart.length == 0) {
